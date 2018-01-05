@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+  <script src="lib/onsenui/js/angular-onsenui.min.js"></script>
+  <script src="components/main.js"></script>
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <ons-navigator var="navi" page="page.html" ng-controller="AppController as app">
+  </ons-navigator>
+  <ons-template id="page.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">{{this.application_name}}</div>
+      </ons-toolbar>
+
+      <section style="margin-top: 20px">
+        <ul class="list list--inset">
+          <li class="list-item list--inset__item list-item--tappable" ng-click='app.go_search("src")'>
+            <div class="list-item__left">
+              <span class="notification" style="background-color:#0080FF">出発</span>
+            </div>
+            <div id="src" class="list-item__center">{{this.search.src}}</div>
+          </li>
+          <li class="list-item list--inset__item list-item--tappable" ng-click='app.go_search("dest")'>
+            <div class="list-item__left">
+              <span class="notification style=" background-color:#FF0080 ">到着</span>
+            </div>
+            <div id="dest" class="list-item__center">{{this.search.dest}}</div>
+          </li>
+        </ul>
+      </section>
+
+      <section style="margin-top: 20px">
+        <ul class="list list--inset">
+          <li class="list-item list--inset__item list-item--tappable">
+            <div class="list-item__left">
+              <ons-icon icon="fa-clock-o"></ons-icon>
+            </div>
+            <div class="list-item__center">現在時刻</div>
+          </li>
+
+        </ul>
+
+        <ul class="list list--inset" style="margin-top: 10px">
+          <li class="list-item list--inset__item list-item--tappable">
+            <div class="list-item__left">
+              <ons-icon icon="fa-group"></ons-icon>
+            </div>
+            <div class="list-item__center">人数</div>
+          </li>
+        </ul>
+
+      </section>
+
+      <div style="text-align: center">
+        <ons-button class="button--large--cta" style="width: 80%; margin: 40px auto;" ng-click="navi.pushPage( 'timeline.html')">
+          検索
+        </ons-button>
+      </div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="search.html">
+    <ons-page ng-controller="SearchController as sc">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">{{sc.title}}を選択</div>
+      </ons-toolbar>
+
+      <div class="navigation-bar">
+        <div class="navigation-bar__center">
+          <input type="search" class="search-input" ng-model="spot_name" style="width: 96%; margin: 6px auto 6px auto;" placeholder="Search">
+        </div>
+      </div>
+
+      <section>
+        <div class="tabbar tabbar--top tabbar--top-border">
+          <label class="tabbar__item tabbar--top-border__item">
+            <input type="radio" name="top-tabbar-b" checked="checked">
+            <button class="tabbar__button tabbar--top-border__button">
+              周辺
+            </button>
+          </label>
+
+          <label class="tabbar__item tabbar--top-border__item">
+            <input type="radio" name="top-tabbar-b">
+            <button class="tabbar__button tabbar--top-border__button">
+              履歴
+            </button>
+          </label>
+
+          <label class="tabbar__item tabbar--top-border__item">
+            <input type="radio" name="top-tabbar-b">
+            <button class="tabbar__button tabbar--top-border__button">
+              人気
+            </button>
+          </label>
+        </div>
+      </section>
+
+      <section>
+        <ons-list>
+          <ons-list-item ng-repeat="i in sc.surroundings|filter: {spot_name: spot_name}" ng-click="sc.setSpot(i.spot_name)" modifier="chevron tappable">
+            <div style="width: 70%" class="list__item__center">
+              <div class="spot_name">{{i.spot_name}}</div>
+            </div>
+            <div class="sc-list__item__right">
+              <div class="distance">{{i.distance}}</div>
+            </div>
+          </ons-list-item>
+        </ons-list>
+      </section>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="timeline.html">
+    <ons-page ng-controller="TimeLineController as tl">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>Back</ons-back-button>
+
+        </div>
+        <div class="center">
+          検索結果
+        </div>
+        <div class="right">
+          <ons-toolbar-button>
+            <ons-icon icon="ion-plus"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+
+      <section style="margin-top: 20px">
+        <div style="padding: 1px 0 0 0;">
+          <div class="card">
+            <div class="card__content">
+              <div>{{tl.time}}{{tl.search_type}}</div>
+              <div>出発: {{tl.src}}</div>
+              <div>到着: {{tl.dest}}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top: 20px">
+        <ons-list class="plan-list">
+          <ons-list-item ng-repeat="r in tl.result" modifier="chevron tappable" class="plan" ng-click="navi.pushPage('timeline_detail.html')">
+
+            <ons-row>
+              <ons-col class="plan-right">
+                <div class="plan-name">
+                  {{r.start_time}}
+                  <ons-icon icon="fa-long-arrow-right"></ons-icon>
+                  {{r.arrival_time}}
+                </div>
+
+                <div class="plan-info">
+                  <div>
+                    <ons-icon class="plan-icon" icon="fa-clock-o"></ons-icon>{{r.time_required}}
+                  </div>
+
+                  <div>
+                    <ons-icon class="plan-icon" icon="fa-yen"></ons-icon>{{r.fee}}
+                  </div>
+                </div>
+
+                <div class="plan-transportation">
+                  <ons-icon ng-repeat="t in r.transportation" icon="{{t}}">
+                    <ons-icon ng-style="{display: $last ? 'none' : 'inline'}" style="margin-right: 7px" icon="angle-right"></ons-icon>
+                  </ons-icon>
+                </div>
+              </ons-col>
+
+              <ons-col width="0px" class="plan-center" style="backgroundColor: #ccc">
+              </ons-col>
+
+              <ons-col ng-style="{display: r.information.length == 0 ? 'none': 'inline'}" width="40%" class="plan-left">
+                交通情報あり
+                <div class="plan-date">
+                  <ons-icon ng-repeat="icon in r.information" icon="{{icon}}" style="margin-right: 6px"></ons-icon>
+                </div>
+              </ons-col>
+            </ons-row>
+          </ons-list-item>
+
+        </ons-list>
+      </section>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="timeline_detail.html">
+    <ons-page ng-controller="TimeLineDetailController as td">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>Back</ons-back-button>
+
+        </div>
+        <div class="center">
+          ルート詳細
+        </div>
+        <div class="right">
+          <ons-toolbar-button>
+            <ons-icon icon="ion-plus"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+
+      <section style="margin: 20px 0">
+        <div style="padding: 1px 0 0 0;">
+          <div class="card">
+            <div class="card__content">
+              <div style="margin-bottom: 10px">
+                {{td.detail.time_required}} <i style="margin-left: 5px">{{td.detail.fee}}</i>
+              </div>
+              <div>出発: {{td.detail.src}}</div>
+              <div>到着: {{td.detail.dest}}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-bottom: 20px">
+        <ons-list class="plan-list list--inset">
+          <ons-list-item modifier="chevron tappable">
+            <i style="margin-right: 20px">{{td.detail.start.time}}</i> {{td.detail.start.spot_name}}
+          </ons-list-item>
+        </ons-list>
+
+        <div ng-repeat="w in td.detail.waypoint">
+          <ons-row>
+            <ons-col width="15%" class="plan-left">
+              <div style="text-align: center; display: flex; align-items: center; height: 100%; font-size: 110%">
+                <div style="position: relative; z-index: 1; right: -80%; background-color: white; height: 35px; width: 42px; padding: 2px; border: 1px solid">
+                  <ons-icon icon="{{w.transportation}}"></ons-icon>
+                  <div style="font-size: 80%">{{w.time_required}}</div>
+                </div>
+              </div>
+            </ons-col>
+
+            <ons-col width="6px" class="plan-center" style="backgroundColor: #ccc">
+            </ons-col>
+
+            <ons-col style="padding: 15px 30px">
+              <div>{{w.transportation_text}}</div>
+              <ons-icon icon="{{w.information_icon}}">{{w.information_text}}</ons-icon>
+              <div style="margin-top: 6px; text-align: right">{{w.fee}}</div>
+            </ons-col>
+          </ons-row>
+
+          <ons-list class="plan-list list--inset">
+            <ons-list-item modifier="chevron tappable" ng-click="navi.pushPage('spot.html')">
+              <i style="margin-right: 20px">{{w.arrival_time}}</i> {{w.spot_name}}
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </section>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="spot.html">
+    <ons-page ng-controller="SpotController as sp">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">{{sp.name}}</div>
+      </ons-toolbar>
+
+      <div class="spot-card" style="background-image: url(images/sushi-bg.jpg);">
+      </div>
+
+      <ons-list class="list list--inset" style="margin-top: 20px;">
+        <ons-list-item modifier="chevron tappable" class="list-item-container">
+          <div class="list-item-content">
+            <div class="spot-label">住所</div>
+            <span class="desc">{{sp.address}}</span>
+          </div>
+        </ons-list-item>
+        <ons-list-item modifier="chevron tappable" class="list-item-container">
+          <div class="list-item-content">
+            <div class="spot-label">営業時間</div>
+            <span class="desc">{{sp.open_hours}}</span>
+          </div>
+        </ons-list-item>
+        <ons-list-item modifier="chevron tappable" class="list-item-container">
+          <div class="list-item-content">
+            <div class="spot-label">料金</div>
+            <span class="desc">{{sp.fee}}</span>
+          </div>
+        </ons-list-item>
+        <ons-list-item modifier="chevron tappable" class="list-item-container">
+          <div class="list-item-content">
+            <div class="spot-label">概要</div>
+            <span class="desc">{{sp.desc}}</span>
+          </div>
+        </ons-list-item>
+      </ons-list>
+
+    </ons-page>
+  </ons-template>
+
+</body>
+
+</html>

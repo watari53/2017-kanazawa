@@ -1,0 +1,84 @@
+/* search.html */
+.distance {
+  color: #9E9E9E;
+}
+.sc-list__item__right {
+  padding-left: 16px;
+}
+
+/* timeline.html */
+.plan-list {
+  border-top: none;
+  background-image: none !important;
+}
+.plan {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.plan-left {
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 10px 10px 0;
+}
+.plan-center {
+  background-color: #3399ff;
+  margin-right: 8px;
+  opacity: 0.5;
+}
+.plan-right {
+  padding: 8px 40px 8px 10px;
+}
+.plan-date {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-top: 6px;
+  font-weight: 500;
+}
+.plan-name {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+.plan-info {
+  opacity: 0.4;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.plan-icon {
+  width: 12px;
+  margin-right: 2px;
+}
+
+/* spot.html */
+.page--shop-details__content {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px !important;
+  bottom: 0px;
+}
+.spot-card {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 250px;
+}
+.list-item-container {
+  width: 100%;
+  margin-bottom: auto;
+}
+.list-item-content {
+  margin-right: 30px;
+}
+.spot-label {
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 15px;
+  margin-bottom: 6px;
+  padding-left: 8px;
+  border-left: 4px solid #ccc;
+}
+.desc {
+  font-size: 14px;
+  line-height: 16px;
+}
