@@ -49,6 +49,53 @@ ons.bootstrap()
         }
       ];
     };
+    service.getTimeLineDetail = function() {
+      return {
+        time_required: "1時間21分",
+        fee          : "520円",
+        src          : "現在地",
+        dest         : "兼六園",
+        start        : {
+          spot_name: "現在地",
+          time     : "13:22",
+        },
+        waypoint: [
+          {
+            spot_name          : "経由地１",
+            arrival_time       : "13:40",
+            transportation     : walk,
+            transportation_text: "徒歩",
+            fee                : "210円",
+            information_icon   : rain,
+            information_text   : "雨天注意",
+            time_required      : "10分",
+            map_url            : "~~~"
+          },
+          {
+            spot_name          : "経由地２",
+            arrival_time       : "14:30",
+            transportation     : bus,
+            transportation_text: "城下町周遊バス右回りルート",
+            fee                : "210円",
+            information_icon   : traffic_jam,
+            information_text   : "渋滞情報あり 5分の遅れ",
+            time_required      : "50分",
+            map_url            : "~~~",
+          },
+          {
+            spot_name          : "兼六園",
+            arrival_time       : "14:43",
+            transportation     : bicycle,
+            transportation_text: "自転車",
+            fee                : "210円",
+            information_icon   : rain,
+            information_text   : "雨天注意",
+            time_required      : "50分",
+            map_url            : "~~~",
+          }
+        ]
+      };
+    };
     return service;
   })
   .controller('AppController', function($scope) {
@@ -74,52 +121,8 @@ ons.bootstrap()
     this.src = "現在地";
     this.dest = "兼六園";
     this.result = DataService.getTimeLines();
-  }).controller('TimeLineDetailController', function() {
-    this.detail = {
-      time_required: "1時間21分",
-      fee          : "520円",
-      src          : "現在地",
-      dest         : "兼六園",
-      start        : {
-        spot_name: "現在地",
-        time     : "13:22",
-      },
-      waypoint: [
-        {
-          spot_name          : "経由地１",
-          arrival_time       : "13:40",
-          transportation     : walk,
-          transportation_text: "徒歩",
-          fee                : "210円",
-          information_icon   : rain,
-          information_text   : "雨天注意",
-          time_required      : "10分",
-          map_url            : "~~~"
-        },
-        {
-          spot_name          : "経由地２",
-          arrival_time       : "14:30",
-          transportation     : bus,
-          transportation_text: "城下町周遊バス右回りルート",
-          fee                : "210円",
-          information_icon   : traffic_jam,
-          information_text   : "渋滞情報あり 5分の遅れ",
-          time_required      : "50分",
-          map_url            : "~~~",
-        },
-        {
-          spot_name          : "兼六園",
-          arrival_time       : "14:43",
-          transportation     : bicycle,
-          transportation_text: "自転車",
-          fee                : "210円",
-          information_icon   : rain,
-          information_text   : "雨天注意",
-          time_required      : "50分",
-          map_url            : "~~~",
-        }
-      ]
-    };
+  }).controller('TimeLineDetailController', function(DataService) {
+    this.detail = DataService.getTimeLineDetail();
 })
 .controller('SpotController', function() {
   this.name = "兼六園";
