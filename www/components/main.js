@@ -8,25 +8,41 @@ traffic_jam = "fa-ban";
 no_bicycle  = "fa-meh-o";
 
 ons.bootstrap()
+  .service('DataService', function() {
+    var service = {};
+
+    service.getSurroundings = function() {
+      return [
+        {spot_name: "兼六園", distance: "500m"},
+        {spot_name: "近江町市場", distance: "600m"},
+        {spot_name: "金沢駅", distance: "780m"},
+        {spot_name: "金沢21世紀美術館", distance: "1km"},
+        {spot_name: "金沢城", distance: "1.6km"},
+        {spot_name: "西茶屋街", distance: "2km"}
+      ];
+    }
+    return service;
+  })
   .controller('AppController', function($scope) {
-      $scope.application_name = "金沢乗換案内";
+    $scope.application_name = "金沢乗換案内";
     $scope.search = {src: "出発地を選択", dest: "到着地を選択"};
     this.go_search = function(search_type) {
       navi.pushPage('search.html',  {data: {search_type: search_type}});
     }
   })
-  .controller('SearchController', function($scope) {
+  .controller('SearchController', function($scope, [DataService]) {
     var type = {src: "出発地", dest: "到着地"}
     var search_type = navi.topPage.data.search_type; // src or dest
     this.title = type[search_type];
-    this.surroundings = [
-      {spot_name: "兼六園", distance: "500m"},
-      {spot_name: "近江町市場", distance: "600m"},
-      {spot_name: "金沢駅", distance: "780m"},
-      {spot_name: "金沢21世紀美術館", distance: "1km"},
-      {spot_name: "金沢城", distance: "1.6km"},
-      {spot_name: "西茶屋街", distance: "2km"}
-    ];
+    this.surroundings = DataService.getSurroundings();
+    // this.surroundings = [
+    //   {spot_name: "兼六園", distance: "500m"},
+    //   {spot_name: "近江町市場", distance: "600m"},
+    //   {spot_name: "金沢駅", distance: "780m"},
+    //   {spot_name: "金沢21世紀美術館", distance: "1km"},
+    //   {spot_name: "金沢城", distance: "1.6km"},
+    //   {spot_name: "西茶屋街", distance: "2km"}
+    // ];
     this.setSpot = function(spot_name) {
       $scope.search[search_type] = spot_name;
       navi.popPage();
