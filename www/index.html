@@ -284,7 +284,7 @@
         <div class="left">
           <ons-back-button>Back</ons-back-button>
         </div>
-        <div class="center">{{sp.name}}</div>
+        <div class="center">{{sp.data.name}}</div>
       </ons-toolbar>
 
       <div class="spot-card" style="background-image: url(images/sushi-bg.jpg);">
@@ -294,25 +294,25 @@
         <ons-list-item modifier="chevron tappable" class="list-item-container">
           <div class="list-item-content">
             <div class="spot-label">住所</div>
-            <span class="desc">{{sp.address}}</span>
+            <span class="desc">{{sp.data.address}}</span>
           </div>
         </ons-list-item>
         <ons-list-item modifier="chevron tappable" class="list-item-container">
           <div class="list-item-content">
             <div class="spot-label">営業時間</div>
-            <span class="desc">{{sp.open_hours}}</span>
+            <span class="desc">{{sp.data.open_hours}}</span>
           </div>
         </ons-list-item>
         <ons-list-item modifier="chevron tappable" class="list-item-container">
           <div class="list-item-content">
             <div class="spot-label">料金</div>
-            <span class="desc">{{sp.fee}}</span>
+            <span class="desc">{{sp.data.fee}}</span>
           </div>
         </ons-list-item>
         <ons-list-item modifier="chevron tappable" class="list-item-container">
           <div class="list-item-content">
             <div class="spot-label">概要</div>
-            <span class="desc">{{sp.desc}}</span>
+            <span class="desc">{{sp.data.desc}}</span>
           </div>
         </ons-list-item>
       </ons-list>
