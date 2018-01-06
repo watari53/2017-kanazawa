@@ -58,7 +58,7 @@ ons.bootstrap()
       navi.pushPage('search.html',  {data: {search_type: search_type}});
     }
   })
-  .controller('SearchController', function($scope, [DataService]) {
+  .controller('SearchController', function($scope, DataService) {
     var type = {src: "出発地", dest: "到着地"}
     var search_type = navi.topPage.data.search_type; // src or dest
     this.title = type[search_type];
@@ -74,32 +74,6 @@ ons.bootstrap()
     this.src = "現在地";
     this.dest = "兼六園";
     this.result = DataService.getTimeLines();
-    // this.result = [
-    //   {
-    //     start_time      : "13:22",
-    //     arrival_time    : "14:43",
-    //     time_required   : "1時間21分",
-    //     fee             : "520円",
-    //     transportation  : [walk, bicycle, bus, goal],
-    //     information     : [rain, traffic_jam, no_bicycle]
-    //   },
-    //   {
-    //     start_time      : "13:22",
-    //     arrival_time    : "14:43",
-    //     time_required   : "1時間21分",
-    //     fee             : "520円",
-    //     transportation  : [walk, bus, goal],
-    //     information     : [rain, no_bicycle]
-    //   },
-    //   {
-    //     start_time      : "13:22",
-    //     arrival_time    : "14:43",
-    //     time_required   : "1時間21分",
-    //     fee             : "520円",
-    //     transportation  : [walk, goal],
-    //     information     : []
-    //   }
-    // ];
   }).controller('TimeLineDetailController', function() {
     this.detail = {
       time_required: "1時間21分",
