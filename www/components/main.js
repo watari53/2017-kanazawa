@@ -20,7 +20,35 @@ ons.bootstrap()
         {spot_name: "金沢城", distance: "1.6km"},
         {spot_name: "西茶屋街", distance: "2km"}
       ];
-    }
+    };
+    service.getTimeLines = function() {
+      return [
+        {
+          start_time      : "13:22",
+          arrival_time    : "14:43",
+          time_required   : "1時間21分",
+          fee             : "520円",
+          transportation  : [walk, bicycle, bus, goal],
+          information     : [rain, traffic_jam, no_bicycle]
+        },
+        {
+          start_time      : "13:22",
+          arrival_time    : "14:43",
+          time_required   : "1時間21分",
+          fee             : "520円",
+          transportation  : [walk, bus, goal],
+          information     : [rain, no_bicycle]
+        },
+        {
+          start_time      : "13:22",
+          arrival_time    : "14:43",
+          time_required   : "1時間21分",
+          fee             : "520円",
+          transportation  : [walk, goal],
+          information     : []
+        }
+      ];
+    };
     return service;
   })
   .controller('AppController', function($scope) {
@@ -35,50 +63,43 @@ ons.bootstrap()
     var search_type = navi.topPage.data.search_type; // src or dest
     this.title = type[search_type];
     this.surroundings = DataService.getSurroundings();
-    // this.surroundings = [
-    //   {spot_name: "兼六園", distance: "500m"},
-    //   {spot_name: "近江町市場", distance: "600m"},
-    //   {spot_name: "金沢駅", distance: "780m"},
-    //   {spot_name: "金沢21世紀美術館", distance: "1km"},
-    //   {spot_name: "金沢城", distance: "1.6km"},
-    //   {spot_name: "西茶屋街", distance: "2km"}
-    // ];
     this.setSpot = function(spot_name) {
       $scope.search[search_type] = spot_name;
       navi.popPage();
     }
   })
-  .controller('TimeLineController', function() {
+  .controller('TimeLineController', function(DataService) {
     this.search_type = "出発";
     this.time = "2018年2月17日 14:30";
     this.src = "現在地";
     this.dest = "兼六園";
-    this.result = [
-      {
-        start_time      : "13:22",
-        arrival_time    : "14:43",
-        time_required   : "1時間21分",
-        fee             : "520円",
-        transportation  : [walk, bicycle, bus, goal],
-        information     : [rain, traffic_jam, no_bicycle]
-      },
-      {
-        start_time      : "13:22",
-        arrival_time    : "14:43",
-        time_required   : "1時間21分",
-        fee             : "520円",
-        transportation  : [walk, bus, goal],
-        information     : [rain, no_bicycle]
-      },
-      {
-        start_time      : "13:22",
-        arrival_time    : "14:43",
-        time_required   : "1時間21分",
-        fee             : "520円",
-        transportation  : [walk, goal],
-        information     : []
-      }
-    ];
+    this.result = DataService.getTimeLines();
+    // this.result = [
+    //   {
+    //     start_time      : "13:22",
+    //     arrival_time    : "14:43",
+    //     time_required   : "1時間21分",
+    //     fee             : "520円",
+    //     transportation  : [walk, bicycle, bus, goal],
+    //     information     : [rain, traffic_jam, no_bicycle]
+    //   },
+    //   {
+    //     start_time      : "13:22",
+    //     arrival_time    : "14:43",
+    //     time_required   : "1時間21分",
+    //     fee             : "520円",
+    //     transportation  : [walk, bus, goal],
+    //     information     : [rain, no_bicycle]
+    //   },
+    //   {
+    //     start_time      : "13:22",
+    //     arrival_time    : "14:43",
+    //     time_required   : "1時間21分",
+    //     fee             : "520円",
+    //     transportation  : [walk, goal],
+    //     information     : []
+    //   }
+    // ];
   }).controller('TimeLineDetailController', function() {
     this.detail = {
       time_required: "1時間21分",
