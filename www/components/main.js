@@ -56,17 +56,17 @@ ons.bootstrap()
     $scope.search = {src: "出発地を選択", dest: "到着地を選択"};
     this.go_search = function(search_type) {
       navi.pushPage('search.html',  {data: {search_type: search_type}});
-    }
+    };
   })
   .controller('SearchController', function($scope, DataService) {
-    var type = {src: "出発地", dest: "到着地"}
+    var type = {src: "出発地", dest: "到着地"};
     var search_type = navi.topPage.data.search_type; // src or dest
     this.title = type[search_type];
     this.surroundings = DataService.getSurroundings();
     this.setSpot = function(spot_name) {
       $scope.search[search_type] = spot_name;
       navi.popPage();
-    }
+    };
   })
   .controller('TimeLineController', function(DataService) {
     this.search_type = "出発";
