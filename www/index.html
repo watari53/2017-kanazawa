@@ -92,35 +92,37 @@
         <div class="center">{{sc.title}}を選択</div>
       </ons-toolbar>
 
-      <div class="navigation-bar">
-        <div class="navigation-bar__center">
-          <input type="search" class="search-input" ng-model="spot_name" style="width: 96%; margin: 6px auto 6px auto;" placeholder="Search">
+      <section style="background: #dcdcdc; padding-top: 10px">
+        <div class="navigation-bar">
+          <div class="navigation-bar__center" style="text-align: center">
+            <input type="search" class="search-input search-input--material" ng-model="spot_name" style="width: 90%; margin: 6px auto 6px auto;" placeholder="{{sc.title}}を入力">
+          </div>
         </div>
-      </div>
 
-      <section>
-        <div class="tabbar tabbar--top tabbar--top-border">
-          <label class="tabbar__item tabbar--top-border__item">
-            <input type="radio" name="top-tabbar-b" checked="checked">
-            <button class="tabbar__button tabbar--top-border__button">
-              周辺
-            </button>
-          </label>
+        <section>
+          <div style="background: #dcdcdc" class="tabbar tabbar--top tabbar--top-border">
+            <label class="tabbar__item tabbar--top-border__item">
+              <input type="radio" name="top-tabbar-b" checked="checked">
+              <button class="tabbar__button tabbar--top-border__button">
+                周辺
+              </button>
+            </label>
 
-          <label class="tabbar__item tabbar--top-border__item">
-            <input type="radio" name="top-tabbar-b">
-            <button class="tabbar__button tabbar--top-border__button">
-              履歴
-            </button>
-          </label>
+            <label class="tabbar__item tabbar--top-border__item">
+              <input type="radio" name="top-tabbar-b">
+              <button class="tabbar__button tabbar--top-border__button">
+                履歴
+              </button>
+            </label>
 
-          <label class="tabbar__item tabbar--top-border__item">
-            <input type="radio" name="top-tabbar-b">
-            <button class="tabbar__button tabbar--top-border__button">
-              人気
-            </button>
-          </label>
-        </div>
+            <label class="tabbar__item tabbar--top-border__item">
+              <input type="radio" name="top-tabbar-b">
+              <button class="tabbar__button tabbar--top-border__button">
+                人気
+              </button>
+            </label>
+          </div>
+        </section>
       </section>
 
       <section>
