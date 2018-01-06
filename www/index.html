@@ -22,21 +22,20 @@
   <ons-template id="page.html">
     <ons-page>
       <ons-toolbar>
-        <div class="left">
-          <ons-back-button>Back</ons-back-button>
-        </div>
+        <div class="left"> </div>
         <div class="center">{{this.application_name}}</div>
+        <div class="right"> </div>
       </ons-toolbar>
 
-      <section style="margin-top: 20px">
+      <section style="margin-top: 30px">
         <ul class="list list--inset">
-          <li class="list-item list--inset__item list-item--tappable" ng-click='app.go_search("src")'>
+          <li class="list-item list--inset__item list-item--tappable input-area" ng-click='app.go_search("src")'>
             <div class="list-item__left">
               <span class="notification" style="background-color:#0080FF">出発</span>
             </div>
             <div id="src" class="list-item__center">{{this.search.src}}</div>
           </li>
-          <li class="list-item list--inset__item list-item--tappable" ng-click='app.go_search("dest")'>
+          <li class="list-item list--inset__item list-item--tappable input-area" ng-click='app.go_search("dest")'>
             <div class="list-item__left">
               <span class="notification style=" background-color:#FF0080 ">到着</span>
             </div>
@@ -47,28 +46,36 @@
 
       <section style="margin-top: 20px">
         <ul class="list list--inset">
-          <li class="list-item list--inset__item list-item--tappable">
-            <div class="list-item__left">
+          <li ng-click="app.setTime()" class="list-item list--inset__item list-item--tappable input-area">
+            <div class="list-item__left" style="width: 30px">
               <ons-icon icon="fa-clock-o"></ons-icon>
             </div>
-            <div class="list-item__center">現在時刻</div>
+            <div class="list-item__center">
+              {{this.time | date: "M月d日（EEE）a hh時mm分"}}
+            </div>
           </li>
-
         </ul>
 
         <ul class="list list--inset" style="margin-top: 10px">
-          <li class="list-item list--inset__item list-item--tappable">
-            <div class="list-item__left">
+          <li class="list-item list--inset__item input-area">
+            <div class="list-item__left" style="width: 30px">
               <ons-icon icon="fa-group"></ons-icon>
             </div>
-            <div class="list-item__center">人数</div>
+            <div class="list-item__center">
+              人数：{{this.people_n}}人
+            </div>
+            <div class="list-item__right">
+              <button ng-click="this.people_n=this.people_n-1" class="fab fab--material fab--mini" ng-disabled="this.people_n==1"><i class="zmdi zmdi-minus"></i></button>
+              <i style="width: 5px"></i>
+              <button ng-click="this.people_n=this.people_n+1" class="fab fab--material fab--mini"><i class="zmdi zmdi-plus"></i></button>
+            </div>
           </li>
         </ul>
 
       </section>
 
       <div style="text-align: center">
-        <ons-button class="button--large--cta" style="width: 80%; margin: 40px auto;" ng-click="navi.pushPage( 'timeline.html')">
+        <ons-button class="button--material button--large--cta" style="width: 80%; margin: 40px auto;" ng-click="navi.pushPage('timeline.html')">
           検索
         </ons-button>
       </div>

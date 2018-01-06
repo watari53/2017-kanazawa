@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "mobi.monaca.plugins.Monaca"
+        "mobi.monaca.plugins.Monaca",
+        "mobi.monaca.plugins.datepicker@1.0.1"
     ],
     "framework_version": "3.5",
     "xcode_version": "8",

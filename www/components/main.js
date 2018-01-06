@@ -111,9 +111,26 @@ ons.bootstrap()
   .controller('AppController', function($scope) {
     $scope.application_name = "金沢乗換案内";
     $scope.search = {src: "出発地を選択", dest: "到着地を選択"};
+    $scope.time = "現在時刻";
+    $scope.people_n = 1;
     this.go_search = function(search_type) {
       navi.pushPage('search.html',  {data: {search_type: search_type}});
     };
+    this.setTime = function() {
+        var time = new Date();
+
+        // Same handling for iPhone and Android
+        window.plugins.datePicker.show({
+            date : time,
+            mode : 'time', // date or time or blank for both
+            allowOldDates : true
+        }, function(returnDate) {
+            var newTime = new Date(returnDate);
+            // alert(newTime.toString());
+            $scope.time = newTime;
+            $scope.$apply();
+        });
+      };
   })
   .controller('SearchController', function($scope, DataService) {
     var type = {src: "出発地", dest: "到着地"};
