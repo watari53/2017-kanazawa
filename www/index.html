@@ -75,7 +75,7 @@
       </section>
 
       <div style="text-align: center">
-        <ons-button class="button--material button--large--cta" style="width: 80%; margin: 40px auto;" ng-click="navi.pushPage('timeline.html')">
+        <ons-button class="button--material button--large--cta" style="width: 80%; margin: 40px auto;" ng-click="app.go_timeline()">
           検索
         </ons-button>
       </div>
@@ -328,6 +328,14 @@
 
     </ons-page>
   </ons-template>
+
+  <ons-modal var="modal" direction="up">
+    <div style="text-align: center">
+      <p>
+      <ons-icon icon="md-spinner" size="28px" spin></ons-icon> Loading...
+      </p>
+    </div>
+  </ons-modal>
 
 </body>
 
