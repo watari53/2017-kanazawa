@@ -1,0 +1,37 @@
+{
+	"surroundings" : [
+        {"spot_name" : "兼六園",     "distance": "500m"},
+        {"spot_name" : "近江町市場", "distance": "600m"},
+        {"spot_name" : "金沢駅",     "distance": "780m"},
+        {"spot_name" : "金沢21世紀美術館", "distance": "1km"},
+        {"spot_name" : "金沢城",     "distance": "1.6km"},
+        {"spot_name" : "西茶屋街",   "distance": "2km"}
+      ],
+
+	"timeline": [
+        {
+          "start_time"      : "13:22",
+          "arrival_time"    : "14:43",
+          "time_required"   : "1時間21分",
+          "fee"             : "520円",
+          "transportation"  : [walk, bicycle, bus, goal],
+          "information"     : [rain, traffic_jam, no_bicycle]
+        },
+        {
+			"start_time"    : "13:22",
+			"arrival_time"  : "14:43",
+			"time_required" : "1時間21分",
+			"fee"           : "520円",
+			"transportation": [walk, bus, goal],
+			"information"   : [rain, no_bicycle]
+        },
+        {
+          "start_time"     : "13:22",
+          "arrival_time"   : "14:43",
+          "time_required"  : "1時間21分",
+          "fee"            : "520円",
+          "transportation" : [walk, goal],
+          "information"    : []
+        }
+      ],
+}

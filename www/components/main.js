@@ -11,7 +11,11 @@ wp_color    = {
               };
 
 ons.bootstrap()
-  .service('DataService', function() {
+  .service('DataService', function($http) {
+    var sample_data;
+    $http.get("data.json").then(function(response){
+      sample_data = response.data;
+    })
     var service = {};
 
     service.getSurroundings = function() {
