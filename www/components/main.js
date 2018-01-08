@@ -12,15 +12,95 @@ wp_color    = {
 
 // sample data
 var sample = {
-  surroundings = [
+  surroundings : [
     {spot_name: "兼六園", distance: "500m"},
     {spot_name: "近江町市場", distance: "600m"},
     {spot_name: "金沢駅", distance: "780m"},
     {spot_name: "金沢21世紀美術館", distance: "1km"},
     {spot_name: "金沢城", distance: "1.6km"},
     {spot_name: "西茶屋街", distance: "2km"}
-  ];
-}
+  ],
+  timeline : [
+    {
+      start_time      : "13:22",
+      arrival_time    : "14:43",
+      time_required   : "1時間21分",
+      fee             : "520円",
+      transportation  : [walk, bicycle, bus, goal],
+      information     : [rain, traffic_jam, no_bicycle]
+    },
+    {
+      start_time      : "13:22",
+      arrival_time    : "14:43",
+      time_required   : "1時間21分",
+      fee             : "520円",
+      transportation  : [walk, bus, goal],
+      information     : [rain, no_bicycle]
+    },
+    {
+      start_time      : "13:22",
+      arrival_time    : "14:43",
+      time_required   : "1時間21分",
+      fee             : "520円",
+      transportation  : [walk, goal],
+      information     : []
+    }
+  ],
+  timeline_detail : {
+    time_required: "1時間21分",
+    fee          : "520円",
+    src          : "現在地",
+    dest         : "兼六園",
+    start        : {
+      spot_name: "現在地",
+      time     : "13:22",
+    },
+    waypoint: [
+      {
+        spot_name          : "経由地１",
+        arrival_time       : "13:40",
+        transportation     : walk,
+        transportation_text: "徒歩",
+        fee                : "210円",
+        information_icon   : rain,
+        information_text   : "雨天注意",
+        time_required      : "10分",
+        map_url            : "~~~"
+      },
+      {
+        spot_name          : "経由地２",
+        arrival_time       : "14:30",
+        transportation     : bus,
+        transportation_text: "城下町周遊バス右回りルート",
+        fee                : "210円",
+        information_icon   : traffic_jam,
+        information_text   : "渋滞情報あり 5分の遅れ",
+        time_required      : "50分",
+        map_url            : "~~~",
+      },
+      {
+        spot_name          : "兼六園",
+        arrival_time       : "14:43",
+        transportation     : bicycle,
+        transportation_text: "自転車",
+        fee                : "210円",
+        information_icon   : rain,
+        information_text   : "雨天注意",
+        time_required      : "50分",
+        map_url            : "~~~",
+      }
+    ]
+  },
+  spotdata:{
+    name       : "兼六園",
+    desc       : "兼六園は、石川県金沢市にある日本庭園である。国の特別名勝に指定されている。広さは約11.7ヘクタール。 17世紀中期、加賀藩により金沢城の外郭に造営された藩庭を起源とする江戸時代を代表する池泉回遊式庭園であり、岡山市の後楽園と水戸市の偕楽園と並んで日本三名園の一つに数えられている。",
+    img        : "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/586", // or "images/dummy.png"
+    address    : "〒920-0936 石川県金沢市兼六町1",
+    location   : [36.562736 , 136.664166],
+    open_hours : "10:00~12:00, 13:00~18:00",
+    fee        : "大人200円 子供100円"
+  }
+};
 
 ons.bootstrap()
   .service('DataService', function() {
@@ -30,90 +110,13 @@ ons.bootstrap()
       return sample.surroundings;
     };
     service.getTimeLines = function() {
-      return [
-        {
-          start_time      : "13:22",
-          arrival_time    : "14:43",
-          time_required   : "1時間21分",
-          fee             : "520円",
-          transportation  : [walk, bicycle, bus, goal],
-          information     : [rain, traffic_jam, no_bicycle]
-        },
-        {
-          start_time      : "13:22",
-          arrival_time    : "14:43",
-          time_required   : "1時間21分",
-          fee             : "520円",
-          transportation  : [walk, bus, goal],
-          information     : [rain, no_bicycle]
-        },
-        {
-          start_time      : "13:22",
-          arrival_time    : "14:43",
-          time_required   : "1時間21分",
-          fee             : "520円",
-          transportation  : [walk, goal],
-          information     : []
-        }
-      ];
+      return sample.timeline;
     };
     service.getTimeLineDetail = function() {
-      return {
-        time_required: "1時間21分",
-        fee          : "520円",
-        src          : "現在地",
-        dest         : "兼六園",
-        start        : {
-          spot_name: "現在地",
-          time     : "13:22",
-        },
-        waypoint: [
-          {
-            spot_name          : "経由地１",
-            arrival_time       : "13:40",
-            transportation     : walk,
-            transportation_text: "徒歩",
-            fee                : "210円",
-            information_icon   : rain,
-            information_text   : "雨天注意",
-            time_required      : "10分",
-            map_url            : "~~~"
-          },
-          {
-            spot_name          : "経由地２",
-            arrival_time       : "14:30",
-            transportation     : bus,
-            transportation_text: "城下町周遊バス右回りルート",
-            fee                : "210円",
-            information_icon   : traffic_jam,
-            information_text   : "渋滞情報あり 5分の遅れ",
-            time_required      : "50分",
-            map_url            : "~~~",
-          },
-          {
-            spot_name          : "兼六園",
-            arrival_time       : "14:43",
-            transportation     : bicycle,
-            transportation_text: "自転車",
-            fee                : "210円",
-            information_icon   : rain,
-            information_text   : "雨天注意",
-            time_required      : "50分",
-            map_url            : "~~~",
-          }
-        ]
-      };
+      return sample.timeline_detail;
     };
     service.getSpotData = function() {
-      return {
-        name       : "兼六園",
-        desc       : "兼六園は、石川県金沢市にある日本庭園である。国の特別名勝に指定されている。広さは約11.7ヘクタール。 17世紀中期、加賀藩により金沢城の外郭に造営された藩庭を起源とする江戸時代を代表する池泉回遊式庭園であり、岡山市の後楽園と水戸市の偕楽園と並んで日本三名園の一つに数えられている。",
-        img        : "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/586", // or "images/dummy.png"
-        address    : "〒920-0936 石川県金沢市兼六町1",
-        location   : [36.562736 , 136.664166],
-        open_hours : "10:00~12:00, 13:00~18:00",
-        fee        : "大人200円 子供100円"
-      };
+      return sample.spotdata;
     };
     return service;
   })
