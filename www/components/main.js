@@ -27,7 +27,52 @@ var sample = {
       time_required   : "1時間21分",
       fee             : "520円",
       transportation  : [walk, bicycle, bus, goal],
-      information     : [rain, traffic_jam, no_bicycle]
+      information     : [rain, traffic_jam, no_bicycle],
+      timeline_detail : {
+        time_required: "1時間21分",
+        fee          : "520円",
+        src          : "現在地",
+        dest         : "兼六園",
+        start        : {
+          spot_name: "現在地",
+          time     : "13:22",
+        },
+        waypoint: [
+          {
+            spot_name          : "経由地１",
+            arrival_time       : "13:40",
+            transportation     : walk,
+            transportation_text: "徒歩",
+            fee                : "210円",
+            information_icon   : rain,
+            information_text   : "雨天注意",
+            time_required      : "10分",
+            map_url            : "~~~"
+          },
+          {
+            spot_name          : "経由地２",
+            arrival_time       : "14:30",
+            transportation     : bus,
+            transportation_text: "城下町周遊バス右回りルート",
+            fee                : "210円",
+            information_icon   : traffic_jam,
+            information_text   : "渋滞情報あり 5分の遅れ",
+            time_required      : "50分",
+            map_url            : "~~~",
+          },
+          {
+            spot_name          : "兼六園",
+            arrival_time       : "14:43",
+            transportation     : bicycle,
+            transportation_text: "自転車",
+            fee                : "210円",
+            information_icon   : rain,
+            information_text   : "雨天注意",
+            time_required      : "50分",
+            map_url            : "~~~",
+          }
+        ]
+      }
     },
     {
       start_time      : "13:22",
@@ -35,7 +80,52 @@ var sample = {
       time_required   : "1時間21分",
       fee             : "520円",
       transportation  : [walk, bus, goal],
-      information     : [rain, no_bicycle]
+      information     : [rain, no_bicycle],
+      timeline_detail : {
+        time_required: "1時間21分",
+        fee          : "520円",
+        src          : "現在地",
+        dest         : "兼六園",
+        start        : {
+          spot_name: "現在地",
+          time     : "13:22",
+        },
+        waypoint: [
+          {
+            spot_name          : "経由地１",
+            arrival_time       : "13:40",
+            transportation     : walk,
+            transportation_text: "徒歩",
+            fee                : "210円",
+            information_icon   : rain,
+            information_text   : "雨天注意",
+            time_required      : "10分",
+            map_url            : "~~~"
+          },
+          {
+            spot_name          : "経由地２",
+            arrival_time       : "14:30",
+            transportation     : bus,
+            transportation_text: "城下町周遊バス右回りルート",
+            fee                : "210円",
+            information_icon   : traffic_jam,
+            information_text   : "渋滞情報あり 5分の遅れ",
+            time_required      : "50分",
+            map_url            : "~~~",
+          },
+          {
+            spot_name          : "兼六園",
+            arrival_time       : "14:43",
+            transportation     : bicycle,
+            transportation_text: "自転車",
+            fee                : "210円",
+            information_icon   : rain,
+            information_text   : "雨天注意",
+            time_required      : "50分",
+            map_url            : "~~~",
+          }
+        ]
+      }
     },
     {
       start_time      : "13:22",
@@ -43,54 +133,54 @@ var sample = {
       time_required   : "1時間21分",
       fee             : "520円",
       transportation  : [walk, goal],
-      information     : []
+      information     : [],
+      timeline_detail : {
+        time_required: "1時間21分",
+        fee          : "520円",
+        src          : "現在地",
+        dest         : "兼六園",
+        start        : {
+          spot_name: "現在地",
+          time     : "13:22",
+        },
+        waypoint: [
+          {
+            spot_name          : "経由地１",
+            arrival_time       : "13:40",
+            transportation     : walk,
+            transportation_text: "徒歩",
+            fee                : "210円",
+            information_icon   : rain,
+            information_text   : "雨天注意",
+            time_required      : "10分",
+            map_url            : "~~~"
+          },
+          {
+            spot_name          : "経由地２",
+            arrival_time       : "14:30",
+            transportation     : bus,
+            transportation_text: "城下町周遊バス右回りルート",
+            fee                : "210円",
+            information_icon   : traffic_jam,
+            information_text   : "渋滞情報あり 5分の遅れ",
+            time_required      : "50分",
+            map_url            : "~~~",
+          },
+          {
+            spot_name          : "兼六園",
+            arrival_time       : "14:43",
+            transportation     : bicycle,
+            transportation_text: "自転車",
+            fee                : "210円",
+            information_icon   : rain,
+            information_text   : "雨天注意",
+            time_required      : "50分",
+            map_url            : "~~~",
+          }
+        ]
+      }
     }
   ],
-  timeline_detail : {
-    time_required: "1時間21分",
-    fee          : "520円",
-    src          : "現在地",
-    dest         : "兼六園",
-    start        : {
-      spot_name: "現在地",
-      time     : "13:22",
-    },
-    waypoint: [
-      {
-        spot_name          : "経由地１",
-        arrival_time       : "13:40",
-        transportation     : walk,
-        transportation_text: "徒歩",
-        fee                : "210円",
-        information_icon   : rain,
-        information_text   : "雨天注意",
-        time_required      : "10分",
-        map_url            : "~~~"
-      },
-      {
-        spot_name          : "経由地２",
-        arrival_time       : "14:30",
-        transportation     : bus,
-        transportation_text: "城下町周遊バス右回りルート",
-        fee                : "210円",
-        information_icon   : traffic_jam,
-        information_text   : "渋滞情報あり 5分の遅れ",
-        time_required      : "50分",
-        map_url            : "~~~",
-      },
-      {
-        spot_name          : "兼六園",
-        arrival_time       : "14:43",
-        transportation     : bicycle,
-        transportation_text: "自転車",
-        fee                : "210円",
-        information_icon   : rain,
-        information_text   : "雨天注意",
-        time_required      : "50分",
-        map_url            : "~~~",
-      }
-    ]
-  },
   spotdata:{
     name       : "兼六園",
     desc       : "兼六園は、石川県金沢市にある日本庭園である。国の特別名勝に指定されている。広さは約11.7ヘクタール。 17世紀中期、加賀藩により金沢城の外郭に造営された藩庭を起源とする江戸時代を代表する池泉回遊式庭園であり、岡山市の後楽園と水戸市の偕楽園と並んで日本三名園の一つに数えられている。",
@@ -169,6 +259,9 @@ ons.bootstrap()
     this.src = "現在地";
     this.dest = "兼六園";
     this.result = DataService.getTimeLines();
+    this.go_timelineDetail = function() {
+      navi.pushPage('timeline_detail.html');
+    }
   }).controller('TimeLineDetailController', function(DataService) {
     this.detail = DataService.getTimeLineDetail();
 })
