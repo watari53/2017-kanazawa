@@ -25,12 +25,12 @@ var sample = {
       start_time      : "13:22",
       arrival_time    : "14:43",
       time_required   : "1時間21分",
-      fee             : "520円",
+      fee             : "120円",
       transportation  : [walk, bicycle, bus, goal],
       information     : [rain, traffic_jam, no_bicycle],
       timeline_detail : {
         time_required: "1時間21分",
-        fee          : "520円",
+        fee          : "120円",
         src          : "現在地",
         dest         : "兼六園",
         start        : {
@@ -77,13 +77,13 @@ var sample = {
     {
       start_time      : "13:22",
       arrival_time    : "14:43",
-      time_required   : "1時間21分",
-      fee             : "520円",
+      time_required   : "2時間21分",
+      fee             : "220円",
       transportation  : [walk, bus, goal],
       information     : [rain, no_bicycle],
       timeline_detail : {
-        time_required: "1時間21分",
-        fee          : "520円",
+        time_required: "2時間21分",
+        fee          : "220円",
         src          : "現在地",
         dest         : "兼六園",
         start        : {
@@ -130,13 +130,13 @@ var sample = {
     {
       start_time      : "13:22",
       arrival_time    : "14:43",
-      time_required   : "1時間21分",
-      fee             : "520円",
+      time_required   : "3時間21分",
+      fee             : "320円",
       transportation  : [walk, goal],
       information     : [],
       timeline_detail : {
-        time_required: "1時間21分",
-        fee          : "520円",
+        time_required: "3時間31分",
+        fee          : "320円",
         src          : "現在地",
         dest         : "兼六園",
         start        : {
@@ -202,9 +202,6 @@ ons.bootstrap()
     service.getTimeLines = function() {
       return sample.timeline;
     };
-    service.getTimeLineDetail = function() {
-      return sample.timeline_detail;
-    };
     service.getSpotData = function() {
       return sample.spotdata;
     };
@@ -215,10 +212,9 @@ ons.bootstrap()
     $scope.search = {src: "出発地を選択", dest: "到着地を選択"};
     $scope.time = "現在時刻";
 
-
     $scope.people_n = 1;
     this.go_search = function(search_type) {
-      navi.pushPage('search.html',  {data: {search_type: search_type}});
+      navi.pushPage('search.html', {data: {search_type: search_type}});
     };
     this.setTime = function() {
       var time = new Date();
@@ -259,15 +255,15 @@ ons.bootstrap()
     this.src = "現在地";
     this.dest = "兼六園";
     this.result = DataService.getTimeLines();
-    this.go_timelineDetail = function() {
-      navi.pushPage('timeline_detail.html');
-    }
+    this.go_timelineDetail = function(timeline_detail) {
+      navi.pushPage('timeline_detail.html', {data: {timeline_detail: timeline_detail}});
+    };
   }).controller('TimeLineDetailController', function(DataService) {
-    this.detail = DataService.getTimeLineDetail();
-})
-.controller('SpotController', function(DataService) {
-  this.data = DataService.getSpotData();
-});
+    this.detail = navi.topPage.data.timeline_detail;
+  })
+  .controller('SpotController', function(DataService) {
+    this.data = DataService.getSpotData();
+  });
 ons.ready(function() {
   console.log("Onsen UI is ready!");
 });

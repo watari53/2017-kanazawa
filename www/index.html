@@ -171,7 +171,7 @@
 
       <section style="padding-top: 20px">
         <ons-list class="plan-list list--inset list--material">
-          <ons-list-item ng-repeat="r in tl.result" modifier="chevron tappable" class="plan" ng-click="go_timelineDetail()">
+          <ons-list-item ng-repeat="r in tl.result" modifier="chevron tappable" class="plan" ng-click="tl.go_timelineDetail(r.timeline_detail)">
 
             <ons-row>
               <ons-col class="plan-right">
