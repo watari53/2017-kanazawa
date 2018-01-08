@@ -92,7 +92,7 @@
         <div class="center">{{sc.title}}を選択</div>
       </ons-toolbar>
 
-      <section style="background: #dcdcdc; padding-top: 10px">
+      <section style="padding-top: 5px">
         <div class="navigation-bar">
           <div class="navigation-bar__center" style="text-align: center">
             <input type="search" class="search-input search-input--material" ng-model="spot_name" style="width: 90%; margin: 6px auto 6px auto;" placeholder="{{sc.title}}を入力">
@@ -100,7 +100,7 @@
         </div>
 
         <section>
-          <div style="background: #dcdcdc" class="tabbar tabbar--top tabbar--top-border">
+          <div class="tabbar tabbar--top tabbar--top-border">
             <label class="tabbar__item tabbar--top-border__item">
               <input type="radio" name="top-tabbar-b" checked="checked">
               <button class="tabbar__button tabbar--top-border__button">
@@ -146,21 +146,20 @@
       <ons-toolbar>
         <div class="left">
           <ons-back-button>Back</ons-back-button>
-
         </div>
         <div class="center">
           検索結果
         </div>
         <div class="right">
-          <ons-toolbar-button>
+          <!--<ons-toolbar-button>
             <ons-icon icon="ion-plus"></ons-icon>
-          </ons-toolbar-button>
+          </ons-toolbar-button>-->
         </div>
       </ons-toolbar>
 
-      <section style="margin-top: 20px">
+      <section style="padding-top: 20px">
         <div style="padding: 1px 0 0 0;">
-          <div class="card">
+          <div class="card card--material">
             <div class="card__content">
               <div>{{tl.time}}{{tl.search_type}}</div>
               <div>出発: {{tl.src}}</div>
@@ -170,8 +169,8 @@
         </div>
       </section>
 
-      <section style="margin-top: 20px">
-        <ons-list class="plan-list">
+      <section style="padding-top: 20px">
+        <ons-list class="plan-list list--inset list--material">
           <ons-list-item ng-repeat="r in tl.result" modifier="chevron tappable" class="plan" ng-click="navi.pushPage('timeline_detail.html')">
 
             <ons-row>
@@ -199,10 +198,10 @@
                 </div>
               </ons-col>
 
-              <ons-col width="0px" class="plan-center" style="backgroundColor: #ccc">
-              </ons-col>
+              <!--<ons-col width="0px" class="plan-center" style="backgroundColor: #ccc">
+              </ons-col>-->
 
-              <ons-col ng-style="{display: r.information.length == 0 ? 'none': 'inline'}" width="40%" class="plan-left">
+              <ons-col ng-style="{display: r.information.length == 0 ? 'none': 'inline'}" width="35%" class="plan-left">
                 交通情報あり
                 <div class="plan-date">
                   <ons-icon ng-repeat="icon in r.information" icon="{{icon}}" style="margin-right: 6px"></ons-icon>
@@ -266,7 +265,7 @@
               </div>
             </ons-col>
 
-            <ons-col width="6px" class="plan-center" style="backgroundColor: #ccc">
+            <ons-col width="6px" class="plan-center" style="background: #3399ff">
             </ons-col>
 
             <ons-col style="padding: 15px 30px">
@@ -296,7 +295,7 @@
         <div class="center">{{sp.data.name}}</div>
       </ons-toolbar>
 
-      <div class="spot-card" style="background-image: url(images/sushi-bg.jpg);">
+      <div class="spot-card" style='background-image: url("{{sp.data.img}}");'>
       </div>
 
       <ons-list class="list list--inset" style="margin-top: 20px;">

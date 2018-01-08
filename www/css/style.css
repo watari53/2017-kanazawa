@@ -1,3 +1,6 @@
+.page__background {
+  background: #dcdcdc;
+}
 /* top page */
 .input-area {
     height: 60px;
@@ -33,7 +36,6 @@
   padding: 10px 10px 10px 0;
 }
 .plan-center {
-  background-color: #3399ff;
   margin-right: 8px;
   opacity: 0.5;
 }

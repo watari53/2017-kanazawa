@@ -6,6 +6,9 @@ goal        = "fa-flag-o";
 rain        = "fa-umbrella";
 traffic_jam = "fa-ban";
 no_bicycle  = "fa-meh-o";
+wp_color    = {
+                walk: "#ccc",
+              };
 
 ons.bootstrap()
   .service('DataService', function() {
@@ -100,6 +103,7 @@ ons.bootstrap()
       return {
         name       : "兼六園",
         desc       : "兼六園は、石川県金沢市にある日本庭園である。国の特別名勝に指定されている。広さは約11.7ヘクタール。 17世紀中期、加賀藩により金沢城の外郭に造営された藩庭を起源とする江戸時代を代表する池泉回遊式庭園であり、岡山市の後楽園と水戸市の偕楽園と並んで日本三名園の一つに数えられている。",
+        img        : "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/586", // or "images/dummy.png"
         address    : "〒920-0936 石川県金沢市兼六町1",
         location   : [36.562736 , 136.664166],
         open_hours : "10:00~12:00, 13:00~18:00",
@@ -138,7 +142,7 @@ ons.bootstrap()
       setTimeout(function() {
         modal.hide();
         navi.pushPage('timeline.html');
-      }, 2000);
+      }, 0);
     };
   })
   .controller('SearchController', function($scope, DataService) {
