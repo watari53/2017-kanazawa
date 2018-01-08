@@ -10,23 +10,24 @@ wp_color    = {
                 walk: "#ccc",
               };
 
+// sample data
+var sample = {
+  surroundings = [
+    {spot_name: "兼六園", distance: "500m"},
+    {spot_name: "近江町市場", distance: "600m"},
+    {spot_name: "金沢駅", distance: "780m"},
+    {spot_name: "金沢21世紀美術館", distance: "1km"},
+    {spot_name: "金沢城", distance: "1.6km"},
+    {spot_name: "西茶屋街", distance: "2km"}
+  ];
+}
+
 ons.bootstrap()
-  .service('DataService', function($http) {
-    var sample_data;
-    $http.get("data.json").then(function(response){
-      sample_data = response.data;
-    })
+  .service('DataService', function() {
     var service = {};
 
     service.getSurroundings = function() {
-      return [
-        {spot_name: "兼六園", distance: "500m"},
-        {spot_name: "近江町市場", distance: "600m"},
-        {spot_name: "金沢駅", distance: "780m"},
-        {spot_name: "金沢21世紀美術館", distance: "1km"},
-        {spot_name: "金沢城", distance: "1.6km"},
-        {spot_name: "西茶屋街", distance: "2km"}
-      ];
+      return sample.surroundings;
     };
     service.getTimeLines = function() {
       return [
