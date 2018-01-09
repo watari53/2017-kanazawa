@@ -1065,7 +1065,7 @@ var sample = {
               "transportation_text": "徒歩",
               "fee": "0円",
               "information_icon": "fa-flag-o",
-              "information_text": null,
+              "information_text": "",
               "time_required": "32分",
               "map_url": "http://maps.apple.com/maps?q=36.560867,136.658258&z=16"
             }
@@ -1083,9 +1083,9 @@ var sample = {
           "fa-blind"
         ],
         "information": [
-          null,
-          null,
-          null
+          "",
+          "",
+          ""
         ],
         "timeline_detail": {
           "time_required": "31分",
@@ -1103,8 +1103,8 @@ var sample = {
               "transportation": "fa-blind",
               "transportation_text": "徒歩",
               "fee": "0円",
-              "information_icon": null,
-              "information_text": null,
+              "information_icon": "",
+              "information_text": "",
               "time_required": "14分",
               "map_url": "http://maps.apple.com/maps?q=36.571924,136.655905&z=16"
             },
@@ -1114,10 +1114,10 @@ var sample = {
               "transportation": "fa-bus",
               "transportation_text": "材木ルート",
               "fee": "500円",
-              "information_icon": null,
-              "information_text": null,
+              "information_icon": "",
+              "information_text": "",
               "time_required": "13分",
-              "map_url": null
+              "map_url": ""
             },
             {
               "spot_name": "金沢21世紀美術館",
@@ -1125,8 +1125,8 @@ var sample = {
               "transportation": "fa-blind",
               "transportation_text": "徒歩",
               "fee": "0円",
-              "information_icon": null,
-              "information_text": null,
+              "information_icon": "",
+              "information_text": "",
               "time_required": "04分",
               "map_url": "http://maps.apple.com/maps?q=36.560867,136.658258&z=16"
             }
@@ -1144,9 +1144,9 @@ var sample = {
           "fa-blind"
         ],
         "information": [
-          null,
+          "",
           "no_bicycle",
-          null
+          ""
         ],
         "timeline_detail": {
           "time_required": "15分",
@@ -1164,8 +1164,8 @@ var sample = {
               "transportation": "fa-blind",
               "transportation_text": "徒歩",
               "fee": "0円",
-              "information_icon": null,
-              "information_text": null,
+              "information_icon": "",
+              "information_text": "",
               "time_required": "03分",
               "map_url": "http://maps.apple.com/maps?q=36.577168896058,136.64741773723&z=16"
             },
@@ -1173,7 +1173,7 @@ var sample = {
               "spot_name": "広坂",
               "arrival_time": "12:14",
               "transportation": "fa-bicycle",
-              "transportation_text": null,
+              "transportation_text": "",
               "fee": "1000円",
               "information_icon": "no_bicycle",
               "information_text": "70分待つ恐れがあります。",
@@ -1186,8 +1186,8 @@ var sample = {
               "transportation": "fa-blind",
               "transportation_text": "徒歩",
               "fee": "0円",
-              "information_icon": null,
-              "information_text": null,
+              "information_icon": "",
+              "information_text": "",
               "time_required": "01分",
               "map_url": "http://maps.apple.com/maps?q=36.561412,136.657436&z=16"
             }
