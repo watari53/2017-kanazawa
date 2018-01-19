@@ -1057,7 +1057,6 @@ var sample = {
         "fa-flag-o"
       ],
       "information": [
-        null
       ],
       "timeline_detail": {
         "time_required": "33分",
@@ -1094,9 +1093,6 @@ var sample = {
         "fa-flag-o"
       ],
       "information": [
-        "",
-        "",
-        ""
       ],
       "timeline_detail": {
         "time_required": "32分",
@@ -1155,9 +1151,7 @@ var sample = {
         "fa-flag-o"
       ],
       "information": [
-        "",
-        "no_bicycle",
-        ""
+        "no_bicycle"
       ],
       "timeline_detail": {
         "time_required": "16分",
