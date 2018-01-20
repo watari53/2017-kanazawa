@@ -1036,16 +1036,65 @@ var sample = {
     }
   ],
   "spotdata": {
-    "name": "金沢21世紀美術館",
-    "desc": "金沢21世紀美術館は、兼六園に隣接し、中心部に位置しています。「新しい文化の創造」と「新たなまちの賑わいの創出」を目的に開設されました。ガラス張りの円形の建物で、誰もがいつでも立ち寄ることができる｢まちに開かれた公園のような美術館｣を目指しています。無料ゾーンにも作品があり、体感することができます。",
-    "address": "金沢市広坂1-2-1",
-    "location": [
-      "36.560867",
-      "136.658258"
-    ],
-    "open_hours": "展覧会ゾーン10:00～18:00（金・土は20:00　※チケットの販売は閉場の30分前まで）無料ゾーン9:00～22:00",
-    "fee": "美術館の建物への入館（交流ゾーン）　無料コレクション展　一般　360円、大学生・65歳以上　280円、高校生以下　無料※特別展は展覧会毎に異なります。",
-    "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
+    "金沢21世紀美術館": {
+      "desc": "金沢21世紀美術館は、兼六園に隣接し、中心部に位置しています。「新しい文化の創造」と「新たなまちの賑わいの創出」を目的に開設されました。ガラス張りの円形の建物で、誰もがいつでも立ち寄ることができる｢まちに開かれた公園のような美術館｣を目指しています。無料ゾーンにも作品があり、体感することができます。",
+      "address": "金沢市広坂1-2-1",
+      "location": [
+        "36.560867",
+        "136.658258"
+      ],
+      "open_hours": "展覧会ゾーン10:00～18:00（金・土は20:00　※チケットの販売は閉場の30分前まで）無料ゾーン9:00～22:00",
+      "fee": "美術館の建物への入館（交流ゾーン）　無料コレクション展　一般　360円、大学生・65歳以上　280円、高校生以下　無料※特別展は展覧会毎に異なります。",
+      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
+    },
+    "武蔵ヶ辻・近江町市場": {
+      "name": "武蔵ヶ辻・近江町市場",
+      "desc": "近江町市場です",
+      "address": "金沢市広坂1-2-1",
+      "location": [
+        "36.560867",
+        "136.658258"
+      ],
+      "open_hours": "information",
+      "fee": "料金",
+      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
+    },
+    "市役所・21世紀美術館": {
+      "name": "市役所・21世紀美術館",
+      "desc": "説明",
+      "address": "金沢市広坂1-2-1",
+      "location": [
+        "36.560867",
+        "136.658258"
+      ],
+      "open_hours": "information",
+      "fee": "料金",
+      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
+    },
+    "金沢駅Ｃ": {
+      "name": "金沢駅C",
+      "desc": "説明",
+      "address": "金沢市広坂1-2-1",
+      "location": [
+        "36.560867",
+        "136.658258"
+      ],
+      "open_hours": "information",
+      "fee": "料金",
+      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
+    },
+    "広坂": {
+      "name": "広坂",
+      "desc": "説明",
+      "address": "金沢市広坂1-2-1",
+      "location": [
+        "36.560867",
+        "136.658258"
+      ],
+      "open_hours": "information",
+      "fee": "料金",
+      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
+    }
   },
   "timeline": [
     {
@@ -1213,8 +1262,8 @@ ons.bootstrap()
     service.getTimeLines = function() {
       return sample.timeline;
     };
-    service.getSpotData = function() {
-      return sample.spotdata;
+    service.getSpotData = function(spot_name) {
+      return sample.spotdata[spot_name];
     };
     return service;
   })
@@ -1271,9 +1320,13 @@ ons.bootstrap()
     };
   }).controller('TimeLineDetailController', function(DataService) {
     this.detail = navi.topPage.data.timeline_detail;
+    this.go_spot = function(spot_name) {
+      navi.pushPage('spot.html', {data: {spot_name: spot_name}});
+    }
   })
   .controller('SpotController', function(DataService) {
-    this.data = DataService.getSpotData();
+    this.spot_name = navi.topPage.data.spot_name;
+    this.data = DataService.getSpotData(spot_name);
   });
 ons.ready(function() {
   console.log("Onsen UI is ready!");
