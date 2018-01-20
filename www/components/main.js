@@ -1037,6 +1037,7 @@ var sample = {
   ],
   "spotdata": {
     "金沢21世紀美術館": {
+      "name": "金沢21世紀美術館",
       "desc": "金沢21世紀美術館は、兼六園に隣接し、中心部に位置しています。「新しい文化の創造」と「新たなまちの賑わいの創出」を目的に開設されました。ガラス張りの円形の建物で、誰もがいつでも立ち寄ることができる｢まちに開かれた公園のような美術館｣を目指しています。無料ゾーンにも作品があり、体感することができます。",
       "address": "金沢市広坂1-2-1",
       "location": [
@@ -1325,7 +1326,7 @@ ons.bootstrap()
     }
   })
   .controller('SpotController', function(DataService) {
-    this.spot_name = navi.topPage.data.spot_name;
+    var spot_name = navi.topPage.data.spot_name;
     this.data = DataService.getSpotData(spot_name);
   });
 ons.ready(function() {
