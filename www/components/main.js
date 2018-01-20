@@ -1,11 +1,15 @@
 // global value
+// transportation
 walk        = "fa-blind";
 bicycle     = "fa-bicycle";
 bus         = "fa-bus";
 goal        = "fa-flag-o";
-rain        = "fa-umbrella";
-traffic_jam = "fa-ban";
-no_bicycle  = "fa-meh-o";
+// information
+rain          = "./images/rain.svg";
+snow          = "./images/snow.svg";
+traffic_jam   = "./images/traffic_jam.svg";
+no_bicycle    = "./images/no_bicycle.svg";
+may_no_bicycle = "./images/may_no_bicycle.svg";
 wp_color    = {
                 walk: "#ccc",
               };
@@ -1107,6 +1111,7 @@ var sample = {
         "fa-flag-o"
       ],
       "information": [
+        "./images/snow.svg"
       ],
       "timeline_detail": {
         "time_required": "33分",
@@ -1124,8 +1129,8 @@ var sample = {
             "transportation": "fa-flag-o",
             "transportation_text": "徒歩",
             "fee": "0円",
-            "information_icon": null,
-            "information_text": "",
+            "information_icon": "./images/snow.svg",
+            "information_text": "雪",
             "time_required": "33分",
             "map_url": "http://maps.apple.com/maps?q=36.560867,136.658258&z=16"
           }
@@ -1143,6 +1148,9 @@ var sample = {
         "fa-flag-o"
       ],
       "information": [
+        "./images/traffic_jam.svg",
+        "",
+        "./images/rain.svg"
       ],
       "timeline_detail": {
         "time_required": "32分",
@@ -1160,8 +1168,8 @@ var sample = {
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
-            "information_icon": "",
-            "information_text": "",
+            "information_icon": "./images/traffic_jam.svg",
+            "information_text": "渋滞あり",
             "time_required": "14分",
             "map_url": "http://maps.apple.com/maps?q=36.571924,136.655905&z=16"
           },
@@ -1182,8 +1190,8 @@ var sample = {
             "transportation": "fa-flag-o",
             "transportation_text": "徒歩",
             "fee": "0円",
-            "information_icon": "",
-            "information_text": "",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨",
             "time_required": "04分",
             "map_url": "http://maps.apple.com/maps?q=36.560867,136.658258&z=16"
           }
@@ -1201,7 +1209,6 @@ var sample = {
         "fa-flag-o"
       ],
       "information": [
-        "no_bicycle"
       ],
       "timeline_detail": {
         "time_required": "16分",
@@ -1228,7 +1235,7 @@ var sample = {
             "spot_name": "広坂",
             "arrival_time": "12:15",
             "transportation": "fa-bicycle",
-            "transportation_text": null,
+            "transportation_text": "",
             "fee": "1000円",
             "information_icon": "no_bicycle",
             "information_text": "70分待つ恐れがあります。",
