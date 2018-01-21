@@ -264,7 +264,7 @@
 
             <ons-col style="padding: 15px 30px">
               <div>{{w.transportation_text}}</div>
-              <div>
+              <div ng-style="{display: w.information_icon == '' ? 'none': 'inline'}">
                 <img src="{{w.information_icon}}" width="23" height="23">
                 {{w.information_text}}
               </div>
