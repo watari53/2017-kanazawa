@@ -17,7 +17,7 @@ wp_color    = {
 // sample data
 var sample = {
 
-  "surroundings": [
+    "surroundings": [
     {
       "spot_name": "金沢駅(鼓門・もてなしドーム)",
       "distance": "87m"
@@ -1052,53 +1052,65 @@ var sample = {
       "fee": "美術館の建物への入館（交流ゾーン）　無料コレクション展　一般　360円、大学生・65歳以上　280円、高校生以下　無料※特別展は展覧会毎に異なります。",
       "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
     },
+    "現在地": {
+      "name": "現在地",
+      "desc": "",
+      "address": "石川県金沢市木ノ新保町１－１",
+      "location": [
+        "36.578268",
+        "136.648035"
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
     "武蔵ヶ辻・近江町市場": {
       "name": "武蔵ヶ辻・近江町市場",
-      "desc": "近江町市場です",
-      "address": "金沢市広坂1-2-1",
+      "desc": "",
+      "address": "石川県金沢市下堤町",
       "location": [
-        "36.560867",
-        "136.658258"
+        36.571924,
+        136.655905
       ],
-      "open_hours": "information",
-      "fee": "料金",
-      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
     },
     "市役所・21世紀美術館": {
       "name": "市役所・21世紀美術館",
-      "desc": "説明",
-      "address": "金沢市広坂1-2-1",
+      "desc": "",
+      "address": "石川県金沢市広坂２丁目１",
       "location": [
-        "36.560867",
-        "136.658258"
+        36.561941,
+        136.65819
       ],
-      "open_hours": "information",
-      "fee": "料金",
-      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
     },
     "金沢駅Ｃ": {
-      "name": "金沢駅C",
-      "desc": "説明",
-      "address": "金沢市広坂1-2-1",
+      "name": "金沢駅Ｃ",
+      "desc": "",
+      "address": "石川県金沢市木ノ新保町１－１",
       "location": [
-        "36.560867",
-        "136.658258"
+        36.577168896058,
+        136.64741773723
       ],
-      "open_hours": "information",
-      "fee": "料金",
-      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
     },
     "広坂": {
       "name": "広坂",
-      "desc": "説明",
-      "address": "金沢市広坂1-2-1",
+      "desc": "",
+      "address": "石川県金沢市広坂１丁目２",
       "location": [
-        "36.560867",
-        "136.658258"
+        36.561412,
+        136.657436
       ],
-      "open_hours": "information",
-      "fee": "料金",
-      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
     }
   },
   "timeline": [
@@ -1108,6 +1120,7 @@ var sample = {
       "time_required": "33分",
       "fee": "0円",
       "transportation": [
+        "fa-blind",
         "fa-flag-o"
       ],
       "information": [
@@ -1126,11 +1139,11 @@ var sample = {
           {
             "spot_name": "金沢21世紀美術館",
             "arrival_time": "12:33",
-            "transportation": "fa-flag-o",
+            "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
             "information_icon": "./images/snow.svg",
-            "information_text": "雪",
+            "information_text": "雪情報あり",
             "time_required": "33分",
             "map_url": "http://maps.apple.com/maps?q=36.560867,136.658258&z=16"
           }
@@ -1138,38 +1151,38 @@ var sample = {
       }
     },
     {
-      "start_time": "12:00",
+      "start_time": "12:01",
       "arrival_time": "12:32",
-      "time_required": "32分",
+      "time_required": "31分",
       "fee": "500円",
       "transportation": [
         "fa-blind",
         "fa-bus",
+        "fa-blind",
         "fa-flag-o"
       ],
       "information": [
-        "./images/traffic_jam.svg",
-        "",
-        "./images/rain.svg"
+        "./images/snow.svg",
+        ""
       ],
       "timeline_detail": {
-        "time_required": "32分",
+        "time_required": "31分",
         "fee": "500円",
         "src": "現在地",
         "dest": "金沢21世紀美術館",
         "start": {
           "spot_name": "現在地",
-          "time": "12:00"
+          "time": "12:01"
         },
         "waypoint": [
           {
             "spot_name": "武蔵ヶ辻・近江町市場",
-            "arrival_time": "12:14",
+            "arrival_time": "12:15",
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
-            "information_icon": "./images/traffic_jam.svg",
-            "information_text": "渋滞あり",
+            "information_icon": "./images/snow.svg",
+            "information_text": "雪情報あり",
             "time_required": "14分",
             "map_url": "http://maps.apple.com/maps?q=36.571924,136.655905&z=16"
           },
@@ -1182,16 +1195,16 @@ var sample = {
             "information_icon": "",
             "information_text": "",
             "time_required": "13分",
-            "map_url": ""
+            "map_url": "http://maps.apple.com/maps?q=36.561941,136.65819&z=16"
           },
           {
             "spot_name": "金沢21世紀美術館",
             "arrival_time": "12:32",
-            "transportation": "fa-flag-o",
+            "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
-            "information_icon": "./images/rain.svg",
-            "information_text": "雨",
+            "information_icon": "./images/snow.svg",
+            "information_text": "雪情報あり",
             "time_required": "04分",
             "map_url": "http://maps.apple.com/maps?q=36.560867,136.658258&z=16"
           }
@@ -1206,9 +1219,12 @@ var sample = {
       "transportation": [
         "fa-blind",
         "fa-bicycle",
+        "fa-blind",
         "fa-flag-o"
       ],
       "information": [
+        "./images/snow.svg",
+        "./images/may_no_bicycle.svg"
       ],
       "timeline_detail": {
         "time_required": "16分",
@@ -1226,8 +1242,8 @@ var sample = {
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
-            "information_icon": "",
-            "information_text": "",
+            "information_icon": "./images/snow.svg",
+            "information_text": "雪情報あり",
             "time_required": "03分",
             "map_url": "http://maps.apple.com/maps?q=36.577168896058,136.64741773723&z=16"
           },
@@ -1235,9 +1251,9 @@ var sample = {
             "spot_name": "広坂",
             "arrival_time": "12:15",
             "transportation": "fa-bicycle",
-            "transportation_text": "",
+            "transportation_text": null,
             "fee": "1000円",
-            "information_icon": "no_bicycle",
+            "information_icon": "./images/may_no_bicycle.svg",
             "information_text": "70分待つ恐れがあります。",
             "time_required": "12分",
             "map_url": "http://maps.apple.com/maps?q=36.561412,136.657436&z=16"
@@ -1245,11 +1261,11 @@ var sample = {
           {
             "spot_name": "金沢21世紀美術館",
             "arrival_time": "12:16",
-            "transportation": "fa-flag-o",
+            "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
-            "information_icon": "",
-            "information_text": "",
+            "information_icon": "./images/snow.svg",
+            "information_text": "雪情報あり",
             "time_required": "01分",
             "map_url": "http://maps.apple.com/maps?q=36.561412,136.657436&z=16"
           }
