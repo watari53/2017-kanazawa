@@ -198,7 +198,7 @@
               <ons-col ng-style="{display: r.information.length == 0 ? 'none': 'inline'}" width="35%" class="plan-left">
                 交通情報あり
                 <div class="plan-date">
-                  <img ng-repeat="icon in r.information" style="margin-right: 6px; width: 25px; hwight: 25px" src="{{icon}}">
+                  <img ng-repeat="icon in r.information" style="margin-right: 6px; width: 23px; hwight: 23px" src="{{icon}}">
                 </div>
               </ons-col>
             </ons-row>
@@ -264,7 +264,10 @@
 
             <ons-col style="padding: 15px 30px">
               <div>{{w.transportation_text}}</div>
-              <ons-icon icon="{{w.information_icon}}">{{w.information_text}}</ons-icon>
+              <div>
+                <img src="{{w.information_icon}}" width="23" height="23">
+                {{w.information_text}}
+              </div>
               <div style="margin-top: 6px; text-align: right">{{w.fee}}</div>
             </ons-col>
           </ons-row>
