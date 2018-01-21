@@ -1,5 +1,4 @@
-// sample data
-var sample = {
+{
 
     "surroundings": [
     {
@@ -1257,6 +1256,4 @@ var sample = {
       }
     }
   ]
-
-};
-
+}

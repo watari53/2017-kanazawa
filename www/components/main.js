@@ -16,10 +16,12 @@ wp_color    = {
 
 ons.bootstrap()
   .service('DataService', function($http) {
-    $http.get('data.json').then(function(response){
-      sample = response.data;
-    });
+    var sample;
     var service = {};
+
+    service.setSample = function(data){
+      sample = data;
+    };
 
     service.getSurroundings = function() {
       return sample.surroundings;
@@ -32,11 +34,14 @@ ons.bootstrap()
     };
     return service;
   })
-  .controller('AppController', function($scope) {
+  .controller('AppController', function($scope, $http, DataService) {
     $scope.application_name = "金沢乗換案内";
     $scope.search = {src: "出発地を選択", dest: "到着地を選択"};
     $scope.time = "現在時刻";
 
+    $http.get('sample.json').then(function(response){
+      DataService.setSample(response.data);
+    });
     $scope.people_n = 1;
     this.go_search = function(search_type) {
       navi.pushPage('search.html', {data: {search_type: search_type}});
