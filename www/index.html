@@ -120,13 +120,21 @@
       </section>
 
       <section>
-        <ons-list>
+        <ons-list id="surroundings">
           <ons-list-item ng-repeat="i in sc.surroundings|filter: {spot_name: spot_name}" ng-click="sc.setSpot(i.spot_name)" modifier="chevron tappable">
             <div style="width: 70%" class="list__item__center">
               <div class="spot_name">{{i.spot_name}}</div>
             </div>
             <div class="sc-list__item__right">
               <div class="distance">{{i.distance}}</div>
+            </div>
+          </ons-list-item>
+        </ons-list>
+
+        <ons-list id="history">
+          <ons-list-item  modifier="chevron tappable">
+            <div style="width: 70%" class="list__item__center">
+              <div class="spot_name">test</div>
             </div>
           </ons-list-item>
         </ons-list>

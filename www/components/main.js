@@ -1,15 +1,15 @@
-// global value
-// transportation
-walk        = "fa-blind";
-bicycle     = "fa-bicycle";
-bus         = "fa-bus";
-goal        = "fa-flag-o";
-// information
-rain          = "./images/rain.svg";
-snow          = "./images/snow.svg";
-traffic_jam   = "./images/traffic_jam.svg";
-no_bicycle    = "./images/no_bicycle.svg";
-may_no_bicycle = "./images/may_no_bicycle.svg";
+// // global value
+// // transportation
+// walk        = "fa-blind";
+// bicycle     = "fa-bicycle";
+// bus         = "fa-bus";
+// goal        = "fa-flag-o";
+// // information
+// rain          = "./images/rain.svg";
+// snow          = "./images/snow.svg";
+// traffic_jam   = "./images/traffic_jam.svg";
+// no_bicycle    = "./images/no_bicycle.svg";
+// may_no_bicycle = "./images/may_no_bicycle.svg";
 wp_color    = {
                 walk: "#ccc",
               };
