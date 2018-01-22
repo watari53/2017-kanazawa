@@ -46,7 +46,7 @@ ons.bootstrap()
       } else {
         history = history.split(',');
         var n = arrayExist(history, spot_name);    
-        if(n != false) {
+        if(n !== false) {
           history.splice(n, 1);
         }
         history.unshift(spot_name);
@@ -57,7 +57,7 @@ ons.bootstrap()
       var history = localStorage.getItem('history');
       if(history == null) {
         console.log('no history');
-        return(["検索履歴が表示されます"]);
+        return([]);
       } else {
         console.log('exist history');
         return history.split(',');
@@ -142,7 +142,7 @@ ons.bootstrap()
   })
   .controller('TimeLineController', function(DataService) {
     this.search_type = "出発";
-    this.time = "2018年2月17日 14:30";
+    this.time = "14:30";
     this.src = "現在地";
     this.dest = "兼六園";
     this.result = DataService.getTimeLines();
