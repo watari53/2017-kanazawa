@@ -14,6 +14,19 @@ wp_color    = {
                 walk: "#ccc",
               };
 
+// 重複を排除しながらunshiftする関数
+function arrayExist(array, value) {
+  // 配列の最後までループ
+  for (var i =0, len = array.length; i < len; i++) {
+    if (value == array[i]) {
+      // 存在したら配列番号を返す
+      return i;
+    }
+  }
+  // 存在しない場合falseを返す
+  return false;
+}
+
 ons.bootstrap()
   .service('DataService', function($http) {
     var sample;
@@ -25,6 +38,30 @@ ons.bootstrap()
 
     service.getSurroundings = function() {
       return sample.surroundings;
+    };
+    service.setHistory = function(spot_name) {
+      var history = localStorage.getItem('history');
+      if(history == null) {
+        localStorage.setItem('history', spot_name);
+      } else {
+        history = history.split(',');
+        var n = arrayExist(history, spot_name);    
+        if(n != false) {
+          history.splice(n, 1);
+        }
+        history.unshift(spot_name);
+        localStorage.setItem('history', history);
+      }
+    };
+    service.getHistory = function() { //return array
+      var history = localStorage.getItem('history');
+      if(history == null) {
+        console.log('no history');
+        return(["検索履歴が表示されます"]);
+      } else {
+        console.log('exist history');
+        return history.split(',');
+      } 
     };
     service.getTimeLines = function() {
       return sample.timeline;
@@ -73,9 +110,33 @@ ons.bootstrap()
     var type = {src: "出発地", dest: "到着地"};
     var search_type = navi.topPage.data.search_type; // src or dest
     this.title = type[search_type];
+
+    this.ViewSurroundings = "surroundings"; // use in if
+    this.ViewHistory = "history";  // use in if
+    this.check = this.ViewSurroundings;  // set default need to hardcoard
+    this.surroundings_style = {display: 'inline'};
+    this.history_style = {display: 'none'};
+
+
+    // set data
     this.surroundings = DataService.getSurroundings();
+    this.history = DataService.getHistory();
+
+    this.changeView = function() {
+        if (this.check === this.ViewSurroundings) {
+          this.surroundings_style = {display: 'inline'};
+          this.history_style = {display: 'none'};
+        } else if(this.check === this.ViewHistory) {
+          this.surroundings_style = {display: 'none'};
+          this.history_style = {display: 'inline'};
+        } else {
+            console.log("no match:" + this.check);
+        }
+    };
+
     this.setSpot = function(spot_name) {
       $scope.search[search_type] = spot_name;
+      DataService.setHistory(spot_name);
       navi.popPage();
     };
   })

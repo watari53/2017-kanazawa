@@ -102,14 +102,14 @@
         <section>
           <div class="tabbar tabbar--top tabbar--top-border">
             <label class="tabbar__item tabbar--top-border__item">
-              <input type="radio" name="top-tabbar-b" checked="checked">
+              <input type="radio" name="top-tabbar-b" ng-model="sc.check" value={{sc.ViewSurroundings}} ng-change="sc.changeView()">
               <button class="tabbar__button tabbar--top-border__button">
                 周辺
               </button>
             </label>
 
             <label class="tabbar__item tabbar--top-border__item">
-              <input type="radio" name="top-tabbar-b">
+              <input type="radio" name="top-tabbar-b" ng-model="sc.check" value={{sc.ViewHistory}} ng-change="sc.changeView()">
               <button class="tabbar__button tabbar--top-border__button">
                 履歴
               </button>
@@ -119,8 +119,8 @@
         </section>
       </section>
 
-      <section>
-        <ons-list id="surroundings">
+      <section ng-style="sc.surroundings_style">
+        <ons-list>
           <ons-list-item ng-repeat="i in sc.surroundings|filter: {spot_name: spot_name}" ng-click="sc.setSpot(i.spot_name)" modifier="chevron tappable">
             <div style="width: 70%" class="list__item__center">
               <div class="spot_name">{{i.spot_name}}</div>
@@ -130,11 +130,13 @@
             </div>
           </ons-list-item>
         </ons-list>
+      </section>
 
-        <ons-list id="history">
-          <ons-list-item  modifier="chevron tappable">
+      <section ng-style="sc.history_style">
+        <ons-list>
+          <ons-list-item ng-repeat="h in sc.history" modifier="chevron tappable" ng-click="sc.setSpot(h)">
             <div style="width: 70%" class="list__item__center">
-              <div class="spot_name">test</div>
+              <div class="spot_name">{{h}}</div>
             </div>
           </ons-list-item>
         </ons-list>
