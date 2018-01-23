@@ -286,13 +286,23 @@
           </ons-row>
 
           <ons-list class="plan-list list--inset">
-            <ons-list-item modifier="chevron tappable" ng-click="td.go_spot(w.spot_name)">
+            <ons-list-item ng-show="!$last">
+              <i style="margin-right: 20px">{{w.arrival_time}}</i> {{w.spot_name}}
+              <ons-button>経路</ons-button>
+            </ons-list-item>
+            <ons-list-item ng-show="$last" modifier="chevron tappable" ng-click="td.go_spot(w.spot_name)">
               <i style="margin-right: 20px">{{w.arrival_time}}</i> {{w.spot_name}}
             </ons-list-item>
           </ons-list>
         </div>
       </section>
 
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="map.html">
+    <ons-page ng-controller="MapController as mp">
+      <div id="map" style="height: 100%"></div>
     </ons-page>
   </ons-template>
 

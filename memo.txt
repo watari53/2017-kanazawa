@@ -1,0 +1,20 @@
+# Angular JSでよく使うコード
+
+## HTML要素の表示・非表示の切り替え
+    <td><span ng-show="[true or false]" ng-click="moveUp()">up</span></td>
+
+## 繰り返しにおける特殊なプロパティ
+
+### first, lastの検出
+
+	<table>
+	    <tr ng-repeat="item in items">
+	        <td>{{item.title}}</td>
+	        <td><span ng-show="!$first" ng-click="moveUp($index)">up</span></td>
+	        <td><span ng-show="!$last" ng-click="moveDown($index)">down</span></td>
+	    </tr>
+	</table>
+
+
+## 条件分岐を使ったstyleの適用
+    <ons-icon ng-style="{display: $last ? 'none' : 'inline'}" style="margin-right: 7px" icon="angle-right"></ons-icon>
