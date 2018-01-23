@@ -160,7 +160,28 @@ ons.bootstrap()
     }
   })
   .controller('MapController', function() {
-    this.waypoint = navi.topPage.data.waypoint;
+    wp = navi.topPage.data.waypoint;
+    //Google mapの設定
+    var mapOptions = {
+          //中心地設定
+          center: new google.maps.LatLng(wp.lat,wp.lng),
+          //ズーム設定
+          zoom: 15,
+          //地図のタイプを指定
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+    //idがmap_canvasのところにGoogle mapを表示
+    var map = new google.maps.Map(document.getElementById("map"),
+        mapOptions);
+    
+    var destLatLng= new google.maps.LatLng(wp.lat,wp.lng);
+    var marker = new google.maps.Marker({
+                    position: destLatLng,
+                    title:wp.name,
+                });
+    marker.setMap(map);
+
   })
   .controller('SpotController', function(DataService) {
     var spot_name = navi.topPage.data.spot_name;
