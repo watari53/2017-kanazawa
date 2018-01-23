@@ -149,11 +149,18 @@ ons.bootstrap()
     this.go_timelineDetail = function(timeline_detail) {
       navi.pushPage('timeline_detail.html', {data: {timeline_detail: timeline_detail}});
     };
-  }).controller('TimeLineDetailController', function(DataService) {
+  })
+  .controller('TimeLineDetailController', function(DataService) {
     this.detail = navi.topPage.data.timeline_detail;
+    this.go_map = function(waypoint){
+      navi.pushPage('map.html', {data: {waypoint: waypoint}});
+    }
     this.go_spot = function(spot_name) {
       navi.pushPage('spot.html', {data: {spot_name: spot_name}});
     }
+  })
+  .controller('MapController', function() {
+    this.waypoint = navi.topPage.data.waypoint;
   })
   .controller('SpotController', function(DataService) {
     var spot_name = navi.topPage.data.spot_name;
