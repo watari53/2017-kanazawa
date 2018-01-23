@@ -1128,6 +1128,8 @@
             "information_icon": "./images/snow.svg",
             "information_text": "雪情報あり",
             "time_required": "33分",
+            "lat": 36.560867,
+            "lng": 136.658258,
             "map_url": "http://maps.apple.com/maps?q=36.560867,136.658258&z=16"
           }
         ]
@@ -1167,6 +1169,8 @@
             "information_icon": "./images/snow.svg",
             "information_text": "雪情報あり",
             "time_required": "14分",
+            "lat": 36.571924,
+            "lng": 136.655905,
             "map_url": "http://maps.apple.com/maps?q=36.571924,136.655905&z=16"
           },
           {
@@ -1178,6 +1182,8 @@
             "information_icon": "",
             "information_text": "",
             "time_required": "13分",
+            "lat": 36.561941,
+            "lng": 136.65819,
             "map_url": "http://maps.apple.com/maps?q=36.561941,136.65819&z=16"
           },
           {
@@ -1189,6 +1195,8 @@
             "information_icon": "./images/snow.svg",
             "information_text": "雪情報あり",
             "time_required": "04分",
+            "lat": 36.560867,
+            "lng": 136.658258,
             "map_url": "http://maps.apple.com/maps?q=36.560867,136.658258&z=16"
           }
         ]
@@ -1228,6 +1236,8 @@
             "information_icon": "./images/snow.svg",
             "information_text": "雪情報あり",
             "time_required": "03分",
+            "lat": 36.577168896058,
+            "lng": 136.64741773723,
             "map_url": "http://maps.apple.com/maps?q=36.577168896058,136.64741773723&z=16"
           },
           {
@@ -1239,6 +1249,8 @@
             "information_icon": "./images/may_no_bicycle.svg",
             "information_text": "70分待つ恐れがあります。",
             "time_required": "12分",
+            "lat": 36.561412,
+            "lng": 136.657436,
             "map_url": "http://maps.apple.com/maps?q=36.561412,136.657436&z=16"
           },
           {
@@ -1250,6 +1262,8 @@
             "information_icon": "./images/snow.svg",
             "information_text": "雪情報あり",
             "time_required": "01分",
+            "lat": 36.561412,
+            "lng": 136.657436,
             "map_url": "http://maps.apple.com/maps?q=36.561412,136.657436&z=16"
           }
         ]
