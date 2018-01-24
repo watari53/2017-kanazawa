@@ -163,36 +163,35 @@ ons.bootstrap()
     var myLatLng = {lat: 36.578268, lng: 136.648035};
     wp = navi.topPage.data.waypoint;
     var destLatLng = {lat: wp.lat, lng: wp.lng};
+    this.map_url = wp.map_url;
     //Google mapの設定
-        var directionsService = new google.maps.DirectionsService;
-        var directionsDisplay = new google.maps.DirectionsRenderer;
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
-          center: myLatLng,
-        });
-        directionsDisplay.setMap(map);
-        calculateAndDisplayRoute(directionsService, directionsDisplay);
-        
-      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-        // var selectedMode = document.getElementById('mode').value;
-        var selectedMode = "WALKING";
-        directionsService.route({
-          origin: myLatLng,
-          destination: destLatLng,
-          // Note that Javascript allows us to access the constant
-          // using square brackets and a string value as its
-          // "property."
-          travelMode: google.maps.TravelMode[selectedMode]
-        }, function(response, status) {
-          if (status == 'OK') {
-            directionsDisplay.setDirections(response);
-          } else {
-            window.alert('通信に失敗しました。電波の良いところで再度お試しください。コード： ' + status);
-          }
-        });
-      }
-
-
+    var directionsService = new google.maps.DirectionsService;
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 7,
+      center: myLatLng,
+    });
+    directionsDisplay.setMap(map);
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
+    
+    function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+      // var selectedMode = document.getElementById('mode').value;
+      var selectedMode = "WALKING";
+      directionsService.route({
+        origin: myLatLng,
+        destination: destLatLng,
+        // Note that Javascript allows us to access the constant
+        // using square brackets and a string value as its
+        // "property."
+        travelMode: google.maps.TravelMode[selectedMode]
+      }, function(response, status) {
+        if (status == 'OK') {
+          directionsDisplay.setDirections(response);
+        } else {
+          window.alert('通信に失敗しました。電波の良いところで再度お試しください。コード： ' + status);
+        }
+      });
+    }
   })
   .controller('SpotController', function(DataService) {
     var spot_name = navi.topPage.data.spot_name;
