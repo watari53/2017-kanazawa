@@ -160,27 +160,38 @@ ons.bootstrap()
     }
   })
   .controller('MapController', function() {
+    var myLatLng = {lat: 36.578268, lng: 136.648035};
     wp = navi.topPage.data.waypoint;
+    var destLatLng = {lat: wp.lat, lng: wp.lng};
     //Google mapの設定
-    var mapOptions = {
-          //中心地設定
-          center: new google.maps.LatLng(wp.lat,wp.lng),
-          //ズーム設定
-          zoom: 15,
-          //地図のタイプを指定
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: myLatLng,
+        });
+        directionsDisplay.setMap(map);
+        calculateAndDisplayRoute(directionsService, directionsDisplay);
+        
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        // var selectedMode = document.getElementById('mode').value;
+        var selectedMode = "WALKING";
+        directionsService.route({
+          origin: myLatLng,
+          destination: destLatLng,
+          // Note that Javascript allows us to access the constant
+          // using square brackets and a string value as its
+          // "property."
+          travelMode: google.maps.TravelMode[selectedMode]
+        }, function(response, status) {
+          if (status == 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('通信に失敗しました。電波の良いところで再度お試しください。コード： ' + status);
+          }
+        });
+      }
 
-    //idがmap_canvasのところにGoogle mapを表示
-    var map = new google.maps.Map(document.getElementById("map"),
-        mapOptions);
-    
-    var destLatLng= new google.maps.LatLng(wp.lat,wp.lng);
-    var marker = new google.maps.Marker({
-                    position: destLatLng,
-                    title:wp.name,
-                });
-    marker.setMap(map);
 
   })
   .controller('SpotController', function(DataService) {
