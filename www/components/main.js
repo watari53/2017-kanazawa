@@ -73,13 +73,17 @@ ons.bootstrap()
   })
   .controller('AppController', function($scope, $http, DataService) {
     $scope.application_name = "金沢乗換案内";
-    $scope.search = {src: "出発地を選択", dest: "到着地を選択"};
-    $scope.time = "現在時刻";
+    var DEFAULT_SRC_MSG = "出発地を選択";
+    var DEFAULT_DEST_MSG = "到着地を選択";
+    var DEFAULT_TIME = "現在時刻";
+    $scope.search = {src: DEFAULT_SRC_MSG, dest: DEFAULT_DEST_MSG};
+    $scope.time = DEFAULT_TIME;
+    $scope.people_n = 1;
+    var search_params = {src: "", dest: "", time: "", people_n: ""};
 
     $http.get('sample.json').then(function(response){
       DataService.setSample(response.data);
     });
-    $scope.people_n = 1;
     this.go_search = function(search_type) {
       navi.pushPage('search.html', {data: {search_type: search_type}});
     };
@@ -99,6 +103,10 @@ ons.bootstrap()
       });
     };
     this.go_timeline = function() {
+      if($scope.search.src === DEFAULT_SRC_MSG | $scope.search.dest === DEFAULT_DEST_MSG) {
+        alert("出発地・目的地を選択してください。")
+        return;
+      }
       modal.show();
       setTimeout(function() {
         modal.hide();
@@ -142,10 +150,11 @@ ons.bootstrap()
   })
   .controller('TimeLineController', function(DataService) {
     this.search_type = "出発";
-    this.time = "14:30";
-    this.src = "現在地";
-    this.dest = "兼六園";
-    this.result = DataService.getTimeLines();
+    this.time        = $scope.time;
+    this.src         = $scope.src;
+    this.dest        = $scope.dest;
+    this.people_n    = $scope.people_n;
+    this.result      = DataService.getTimeLines();
     this.go_timelineDetail = function(timeline_detail) {
       navi.pushPage('timeline_detail.html', {data: {timeline_detail: timeline_detail}});
     };
