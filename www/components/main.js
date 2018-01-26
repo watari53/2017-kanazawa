@@ -103,10 +103,10 @@ ons.bootstrap()
       });
     };
     this.go_timeline = function() {
-      if($scope.search.dest === DEFAULT_DEST_MSG) {
-        alert("目的地を選択してください。")
-        return;
-      }
+      // if($scope.search.dest === DEFAULT_DEST_MSG) {
+      //   alert("目的地を選択してください。")
+      //   return;
+      // }
       modal.show();
       setTimeout(function() {
         modal.hide();
@@ -163,10 +163,10 @@ ons.bootstrap()
     this.detail = navi.topPage.data.timeline_detail;
     this.go_map = function(waypoint){
       navi.pushPage('map.html', {data: {waypoint: waypoint}});
-    }
+    };
     this.go_spot = function(spot_name) {
       navi.pushPage('spot.html', {data: {spot_name: spot_name}});
-    }
+    };
   })
   .controller('MapController', function() {
     var myLatLng = {lat: 36.578268, lng: 136.648035};
