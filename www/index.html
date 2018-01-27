@@ -137,7 +137,7 @@
 
       <section ng-style="sc.history_style">
         <ons-list>
-          <ons-list-item ng-repeat="h in sc.history" modifier="chevron tappable" ng-click="sc.setSpot(h)">
+          <ons-list-item ng-repeat="h in sc.history" ng-click="sc.setSpot(h)" modifier="chevron tappable">
             <div style="width: 70%" class="list__item__center">
               <div class="spot_name">{{h}}</div>
             </div>
@@ -171,7 +171,7 @@
         <div style="padding: 1px 0 0 0;">
           <div class="card card--material">
             <div class="card__content">
-              <div>{{tl.time}}{{tl.search_type}}</div>
+              <div>{{tl.time| date: "a hh時mm分"}}{{tl.search_type}}</div>
               <div>出発: {{tl.src}}</div>
               <div>到着: {{tl.dest}}</div>
             </div>
@@ -279,9 +279,17 @@
             </ons-col>
 
             <ons-col style="padding: 15px 30px">
-              <div>{{w.transportation_text}}</div>
+              <div>
+                {{w.transportation_text}}
+                <div style="float: right" ng-show="td.showRoute(w.transportation_text)">
+                  <ons-button ng-click="td.go_map($index)">
+                    <ons-icon icon="map"></ons-icon>
+                    経路
+                  </ons-button>
+                </div>
+              </div>
               <div ng-style="{display: w.information_icon == '' ? 'none': 'inline'}">
-                <img style="vertical-align: middle" src="{{w.information_icon}}" width="23" height="23">
+                <img class="icon-label" src="{{w.information_icon}}">
                 {{w.information_text}}
               </div>
               <div style="margin-top: 6px; text-align: right">{{w.fee}}</div>
@@ -291,7 +299,6 @@
           <ons-list class="plan-list list--inset">
             <ons-list-item ng-show="!$last">
               <i style="margin-right: 20px">{{w.arrival_time}}</i> {{w.spot_name}}
-              <ons-button ng-click="td.go_map(w)">経路</ons-button>
             </ons-list-item>
             <ons-list-item ng-show="$last" modifier="chevron tappable" ng-click="td.go_spot(w.spot_name)">
               <i style="margin-right: 20px">{{w.arrival_time}}</i> {{w.spot_name}}
@@ -314,7 +321,7 @@
         </div>
         <div class="right">
           <ons-toolbar-button>
-            <ons-icon icon="ion-map" href="{{mp.map_url}}"></ons-icon>
+            <ons-icon ng-click="mp.goExMap(mp.map_url)" icon="ion-map"></ons-icon>
           </ons-toolbar-button>
         </div>
       </ons-toolbar>
