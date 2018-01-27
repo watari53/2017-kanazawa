@@ -180,9 +180,8 @@
       </section>
 
       <section style="padding-top: 20px">
-        <ons-list class="plan-list list--inset list--material">
-          <ons-list-item ng-repeat="r in tl.result" modifier="chevron tappable" class="plan" ng-click="tl.go_timelineDetail(r.timeline_detail)">
-
+        <ons-list style="margin-bottom: 10px" ng-repeat="r in tl.result" class="plan-list list--inset list--material">
+          <ons-list-item modifier="chevron tappable" class="plan" ng-click="tl.go_timelineDetail(r.timeline_detail)">
             <ons-row>
               <ons-col class="plan-right">
                 <div class="plan-name">
