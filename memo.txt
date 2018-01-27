@@ -18,3 +18,18 @@
 
 ## 条件分岐を使ったstyleの適用
     <ons-icon ng-style="{display: $last ? 'none' : 'inline'}" style="margin-right: 7px" icon="angle-right"></ons-icon>
+
+
+## 外部リンク先から元のページに戻る
+InAppBrowserプラグインを有効化する
+
+### 使い方
+  window.open("https://ja.monaca.io/", '_blank', 'location=yes');
+  
+### パラメーター
+
+|target  |用途  |
+|--------|-----|
+|_blank	 |InAppBrowserを開きます。 |
+|_system |システム標準のWebブラウザーを開きます。 |
+|_self	 |ホワイトリストに対象のURLが登録されている場合には、Cordova WebViewを開きます。それ以外の場合には、InAppBrowser を開きます。 |
