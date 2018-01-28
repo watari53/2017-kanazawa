@@ -15,6 +15,7 @@ var DEFAULT_SRC_MSG = "現在地";
 var DEFAULT_DEST_MSG = "到着地を選択";
 var DEFAULT_TIME = "現在時刻";
 var APP_NAME = "金沢乗換案内";
+var DEMO = [{dest: "金沢21世紀美術館", file:"sample1.json"},{dest: "ひがし茶屋街", file:"sample2.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3.json"}];
 wp_color    = {
                 walk: "#ccc",
               };
@@ -78,17 +79,41 @@ ons.bootstrap()
     service.getSpotData = function(spot_name) {
       return sample.spotdata[spot_name];
     };
+    service.getData = function(param) {
+      var DEMO_PATTERN = DEMO;
+      var sample_file = "sample.json";
+      angular.forEach(DEMO_PATTERN, function(p){
+        if(p.dest === param.dest) {
+          console.log("hit sample data: " + p.files);
+          sample_file = p.file;
+        }
+      });
+      return $http({method: 'GET', url: sample_file}).
+        success(function(data, status, headers, config) {
+          // レスポンスが有効の場合に、非同期で呼び出されるコールバックです。
+          console.log(data);
+          service.setSample(data);
+        }).
+        error(function(data, status, headers, config) {
+          // エラーが発生、またはサーバからエラーステータスが返された場合に、
+          // 非同期で呼び出されます。
+          alert("電波の良いところでアプリを起動してください。");
+          console.log("Error Code: 0");
+        });
+    };
     return service;
   })
   .controller('AppController', function($scope, $http, DataService) {
     $scope.application_name = APP_NAME;
     $scope.search = {src: DEFAULT_SRC_MSG, dest: DEFAULT_DEST_MSG};
+    $scope.search_type = "出発";
     $scope.time = DEFAULT_TIME;
     $scope.people_n = 1;
 
     $http.get('sample.json').then(function(response){
       DataService.setSample(response.data);
     });
+    
     this.go_search = function(search_type) {
       navi.pushPage('search.html', {data: {search_type: search_type}});
     };
@@ -111,12 +136,18 @@ ons.bootstrap()
       // if($scope.search.dest === DEFAULT_DEST_MSG) {
       //   alert("目的地を選択してください。")
       //   return;
+      // }else if($scope.search.dest === $scope.search.dest) {
+      //   alert("目的地と到着地が同じです");
+      //   return;
       // }
       modal.show();
-      setTimeout(function() {
-        modal.hide();
-        navi.pushPage('timeline.html');
-      }, 0);
+      promise = DataService.getData({src:$scope.search.src, dest:$scope.search.dest});
+      promise.then(function(response){
+        setTimeout(function() {
+          modal.hide();
+          navi.pushPage('timeline.html');
+        }, 0);          
+      });
     };
   })
   .controller('SearchController', function($scope, DataService) {
@@ -154,7 +185,7 @@ ons.bootstrap()
     };
   })
   .controller('TimeLineController', function($scope, DataService) {
-    this.search_type = "出発";
+    this.search_type = $scope.search_type;
     this.time        = $scope.time;
     this.src         = $scope.search.src;
     this.dest        = $scope.search.dest;
