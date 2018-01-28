@@ -1020,5 +1020,360 @@
       "spot_name": "白鷺の足湯",
       "distance": "14.1km"
     }
+  ],
+  "spotdata": {
+    "金沢駅(鼓門・もてなしドーム)": {
+      "name": "金沢駅(鼓門・もてなしドーム)",
+      "desc": "金沢の玄関口。東広場では、金沢を訪れる人に差し出す雨傘をイメージし、おもてなしの心を表わしたガラスのドーム「もてなしドーム」や、伝統芸能に使われる鼓をイメージした「鼓門」を見ることができる。",
+      "address": "金沢市木ノ新保町1-1",
+      "location": [
+        "36.577912",
+        "136.648904"
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "ひがし茶屋街": {
+      "name": "ひがし茶屋街",
+      "desc": "金沢市内にある三茶屋街の一つであり、国の重要伝統的建造物群保存地区。キムスコ(木虫籠)と呼ばれる美しい出格子がある古い街並みが残る。",
+      "address": "金沢市東山",
+      "location": [
+        "36.572587",
+        "136.666548"
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/24"
+    },
+    "武蔵西": {
+      "name": "武蔵西",
+      "desc": "",
+      "address": "石川県金沢市武蔵町１５",
+      "location": [
+        36.572449,
+        136.655411
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "白銀町": {
+      "name": "白銀町",
+      "desc": "",
+      "address": "石川県金沢市玉川町１１",
+      "location": [
+        36.573518,
+        136.652316
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "浅野川大橋": {
+      "name": "浅野川大橋",
+      "desc": "",
+      "address": "石川県金沢市橋場町４",
+      "location": [
+        36.571654,
+        136.664574
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "袋町": {
+      "name": "袋町",
+      "desc": "",
+      "address": "石川県金沢市袋町２",
+      "location": [
+        36.572367,
+        136.657428
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "東山": {
+      "name": "東山",
+      "desc": "",
+      "address": "石川県金沢市東山１丁目１",
+      "location": [
+        36.572311,
+        136.664874
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "金沢駅Ｂ": {
+      "name": "金沢駅Ｂ",
+      "desc": "",
+      "address": "石川県金沢市木ノ新保町１－１",
+      "location": [
+        36.57707818565,
+        136.64759501065
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    }
+  },
+  "timeline": [
+    {
+      "start_time": "15:30",
+      "arrival_time": "15:54",
+      "time_required": "24分",
+      "fee": "0円",
+      "transportation": [
+        "fa-blind",
+        "fa-flag-o"
+      ],
+      "information": [
+        "./images/rain.svg"
+      ],
+      "timeline_detail": {
+        "time_required": "24分",
+        "fee": "0円",
+        "src": "ひがし茶屋街",
+        "dest": "金沢駅(鼓門・もてなしドーム)",
+        "start": {
+          "spot_name": "ひがし茶屋街",
+          "time": "15:30"
+        },
+        "waypoint": [
+          {
+            "spot_name": "金沢駅(鼓門・もてなしドーム)",
+            "arrival_time": "15:54",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "24分",
+            "lat": 36.577912,
+            "lng": 136.648904
+          }
+        ]
+      }
+    },
+    {
+      "start_time": "15:42",
+      "arrival_time": "16:09",
+      "time_required": "27分",
+      "fee": "200円",
+      "transportation": [
+        "fa-blind",
+        "fa-bus",
+        "fa-blind",
+        "fa-flag-o"
+      ],
+      "information": [
+        "./images/rain.svg",
+        ""
+      ],
+      "timeline_detail": {
+        "time_required": "27分",
+        "fee": "200円",
+        "src": "ひがし茶屋街",
+        "dest": "金沢駅(鼓門・もてなしドーム)",
+        "start": {
+          "spot_name": "ひがし茶屋街",
+          "time": "15:42"
+        },
+        "waypoint": [
+          {
+            "spot_name": "武蔵西",
+            "arrival_time": "15:57",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "15分",
+            "lat": 36.572449,
+            "lng": 136.655411
+          },
+          {
+            "spot_name": "白銀町",
+            "arrival_time": "15:59",
+            "transportation": "fa-bus",
+            "transportation_text": "長町ルート",
+            "fee": "200円",
+            "information_icon": "",
+            "information_text": "",
+            "time_required": "02分",
+            "lat": 36.573518,
+            "lng": 136.652316
+          },
+          {
+            "spot_name": "金沢駅(鼓門・もてなしドーム)",
+            "arrival_time": "16:09",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "10分",
+            "lat": 36.577912,
+            "lng": 136.648904
+          }
+        ]
+      }
+    },
+    {
+      "start_time": "15:43",
+      "arrival_time": "16:09",
+      "time_required": "26分",
+      "fee": "400円",
+      "transportation": [
+        "fa-blind",
+        "fa-bus",
+        "fa-blind",
+        "fa-bus",
+        "fa-blind",
+        "fa-flag-o"
+      ],
+      "information": [
+        "./images/rain.svg",
+        ""
+      ],
+      "timeline_detail": {
+        "time_required": "26分",
+        "fee": "400円",
+        "src": "ひがし茶屋街",
+        "dest": "金沢駅(鼓門・もてなしドーム)",
+        "start": {
+          "spot_name": "ひがし茶屋街",
+          "time": "15:43"
+        },
+        "waypoint": [
+          {
+            "spot_name": "浅野川大橋",
+            "arrival_time": "15:47",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "04分",
+            "lat": 36.571654,
+            "lng": 136.664574
+          },
+          {
+            "spot_name": "袋町",
+            "arrival_time": "15:54",
+            "transportation": "fa-bus",
+            "transportation_text": "材木ルート",
+            "fee": "200円",
+            "information_icon": "",
+            "information_text": "",
+            "time_required": "07分",
+            "lat": 36.572367,
+            "lng": 136.657428
+          },
+          {
+            "spot_name": "武蔵西",
+            "arrival_time": "15:57",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "03分",
+            "lat": 36.572449,
+            "lng": 136.655411
+          },
+          {
+            "spot_name": "白銀町",
+            "arrival_time": "15:59",
+            "transportation": "fa-bus",
+            "transportation_text": "長町ルート",
+            "fee": "200円",
+            "information_icon": "",
+            "information_text": "",
+            "time_required": "02分",
+            "lat": 36.573518,
+            "lng": 136.652316
+          },
+          {
+            "spot_name": "金沢駅(鼓門・もてなしドーム)",
+            "arrival_time": "16:09",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "10分",
+            "lat": 36.577912,
+            "lng": 136.648904
+          }
+        ]
+      }
+    },
+    {
+      "start_time": "15:30",
+      "arrival_time": "15:46",
+      "time_required": "16分",
+      "fee": "400円",
+      "transportation": [
+        "fa-blind",
+        "fa-bicycle",
+        "fa-blind",
+        "fa-flag-o"
+      ],
+      "information": [
+        "./images/rain.svg",
+        "./images/may_no_bicycle.svg"
+      ],
+      "timeline_detail": {
+        "time_required": "16分",
+        "fee": "400円",
+        "src": "ひがし茶屋街",
+        "dest": "金沢駅(鼓門・もてなしドーム)",
+        "start": {
+          "spot_name": "ひがし茶屋街",
+          "time": "15:30"
+        },
+        "waypoint": [
+          {
+            "spot_name": "東山",
+            "arrival_time": "15:33",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "03分",
+            "lat": 36.572311,
+            "lng": 136.664874
+          },
+          {
+            "spot_name": "金沢駅Ｂ",
+            "arrival_time": "15:42",
+            "transportation": "fa-bicycle",
+            "transportation_text": "自転車",
+            "fee": "400円",
+            "information_icon": "./images/may_no_bicycle.svg",
+            "information_text": "現在の貸出可能台数：7台",
+            "time_required": "09分",
+            "lat": 36.57707818565,
+            "lng": 136.64759501065
+          },
+          {
+            "spot_name": "金沢駅(鼓門・もてなしドーム)",
+            "arrival_time": "15:46",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "04分",
+            "lat": 36.577912,
+            "lng": 136.648904
+          }
+        ]
+      }
+    }
   ]
 }
