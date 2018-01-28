@@ -1097,8 +1097,8 @@
   },
   "timeline": [
     {
-      "start_time": "09:40",
-      "arrival_time": "10:02",
+      "start_time": "12:00",
+      "arrival_time": "12:22",
       "time_required": "22分",
       "fee": "0円",
       "transportation": [
@@ -1115,19 +1115,18 @@
         "dest": "ひがし茶屋街",
         "start": {
           "spot_name": "金沢21世紀美術館",
-          "time": "09:40"
+          "time": "12:00"
         },
         "waypoint": [
           {
             "spot_name": "ひがし茶屋街",
-            "arrival_time": "10:02",
+            "arrival_time": "12:22",
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "22分",
-            "map_url": "http://maps.apple.com/maps?q=36.572587,136.666548&z=16",
             "lat": 36.572587,
             "lng": 136.666548
           }
@@ -1135,10 +1134,10 @@
       }
     },
     {
-      "start_time": "09:54",
-      "arrival_time": "10:21",
+      "start_time": "12:09",
+      "arrival_time": "12:36",
       "time_required": "27分",
-      "fee": "500円",
+      "fee": "200円",
       "transportation": [
         "fa-blind",
         "fa-bus",
@@ -1151,50 +1150,47 @@
       ],
       "timeline_detail": {
         "time_required": "27分",
-        "fee": "500円",
+        "fee": "200円",
         "src": "金沢21世紀美術館",
         "dest": "ひがし茶屋街",
         "start": {
           "spot_name": "金沢21世紀美術館",
-          "time": "09:54"
+          "time": "12:09"
         },
         "waypoint": [
           {
             "spot_name": "市役所・21世紀美術館",
-            "arrival_time": "9:58",
+            "arrival_time": "12:13",
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "04分",
-            "map_url": "http://maps.apple.com/maps?q=36.561941,136.65819&z=16",
             "lat": 36.561941,
             "lng": 136.65819
           },
           {
             "spot_name": "浅野川大橋",
-            "arrival_time": "10:17",
+            "arrival_time": "12:32",
             "transportation": "fa-bus",
             "transportation_text": "材木ルート",
-            "fee": "500円",
+            "fee": "200円",
             "information_icon": "",
             "information_text": "",
             "time_required": "19分",
-            "map_url": "http://maps.apple.com/maps?q=36.571654,136.664574&z=16",
             "lat": 36.571654,
             "lng": 136.664574
           },
           {
             "spot_name": "ひがし茶屋街",
-            "arrival_time": "10:21",
+            "arrival_time": "12:36",
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "04分",
-            "map_url": "http://maps.apple.com/maps?q=36.572587,136.666548&z=16",
             "lat": 36.572587,
             "lng": 136.666548
           }
@@ -1202,10 +1198,10 @@
       }
     },
     {
-      "start_time": "09:40",
-      "arrival_time": "09:51",
+      "start_time": "12:00",
+      "arrival_time": "12:11",
       "time_required": "11分",
-      "fee": "1000円",
+      "fee": "400円",
       "transportation": [
         "fa-blind",
         "fa-bicycle",
@@ -1218,52 +1214,49 @@
       ],
       "timeline_detail": {
         "time_required": "11分",
-        "fee": "1000円",
+        "fee": "400円",
         "src": "金沢21世紀美術館",
         "dest": "ひがし茶屋街",
         "start": {
           "spot_name": "金沢21世紀美術館",
-          "time": "09:40"
+          "time": "12:00"
         },
         "waypoint": [
           {
             "spot_name": "広坂",
-            "arrival_time": "09:41",
+            "arrival_time": "12:01",
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "01分",
-            "map_url": "http://maps.apple.com/maps?q=36.561412,136.657436&z=16",
             "lat": 36.561412,
             "lng": 136.657436
           },
           {
             "spot_name": "東山",
-            "arrival_time": "09:48",
+            "arrival_time": "12:08",
             "transportation": "fa-bicycle",
-            "transportation_text": null,
-            "fee": "1000円",
+            "transportation_text": "自転車",
+            "fee": "400円",
             "information_icon": "./images/may_no_bicycle.svg",
-            "information_text": "",
+            "information_text": "現在の貸出可能台数：1台",
             "time_required": "07分",
-            "map_url": "http://maps.apple.com/maps?q=36.572311,136.664874&z=16",
             "lat": 36.572311,
             "lng": 136.664874
           },
           {
             "spot_name": "ひがし茶屋街",
-            "arrival_time": "09:51",
+            "arrival_time": "12:11",
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "03分",
-            "map_url": "http://maps.apple.com/maps?q=36.572311,136.664874&z=16",
-            "lat": 36.572311,
-            "lng": 136.664874
+            "lat": 36.572587,
+            "lng": 136.666548
           }
         ]
       }

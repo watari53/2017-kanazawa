@@ -1097,8 +1097,8 @@
   },
   "timeline": [
     {
-      "start_time": "09:10",
-      "arrival_time": "09:42",
+      "start_time": "09:28",
+      "arrival_time": "10:00",
       "time_required": "32分",
       "fee": "0円",
       "transportation": [
@@ -1115,19 +1115,18 @@
         "dest": "金沢21世紀美術館",
         "start": {
           "spot_name": "金沢駅(鼓門・もてなしドーム)",
-          "time": "09:10"
+          "time": "09:28"
         },
         "waypoint": [
           {
             "spot_name": "金沢21世紀美術館",
-            "arrival_time": "09:42",
+            "arrival_time": "10:00",
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "32分",
-            "map_url": "http://maps.apple.com/maps?q=36.560867,136.658258&z=16",
             "lat": 36.560867,
             "lng": 136.658258
           }
@@ -1135,10 +1134,10 @@
       }
     },
     {
-      "start_time": "09:13",
-      "arrival_time": "09:42",
+      "start_time": "09:28",
+      "arrival_time": "09:57",
       "time_required": "29分",
-      "fee": "500円",
+      "fee": "200円",
       "transportation": [
         "fa-blind",
         "fa-bus",
@@ -1151,50 +1150,47 @@
       ],
       "timeline_detail": {
         "time_required": "29分",
-        "fee": "500円",
+        "fee": "200円",
         "src": "金沢駅(鼓門・もてなしドーム)",
         "dest": "金沢21世紀美術館",
         "start": {
           "spot_name": "金沢駅(鼓門・もてなしドーム)",
-          "time": "09:13"
+          "time": "09:28"
         },
         "waypoint": [
           {
             "spot_name": "金沢駅",
-            "arrival_time": "9:14",
+            "arrival_time": "9:29",
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "01分",
-            "map_url": "http://maps.apple.com/maps?q=36.578213,136.649215&z=16",
             "lat": 36.578213,
             "lng": 136.649215
           },
           {
             "spot_name": "町民文化館",
-            "arrival_time": "9:23",
+            "arrival_time": "9:38",
             "transportation": "fa-bus",
             "transportation_text": "此花ルート",
-            "fee": "500円",
+            "fee": "200円",
             "information_icon": "",
             "information_text": "",
             "time_required": "09分",
-            "map_url": "http://maps.apple.com/maps?q=36.571575,136.659091&z=16",
             "lat": 36.571575,
             "lng": 136.659091
           },
           {
             "spot_name": "金沢21世紀美術館",
-            "arrival_time": "09:42",
+            "arrival_time": "09:57",
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "19分",
-            "map_url": "http://maps.apple.com/maps?q=36.560867,136.658258&z=16",
             "lat": 36.560867,
             "lng": 136.658258
           }
@@ -1202,10 +1198,10 @@
       }
     },
     {
-      "start_time": "09:10",
-      "arrival_time": "09:26",
+      "start_time": "09:28",
+      "arrival_time": "09:44",
       "time_required": "16分",
-      "fee": "1000円",
+      "fee": "400円",
       "transportation": [
         "fa-blind",
         "fa-bicycle",
@@ -1214,56 +1210,53 @@
       ],
       "information": [
         "./images/rain.svg",
-        ""
+        "./images/no_bicycle.svg"
       ],
       "timeline_detail": {
         "time_required": "16分",
-        "fee": "1000円",
+        "fee": "400円",
         "src": "金沢駅(鼓門・もてなしドーム)",
         "dest": "金沢21世紀美術館",
         "start": {
           "spot_name": "金沢駅(鼓門・もてなしドーム)",
-          "time": "09:10"
+          "time": "09:28"
         },
         "waypoint": [
           {
             "spot_name": "金沢駅Ｂ",
-            "arrival_time": "09:14",
+            "arrival_time": "09:32",
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "04分",
-            "map_url": "http://maps.apple.com/maps?q=36.57707818565,136.64759501065&z=16",
             "lat": 36.57707818565,
             "lng": 136.64759501065
           },
           {
             "spot_name": "広坂",
-            "arrival_time": "09:25",
+            "arrival_time": "09:43",
             "transportation": "fa-bicycle",
-            "transportation_text": null,
-            "fee": "1000円",
-            "information_icon": "",
+            "transportation_text": "自転車",
+            "fee": "400円",
+            "information_icon": "./images/no_bicycle.svg",
             "information_text": "",
             "time_required": "11分",
-            "map_url": "http://maps.apple.com/maps?q=36.561412,136.657436&z=16",
             "lat": 36.561412,
             "lng": 136.657436
           },
           {
             "spot_name": "金沢21世紀美術館",
-            "arrival_time": "09:26",
+            "arrival_time": "09:44",
             "transportation": "fa-blind",
             "transportation_text": "徒歩",
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "01分",
-            "map_url": "http://maps.apple.com/maps?q=36.561412,136.657436&z=16",
-            "lat": 36.561412,
-            "lng": 136.657436
+            "lat": 36.560867,
+            "lng": 136.658258
           }
         ]
       }
