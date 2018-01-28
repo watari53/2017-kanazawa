@@ -1292,7 +1292,7 @@
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
-            "time_required": "04分",
+            "time_required": "03分",
             "lat": 36.572367,
             "lng": 136.657428
           },
@@ -1367,7 +1367,7 @@
             "transportation_text": "自転車",
             "fee": "400円",
             "information_icon": "./images/no_bicycle.svg",
-            "information_text": "",
+            "information_text": "現在の貸出可能台数：13台",
             "time_required": "11分",
             "lat": 36.561412,
             "lng": 136.657436
