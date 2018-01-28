@@ -1046,30 +1046,6 @@
       "fee": "",
       "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/24"
     },
-    "浅野川大橋": {
-      "name": "浅野川大橋",
-      "desc": "",
-      "address": "石川県金沢市橋場町４",
-      "location": [
-        36.571654,
-        136.664574
-      ],
-      "open_hours": "",
-      "fee": "",
-      "img": "dummy"
-    },
-    "袋町": {
-      "name": "袋町",
-      "desc": "",
-      "address": "石川県金沢市袋町２",
-      "location": [
-        36.572367,
-        136.657428
-      ],
-      "open_hours": "",
-      "fee": "",
-      "img": "dummy"
-    },
     "武蔵西": {
       "name": "武蔵西",
       "desc": "",
@@ -1089,6 +1065,30 @@
       "location": [
         36.573518,
         136.652316
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "浅野川大橋": {
+      "name": "浅野川大橋",
+      "desc": "",
+      "address": "石川県金沢市橋場町４",
+      "location": [
+        36.571654,
+        136.664574
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "袋町": {
+      "name": "袋町",
+      "desc": "",
+      "address": "石川県金沢市袋町２",
+      "location": [
+        36.572367,
+        136.657428
       ],
       "open_hours": "",
       "fee": "",
@@ -1151,6 +1151,70 @@
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "24分",
+            "lat": 36.577912,
+            "lng": 136.648904
+          }
+        ]
+      }
+    },
+    {
+      "start_time": "15:42",
+      "arrival_time": "16:09",
+      "time_required": "27分",
+      "fee": "200円",
+      "transportation": [
+        "fa-blind",
+        "fa-bus",
+        "fa-blind",
+        "fa-flag-o"
+      ],
+      "information": [
+        "./images/rain.svg",
+        ""
+      ],
+      "timeline_detail": {
+        "time_required": "27分",
+        "fee": "200円",
+        "src": "ひがし茶屋街",
+        "dest": "金沢駅(鼓門・もてなしドーム)",
+        "start": {
+          "spot_name": "ひがし茶屋街",
+          "time": "15:42"
+        },
+        "waypoint": [
+          {
+            "spot_name": "武蔵西",
+            "arrival_time": "15:57",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "15分",
+            "lat": 36.572449,
+            "lng": 136.655411
+          },
+          {
+            "spot_name": "白銀町",
+            "arrival_time": "15:59",
+            "transportation": "fa-bus",
+            "transportation_text": "長町ルート",
+            "fee": "200円",
+            "information_icon": "",
+            "information_text": "",
+            "time_required": "02分",
+            "lat": 36.573518,
+            "lng": 136.652316
+          },
+          {
+            "spot_name": "金沢駅(鼓門・もてなしドーム)",
+            "arrival_time": "16:09",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "10分",
             "lat": 36.577912,
             "lng": 136.648904
           }

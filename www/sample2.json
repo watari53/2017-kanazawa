@@ -1070,6 +1070,18 @@
       "fee": "",
       "img": "dummy"
     },
+    "21世紀美術館": {
+      "name": "21世紀美術館",
+      "desc": "",
+      "address": "石川県金沢市本多町３丁目１",
+      "location": [
+        36.561088,
+        136.659375
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
     "広坂": {
       "name": "広坂",
       "desc": "",
@@ -1167,6 +1179,96 @@
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "04分",
+            "lat": 36.561941,
+            "lng": 136.65819
+          },
+          {
+            "spot_name": "浅野川大橋",
+            "arrival_time": "12:32",
+            "transportation": "fa-bus",
+            "transportation_text": "材木ルート",
+            "fee": "200円",
+            "information_icon": "",
+            "information_text": "",
+            "time_required": "19分",
+            "lat": 36.571654,
+            "lng": 136.664574
+          },
+          {
+            "spot_name": "ひがし茶屋街",
+            "arrival_time": "12:36",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "04分",
+            "lat": 36.572587,
+            "lng": 136.666548
+          }
+        ]
+      }
+    },
+    {
+      "start_time": "12:07",
+      "arrival_time": "12:36",
+      "time_required": "29分",
+      "fee": "400円",
+      "transportation": [
+        "fa-blind",
+        "fa-bus",
+        "fa-blind",
+        "fa-bus",
+        "fa-blind",
+        "fa-flag-o"
+      ],
+      "information": [
+        "./images/rain.svg",
+        ""
+      ],
+      "timeline_detail": {
+        "time_required": "29分",
+        "fee": "400円",
+        "src": "金沢21世紀美術館",
+        "dest": "ひがし茶屋街",
+        "start": {
+          "spot_name": "金沢21世紀美術館",
+          "time": "12:07"
+        },
+        "waypoint": [
+          {
+            "spot_name": "21世紀美術館",
+            "arrival_time": "12:10",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "03分",
+            "lat": 36.561088,
+            "lng": 136.659375
+          },
+          {
+            "spot_name": "21世紀美術館",
+            "arrival_time": "12:10",
+            "transportation": "fa-bus",
+            "transportation_text": "菊川ルート",
+            "fee": "200円",
+            "information_icon": "",
+            "information_text": "",
+            "time_required": "00分",
+            "lat": 36.561088,
+            "lng": 136.659375
+          },
+          {
+            "spot_name": "市役所・21世紀美術館",
+            "arrival_time": "12:13",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "03分",
             "lat": 36.561941,
             "lng": 136.65819
           },

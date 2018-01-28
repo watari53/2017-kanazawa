@@ -1070,6 +1070,42 @@
       "fee": "",
       "img": "dummy"
     },
+    "武蔵ヶ辻": {
+      "name": "武蔵ヶ辻",
+      "desc": "",
+      "address": "石川県金沢市武蔵町１５",
+      "location": [
+        36.572852,
+        136.655368
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "袋町": {
+      "name": "袋町",
+      "desc": "",
+      "address": "石川県金沢市袋町２",
+      "location": [
+        36.572367,
+        136.657428
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "市役所・21世紀美術館": {
+      "name": "市役所・21世紀美術館",
+      "desc": "",
+      "address": "石川県金沢市広坂２丁目１",
+      "location": [
+        36.561941,
+        136.65819
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
     "金沢駅Ｂ": {
       "name": "金沢駅Ｂ",
       "desc": "",
@@ -1191,6 +1227,96 @@
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
             "time_required": "19分",
+            "lat": 36.560867,
+            "lng": 136.658258
+          }
+        ]
+      }
+    },
+    {
+      "start_time": "09:28",
+      "arrival_time": "10:02",
+      "time_required": "34分",
+      "fee": "400円",
+      "transportation": [
+        "fa-blind",
+        "fa-bus",
+        "fa-blind",
+        "fa-bus",
+        "fa-blind",
+        "fa-flag-o"
+      ],
+      "information": [
+        "./images/rain.svg",
+        ""
+      ],
+      "timeline_detail": {
+        "time_required": "34分",
+        "fee": "400円",
+        "src": "金沢駅(鼓門・もてなしドーム)",
+        "dest": "金沢21世紀美術館",
+        "start": {
+          "spot_name": "金沢駅(鼓門・もてなしドーム)",
+          "time": "09:28"
+        },
+        "waypoint": [
+          {
+            "spot_name": "金沢駅",
+            "arrival_time": "9:29",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "01分",
+            "lat": 36.578213,
+            "lng": 136.649215
+          },
+          {
+            "spot_name": "武蔵ヶ辻",
+            "arrival_time": "9:36",
+            "transportation": "fa-bus",
+            "transportation_text": "此花ルート",
+            "fee": "200円",
+            "information_icon": "",
+            "information_text": "",
+            "time_required": "07分",
+            "lat": 36.572852,
+            "lng": 136.655368
+          },
+          {
+            "spot_name": "袋町",
+            "arrival_time": "9:39",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "04分",
+            "lat": 36.572367,
+            "lng": 136.657428
+          },
+          {
+            "spot_name": "市役所・21世紀美術館",
+            "arrival_time": "9:58",
+            "transportation": "fa-bus",
+            "transportation_text": "材木ルート",
+            "fee": "200円",
+            "information_icon": "",
+            "information_text": "",
+            "time_required": "19分",
+            "lat": 36.561941,
+            "lng": 136.65819
+          },
+          {
+            "spot_name": "金沢21世紀美術館",
+            "arrival_time": "10:02",
+            "transportation": "fa-blind",
+            "transportation_text": "徒歩",
+            "fee": "0円",
+            "information_icon": "./images/rain.svg",
+            "information_text": "雨情報あり",
+            "time_required": "04分",
             "lat": 36.560867,
             "lng": 136.658258
           }
