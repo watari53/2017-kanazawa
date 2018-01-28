@@ -36,7 +36,9 @@ InAppBrowserプラグインを有効化する
 |_self	 |ホワイトリストに対象のURLが登録されている場合には、Cordova WebViewを開きます。それ以外の場合には、InAppBrowser を開きます。 |
 
 ## 非同期待ち合わせ　promise
-サービス内で
+参考URL: https://whiskers.nukos.kitchen/2015/04/27/angularjs-promise.html
+
+非同期処理のサービスを作成
 
 	var service = angular.module("customServices", []);
 	service.factory('myService', ['$q', '$timeout', function($q, $timeout) {
@@ -141,3 +143,11 @@ $httpは内部で$qが使われているので、戻り値がpromiseオブジェ
 	    }
 	  }
 	}]);
+
+## 配列を回す
+angular.forEachを使う
+
+	var array = ["a", "b", "c"];
+	angular.forEach(array, function(a){
+	  console.log(a);	
+	});
