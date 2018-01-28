@@ -34,13 +34,13 @@
         <ul class="list list--inset">
           <li class="list-item list--inset__item list-item--tappable input-area" ng-click='app.go_search("src")'>
             <div class="list-item__left">
-              <span class="notification" style="background-color:#0080FF">出発</span>
+              <span class="start_index">出発</span>
             </div>
             <div id="src" class="list-item__center">{{this.search.src}}</div>
           </li>
           <li class="list-item list--inset__item list-item--tappable input-area" ng-click='app.go_search("dest")'>
             <div class="list-item__left">
-              <span class="notification style=" background-color:#FF0080 ">到着</span>
+              <span class="dest_index">到着</span>
             </div>
             <div id="dest" class="list-item__center">{{this.search.dest}}</div>
           </li>
@@ -171,9 +171,9 @@
         <div style="padding: 1px 0 0 0;">
           <div class="card card--material">
             <div class="card__content">
-              <div>{{tl.time| date: "a hh時mm分"}}{{tl.search_type}}</div>
-              <div>出発: {{tl.src}}</div>
-              <div>到着: {{tl.dest}}</div>
+              {{tl.time| date: "a hh時mm分"}}{{tl.search_type}}
+              <div style="margin-top:5px"><span class="start_index">出発</span><strong>{{tl.src}}</strong></div>
+              <div style="margin-top:10px"><span class="dest_index">到着</span><strong>{{tl.dest}}</strong></div>
             </div>
           </div>
         </div>
@@ -249,8 +249,8 @@
               <div style="margin-bottom: 10px">
                 {{td.detail.time_required}} <i style="margin-left: 5px">{{td.detail.fee}}</i>
               </div>
-              <div>出発: {{td.detail.src}}</div>
-              <div>到着: {{td.detail.dest}}</div>
+              <div style="margin-top:5px"><span class="start_index">出発</span><strong>{{td.detail.src}}</strong></div>
+              <div style="margin-top:10px"><span class="dest_index">到着</span><strong>{{td.detail.dest}}</strong></div>
             </div>
           </div>
         </div>

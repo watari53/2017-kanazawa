@@ -5,6 +5,24 @@
 .input-area {
     height: 60px;
 }
+
+.start_index {
+  padding: 3px 4px 2px 4px;
+  margin-right: 2px;
+  font-size: 12px;
+  background-color: #5e92c4;
+  color: #FFF;
+  font-weight: bold;
+}    
+.dest_index {
+  padding: 3px 4px 2px 4px;
+  margin-right: 2px;
+  font-size: 12px;
+  background-color: #c76daa;
+  color: #FFF;
+  font-weight: bold;
+}
+
 /* search.html */
 .distance {
   color: #9E9E9E;
@@ -22,6 +40,14 @@
 }
 
 /* timeline.html */
+.fa-walk {
+  position: relative;
+  &:after {
+    background: $color-bg;
+    bottom: 0;
+    content: '';
+  }
+}
 .plan-list {
   border-top: none;
   background-image: none !important;

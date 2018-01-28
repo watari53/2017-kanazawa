@@ -81,7 +81,7 @@ ons.bootstrap()
     };
     service.getData = function(param) {
       var DEMO_PATTERN = DEMO;
-      var sample_file = "sample.json";
+      var sample_file = "sample1.json"; // default file is sample1.json
       angular.forEach(DEMO_PATTERN, function(p){
         if(p.dest === param.dest) {
           console.log("hit sample data: " + p.files);
@@ -110,9 +110,8 @@ ons.bootstrap()
     $scope.time = DEFAULT_TIME;
     $scope.people_n = 1;
 
-    $http.get('sample.json').then(function(response){
-      DataService.setSample(response.data);
-    });
+    //init
+    DataService.getData({});
     
     this.go_search = function(search_type) {
       navi.pushPage('search.html', {data: {search_type: search_type}});
