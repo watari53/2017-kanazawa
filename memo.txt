@@ -21,11 +21,12 @@
 
 
 ## 外部リンク先から元のページに戻る
+https://qiita.com/keeey/items/d81b3c64dc5c1fcc1c9b
 InAppBrowserプラグインを有効化する
 
 ### 使い方
   window.open("https://ja.monaca.io/", '_blank', 'location=yes');
-  
+
 ### パラメーター
 
 |target  |用途  |
@@ -33,3 +34,110 @@ InAppBrowserプラグインを有効化する
 |_blank	 |InAppBrowserを開きます。 |
 |_system |システム標準のWebブラウザーを開きます。 |
 |_self	 |ホワイトリストに対象のURLが登録されている場合には、Cordova WebViewを開きます。それ以外の場合には、InAppBrowser を開きます。 |
+
+## 非同期待ち合わせ　promise
+サービス内で
+
+	var service = angular.module("customServices", []);
+	service.factory('myService', ['$q', '$timeout', function($q, $timeout) {
+	  return {
+	    data: function(){
+	      //deferのインスタンスを作る（お呪いのようなもの）
+	      var d = $q.defer();
+
+	      $timeout(function(){
+	        d.resolve("Data:1（３秒後に取得完了）"); //非同期処理完了時の値をresolveメソッドに渡す
+	      }, 3000);
+
+	      //プロミスオブジェクトを参照もとに返す
+	      return d.promise;
+	    }
+	  }
+	}]);
+
+js内で、promise.thenを使って待ち合わせ
+
+	var app = angular.module('myApp', ['customServices']);
+	app.controller('myController', ['$scope', 'myService', function($scope, myService){
+
+	  //dataの取得完了後にthenが実行される
+	  $scope.get_data = function(){
+	    // Factoryからデータ取得のメソッドを呼び出し、Promiseオブジェクトを格納する
+	    promise = myService.data();
+
+	    //取得中であることを明示
+	    $scope.message = '取得中';
+
+	    promise.then(function(strs){
+	      //成功時
+	      $scope.message = '取得完了';
+	      $scope.data = strs;
+	    });
+
+	  }
+
+	  $scope.reset = function(){
+	    $scope.data = '';
+	  }
+	}]);
+
+HTML内
+
+	<h1>Example: Promise</h1>
+	<p>ひとつの非同期処理が完了したら値を表示する（3秒かかります）。</p>
+	<div ng-app="myApp">
+	  <div ng-controller="myController">
+	    <button ng-click="get_data()">データを取得</button>
+	    <button ng-click="reset()">リセット</button>
+	    <p>{{ message }}</p>
+	    <p>{{ data }}</p>
+	  </div>
+	</div>
+
+
+複数の非同期待ち
+
+	var app = angular.module('myApp', ['customServices']);
+	app.controller('myController', ['$scope', '$q', 'myService', function($scope, $q, myService){
+
+	  $scope.get_all = function(){
+	    //処理中に表示するテキスト
+	    $scope.data1 = '取得中';
+	    $scope.data2 = '取得中';
+
+	    //$q.allを使って複数のPromiseオブジェクトを取得する
+	    $q.all([
+	      myService.data1(),
+	      myService.data2()
+	    ]).then(function(strs){
+	      //すべてのPromiseオブジェクトが取得できたら実行される
+	      $scope.data1 = strs[0];
+	      $scope.data2 = strs[1];
+	    });
+	  }
+
+	  $scope.reset = function(){
+	    $scope.data1 = '';
+	    $scope.data2 = '';
+	  }
+	}]);
+
+
+$httpは内部で$qが使われているので、戻り値がpromiseオブジェクトになっているため、以下のような記述も可能
+
+	var service = angular.module("customServices", []);
+	service.factory('myService', ['$q', '$http', function($q, $http) {
+	  return {
+	    data: function(){
+	      //リクエスト内容
+	      var req = {
+	        method: 'GET',
+	        url: 'http://api.nukos.kitchen/index.json',
+	        responseType: 'json'
+	      }
+
+	      //プロミスオブジェクトを返す
+	      return $http(req);
+	    }
+	  }
+	}]);
