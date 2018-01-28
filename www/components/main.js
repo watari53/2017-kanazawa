@@ -10,15 +10,17 @@
 // traffic_jam   = "./images/traffic_jam.svg";
 // no_bicycle    = "./images/no_bicycle.svg";
 // may_no_bicycle = "./images/may_no_bicycle.svg";
+var APP_NAME = "金沢乗換案内";
 var show_route = ["徒歩", "自転車"];
 var DEFAULT_SRC_MSG = "現在地";
 var DEFAULT_DEST_MSG = "到着地を選択";
 var DEFAULT_TIME = "現在時刻";
-var APP_NAME = "金沢乗換案内";
+
+var DEMO_INIT_FILE = "sample.json";
 var DEMO = [{dest: "金沢21世紀美術館", file:"sample1.json"},{dest: "ひがし茶屋街", file:"sample2.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3.json"}];
-wp_color    = {
-                walk: "#ccc",
-              };
+var WP_COLOR = {
+                  walk: "#ccc",
+               };
 
 // 重複を排除しながらunshiftする関数
 function arrayExist(array, value) {
@@ -81,7 +83,7 @@ ons.bootstrap()
     };
     service.getData = function(param) {
       var DEMO_PATTERN = DEMO;
-      var sample_file = "sample1.json"; // default file is sample1.json
+      var sample_file = DEMO_INIT_FILE; // default file is sample1.json
       angular.forEach(DEMO_PATTERN, function(p){
         if(p.dest === param.dest) {
           console.log("hit sample data: " + p.files);
