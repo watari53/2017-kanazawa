@@ -40,14 +40,6 @@
 }
 
 /* timeline.html */
-.fa-walk {
-  position: relative;
-  &:after {
-    background: $color-bg;
-    bottom: 0;
-    content: '';
-  }
-}
 .plan-list {
   border-top: none;
   background-image: none !important;
