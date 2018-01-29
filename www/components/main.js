@@ -10,13 +10,15 @@
 // traffic_jam   = "./images/traffic_jam.svg";
 // no_bicycle    = "./images/no_bicycle.svg";
 // may_no_bicycle = "./images/may_no_bicycle.svg";
-var APP_NAME = "金沢乗換案内";
+var APP_NAME = "金沢乗換案内";
+
 var show_route = ["徒歩", "自転車"];
 var DEFAULT_SRC_MSG = "現在地";
 var DEFAULT_DEST_MSG = "到着地を選択";
 var DEFAULT_TIME = "現在時刻";
 
-var DEMO_INIT_FILE = "sample.json";
+var DEMO_INIT_FILE = "sample.json";
+
 var DEMO = [{dest: "金沢21世紀美術館", file:"sample1.json"},{dest: "ひがし茶屋街", file:"sample2.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3.json"}];
 var WP_COLOR = {
                   walk: "#ccc",
@@ -211,9 +213,14 @@ ons.bootstrap()
     };
     // wapoint_index: 0,1,...n
     this.go_map = function(w_index){
-      var srcLocation;
+      var srcLocation; // {name: spot_name, lat: latitude, lng: longitude}
       if(w_index === 0) {
-        srcLocation = getSrcLocation();
+        if(this.detail.start.spot_name === DEFAULT_SRC_MSG) {
+          srcLocation = getSrcLocation();
+        } else {
+          var start = this.detail.start;
+          srcLocation = {name: start.spot_name, lat: start.lat, lng: start.lng}
+        }
       } else {
         var i = w_index - 1;
         srcLocation = {name: waypoint[i].spot_name, lat: waypoint[i].lat, lng: waypoint[i].lng};
