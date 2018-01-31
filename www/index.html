@@ -188,16 +188,12 @@
                   {{r.start_time}}
                   <ons-icon icon="fa-long-arrow-right"></ons-icon>
                   {{r.arrival_time}}
+                  <span class="fast_index" ng-show="r.feature.fast">早</span>
                 </div>
 
                 <div class="plan-info">
-                  <div>
                     <ons-icon class="plan-icon" icon="fa-clock-o"></ons-icon>{{r.time_required}}
-                  </div>
-
-                  <div>
-                    <ons-icon class="plan-icon" icon="fa-yen"></ons-icon>{{r.fee}}
-                  </div>
+                    <ons-icon class="plan-icon plan-fee" icon="fa-yen"></ons-icon>{{r.fee}}
                 </div>
 
                 <div class="plan-transportation">
@@ -244,7 +240,7 @@
           <div class="card">
             <div class="card__content">
               <div style="margin-bottom: 10px">
-                {{td.detail.time_required}} <i style="margin-left: 5px">{{td.detail.fee}}</i>
+                {{td.detail.time_required}} <span style="margin-left: 5px">{{td.detail.fee}}</span>
               </div>
               <div style="margin-top:5px"><span class="start_index">出発</span><strong>{{td.detail.src}}</strong></div>
               <div style="margin-top:10px"><span class="dest_index">到着</span><strong>{{td.detail.dest}}</strong></div>

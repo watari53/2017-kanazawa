@@ -66,20 +66,32 @@
   margin-top: 6px;
   font-weight: 500;
 }
+.fast_index {
+  padding: 3px 3px 2px 3px;
+  font-size: 12px;
+  font-weight: normal;
+  background-color: #5e92c4;
+  color: #FFF;
+}
 .plan-name {
   font-size: 17px;
   margin-bottom: 8px;
+  font-weight: bold;
 }
 .plan-info {
-  opacity: 0.4;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
 }
 .plan-icon {
-  width: 12px;
-  margin-right: 2px;
+  opacity: 0.6;
+  margin-right: 4px;
 }
-
+.plan-fee {
+  margin-left: 8px;
+}
+.plan-transportation {
+  margin-top: 7px;
+}
 /* spot.html */
 .page--shop-details__content {
   position: absolute;

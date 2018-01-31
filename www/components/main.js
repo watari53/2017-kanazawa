@@ -219,8 +219,7 @@ ons.bootstrap()
           srcLocation = getSrcLocation();
         } else {
           var start = this.detail.start;
-          srcLocation = {name: start.spot_name, lat: start.lat, lng: start.lng};
-          console.log(srcLocation);
+          srcLocation = {name: start.spot_name, lat: start.lat, lng: start.lng}
         }
       } else {
         var i = w_index - 1;
