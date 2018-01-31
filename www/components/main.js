@@ -22,9 +22,9 @@ var DEMO_INIT_FILE = "sample.json";
 var DEMO = [{dest: "金沢21世紀美術館", file:"sample1.json"},{dest: "ひがし茶屋街", file:"sample2.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3.json"}];
 var TP_ICON = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus"};
 var TP_COLOR = {
-                  walk:    "#3399ff",
-                  bicycle: "green",
-                  bus:     "red"
+                  walk:    {background-color: "#3399ff"},
+                  bicycle: {background-color: "green"},
+                  bus:     {background-color: "red"}
                };
 
 // 重複を排除しながらunshiftする関数
@@ -214,7 +214,7 @@ ons.bootstrap()
     };
     this.getTPIcon = function(transportation_type) {
       return TP_ICON[transportation_type];
-    }
+    };
     // show route if transportation_text exist in show_route
     this.showRoute = function(transportation_text) {
         if(show_route.indexOf(transportation_text) !== -1) {
