@@ -41,7 +41,7 @@ function arrayExist(array, value) {
 }
 
 ons.bootstrap()
-  .service('IconService', function() {
+  .service('OrnamentService', function() {
     var service = {};
 
     service.getTPColor = function(transportation_type) {
@@ -213,7 +213,7 @@ ons.bootstrap()
       navi.pushPage('timeline_detail.html', {data: {timeline_detail: timeline_detail}});
     };
   })
-  .controller('TimeLineDetailController', function(IconService, DataService) {
+  .controller('TimeLineDetailController', function(OrnamentService, DataService) {
     this.detail = navi.topPage.data.timeline_detail;
     var waypoint = this.detail.waypoint;
     
@@ -221,10 +221,6 @@ ons.bootstrap()
       return {name: "現在地", lat: 36.578268, lng: 136.648035};
     }
 
-    this.getTPColor = IconService.getTPColor();
-    this.getTPIcon = function(transportation_type) {
-      return TP_ICON[transportation_type];
-    };
     // show route if transportation_text exist in show_route
     this.showRoute = function(transportation_text) {
         if(show_route.indexOf(transportation_text) !== -1) {
