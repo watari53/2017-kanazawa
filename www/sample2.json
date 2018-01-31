@@ -1114,8 +1114,8 @@
       "time_required": "22分",
       "fee": "0円",
       "transportation": [
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg"
@@ -1135,8 +1135,10 @@
           {
             "spot_name": "ひがし茶屋街",
             "arrival_time": "12:22",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1156,10 +1158,10 @@
       "time_required": "27分",
       "fee": "200円",
       "transportation": [
-        "fa-blind",
-        "fa-bus",
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "bus",
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg",
@@ -1180,8 +1182,10 @@
           {
             "spot_name": "市役所・21世紀美術館",
             "arrival_time": "12:13",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1192,8 +1196,10 @@
           {
             "spot_name": "浅野川大橋",
             "arrival_time": "12:32",
-            "transportation": "fa-bus",
-            "transportation_text": "材木ルート",
+            "transportation": {
+              "type": "bus",
+              "text": "材木ルート"
+            },
             "fee": "200円",
             "information_icon": "",
             "information_text": "",
@@ -1204,8 +1210,10 @@
           {
             "spot_name": "ひがし茶屋街",
             "arrival_time": "12:36",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1225,12 +1233,12 @@
       "time_required": "29分",
       "fee": "400円",
       "transportation": [
-        "fa-blind",
-        "fa-bus",
-        "fa-blind",
-        "fa-bus",
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "bus",
+        "walk",
+        "bus",
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg",
@@ -1251,8 +1259,10 @@
           {
             "spot_name": "21世紀美術館",
             "arrival_time": "12:10",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1263,8 +1273,10 @@
           {
             "spot_name": "21世紀美術館",
             "arrival_time": "12:10",
-            "transportation": "fa-bus",
-            "transportation_text": "菊川ルート",
+            "transportation": {
+              "type": "bus",
+              "text": "菊川ルート"
+            },
             "fee": "200円",
             "information_icon": "",
             "information_text": "",
@@ -1275,8 +1287,10 @@
           {
             "spot_name": "市役所・21世紀美術館",
             "arrival_time": "12:13",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1287,8 +1301,10 @@
           {
             "spot_name": "浅野川大橋",
             "arrival_time": "12:32",
-            "transportation": "fa-bus",
-            "transportation_text": "材木ルート",
+            "transportation": {
+              "type": "bus",
+              "text": "材木ルート"
+            },
             "fee": "200円",
             "information_icon": "",
             "information_text": "",
@@ -1299,8 +1315,10 @@
           {
             "spot_name": "ひがし茶屋街",
             "arrival_time": "12:36",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1320,10 +1338,10 @@
       "time_required": "11分",
       "fee": "400円",
       "transportation": [
-        "fa-blind",
-        "fa-bicycle",
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "bicycle",
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg",
@@ -1344,8 +1362,10 @@
           {
             "spot_name": "広坂",
             "arrival_time": "12:01",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1356,11 +1376,13 @@
           {
             "spot_name": "東山",
             "arrival_time": "12:08",
-            "transportation": "fa-bicycle",
-            "transportation_text": "自転車",
+            "transportation": {
+              "type": "bicycle",
+              "text": "自転車"
+            },
             "fee": "400円",
             "information_icon": "./images/may_no_bicycle.svg",
-            "information_text": "現在の貸出可能台数：1台",
+            "information_text": "残り1台",
             "time_required": "07分",
             "lat": 36.572311,
             "lng": 136.664874
@@ -1368,8 +1390,10 @@
           {
             "spot_name": "ひがし茶屋街",
             "arrival_time": "12:11",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",

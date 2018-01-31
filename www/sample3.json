@@ -1126,8 +1126,8 @@
       "time_required": "24分",
       "fee": "0円",
       "transportation": [
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg"
@@ -1147,8 +1147,10 @@
           {
             "spot_name": "金沢駅(鼓門・もてなしドーム)",
             "arrival_time": "15:54",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1168,10 +1170,10 @@
       "time_required": "27分",
       "fee": "200円",
       "transportation": [
-        "fa-blind",
-        "fa-bus",
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "bus",
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg",
@@ -1192,8 +1194,10 @@
           {
             "spot_name": "武蔵西",
             "arrival_time": "15:57",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1204,8 +1208,10 @@
           {
             "spot_name": "白銀町",
             "arrival_time": "15:59",
-            "transportation": "fa-bus",
-            "transportation_text": "長町ルート",
+            "transportation": {
+              "type": "bus",
+              "text": "長町ルート"
+            },
             "fee": "200円",
             "information_icon": "",
             "information_text": "",
@@ -1216,8 +1222,10 @@
           {
             "spot_name": "金沢駅(鼓門・もてなしドーム)",
             "arrival_time": "16:09",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1237,12 +1245,12 @@
       "time_required": "26分",
       "fee": "400円",
       "transportation": [
-        "fa-blind",
-        "fa-bus",
-        "fa-blind",
-        "fa-bus",
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "bus",
+        "walk",
+        "bus",
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg",
@@ -1263,8 +1271,10 @@
           {
             "spot_name": "浅野川大橋",
             "arrival_time": "15:47",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1275,8 +1285,10 @@
           {
             "spot_name": "袋町",
             "arrival_time": "15:54",
-            "transportation": "fa-bus",
-            "transportation_text": "材木ルート",
+            "transportation": {
+              "type": "bus",
+              "text": "材木ルート"
+            },
             "fee": "200円",
             "information_icon": "",
             "information_text": "",
@@ -1287,8 +1299,10 @@
           {
             "spot_name": "武蔵西",
             "arrival_time": "15:57",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1299,8 +1313,10 @@
           {
             "spot_name": "白銀町",
             "arrival_time": "15:59",
-            "transportation": "fa-bus",
-            "transportation_text": "長町ルート",
+            "transportation": {
+              "type": "bus",
+              "text": "長町ルート"
+            },
             "fee": "200円",
             "information_icon": "",
             "information_text": "",
@@ -1311,8 +1327,10 @@
           {
             "spot_name": "金沢駅(鼓門・もてなしドーム)",
             "arrival_time": "16:09",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1332,10 +1350,10 @@
       "time_required": "16分",
       "fee": "400円",
       "transportation": [
-        "fa-blind",
-        "fa-bicycle",
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "bicycle",
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg",
@@ -1356,8 +1374,10 @@
           {
             "spot_name": "東山",
             "arrival_time": "15:33",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1368,11 +1388,13 @@
           {
             "spot_name": "金沢駅Ｂ",
             "arrival_time": "15:42",
-            "transportation": "fa-bicycle",
-            "transportation_text": "自転車",
+            "transportation": {
+              "type": "bicycle",
+              "text": "自転車"
+            },
             "fee": "400円",
             "information_icon": "./images/may_no_bicycle.svg",
-            "information_text": "現在の貸出可能台数：7台",
+            "information_text": "残り7台",
             "time_required": "09分",
             "lat": 36.57707818565,
             "lng": 136.64759501065
@@ -1380,8 +1402,10 @@
           {
             "spot_name": "金沢駅(鼓門・もてなしドーム)",
             "arrival_time": "15:46",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
