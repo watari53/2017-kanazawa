@@ -1138,8 +1138,8 @@
       "time_required": "32分",
       "fee": "0円",
       "transportation": [
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg"
@@ -1159,8 +1159,7 @@
           {
             "spot_name": "金沢21世紀美術館",
             "arrival_time": "10:00",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {"type": "walk", "text": "徒歩"},
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1180,10 +1179,10 @@
       "time_required": "29分",
       "fee": "200円",
       "transportation": [
-        "fa-blind",
-        "fa-bus",
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "bus",
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg",
@@ -1204,8 +1203,7 @@
           {
             "spot_name": "金沢駅",
             "arrival_time": "9:29",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {"type": "walk", "text": "徒歩"},
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1216,8 +1214,7 @@
           {
             "spot_name": "町民文化館",
             "arrival_time": "9:38",
-            "transportation": "fa-bus",
-            "transportation_text": "此花ルート",
+            "transportation": {"type": "bus", "text": "此花ルート"},
             "fee": "200円",
             "information_icon": "",
             "information_text": "",
@@ -1228,8 +1225,7 @@
           {
             "spot_name": "金沢21世紀美術館",
             "arrival_time": "09:57",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {"type": "walk", "text": "徒歩"},
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1249,12 +1245,12 @@
       "time_required": "34分",
       "fee": "400円",
       "transportation": [
-        "fa-blind",
-        "fa-bus",
-        "fa-blind",
-        "fa-bus",
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "bus",
+        "walk",
+        "bus",
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg",
@@ -1275,8 +1271,7 @@
           {
             "spot_name": "金沢駅",
             "arrival_time": "9:29",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {"type": "walk", "text": "徒歩"},
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1287,8 +1282,7 @@
           {
             "spot_name": "武蔵ヶ辻",
             "arrival_time": "9:36",
-            "transportation": "fa-bus",
-            "transportation_text": "此花ルート",
+            "transportation": {"type": "bus", "text": "此花ルート"},
             "fee": "200円",
             "information_icon": "",
             "information_text": "",
@@ -1299,8 +1293,7 @@
           {
             "spot_name": "袋町",
             "arrival_time": "9:39",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {"type": "walk", "text": "徒歩"},
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1311,8 +1304,7 @@
           {
             "spot_name": "市役所・21世紀美術館",
             "arrival_time": "9:58",
-            "transportation": "fa-bus",
-            "transportation_text": "材木ルート",
+            "transportation": {"type": "bus", "text": "材木ルート"},
             "fee": "200円",
             "information_icon": "",
             "information_text": "",
@@ -1323,8 +1315,7 @@
           {
             "spot_name": "金沢21世紀美術館",
             "arrival_time": "10:02",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {"type": "walk", "text": "徒歩"},
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1344,10 +1335,10 @@
       "time_required": "16分",
       "fee": "400円",
       "transportation": [
-        "fa-blind",
-        "fa-bicycle",
-        "fa-blind",
-        "fa-flag-o"
+        "walk",
+        "bicycle",
+        "walk",
+        "goal"
       ],
       "information": [
         "./images/rain.svg",
@@ -1368,8 +1359,7 @@
           {
             "spot_name": "金沢駅Ｂ",
             "arrival_time": "09:32",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {"type": "walk", "text": "徒歩"},
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",
@@ -1380,8 +1370,7 @@
           {
             "spot_name": "広坂",
             "arrival_time": "09:43",
-            "transportation": "fa-bicycle",
-            "transportation_text": "自転車",
+            "transportation": {"type": "bicycle", "text": "自転車"},
             "fee": "400円",
             "information_icon": "./images/no_bicycle.svg",
             "information_text": "現在の貸出可能台数：13台",
@@ -1392,8 +1381,7 @@
           {
             "spot_name": "金沢21世紀美術館",
             "arrival_time": "09:44",
-            "transportation": "fa-blind",
-            "transportation_text": "徒歩",
+            "transportation": {"type": "walk", "text": "徒歩"},
             "fee": "0円",
             "information_icon": "./images/rain.svg",
             "information_text": "雨情報あり",

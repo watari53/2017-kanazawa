@@ -261,19 +261,19 @@
             <ons-col width="15%" class="plan-left">
               <div style="text-align: center; display: flex; align-items: center; height: 100%; font-size: 110%">
                 <div style="position: relative; z-index: 1; right: -80%; background-color: white; height: 35px; width: 42px; padding: 2px; border: 1px solid">
-                  <ons-icon icon="{{w.transportation}}"></ons-icon>
+                  <ons-icon icon="{{td.getTPIcon(w.transportation.type)}}"></ons-icon>
                   <div style="font-size: 80%">{{w.time_required}}</div>
                 </div>
               </div>
             </ons-col>
 
-            <ons-col width="6px" class="plan-center" style="background: #3399ff">
+            <ons-col width="6px" class="plan-center" ng-style="td.getTPColo(w.transporation.type)">
             </ons-col>
 
             <ons-col style="padding: 15px 30px">
               <div>
-                {{w.transportation_text}}
-                <div style="float: right" ng-show="td.showRoute(w.transportation_text)">
+                {{w.transportation.text}}
+                <div style="float: right" ng-show="td.showRoute(w.transportation.text)">
                   <ons-button ng-click="td.go_map($index)">
                     <ons-icon icon="map"></ons-icon>
                     経路
