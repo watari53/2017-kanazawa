@@ -232,7 +232,7 @@ ons.bootstrap()
     }
 
     this.getTPColor = function(tp) {
-      DecolateService.getTPColor(tp);
+      return DecolateService.getTPColor(tp);
     };
     // this.getTPColor = function(tp) {
     //   var tp_type = tp.type;
@@ -244,7 +244,7 @@ ons.bootstrap()
     //   }
     // };
     this.getTPIcon = function(tp) {
-      DecolateService.getTPIcon(tp);
+      return DecolateService.getTPIcon(tp);
     };
     // this.getTPIcon = function(tp) {
     //   return TP_ICON[tp.type];
