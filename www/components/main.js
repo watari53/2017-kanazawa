@@ -23,8 +23,8 @@ var DEMO = [{dest: "金沢21世紀美術館", file:"sample1.json"},{dest: "ひ�
 var TP_ICON  = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus"};
 var TP_COLOR = {
                   walk:    {"background-color": "#3399ff"},
-                  bus:     {"background-color": "red"},
-                  bicycle: {
+                  bicycle:     {"background-color": "red"},
+                  bus: {
                     "此花ルート": {"background-color": "#0d2c63"},
                     "菊川ルート": {"background-color": "#821721"},
                     "材木ルート": {"background-color": "#0b6d34"},
@@ -214,7 +214,8 @@ ons.bootstrap()
       return {name: "現在地", lat: 36.578268, lng: 136.648035};
     }
 
-    this.getTPColor = function(tp_type) {
+    this.getTPColor = function(tp) {
+      var tp_type = tp.type;
       if(tp_type === "bus") {
         return TP_COLOR.bus[tp_type];
       } else {
