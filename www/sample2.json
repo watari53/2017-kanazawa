@@ -1345,7 +1345,7 @@
       ],
       "information": [
         "./images/rain.svg",
-        "./images/may_no_bicycle.svg"
+        "./images/exist_bicycle.svg"
       ],
       "timeline_detail": {
         "time_required": "11分",
@@ -1381,7 +1381,7 @@
               "text": "自転車"
             },
             "fee": "400円",
-            "information_icon": "./images/may_no_bicycle.svg",
+            "information_icon": "./images/exist_bicycle.svg",
             "information_text": "残り1台",
             "time_required": "07分",
             "lat": 36.572311,

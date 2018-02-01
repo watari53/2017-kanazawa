@@ -1358,7 +1358,7 @@
     },
     {
       "start_time": "09:28",
-      "arrival_time": "09:44",
+      "arrival_time": "9:44",
       "time_required": "16分",
       "fee": "400円",
       "transportation": [
@@ -1385,7 +1385,7 @@
         "waypoint": [
           {
             "spot_name": "金沢駅Ｂ",
-            "arrival_time": "09:32",
+            "arrival_time": "9:32",
             "transportation": {
               "type": "walk",
               "text": "徒歩"
@@ -1399,7 +1399,7 @@
           },
           {
             "spot_name": "広坂",
-            "arrival_time": "09:43",
+            "arrival_time": "9:43",
             "transportation": {
               "type": "bicycle",
               "text": "自転車"
@@ -1413,7 +1413,7 @@
           },
           {
             "spot_name": "金沢21世紀美術館",
-            "arrival_time": "09:44",
+            "arrival_time": "9:44",
             "transportation": {
               "type": "walk",
               "text": "徒歩"
