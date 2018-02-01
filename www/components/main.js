@@ -23,7 +23,7 @@ var DEMO = [{dest: "金沢21世紀美術館", file:"sample1.json"},{dest: "ひ�
 var TP_ICON  = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus"};
 var TP_COLOR = {
                   walk:    {"background-color": "#3399ff"},
-                  bus:     {"background-color": "red"}
+                  bus:     {"background-color": "red"},
                   bicycle: {
                     "此花ルート": {"background-color": "#0d2c63"},
                     "菊川ルート": {"background-color": "#821721"},
