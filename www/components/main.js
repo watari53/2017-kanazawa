@@ -46,6 +46,23 @@ function arrayExist(array, value) {
 }
 
 ons.bootstrap()
+  .service('DecolateService', function(){
+    var service = {};
+    service.getTPColor = function(tp) {
+      var tp_type = tp.type;
+      if(tp_type === "bus") {
+        var bus_route = tp.text;
+        return TP_COLOR.bus[bus_route];
+      } else {
+        return TP_COLOR[tp_type];
+      }
+    };
+    service.getTPIcon = function(tp) {
+      return TP_ICON[tp.type];
+    };
+
+    return service;
+  })
   .service('DataService', function($http) {
     var sample;
     var service = {};
@@ -206,7 +223,7 @@ ons.bootstrap()
       navi.pushPage('timeline_detail.html', {data: {timeline_detail: timeline_detail}});
     };
   })
-  .controller('TimeLineDetailController', function(DataService) {
+  .controller('TimeLineDetailController', function(DecolateService, DataService) {
     this.detail = navi.topPage.data.timeline_detail;
     var waypoint = this.detail.waypoint;
     
@@ -215,17 +232,23 @@ ons.bootstrap()
     }
 
     this.getTPColor = function(tp) {
-      var tp_type = tp.type;
-      if(tp_type === "bus") {
-        var bus_route = tp.text;
-        return TP_COLOR.bus[bus_route];
-      } else {
-        return TP_COLOR[tp_type];
-      }
+      DecolateService.getTPColor(tp);
     };
+    // this.getTPColor = function(tp) {
+    //   var tp_type = tp.type;
+    //   if(tp_type === "bus") {
+    //     var bus_route = tp.text;
+    //     return TP_COLOR.bus[bus_route];
+    //   } else {
+    //     return TP_COLOR[tp_type];
+    //   }
+    // };
     this.getTPIcon = function(tp) {
-      return TP_ICON[tp.type];
+      DecolateService.getTPIcon(tp);
     };
+    // this.getTPIcon = function(tp) {
+    //   return TP_ICON[tp.type];
+    // };
     // show route if transportation.text exist in SHOR_ROUTE
     this.showRoute = function(tp) {
         var tp_text = tp.text;
