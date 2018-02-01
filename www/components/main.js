@@ -217,7 +217,8 @@ ons.bootstrap()
     this.getTPColor = function(tp) {
       var tp_type = tp.type;
       if(tp_type === "bus") {
-        return TP_COLOR.bus[tp_type];
+        var bus_route = tp.text;
+        return TP_COLOR.bus[bus_route];
       } else {
         return TP_COLOR[tp_type];
       }
