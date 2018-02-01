@@ -96,7 +96,7 @@ ons.bootstrap()
       var sample_file = DEMO_INIT_FILE; // default file is sample1.json
       angular.forEach(DEMO_PATTERN, function(p){
         if(p.dest === param.dest) {
-          console.log("hit sample data: " + p.files);
+          console.log("hit sample data: " + p.file);
           sample_file = p.file;
         }
       });
