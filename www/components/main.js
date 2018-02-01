@@ -48,6 +48,7 @@ function arrayExist(array, value) {
 ons.bootstrap()
   .service('DecolateService', function(){
     var service = {};
+    // tp = {"walk|bicycle|bus", "徒歩|此花ルート|自転車"}
     service.getTPColor = function(tp) {
       var tp_type = tp.type;
       if(tp_type === "bus") {
@@ -57,8 +58,8 @@ ons.bootstrap()
         return TP_COLOR[tp_type];
       }
     };
-    service.getTPIcon = function(tp) {
-      return TP_ICON[tp.type];
+    service.getTPIcon = function(tp_type) {
+      return TP_ICON[tp_type];
     };
 
     return service;
@@ -220,12 +221,8 @@ ons.bootstrap()
     this.people_n    = $scope.people_n;
     this.result      = DataService.getTimeLines();
 
-    this.getTPColor = function(tp) {
-      return DecolateService.getTPColor(tp);
-    };
-
-    this.getTPIcon = function(tp) {
-      return DecolateService.getTPIcon(tp);
+    this.getTPIcon = function(tp_type) {
+      return DecolateService.getTPIcon(tp_type);
     };
 
     this.go_timelineDetail = function(timeline_detail) {
@@ -245,7 +242,7 @@ ons.bootstrap()
     };
 
     this.getTPIcon = function(tp) {
-      return DecolateService.getTPIcon(tp);
+      return DecolateService.getTPIcon(tp.type);
     };
 
     this.showRoute = function(tp) {
