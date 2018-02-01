@@ -1,14 +1,3 @@
-.SvgIcon {
-  position: absolute;
-  width: 0;
-  height:0;
-}
-.RAIN-SVG {
-  fill: #42AFE3;
-  width: 23px;
-  height: 23px;
-}
-
 .page__background {
   background: #dcdcdc;
 }
