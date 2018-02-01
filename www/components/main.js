@@ -20,7 +20,7 @@ var DEFAULT_TIME = "現在時刻";
 var DEMO_INIT_FILE = "sample.json";
 
 var DEMO = [{dest: "金沢21世紀美術館", file:"sample1.json"},{dest: "ひがし茶屋街", file:"sample2.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3.json"}];
-var TP_ICON  = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus"};
+var TP_ICON  = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus", goal: "fa-flag-o"};
 var TP_COLOR = {
                   walk:    {"background-color": "#3399ff"},
                   bicycle:     {"background-color": "red"},
