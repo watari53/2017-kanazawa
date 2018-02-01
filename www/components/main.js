@@ -12,7 +12,7 @@
 // may_no_bicycle = "./images/may_no_bicycle.svg";
 var APP_NAME = "金沢乗換案内";
 
-var show_route = ["徒歩", "自転車"];  //経路を表示するtransportation
+var SHOW_ROUTE = ["徒歩", "自転車"];  //経路を表示するtransportation
 var DEFAULT_SRC_MSG = "現在地";
 var DEFAULT_DEST_MSG = "到着地を選択";
 var DEFAULT_TIME = "現在時刻";
@@ -20,11 +20,16 @@ var DEFAULT_TIME = "現在時刻";
 var DEMO_INIT_FILE = "sample.json";
 
 var DEMO = [{dest: "金沢21世紀美術館", file:"sample1.json"},{dest: "ひがし茶屋街", file:"sample2.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3.json"}];
-var TP_ICON = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus"};
+var TP_ICON  = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus"};
 var TP_COLOR = {
                   walk:    {"background-color": "#3399ff"},
-                  bicycle: {"background-color": "green"},
                   bus:     {"background-color": "red"}
+                  bicycle: {
+                    "此花ルート": {"background-color": "#0d2c63"},
+                    "菊川ルート": {"background-color": "#821721"},
+                    "材木ルート": {"background-color": "#0b6d34"},
+                    "長町ルート": {"background-color": "#b17117"},
+                  },
                };
 
 // 重複を排除しながらunshiftする関数
@@ -209,15 +214,20 @@ ons.bootstrap()
       return {name: "現在地", lat: 36.578268, lng: 136.648035};
     }
 
-    this.getTPColor = function(transportation_type) {
-      return TP_COLOR[transportation_type];
+    this.getTPColor = function(tp_type) {
+      if(tp_type === "bus") {
+        return TP_COLOR.bus[tp_type];
+      } else {
+        return TP_COLOR[tp_type];
+      }
     };
-    this.getTPIcon = function(transportation_type) {
-      return TP_ICON[transportation_type];
+    this.getTPIcon = function(tp) {
+      return TP_ICON[tp.type];
     };
-    // show route if transportation_text exist in show_route
-    this.showRoute = function(transportation_text) {
-        if(show_route.indexOf(transportation_text) !== -1) {
+    // show route if transportation.text exist in SHOR_ROUTE
+    this.showRoute = function(tp) {
+        var tp_text = tp.text;
+        if(SHOW_ROUTE.indexOf(tp_text) !== -1) {
           return true;
         }
     };
