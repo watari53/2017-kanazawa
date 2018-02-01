@@ -212,13 +212,22 @@ ons.bootstrap()
       navi.popPage();
     };
   })
-  .controller('TimeLineController', function($scope, DataService) {
+  .controller('TimeLineController', function($scope, DecolateService, DataService) {
     this.search_type = $scope.search_type;
     this.time        = $scope.time;
     this.src         = $scope.search.src;
     this.dest        = $scope.search.dest;
     this.people_n    = $scope.people_n;
     this.result      = DataService.getTimeLines();
+
+    this.getTPColor = function(tp) {
+      return DecolateService.getTPColor(tp);
+    };
+
+    this.getTPIcon = function(tp) {
+      return DecolateService.getTPIcon(tp);
+    };
+
     this.go_timelineDetail = function(timeline_detail) {
       navi.pushPage('timeline_detail.html', {data: {timeline_detail: timeline_detail}});
     };
@@ -234,22 +243,11 @@ ons.bootstrap()
     this.getTPColor = function(tp) {
       return DecolateService.getTPColor(tp);
     };
-    // this.getTPColor = function(tp) {
-    //   var tp_type = tp.type;
-    //   if(tp_type === "bus") {
-    //     var bus_route = tp.text;
-    //     return TP_COLOR.bus[bus_route];
-    //   } else {
-    //     return TP_COLOR[tp_type];
-    //   }
-    // };
+
     this.getTPIcon = function(tp) {
       return DecolateService.getTPIcon(tp);
     };
-    // this.getTPIcon = function(tp) {
-    //   return TP_ICON[tp.type];
-    // };
-    // show route if transportation.text exist in SHOR_ROUTE
+
     this.showRoute = function(tp) {
         var tp_text = tp.text;
         if(SHOW_ROUTE.indexOf(tp_text) !== -1) {
