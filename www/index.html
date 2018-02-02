@@ -172,8 +172,8 @@
           <div class="card card--material">
             <div class="card__content">
               {{tl.time| date: "a hh時mm分"}}{{tl.search_type}}
-              <div style="margin-top:5px"><span class="start_index">出発</span><strong>{{tl.src}}</strong></div>
-              <div style="margin-top:10px"><span class="dest_index">到着</span><strong>{{tl.dest}}</strong></div>
+              <div style="margin-top:5px"><span class="start_index">発</span><span class="index_title">{{tl.src}}</span></div>
+              <div style="margin-top:10px"><span class="dest_index">着</span><span class="index_title">{{tl.dest}}</span></div>
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@
               <ons-col class="plan-right">
                 <div class="plan-name">
                   {{r.start_time}}
-                  <ons-icon icon="fa-long-arrow-right"></ons-icon>
+                  <ons-icon style="color: gray" icon="fa-long-arrow-right"></ons-icon>
                   {{r.arrival_time}}
                   <span class="fast_index" ng-show="r.feature.fast">早</span>
                 </div>
@@ -207,7 +207,12 @@
               </ons-col>-->
 
               <ons-col ng-style="{display: r.information.length == 0 ? 'none': 'inline'}" width="35%" class="plan-left">
-                交通情報あり
+                <div>
+                  <span>
+                    <img class="icon-label" src="./images/information.svg">
+                    交通情報
+                  </span>
+                </div>
                 <div class="plan-date">
                   <img ng-repeat="icon in r.information" style="margin-right: 6px; width: 23px; hwight: 23px" src="{{icon}}">
                 </div>
@@ -242,8 +247,8 @@
               <div style="margin-bottom: 10px">
                 {{td.detail.time_required}} <span style="margin-left: 5px">{{td.detail.fee}}</span>
               </div>
-              <div style="margin-top:5px"><span class="start_index">出発</span><strong>{{td.detail.src}}</strong></div>
-              <div style="margin-top:10px"><span class="dest_index">到着</span><strong>{{td.detail.dest}}</strong></div>
+              <div style="margin-top:5px"><span class="start_index">発</span><strong>{{td.detail.src}}</strong></div>
+              <div style="margin-top:10px"><span class="dest_index">着</span><strong>{{td.detail.dest}}</strong></div>
             </div>
           </div>
         </div>
