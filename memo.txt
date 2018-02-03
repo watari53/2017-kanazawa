@@ -1,5 +1,30 @@
 # Angular JSでよく使うコード
 
+## オブジェクトの値渡し
+
+### 配列の場合
+
+	var a, b;
+	a = [0,1,2];
+	b = a.concat();
+	console.log(b) // [0,1,2]
+
+	b[0] = 5;
+	console.log(b) // [5,1,2]
+	console.log(a) // [0,1,2] (aは変わらない)
+
+### 連想配列の場合
+
+	var a, b;
+	a = {x:0,y:0};
+	b = JSON.stringify(a); // JSON文字列化
+	b = JSON.parse(b); // JSON文字列化したものを戻す
+	console.log(b); // {x:0,y:0}
+
+	b.x = 5;
+	console.log(b); // {x:5,y:0}
+	console.log(a); // {x:0,y:0} (aは変わらない)
+
 ## HTML要素の表示・非表示の切り替え
     <td><span ng-show="[true or false]" ng-click="moveUp()">up</span></td>
 

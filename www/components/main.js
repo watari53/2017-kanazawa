@@ -70,11 +70,16 @@ ons.bootstrap()
 
     service.setSample = function(data){
       sample = data;
-      sample.surroundings.unshift({spot_name: DEFAULT_SRC_MSG, distance: ""});
     };
-
-    service.getSurroundings = function() {
-      return sample.surroundings;
+    // search_type = "src or dest"
+    service.getSurroundings = function(search_type) {
+      if (search_type === "src") {
+        var surroundings = sample.surroundings.concat();
+        surroundings.surroundings.unshift({spot_name: DEFAULT_SRC_MSG, distance: ""});
+        return surroundings;
+      } else {
+        return sample.surroundings;
+      }
     };
     service.setHistory = function(spot_name) {
       if(spot_name === DEFAULT_SRC_MSG) {
@@ -121,7 +126,7 @@ ons.bootstrap()
       return $http({method: 'GET', url: sample_file}).
         success(function(data, status, headers, config) {
           // レスポンスが有効の場合に、非同期で呼び出されるコールバックです。
-          console.log(data);
+          console.log('success init data');
           service.setSample(data);
         }).
         error(function(data, status, headers, config) {
@@ -192,7 +197,7 @@ ons.bootstrap()
 
 
     // set data
-    this.surroundings = DataService.getSurroundings();
+    this.surroundings = DataService.getSurroundings(search_type);
     this.history = DataService.getHistory();
 
     this.changeView = function() {
