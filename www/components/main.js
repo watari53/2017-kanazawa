@@ -25,7 +25,7 @@ var TP_COLOR = {
                   walk:    {"background-color": "#3399ff"},
                   bicycle:     {"background-color": "red"},
                   bus: {
-                    "此花ルート": {"background-color": "#0d2c63"},
+                    "此花ルート": {"background-color": "#4f5187"},
                     "菊川ルート": {"background-color": "#821721"},
                     "材木ルート": {"background-color": "#0b6d34"},
                     "長町ルート": {"background-color": "#b17117"},

@@ -172,8 +172,8 @@
           <div class="card card--material">
             <div class="card__content">
               {{tl.time| date: "a hh時mm分"}}{{tl.search_type}}
-              <div style="margin-top:5px"><span class="start_index">発</span><span class="index_title">{{tl.src}}</span></div>
-              <div style="margin-top:10px"><span class="dest_index">着</span><span class="index_title">{{tl.dest}}</span></div>
+              <div style="margin-top:5px"><span class="start_index">発</span><strong>{{tl.src}}</strong></div>
+              <div style="margin-top:10px"><span class="dest_index">着</span><strong>{{tl.dest}}</strong></div>
             </div>
           </div>
         </div>
@@ -342,25 +342,25 @@
       </div>
 
       <ons-list class="list list--inset" style="margin-top: 20px;">
-        <ons-list-item modifier="chevron tappable" class="list-item-container">
+        <ons-list-item class="list-item-container">
           <div class="list-item-content">
             <div class="spot-label">住所</div>
             <span class="desc">{{sp.data.address}}</span>
           </div>
         </ons-list-item>
-        <ons-list-item modifier="chevron tappable" class="list-item-container">
+        <ons-list-item class="list-item-container">
           <div class="list-item-content">
             <div class="spot-label">営業時間</div>
             <span class="desc">{{sp.data.open_hours}}</span>
           </div>
         </ons-list-item>
-        <ons-list-item modifier="chevron tappable" class="list-item-container">
+        <ons-list-item class="list-item-container">
           <div class="list-item-content">
             <div class="spot-label">料金</div>
             <span class="desc">{{sp.data.fee}}</span>
           </div>
         </ons-list-item>
-        <ons-list-item modifier="chevron tappable" class="list-item-container">
+        <ons-list-item class="list-item-container">
           <div class="list-item-content">
             <div class="spot-label">概要</div>
             <span class="desc">{{sp.data.desc}}</span>

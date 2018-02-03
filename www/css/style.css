@@ -22,9 +22,6 @@
   color: #FFF;
   font-weight: bold;
 }
-.index_title {
-  font-size: 1.2rem;
-}
 
 /* search.html */
 .distance {
@@ -54,14 +51,16 @@
 .plan-left {
   font-size: 14px;
   text-align: left;
-  padding: 8px 20px 4px 0px;
+  padding: 8px 20px 4px 0px;
+
 }
 .plan-center {
   margin-right: 8px;
   opacity: 0.5;
 }
 .plan-right {
-  padding: 0px 10px 4px 0;
+  padding: 0px 10px 4px 0;
+
   
 }
 .plan-date {
