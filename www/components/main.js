@@ -75,7 +75,7 @@ ons.bootstrap()
     service.getSurroundings = function(search_type) {
       if (search_type === "src") {
         var surroundings = sample.surroundings.concat();
-        surroundings.surroundings.unshift({spot_name: DEFAULT_SRC_MSG, distance: ""});
+        surroundings.unshift({spot_name: DEFAULT_SRC_MSG, distance: ""});
         return surroundings;
       } else {
         return sample.surroundings;
