@@ -1388,7 +1388,7 @@
       ],
       "information": [
         "./images/rain.svg",
-        "./images/may_no_bicycle.svg"
+        "./images/bicycle.svg"
       ],
       "timeline_detail": {
         "time_required": "16分",
@@ -1430,7 +1430,7 @@
             "fee": "400円",
             "information": [
               {
-                "icon": "./images/may_no_bicycle.svg",
+                "icon": "./images/bicycle.svg",
                 "text": "残り13台"
               },
               {

@@ -1118,7 +1118,7 @@
         "goal"
       ],
       "information": [
-        "./images/rain.svg"
+        "./images/snow.svg"
       ],
       "timeline_detail": {
         "time_required": "22分",
@@ -1142,8 +1142,8 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
+                "icon": "./images/snow.svg",
+                "text": "雪"
               }
             ],
             "time_required": "22分",
@@ -1168,7 +1168,7 @@
         "goal"
       ],
       "information": [
-        "./images/rain.svg"
+        "./images/snow.svg"
       ],
       "timeline_detail": {
         "time_required": "27分",
@@ -1192,8 +1192,8 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
+                "icon": "./images/snow.svg",
+                "text": "雪"
               }
             ],
             "time_required": "4分",
@@ -1223,8 +1223,8 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
+                "icon": "./images/snow.svg",
+                "text": "雪"
               }
             ],
             "time_required": "4分",
@@ -1251,7 +1251,7 @@
         "goal"
       ],
       "information": [
-        "./images/rain.svg"
+        "./images/snow.svg"
       ],
       "timeline_detail": {
         "time_required": "29分",
@@ -1275,8 +1275,8 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
+                "icon": "./images/snow.svg",
+                "text": "雪"
               }
             ],
             "time_required": "3分",
@@ -1306,8 +1306,8 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
+                "icon": "./images/snow.svg",
+                "text": "雪"
               }
             ],
             "time_required": "2分",
@@ -1337,8 +1337,8 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
+                "icon": "./images/snow.svg",
+                "text": "雪"
               }
             ],
             "time_required": "4分",
@@ -1363,7 +1363,7 @@
         "goal"
       ],
       "information": [
-        "./images/rain.svg",
+        "./images/snow.svg",
         "./images/may_no_bicycle.svg"
       ],
       "timeline_detail": {
@@ -1388,8 +1388,8 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
+                "icon": "./images/snow.svg",
+                "text": "雪"
               }
             ],
             "time_required": "1分",
@@ -1410,8 +1410,8 @@
                 "text": "残り1台"
               },
               {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
+                "icon": "./images/snow.svg",
+                "text": "雪"
               }
             ],
             "time_required": "7分",
@@ -1428,8 +1428,8 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
+                "icon": "./images/snow.svg",
+                "text": "雪"
               }
             ],
             "time_required": "3分",
