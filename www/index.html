@@ -183,7 +183,7 @@
         <ons-list style="margin-bottom: 10px" ng-repeat="r in tl.result" class="plan-list list--inset list--material">
           <ons-list-item modifier="chevron tappable" class="plan" ng-click="tl.go_timelineDetail(r.timeline_detail)">
             <ons-row>
-              <ons-col class="plan-right">
+              <ons-col class="plan-left">
                 <div class="plan-name">
                   {{r.start_time}}
                   <ons-icon style="color: gray" icon="fa-long-arrow-right"></ons-icon>
@@ -206,7 +206,7 @@
               <!--<ons-col width="0px" class="plan-center" style="backgroundColor: #ccc">
               </ons-col>-->
 
-              <ons-col ng-style="{display: r.information.length == 0 ? 'none': 'inline'}" width="35%" class="plan-left">
+              <ons-col ng-style="{display: r.information.length == 0 ? 'none': 'inline'}" width="35%" class="plan-right">
                 <div>
                   <span>
                     <img class="icon-label" src="./images/information.svg">
@@ -263,9 +263,9 @@
 
         <div ng-repeat="w in td.detail.waypoint">
           <ons-row>
-            <ons-col width="15%" class="plan-left">
-              <div style="text-align: center; display: flex; align-items: center; height: 100%; font-size: 110%">
-                <div style="position: relative; z-index: 1; right: -80%; background-color: white; height: 35px; width: 42px; padding: 2px; border: 1px solid">
+            <ons-col width="11%" class="plan-left">
+              <div style="text-align: center; display: flex; align-items: center; width: 42px; height: 100%; font-size: 110%">
+                <div style="position: relative; z-index: 1; left: 22px; background-color: white; height: 33px; width: 42px; padding: 5px; border: 1px solid">
                   <ons-icon icon="{{td.getTPIcon(w.transportation)}}"></ons-icon>
                   <div style="font-size: 80%">{{w.time_required}}</div>
                 </div>
