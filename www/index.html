@@ -266,13 +266,13 @@
             <ons-col width="11%" class="plan-left">
               <div style="text-align: center; display: flex; align-items: center; width: 42px; height: 100%; font-size: 110%">
                 <div style="position: relative; z-index: 1; left: 22px; background-color: white; height: 33px; width: 42px; padding: 5px; border: 1px solid">
-                  <ons-icon icon="{{td.getTPIcon(w.transportation)}}"></ons-icon>
+                  <ons-icon ng-style='td.getTPColor("color", w.transportation)' icon="{{td.getTPIcon(w.transportation)}}"></ons-icon>
                   <div style="font-size: 80%">{{w.time_required}}</div>
                 </div>
               </div>
             </ons-col>
 
-            <ons-col width="6px" class="plan-center" ng-style="td.getTPColor(w.transportation)">
+            <ons-col width="6px" class="plan-center" ng-style='td.getTPColor("background-color", w.transportation)'>
             </ons-col>
 
             <ons-col style="padding: 15px 30px">

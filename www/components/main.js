@@ -22,13 +22,13 @@ var DEMO_INIT_FILE = "sample.json";
 var DEMO = [{dest: "金沢21世紀美術館", file:"sample1.json"},{dest: "ひがし茶屋街", file:"sample2.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3.json"}];
 var TP_ICON  = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus", goal: "fa-flag-o"};
 var TP_COLOR = {
-                  walk:    {"background-color": "#3399ff"},
-                  bicycle:     {"background-color": "red"},
+                  walk:    "#3399ff",
+                  bicycle: "red",
                   bus: {
-                    "此花ルート": {"background-color": "#4f5187"},
-                    "菊川ルート": {"background-color": "#821721"},
-                    "材木ルート": {"background-color": "#0b6d34"},
-                    "長町ルート": {"background-color": "#b17117"},
+                    "此花ルート": "#4f5187",
+                    "菊川ルート": "#821721",
+                    "材木ルート": "#0b6d34",
+                    "長町ルート": "#b17117",
                   },
                };
 
@@ -237,8 +237,11 @@ ons.bootstrap()
       return {name: "現在地", lat: 36.578268, lng: 136.648035};
     }
 
-    this.getTPColor = function(tp) {
-      return DecolateService.getTPColor(tp);
+    this.getTPColor = function(style, tp) {
+      var hash = {};
+      var color = DecolateService.getTPColor(tp);
+      hash[style] = color; 
+      return hash;
     };
 
     this.getTPIcon = function(tp) {
