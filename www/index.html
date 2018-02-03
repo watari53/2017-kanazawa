@@ -286,9 +286,9 @@
                 </div>
               </div>
               <div ng-style="{display: w.information.length === 0 ? 'none': 'inline'}">
-                <div ng-repeat = "i in w.information">
+                <span ng-repeat = "i in w.information">
                   <img class="icon-label" src="{{i.icon}}">
-                  {{i.text}}
+                  {{i.text}}<br>
                 </span>
               </div>
               <div style="margin-top: 6px; text-align: right">{{w.fee}}</div>
