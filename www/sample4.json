@@ -208,7 +208,7 @@
                 "text": "小雨"
               }
             ],
-            "time_required": "01分",
+            "time_required": "1分",
             "lat": 36.578213,
             "lng": 136.649215
           },
@@ -221,7 +221,7 @@
             },
             "fee": "200円",
             "information": [],
-            "time_required": "09分",
+            "time_required": "9分",
             "lat": 36.571575,
             "lng": 136.659091
           },
@@ -291,7 +291,7 @@
                 "text": "小雨"
               }
             ],
-            "time_required": "01分",
+            "time_required": "1分",
             "lat": 36.578213,
             "lng": 136.649215
           },
@@ -304,7 +304,7 @@
             },
             "fee": "200円",
             "information": [],
-            "time_required": "07分",
+            "time_required": "7分",
             "lat": 36.572852,
             "lng": 136.655368
           },
@@ -322,7 +322,7 @@
                 "text": "小雨"
               }
             ],
-            "time_required": "03分",
+            "time_required": "3分",
             "lat": 36.572367,
             "lng": 136.657428
           },
@@ -353,7 +353,7 @@
                 "text": "小雨"
               }
             ],
-            "time_required": "04分",
+            "time_required": "4分",
             "lat": 36.560867,
             "lng": 136.658258
           }
@@ -404,7 +404,7 @@
                 "text": "小雨"
               }
             ],
-            "time_required": "04分",
+            "time_required": "4分",
             "lat": 36.57707818565,
             "lng": 136.64759501065
           },
@@ -418,12 +418,12 @@
             "fee": "400円",
             "information": [
               {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
-              },
-              {
                 "icon": "./images/may_no_bicycle.svg",
                 "text": "残り13台"
+              },
+              {
+                "icon": "./images/rain.svg",
+                "text": "小雨"
               }
             ],
             "time_required": "11分",
@@ -444,7 +444,7 @@
                 "text": "小雨"
               }
             ],
-            "time_required": "01分",
+            "time_required": "1分",
             "lat": 36.560867,
             "lng": 136.658258
           }
