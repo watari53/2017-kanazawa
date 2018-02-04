@@ -1129,9 +1129,7 @@
         "walk",
         "goal"
       ],
-      "information": [
-        "./images/rain.svg"
-      ],
+      "information": [],
       "timeline_detail": {
         "time_required": "24分",
         "fee": "0円",
@@ -1152,12 +1150,7 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
-              }
-            ],
+            "information": [],
             "time_required": "24分",
             "lat": 36.577912,
             "lng": 136.648904
@@ -1179,9 +1172,7 @@
         "walk",
         "goal"
       ],
-      "information": [
-        "./images/rain.svg"
-      ],
+      "information": [],
       "timeline_detail": {
         "time_required": "27分",
         "fee": "200円",
@@ -1202,12 +1193,7 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
-              }
-            ],
+            "information": [],
             "time_required": "15分",
             "lat": 36.572449,
             "lng": 136.655411
@@ -1233,12 +1219,7 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
-              }
-            ],
+            "information": [],
             "time_required": "10分",
             "lat": 36.577912,
             "lng": 136.648904
@@ -1262,9 +1243,7 @@
         "walk",
         "goal"
       ],
-      "information": [
-        "./images/rain.svg"
-      ],
+      "information": [],
       "timeline_detail": {
         "time_required": "26分",
         "fee": "400円",
@@ -1285,12 +1264,7 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
-              }
-            ],
+            "information": [],
             "time_required": "4分",
             "lat": 36.571654,
             "lng": 136.664574
@@ -1316,12 +1290,7 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
-              }
-            ],
+            "information": [],
             "time_required": "2分",
             "lat": 36.572449,
             "lng": 136.655411
@@ -1347,12 +1316,7 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
-              }
-            ],
+            "information": [],
             "time_required": "10分",
             "lat": 36.577912,
             "lng": 136.648904
@@ -1375,8 +1339,7 @@
         "goal"
       ],
       "information": [
-        "./images/rain.svg",
-        "./images/bicycle.svg"
+        "./images/may_no_bicycle.svg"
       ],
       "timeline_detail": {
         "time_required": "16分",
@@ -1398,12 +1361,7 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
-              }
-            ],
+            "information": [],
             "time_required": "3分",
             "lat": 36.572311,
             "lng": 136.664874
@@ -1418,12 +1376,8 @@
             "fee": "400円",
             "information": [
               {
-                "icon": "./images/bicycle.svg",
-                "text": "残り7台"
-              },
-              {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
+                "icon": "./images/may_no_bicycle.svg",
+                "text": "残り1台"
               }
             ],
             "time_required": "9分",
@@ -1438,12 +1392,7 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/rain.svg",
-                "text": "小雨"
-              }
-            ],
+            "information": [],
             "time_required": "4分",
             "lat": 36.577912,
             "lng": 136.648904

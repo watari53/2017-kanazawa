@@ -1046,42 +1046,6 @@
       "fee": "美術館の建物への入館（交流ゾーン）　無料コレクション展　一般　360円、大学生・65歳以上　280円、高校生以下　無料※特別展は展覧会毎に異なります。",
       "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
     },
-    "市役所・21世紀美術館": {
-      "name": "市役所・21世紀美術館",
-      "desc": "",
-      "address": "石川県金沢市広坂２丁目１",
-      "location": [
-        36.561941,
-        136.65819
-      ],
-      "open_hours": "",
-      "fee": "",
-      "img": "dummy"
-    },
-    "浅野川大橋": {
-      "name": "浅野川大橋",
-      "desc": "",
-      "address": "石川県金沢市橋場町４",
-      "location": [
-        36.571654,
-        136.664574
-      ],
-      "open_hours": "",
-      "fee": "",
-      "img": "dummy"
-    },
-    "21世紀美術館": {
-      "name": "21世紀美術館",
-      "desc": "",
-      "address": "石川県金沢市本多町３丁目１",
-      "location": [
-        36.561088,
-        136.659375
-      ],
-      "open_hours": "",
-      "fee": "",
-      "img": "dummy"
-    },
     "広坂": {
       "name": "広坂",
       "desc": "",
@@ -1105,9 +1069,121 @@
       "open_hours": "",
       "fee": "",
       "img": "dummy"
+    },
+    "21世紀美術館": {
+      "name": "21世紀美術館",
+      "desc": "",
+      "address": "石川県金沢市本多町３丁目１",
+      "location": [
+        36.561088,
+        136.659375
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "市役所・21世紀美術館": {
+      "name": "市役所・21世紀美術館",
+      "desc": "",
+      "address": "石川県金沢市広坂２丁目１",
+      "location": [
+        36.561941,
+        136.65819
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "浅野川大橋": {
+      "name": "浅野川大橋",
+      "desc": "",
+      "address": "石川県金沢市橋場町４",
+      "location": [
+        36.571654,
+        136.664574
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
     }
   },
   "timeline": [
+    {
+      "start_time": "12:00",
+      "arrival_time": "12:11",
+      "time_required": "11分",
+      "fee": "400円",
+      "transportation": [
+        "walk",
+        "bicycle",
+        "walk",
+        "goal"
+      ],
+      "information": [
+        "./images/bicycle.svg"
+      ],
+      "timeline_detail": {
+        "time_required": "11分",
+        "fee": "400円",
+        "src": "金沢21世紀美術館",
+        "dest": "ひがし茶屋街",
+        "start": {
+          "spot_name": "金沢21世紀美術館",
+          "time": "12:00",
+          "lat": 36.560867,
+          "lng": 136.658258
+        },
+        "waypoint": [
+          {
+            "spot_name": "広坂",
+            "arrival_time": "12:01",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
+            "fee": "0円",
+            "information": [],
+            "time_required": "1分",
+            "lat": 36.561412,
+            "lng": 136.657436
+          },
+          {
+            "spot_name": "東山",
+            "arrival_time": "12:08",
+            "transportation": {
+              "type": "bicycle",
+              "text": "自転車"
+            },
+            "fee": "400円",
+            "information": [
+              {
+                "icon": "./images/bicycle.svg",
+                "text": "残り10台"
+              }
+            ],
+            "time_required": "7分",
+            "lat": 36.572311,
+            "lng": 136.664874
+          },
+          {
+            "spot_name": "ひがし茶屋街",
+            "arrival_time": "12:11",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
+            "fee": "0円",
+            "information": [],
+            "time_required": "3分",
+            "lat": 36.572587,
+            "lng": 136.666548
+          }
+        ]
+      },
+      "feature": {
+        "fast": true
+      }
+    },
     {
       "start_time": "12:00",
       "arrival_time": "12:22",
@@ -1117,9 +1193,7 @@
         "walk",
         "goal"
       ],
-      "information": [
-        "./images/snow.svg"
-      ],
+      "information": [],
       "timeline_detail": {
         "time_required": "22分",
         "fee": "0円",
@@ -1140,94 +1214,8 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/snow.svg",
-                "text": "雪"
-              }
-            ],
-            "time_required": "22分",
-            "lat": 36.572587,
-            "lng": 136.666548
-          }
-        ]
-      },
-      "feature": {
-        "fast": false
-      }
-    },
-    {
-      "start_time": "12:09",
-      "arrival_time": "12:36",
-      "time_required": "27分",
-      "fee": "200円",
-      "transportation": [
-        "walk",
-        "bus",
-        "walk",
-        "goal"
-      ],
-      "information": [
-        "./images/snow.svg"
-      ],
-      "timeline_detail": {
-        "time_required": "27分",
-        "fee": "200円",
-        "src": "金沢21世紀美術館",
-        "dest": "ひがし茶屋街",
-        "start": {
-          "spot_name": "金沢21世紀美術館",
-          "time": "12:09",
-          "lat": 36.560867,
-          "lng": 136.658258
-        },
-        "waypoint": [
-          {
-            "spot_name": "市役所・21世紀美術館",
-            "arrival_time": "12:13",
-            "transportation": {
-              "type": "walk",
-              "text": "徒歩"
-            },
-            "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/snow.svg",
-                "text": "雪"
-              }
-            ],
-            "time_required": "4分",
-            "lat": 36.561941,
-            "lng": 136.65819
-          },
-          {
-            "spot_name": "浅野川大橋",
-            "arrival_time": "12:32",
-            "transportation": {
-              "type": "bus",
-              "text": "材木ルート"
-            },
-            "fee": "200円",
             "information": [],
-            "time_required": "19分",
-            "lat": 36.571654,
-            "lng": 136.664574
-          },
-          {
-            "spot_name": "ひがし茶屋街",
-            "arrival_time": "12:36",
-            "transportation": {
-              "type": "walk",
-              "text": "徒歩"
-            },
-            "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/snow.svg",
-                "text": "雪"
-              }
-            ],
-            "time_required": "4分",
+            "time_required": "22分",
             "lat": 36.572587,
             "lng": 136.666548
           }
@@ -1250,9 +1238,7 @@
         "walk",
         "goal"
       ],
-      "information": [
-        "./images/snow.svg"
-      ],
+      "information": [],
       "timeline_detail": {
         "time_required": "29分",
         "fee": "400円",
@@ -1273,12 +1259,7 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/snow.svg",
-                "text": "雪"
-              }
-            ],
+            "information": [],
             "time_required": "3分",
             "lat": 36.561088,
             "lng": 136.659375
@@ -1304,12 +1285,7 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/snow.svg",
-                "text": "雪"
-              }
-            ],
+            "information": [],
             "time_required": "2分",
             "lat": 36.561941,
             "lng": 136.65819
@@ -1335,12 +1311,7 @@
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/snow.svg",
-                "text": "雪"
-              }
-            ],
+            "information": [],
             "time_required": "4分",
             "lat": 36.572587,
             "lng": 136.666548
@@ -1352,94 +1323,72 @@
       }
     },
     {
-      "start_time": "12:00",
-      "arrival_time": "12:11",
-      "time_required": "11分",
-      "fee": "400円",
+      "start_time": "12:09",
+      "arrival_time": "12:36",
+      "time_required": "27分",
+      "fee": "200円",
       "transportation": [
         "walk",
-        "bicycle",
+        "bus",
         "walk",
         "goal"
       ],
-      "information": [
-        "./images/snow.svg",
-        "./images/may_no_bicycle.svg"
-      ],
+      "information": [],
       "timeline_detail": {
-        "time_required": "11分",
-        "fee": "400円",
+        "time_required": "27分",
+        "fee": "200円",
         "src": "金沢21世紀美術館",
         "dest": "ひがし茶屋街",
         "start": {
           "spot_name": "金沢21世紀美術館",
-          "time": "12:00",
+          "time": "12:09",
           "lat": 36.560867,
           "lng": 136.658258
         },
         "waypoint": [
           {
-            "spot_name": "広坂",
-            "arrival_time": "12:01",
+            "spot_name": "市役所・21世紀美術館",
+            "arrival_time": "12:13",
             "transportation": {
               "type": "walk",
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/snow.svg",
-                "text": "雪"
-              }
-            ],
-            "time_required": "1分",
-            "lat": 36.561412,
-            "lng": 136.657436
+            "information": [],
+            "time_required": "4分",
+            "lat": 36.561941,
+            "lng": 136.65819
           },
           {
-            "spot_name": "東山",
-            "arrival_time": "12:08",
+            "spot_name": "浅野川大橋",
+            "arrival_time": "12:32",
             "transportation": {
-              "type": "bicycle",
-              "text": "自転車"
+              "type": "bus",
+              "text": "材木ルート"
             },
-            "fee": "400円",
-            "information": [
-              {
-                "icon": "./images/may_no_bicycle.svg",
-                "text": "残り1台"
-              },
-              {
-                "icon": "./images/snow.svg",
-                "text": "雪"
-              }
-            ],
-            "time_required": "7分",
-            "lat": 36.572311,
-            "lng": 136.664874
+            "fee": "200円",
+            "information": [],
+            "time_required": "19分",
+            "lat": 36.571654,
+            "lng": 136.664574
           },
           {
             "spot_name": "ひがし茶屋街",
-            "arrival_time": "12:11",
+            "arrival_time": "12:36",
             "transportation": {
               "type": "walk",
               "text": "徒歩"
             },
             "fee": "0円",
-            "information": [
-              {
-                "icon": "./images/snow.svg",
-                "text": "雪"
-              }
-            ],
-            "time_required": "3分",
+            "information": [],
+            "time_required": "4分",
             "lat": 36.572587,
             "lng": 136.666548
           }
         ]
       },
       "feature": {
-        "fast": true
+        "fast": false
       }
     }
   ]
