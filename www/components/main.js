@@ -10,20 +10,21 @@
 // traffic_jam   = "./images/traffic_jam.svg";
 // no_bicycle    = "./images/no_bicycle.svg";
 // may_no_bicycle = "./images/may_no_bicycle.svg";
-var APP_NAME = "金沢乗換案内";
+var APP_NAME = "金沢ルート検索";
 
 var SHOW_ROUTE = ["徒歩", "自転車"];  //経路を表示するtransportation
 var DEFAULT_SRC_MSG = "現在地";
 var DEFAULT_DEST_MSG = "到着地を選択";
 var DEFAULT_TIME = "現在時刻";
+var LANG = {ja: "true", en: "false"};
 
-var DEMO_INIT_FILE = "sample.json";
+var DEMO_INIT_FILE = "sample-ja.json";
+var DEMO = [{dest: "金沢21世紀美術館", file:"sample1-ja.json"},{dest: "ひがし茶屋街", file:"sample2-ja.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3-ja.json"}];
 
-var DEMO = [{dest: "金沢21世紀美術館", file:"sample1.json"},{dest: "ひがし茶屋街", file:"sample2.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3.json"}];
 var TP_ICON  = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus", goal: "fa-flag-o"};
 var TP_COLOR = {
-                  walk:    "#3399ff",
-                  bicycle: "red",
+                  walk:    "#778899",
+                  bicycle: "#a6cf22",
                   bus: {
                     "此花ルート": "#4f5187",
                     "菊川ルート": "#821721",
@@ -141,9 +142,10 @@ ons.bootstrap()
   .controller('AppController', function($scope, $http, DataService) {
     $scope.application_name = APP_NAME;
     $scope.search = {src: DEFAULT_SRC_MSG, dest: DEFAULT_DEST_MSG};
-    // $scope.search_type = "出発";
+    $scope.search_type = "出発";
     $scope.type = "start"; // controll default search_type. start or arrive
     $scope.search_type = {start: "出発", arrive: "到着"};
+    $scope.tp = {"walk": true, "bicycle": true, "bus": true};
     $scope.time = DEFAULT_TIME;
     $scope.people_n = 1;
 
@@ -182,7 +184,7 @@ ons.bootstrap()
       // if($scope.search.dest === DEFAULT_DEST_MSG) {
       //   alert("目的地を選択してください。")
       //   return;
-      // }else if($scope.search.dest === $scope.search.dest) {
+      // }else if($scope.search.src === $scope.search.dest) {
       //   alert("目的地と到着地が同じです");
       //   return;
       // }

@@ -22,6 +22,10 @@
   color: #FFF;
   font-weight: bold;
 }
+.condition-unit {
+  margin-left: 5px;
+  margin-right: 15px;
+}
 
 /* search.html */
 .distance {

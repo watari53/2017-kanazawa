@@ -50,7 +50,7 @@
       <section style="margin-top: 20px">
         <ul class="list list--inset">
           <li ng-click="app.setTime()" class="list-item list--inset__item list-item--tappable input-area">
-            <div class="list-item__left" style="width: 30px">
+            <div class="list-item__left" style="width: 25px">
               <ons-icon icon="fa-clock-o"></ons-icon>
             </div>
             <div class="list-item__center">
@@ -78,12 +78,12 @@
         </ul>
 
         <ul class="list list--inset" style="margin-top: 10px">
-          <li class="list-item list--inset__item input-area">
-            <div class="list-item__left" style="width: 30px">
+          <li class="list-item list--inset__item">
+            <div class="list-item__left" style="width: 25px">
               <ons-icon icon="fa-group"></ons-icon>
             </div>
             <div class="list-item__center">
-              人数：{{this.people_n}}人
+              <span style="margin-right: 10px">人数：</span>{{this.people_n}}人
             </div>
             <div class="list-item__right">
               <button ng-click="this.people_n=this.people_n-1" class="fab fab--material fab--mini" ng-disabled="this.people_n==1"><i class="zmdi zmdi-minus"></i></button>
@@ -92,6 +92,20 @@
             </div>
           </li>
         </ul>
+        
+
+        <ul class="list list--inset" style="margin-top: 10px">
+          <li class="list-item list--inset__item">
+            <div class="list-item__left" style="width: 25px">
+              <ons-icon icon="fa-gear"></ons-icon>
+            </div>
+            <span style="margin-right: 10px">優先：</span>
+            <ons-checkbox input-id="walk" ng-model="tp.walk"></ons-checkbox><span class="condition-unit">徒歩</span>
+            <ons-checkbox input-id="bicycle" ng-model="tp.bicycle"></ons-checkbox><span class="condition-unit">自転車</span>
+            <ons-checkbox input-id="bus" ng-model="tp.bus"></ons-checkbox><span class="condition-unit">バス</span>
+          </li>
+        </ul>
+        
 
       </section>
 
@@ -294,7 +308,7 @@
             </ons-col>
 
             <ons-col style="padding: 15px 30px">
-              <div>
+              <div style="min-height: 45px">
                 {{w.transportation.text}}
                 <div style="float: right" ng-show="td.showRoute(w.transportation)">
                   <ons-button ng-click="td.go_map($index)">
@@ -302,12 +316,13 @@
                     経路
                   </ons-button>
                 </div>
-              </div>
-              <div ng-style="{display: w.information.length === 0 ? 'none': 'inline'}">
-                <span ng-repeat = "i in w.information">
-                  <img class="icon-label" src="{{i.icon}}">
-                  {{i.text}}<br>
-                </span>
+                <div ng-style="{display: w.information.length === 0 ? 'none': 'inline'}">
+                  <br>
+                  <span ng-repeat = "i in w.information">
+                    <img class="icon-label" src="{{i.icon}}">
+                    {{i.text}}<br>
+                  </span>
+                </div>
               </div>
               <div style="margin-top: 6px; text-align: right">{{w.fee}}</div>
             </ons-col>
