@@ -59,6 +59,24 @@
           </li>
         </ul>
 
+        <ul class="list list--inset">
+          <div class="tabbar tabbar--top tabbar--top-border">
+            <label class="tabbar__item tabbar--top-border__item">
+              <input type="radio" name="top-tabbar-type" ng-model="type" value="start" ng-change="app.changeSearchType()" checked="checked">
+              <button class="tabbar__button tabbar--top-border__button">
+                出発
+              </button>
+            </label>
+
+            <label class="tabbar__item tabbar--top-border__item">
+              <input type="radio" name="top-tabbar-type" ng-model="type" value="arrive" ng-change="app.changeSearchType()">
+              <button class="tabbar__button tabbar--top-border__button">
+                到着
+              </button>
+            </label>
+          </div>
+        </ul>
+
         <ul class="list list--inset" style="margin-top: 10px">
           <li class="list-item list--inset__item input-area">
             <div class="list-item__left" style="width: 30px">
@@ -171,7 +189,7 @@
         <div style="padding: 1px 0 0 0;">
           <div class="card card--material">
             <div class="card__content">
-              {{tl.time| date: "a hh時mm分"}}{{tl.search_type}}
+              {{tl.time| date: "a hh時mm分"}} <span style="margin-left: 6px">{{tl.search_type}}</span>
               <div style="margin-top:5px"><span class="start_index">発</span><strong>{{tl.src}}</strong></div>
               <div style="margin-top:10px"><span class="dest_index">着</span><strong>{{tl.dest}}</strong></div>
             </div>

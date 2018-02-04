@@ -141,7 +141,9 @@ ons.bootstrap()
   .controller('AppController', function($scope, $http, DataService) {
     $scope.application_name = APP_NAME;
     $scope.search = {src: DEFAULT_SRC_MSG, dest: DEFAULT_DEST_MSG};
-    $scope.search_type = "出発";
+    // $scope.search_type = "出発";
+    $scope.type = "start"; // controll default search_type. start or arrive
+    $scope.search_type = {start: "出発", arrive: "到着"};
     $scope.time = DEFAULT_TIME;
     $scope.people_n = 1;
 
@@ -165,6 +167,16 @@ ons.bootstrap()
           $scope.time = newTime;
           $scope.$apply();
       });
+    };
+    this.changeSearchType = function() {
+      if($scope.type === 'start') {
+        $scope.type = 'arrive';
+      } else if($scope.type === 'arrive') {
+        $scope.type = 'start';
+      } else {
+        $scope.type = 'arrive';
+        console.log('invalid search type');
+      }
     };
     this.go_timeline = function() {
       // if($scope.search.dest === DEFAULT_DEST_MSG) {
@@ -219,7 +231,7 @@ ons.bootstrap()
     };
   })
   .controller('TimeLineController', function($scope, DecolateService, DataService) {
-    this.search_type = $scope.search_type;
+    this.search_type = $scope.search_type[$scope.type];
     this.time        = $scope.time;
     this.src         = $scope.search.src;
     this.dest        = $scope.search.dest;
