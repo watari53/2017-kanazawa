@@ -48,16 +48,12 @@
       </section>
 
       <section style="margin-top: 20px">
-        <ul class="list list--inset">
-          <li ng-click="app.setTime()" class="list-item list--inset__item list-item--tappable input-area">
-            <div class="list-item__left" style="width: 25px">
-              <ons-icon icon="fa-clock-o"></ons-icon>
-            </div>
-            <div class="list-item__center">
+        <div class="list list--inset" style="text-align: center;">
+          <div ng-click="app.setTime()" class="list--inset__item list-item--tappable input-area" style="display: flex;justify-content: center;align-items: center;">
+              <ons-icon style="margin-right: 5px" icon="fa-clock-o"></ons-icon>
               {{this.time | date: "M月d日（EEE）a hh時mm分"}}
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
 
         <ul class="list list--inset">
           <div class="tabbar tabbar--top tabbar--top-border">
