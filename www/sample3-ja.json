@@ -1126,8 +1126,12 @@
       "time_required": "24分",
       "fee": "0円",
       "transportation": [
-        "walk",
-        "goal"
+        {
+          "walk": "徒歩"
+        },
+        {
+          "goal": "到着"
+        }
       ],
       "information": [],
       "timeline_detail": {
@@ -1167,10 +1171,18 @@
       "time_required": "27分",
       "fee": "200円",
       "transportation": [
-        "walk",
-        "bus",
-        "walk",
-        "goal"
+        {
+          "walk": "徒歩"
+        },
+        {
+          "bus": "長町ルート"
+        },
+        {
+          "walk": "徒歩"
+        },
+        {
+          "goal": "到着"
+        }
       ],
       "information": [],
       "timeline_detail": {
@@ -1236,12 +1248,24 @@
       "time_required": "26分",
       "fee": "400円",
       "transportation": [
-        "walk",
-        "bus",
-        "walk",
-        "bus",
-        "walk",
-        "goal"
+        {
+          "walk": "徒歩"
+        },
+        {
+          "bus": "材木ルート"
+        },
+        {
+          "walk": "徒歩"
+        },
+        {
+          "bus": "長町ルート"
+        },
+        {
+          "walk": "徒歩"
+        },
+        {
+          "goal": "到着"
+        }
       ],
       "information": [],
       "timeline_detail": {
@@ -1333,10 +1357,18 @@
       "time_required": "16分",
       "fee": "400円",
       "transportation": [
-        "walk",
-        "bicycle",
-        "walk",
-        "goal"
+        {
+          "walk": "徒歩"
+        },
+        {
+          "bicycle": "自転車"
+        },
+        {
+          "walk": "徒歩"
+        },
+        {
+          "goal": "到着"
+        }
       ],
       "information": [
         "./images/may_no_bicycle.svg"
