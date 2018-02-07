@@ -226,7 +226,7 @@
 
                 <div class="plan-transportation">
                   <ons-icon ng-repeat="t in r.transportation track by $index" icon="{{tl.getTPIcon(t)}}">
-                    <ons-icon ng-style="{display: $last ? 'none' : 'inline'}" style="margin-right: 7px" icon="angle-right"></ons-icon>
+                    <ons-icon ng-show="!$last" style="margin-right: 7px" icon="angle-right"></ons-icon>
                   </ons-icon>
                 </div>
               </ons-col>
