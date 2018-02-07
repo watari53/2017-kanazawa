@@ -238,11 +238,8 @@
                 <div>
                   <span>
                     <img class="icon-label" src="./images/information.svg">
-                    交通情報
+                    <img ng-repeat="icon in r.information" class="icon-label" src="{{icon}}">
                   </span>
-                </div>
-                <div class="plan-date">
-                  <img ng-repeat="icon in r.information" style="margin-right: 6px; width: 23px; hwight: 23px" src="{{icon}}">
                 </div>
               </ons-col>
             </ons-row>
@@ -284,7 +281,7 @@
 
       <section style="margin-bottom: 20px">
         <ons-list class="plan-list list--inset">
-          <ons-list-item modifier="chevron tappable">
+          <ons-list-item>
             <i style="margin-right: 20px">{{td.detail.start.time}}</i> {{td.detail.start.spot_name}}
           </ons-list-item>
         </ons-list>

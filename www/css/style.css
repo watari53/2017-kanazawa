@@ -1,5 +1,14 @@
 .page__background {
-  background: #dcdcdc;
+  background: #F3F0E8;
+}
+.toolbar {
+  background-color: #20A738;
+}
+.toolbar__title {
+  color: white;
+}
+.button {
+  background-color: #20A738;
 }
 /* top page */
 .input-area {
@@ -10,7 +19,7 @@
   padding: 3px 4px 2px 4px;
   margin-right: 2px;
   font-size: 12px;
-  background-color: #5e92c4;
+  background-color: #059be6;
   color: #FFF;
   font-weight: bold;
 }    
@@ -18,7 +27,7 @@
   padding: 3px 4px 2px 4px;
   margin-right: 2px;
   font-size: 12px;
-  background-color: #c76daa;
+  background-color: #df166e;
   color: #FFF;
   font-weight: bold;
 }
@@ -55,7 +64,7 @@
 .plan-left {
   font-size: 14px;
   text-align: left;
-  padding: 8px 20px 4px 0px;
+  padding: 0px 20px 4px 0px;
 
 }
 .plan-center {
@@ -75,7 +84,9 @@
   text-align: center;
 }
 .fast_index {
-  padding: 3px 3px 2px 3px;
+  position: relative;
+  top: -4px;
+  padding: 3px 4px;
   font-size: 12px;
   font-weight: normal;
   background-color: #5e92c4;
