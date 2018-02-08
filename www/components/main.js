@@ -12,10 +12,13 @@
 // may_no_bicycle = "./images/may_no_bicycle.svg";
 var APP_NAME = "金沢ルート検索";
 
+var SEARCH_TYPE = {start: "出発", arrive: "到着"};
+var SEARCH_CTR_TITLE = {src: "出発地", dest: "到着地"};
 var SHOW_ROUTE = ["徒歩", "自転車"];  //経路を表示するtransportation
 var DEFAULT_SRC_MSG = "現在地";
 var DEFAULT_DEST_MSG = "到着地を選択";
 var DEFAULT_TIME = "現在時刻";
+var CONNECTION_FAILD_MSG = "電波の良いところでアプリを起動してください。";
 var LANG = {ja: "true", en: "false"};
 
 var DEMO_INIT_FILE = "sample-ja.json";
@@ -133,7 +136,7 @@ ons.bootstrap()
         error(function(data, status, headers, config) {
           // エラーが発生、またはサーバからエラーステータスが返された場合に、
           // 非同期で呼び出されます。
-          alert("電波の良いところでアプリを起動してください。");
+          alert(CONNECTION_FAILD_MSG);
           console.log("Error Code: 0");
         });
     };
@@ -142,9 +145,9 @@ ons.bootstrap()
   .controller('AppController', function($scope, $http, DataService) {
     $scope.application_name = APP_NAME;
     $scope.search = {src: DEFAULT_SRC_MSG, dest: DEFAULT_DEST_MSG};
-    $scope.search_type = "出発";
+    // $scope.search_type = "出発";
     $scope.type = "start"; // controll default search_type. start or arrive
-    $scope.search_type = {start: "出発", arrive: "到着"};
+    $scope.search_type = SEARCH_TYPE;
     $scope.tp = {"walk": true, "bicycle": true, "bus": true};
     $scope.time = DEFAULT_TIME;
     $scope.people_n = 1;
@@ -199,9 +202,8 @@ ons.bootstrap()
     };
   })
   .controller('SearchController', function($scope, DataService) {
-    var type = {src: "出発地", dest: "到着地"};
     var search_type = navi.topPage.data.search_type; // src or dest
-    this.title = type[search_type];
+    this.title = SEARCH_CTR_TITLE[search_type];
 
     this.ViewSurroundings = "surroundings"; // use in if
     this.ViewHistory = "history";  // use in if
@@ -337,7 +339,7 @@ ons.bootstrap()
         if (status == 'OK') {
           directionsDisplay.setDirections(response);
         } else {
-          window.alert('通信に失敗しました。電波の良いところで再度お試しください。コード： ' + status);
+          window.alert(CONNECTION_FAILD_MSG + ': code: ' + status);
         }
       });
     }
