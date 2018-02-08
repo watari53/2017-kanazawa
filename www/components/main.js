@@ -1,3 +1,7 @@
+// // use in index.html
+var SURROUNDINGS_TITLE = "周辺";
+var HISTORY_TITLE = "履歴";
+
 // // global value
 // // transportation
 // walk        = "fa-blind";
@@ -204,6 +208,8 @@ ons.bootstrap()
   .controller('SearchController', function($scope, DataService) {
     var search_type = navi.topPage.data.search_type; // src or dest
     this.title = SEARCH_CTR_TITLE[search_type];
+    this.surroundings_tiele = SURROUNDINGS_TITLE;
+    this.history_title = HISTORY_TITLE;
 
     this.ViewSurroundings = "surroundings"; // use in if
     this.ViewHistory = "history";  // use in if
@@ -262,7 +268,7 @@ ons.bootstrap()
     var waypoint = this.detail.waypoint;
     
     function getSrcLocation() {
-      return {name: "現在地", lat: 36.578268, lng: 136.648035};
+      return {name: DEFAULT_SRC_MSG, lat: 36.578268, lng: 136.648035};
     }
 
     this.getTPColor = function(style, tp) {
