@@ -60,14 +60,14 @@
             <label class="tabbar__item tabbar--top-border__item">
               <input type="radio" name="top-tabbar-type" ng-model="type" value="start" ng-change="app.changeSearchType()" checked="checked">
               <button class="tabbar__button tabbar--top-border__button">
-                出発
+                {{src_text}}
               </button>
             </label>
 
             <label class="tabbar__item tabbar--top-border__item">
               <input type="radio" name="top-tabbar-type" ng-model="type" value="arrive" ng-change="app.changeSearchType()">
               <button class="tabbar__button tabbar--top-border__button">
-                到着
+                {{dest_text}}
               </button>
             </label>
           </div>
