@@ -1139,22 +1139,28 @@
       "fee": "400円",
       "transportation": [
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "bus": "此花ルート"
+          "type": "bus",
+          "text": "此花ルート"
         },
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "bus": "材木ルート"
+          "type": "bus",
+          "text": "材木ルート"
         },
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "goal": "到着"
+          "type": "goal",
+          "text": "到着"
         }
       ],
       "information": [
@@ -1183,7 +1189,7 @@
             "information": [
               {
                 "icon": "./images/rain.svg",
-                "text": "雨"
+                "text": "小雨"
               }
             ],
             "time_required": "1分",
@@ -1214,7 +1220,7 @@
             "information": [
               {
                 "icon": "./images/rain.svg",
-                "text": "雨"
+                "text": "小雨"
               }
             ],
             "time_required": "3分",
@@ -1245,7 +1251,7 @@
             "information": [
               {
                 "icon": "./images/rain.svg",
-                "text": "雨"
+                "text": "小雨"
               }
             ],
             "time_required": "4分",
@@ -1265,16 +1271,20 @@
       "fee": "200円",
       "transportation": [
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "bus": "此花ルート"
+          "type": "bus",
+          "text": "此花ルート"
         },
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "goal": "到着"
+          "type": "goal",
+          "text": "到着"
         }
       ],
       "information": [
@@ -1303,7 +1313,7 @@
             "information": [
               {
                 "icon": "./images/rain.svg",
-                "text": "雨"
+                "text": "小雨"
               }
             ],
             "time_required": "1分",
@@ -1334,7 +1344,7 @@
             "information": [
               {
                 "icon": "./images/rain.svg",
-                "text": "雨"
+                "text": "小雨"
               }
             ],
             "time_required": "19分",
@@ -1354,10 +1364,12 @@
       "fee": "0円",
       "transportation": [
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "goal": "到着"
+          "type": "goal",
+          "text": "到着"
         }
       ],
       "information": [
@@ -1386,7 +1398,7 @@
             "information": [
               {
                 "icon": "./images/rain.svg",
-                "text": "雨"
+                "text": "小雨"
               }
             ],
             "time_required": "32分",
@@ -1406,21 +1418,26 @@
       "fee": "400円",
       "transportation": [
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "bicycle": "自転車"
+          "type": "bicycle",
+          "text": "自転車"
         },
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "goal": "到着"
+          "type": "goal",
+          "text": "到着"
         }
       ],
       "information": [
         "./images/rain.svg",
-        "./images/bicycle.svg"
+        "./images/bicycle.svg",
+        "./images/light_rain.svg"
       ],
       "timeline_detail": {
         "time_required": "16分",
@@ -1445,7 +1462,7 @@
             "information": [
               {
                 "icon": "./images/rain.svg",
-                "text": "雨"
+                "text": "小雨"
               }
             ],
             "time_required": "4分",
@@ -1466,8 +1483,8 @@
                 "text": "残り13台"
               },
               {
-                "icon": "./images/rain.svg",
-                "text": "雨"
+                "icon": "./images/light_rain.svg",
+                "text": "小雨"
               }
             ],
             "time_required": "11分",
@@ -1485,7 +1502,7 @@
             "information": [
               {
                 "icon": "./images/rain.svg",
-                "text": "雨"
+                "text": "小雨"
               }
             ],
             "time_required": "1分",

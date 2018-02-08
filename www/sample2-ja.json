@@ -1115,16 +1115,20 @@
       "fee": "400円",
       "transportation": [
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "bicycle": "自転車"
+          "type": "bicycle",
+          "text": "自転車"
         },
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "goal": "到着"
+          "type": "goal",
+          "text": "到着"
         }
       ],
       "information": [
@@ -1199,10 +1203,12 @@
       "fee": "0円",
       "transportation": [
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "goal": "到着"
+          "type": "goal",
+          "text": "到着"
         }
       ],
       "information": [],
@@ -1244,22 +1250,28 @@
       "fee": "400円",
       "transportation": [
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "bus": "菊川ルート"
+          "type": "bus",
+          "text": "菊川ルート"
         },
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "bus": "材木ルート"
+          "type": "bus",
+          "text": "材木ルート"
         },
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "goal": "到着"
+          "type": "goal",
+          "text": "到着"
         }
       ],
       "information": [],
@@ -1353,16 +1365,20 @@
       "fee": "200円",
       "transportation": [
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "bus": "材木ルート"
+          "type": "bus",
+          "text": "材木ルート"
         },
         {
-          "walk": "徒歩"
+          "type": "walk",
+          "text": "徒歩"
         },
         {
-          "goal": "到着"
+          "type": "goal",
+          "text": "到着"
         }
       ],
       "information": [],
