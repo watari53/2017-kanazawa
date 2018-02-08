@@ -1,4 +1,6 @@
 // // use in index.html
+var SRC_TEXT = "出発";
+var DEST_TEXT = "到着";
 var SURROUNDINGS_TITLE = "周辺";
 var HISTORY_TITLE = "履歴";
 
@@ -148,6 +150,8 @@ ons.bootstrap()
   })
   .controller('AppController', function($scope, $http, DataService) {
     $scope.application_name = APP_NAME;
+    $scope.src_text = SRC_TEXT;
+    $scope.dest_text = DEST_TEXT;
     $scope.search = {src: DEFAULT_SRC_MSG, dest: DEFAULT_DEST_MSG};
     // $scope.search_type = "出発";
     $scope.type = "start"; // controll default search_type. start or arrive

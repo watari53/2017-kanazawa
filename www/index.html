@@ -34,13 +34,13 @@
         <ul class="list list--inset">
           <li class="list-item list--inset__item list-item--tappable input-area" ng-click='app.go_search("src")'>
             <div class="list-item__left">
-              <span class="start_index">出発</span>
+              <span class="start_index">{{src_text}}</span>
             </div>
             <div id="src" class="list-item__center">{{this.search.src}}</div>
           </li>
           <li class="list-item list--inset__item list-item--tappable input-area" ng-click='app.go_search("dest")'>
             <div class="list-item__left">
-              <span class="dest_index">到着</span>
+              <span class="dest_index">{{dest_text}}</span>
             </div>
             <div id="dest" class="list-item__center">{{this.search.dest}}</div>
           </li>
