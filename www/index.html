@@ -225,7 +225,7 @@
                 </div>
 
                 <div class="plan-transportation">
-                  <ons-icon ng-repeat="t in r.transportation track by $index" icon="{{tl.getTPIcon(t)}}">
+                  <ons-icon ng-repeat="tp in r.transportation track by $index" ng-style='tl.getTPColor("color", w.transportation)' icon="{{tl.getTPIcon(tp)}}">
                     <ons-icon ng-show="!$last" style="margin-right: 7px" icon="angle-right"></ons-icon>
                   </ons-icon>
                 </div>
@@ -238,7 +238,8 @@
                 <div>
                   <span>
                     <img class="icon-label" src="./images/information.svg">
-                    <img ng-repeat="icon in r.information" class="icon-label" src="{{icon}}">
+                    <img ng-repeat="icon in r.information" class="icon-label" src="{{icon}}">
+
                   </span>
                 </div>
               </ons-col>

@@ -240,7 +240,14 @@ ons.bootstrap()
     this.people_n    = $scope.people_n;
     this.result      = DataService.getTimeLines();
 
-    this.getTPIcon = function(tp_type) {
+    this.getTPColor = function(style, tp) {
+      var hash = {};
+      var color = DecolateService.getTPColor(tp);
+      hash[style] = color; 
+      return hash;
+    };
+
+    this.getTPIcon = function(tp) {
       return DecolateService.getTPIcon(tp_type);
     };
 
@@ -341,4 +348,5 @@ ons.bootstrap()
   });
 ons.ready(function() {
   console.log("Onsen UI is ready!");
+  ons.platform.select('android');
 });
