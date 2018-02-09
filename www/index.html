@@ -27,7 +27,7 @@
       <ons-toolbar>
         <div class="left"> </div>
         <div class="center">{{this.application_name}}</div>
-        <div class="right"> </div>
+        <div class="right"> <ons-icon icon="gear" ng-click="setting.show()"></ons-icon></div>
       </ons-toolbar>
 
       <section style="margin-top: 30px">
@@ -402,6 +402,16 @@
       <p>
       <ons-icon icon="md-spinner" size="28px" spin></ons-icon> Loading...
       </p>
+    </div>
+  </ons-modal>
+
+  <ons-modal var="setting" direction="down">
+    <div style="text-align: center">
+      <ons-select id="choose-sel" onchange="editSelects(event)">
+        <option value="ja">日本語</option>
+        <option value="en">English</option>
+      </ons-select>      
+      <ons-button ng-click="">閉じる</ons-button>
     </div>
   </ons-modal>
 
