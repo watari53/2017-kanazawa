@@ -1214,7 +1214,8 @@
             "information": [],
             "time_required": "15分",
             "lat": 36.572449,
-            "lng": 136.655411
+            "lng": 136.655411,
+            "passed_bus_stop": null
           },
           {
             "spot_name": "白銀町",
@@ -1227,7 +1228,8 @@
             "information": [],
             "time_required": "2分",
             "lat": 36.573518,
-            "lng": 136.652316
+            "lng": 136.652316,
+            "passed_bus_stop": []
           },
           {
             "spot_name": "金沢駅(鼓門・もてなしドーム)",
@@ -1240,7 +1242,8 @@
             "information": [],
             "time_required": "10分",
             "lat": 36.577912,
-            "lng": 136.648904
+            "lng": 136.648904,
+            "passed_bus_stop": null
           }
         ]
       },
@@ -1303,7 +1306,8 @@
             "information": [],
             "time_required": "4分",
             "lat": 36.571654,
-            "lng": 136.664574
+            "lng": 136.664574,
+            "passed_bus_stop": null
           },
           {
             "spot_name": "袋町",
@@ -1316,7 +1320,24 @@
             "information": [],
             "time_required": "7分",
             "lat": 36.572367,
-            "lng": 136.657428
+            "lng": 136.657428,
+            "passed_bus_stop": [
+              {
+                "spot_name": "泉鏡花記念館",
+                "lat": 36.570993,
+                "lng": 136.663013
+              },
+              {
+                "spot_name": "尾張町",
+                "lat": 36.571217,
+                "lng": 136.661218
+              },
+              {
+                "spot_name": "老舗交流館",
+                "lat": 36.571432,
+                "lng": 136.659338
+              }
+            ]
           },
           {
             "spot_name": "武蔵西",
@@ -1329,7 +1350,8 @@
             "information": [],
             "time_required": "2分",
             "lat": 36.572449,
-            "lng": 136.655411
+            "lng": 136.655411,
+            "passed_bus_stop": null
           },
           {
             "spot_name": "白銀町",
@@ -1342,7 +1364,8 @@
             "information": [],
             "time_required": "2分",
             "lat": 36.573518,
-            "lng": 136.652316
+            "lng": 136.652316,
+            "passed_bus_stop": []
           },
           {
             "spot_name": "金沢駅(鼓門・もてなしドーム)",
@@ -1355,7 +1378,8 @@
             "information": [],
             "time_required": "10分",
             "lat": 36.577912,
-            "lng": 136.648904
+            "lng": 136.648904,
+            "passed_bus_stop": null
           }
         ]
       },
