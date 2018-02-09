@@ -216,7 +216,7 @@ ons.bootstrap()
   .controller('SearchController', function($scope, DataService) {
     var search_type = navi.topPage.data.search_type; // src or dest
     this.title = SEARCH_CTR_TITLE[search_type];
-    this.surroundings_tiele = SURROUNDINGS_TITLE;
+    this.surroundings_title = SURROUNDINGS_TITLE;
     this.history_title = HISTORY_TITLE;
 
     this.ViewSurroundings = "surroundings"; // use in if
