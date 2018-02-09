@@ -3,6 +3,7 @@ var SRC_TEXT = "出発";
 var DEST_TEXT = "到着";
 var SURROUNDINGS_TITLE = "周辺";
 var HISTORY_TITLE = "履歴";
+var SEARCH_TEXT = "検索";
 
 // // global value
 // // transportation
@@ -20,6 +21,7 @@ var APP_NAME = "金沢ルート検索";
 
 var SEARCH_TYPE = {start: "出発", arrive: "到着"};
 var SEARCH_CTR_TITLE = {src: "出発地", dest: "到着地"};
+var TRANSPORTATION = {"walk": true, "bicycle": true, "bus": true};
 var SHOW_ROUTE = ["徒歩", "自転車"];  //経路を表示するtransportation
 var DEFAULT_SRC_MSG = "現在地";
 var DEFAULT_DEST_MSG = "到着地を選択";
@@ -152,11 +154,12 @@ ons.bootstrap()
     $scope.application_name = APP_NAME;
     $scope.src_text = SRC_TEXT;
     $scope.dest_text = DEST_TEXT;
+    $scope.search_text = SEARCH_TEXT;
     $scope.search = {src: DEFAULT_SRC_MSG, dest: DEFAULT_DEST_MSG};
     // $scope.search_type = "出発";
     $scope.type = "start"; // controll default search_type. start or arrive
     $scope.search_type = SEARCH_TYPE;
-    $scope.tp = {"walk": true, "bicycle": true, "bus": true};
+    $scope.tp = TRANSPORTATION;
     $scope.time = DEFAULT_TIME;
     $scope.people_n = 1;
 
@@ -260,7 +263,7 @@ ons.bootstrap()
     };
 
     this.getTPIcon = function(tp) {
-      return DecolateService.getTPIcon(tp_type);
+      return DecolateService.getTPIcon(tp.type);
     };
 
     this.go_timelineDetail = function(timeline_detail) {
