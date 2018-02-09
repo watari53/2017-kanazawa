@@ -1,4 +1,5 @@
 // // use in index.html
+var LANG = {ja: true, en: true};
 var SRC_TEXT = "出発";
 var DEST_TEXT = "到着";
 var SURROUNDINGS_TITLE = "周辺";
@@ -17,7 +18,7 @@ var SEARCH_TEXT = "検索";
 // traffic_jam   = "./images/traffic_jam.svg";
 // no_bicycle    = "./images/no_bicycle.svg";
 // may_no_bicycle = "./images/may_no_bicycle.svg";
-var APP_NAME = "金沢ルート検索";
+var APP_NAME = {ja: "金沢ルート検索", en: "kanazawa"};
 
 var SEARCH_TYPE = {start: "出発", arrive: "到着"};
 var SEARCH_CTR_TITLE = {src: "出発地", dest: "到着地"};
