@@ -7,9 +7,26 @@ var DEST_TEXT = "到着";
 var SURROUNDINGS_TITLE = "周辺";
 var HISTORY_TITLE = "履歴";
 var SEARCH_TEXT = "検索";
+var TXT = {
+  "ja": {
+    "APP_NAME"          : "金沢ルート検索",
+    "SRC_TEXT"          : "出発",
+    "DEST_TEXT"         : "到着",
+    "SURROUNDINGS_TITLE": "周辺",
+    "HISTORY_TITLE     ": "履歴",
+    "SEARCH_TEXT       ": "検索",
+  },
+  "en": {
+    "APP_NAME"          : "kanazawa",
+    "SRC_TEXT"          : "dep",
+    "DEST_TEXT"         : "arr",
+    "SURROUNDINGS_TITLE": "Surroungings",
+    "HISTORY_TITLE     ": "History",
+    "SEARCH_TEXT       ": "Search",
+  }
+}
 
 
-var APP_NAME = {ja: "金沢ルート検索", en: "kanazawa"};
 
 var SEARCH_TYPE = {start: "出発", arrive: "到着"};
 var SEARCH_CTR_TITLE = {src: "出発地", dest: "到着地"};
@@ -145,8 +162,8 @@ ons.bootstrap()
   .controller('AppController', function($scope, $http, DataService) {
     $scope.lang_set = LANG_SET;
     $scope.l = LANG;
-    $scope.application_name = APP_NAME[$scope.l];
-    $scope.src_text = SRC_TEXT[$scope.l];
+    $scope.application_name = TXT[$scope.l].APP_NAME;
+    $scope.src_text = TXT[$scope.l].SRC_TEXT;
     $scope.dest_text = DEST_TEXT;
     $scope.search_text = SEARCH_TEXT;
     $scope.search = {src: DEFAULT_SRC_MSG, dest: DEFAULT_DEST_MSG};

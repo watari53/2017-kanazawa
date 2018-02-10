@@ -1,0 +1,16 @@
+"LANG": {
+	"en": {
+		"SRC_TEXT"          : "dep",
+		"DEST_TEXT"         : "arr",
+		"SURROUNDINGS_TITLE": "Surroungings",
+		"HISTORY_TITLE     ": "History",
+		"SEARCH_TEXT       ": "Search",
+	},
+	"ja": {
+		"SRC_TEXT"          : "出発",
+		"DEST_TEXT"         : "到着",
+		"SURROUNDINGS_TITLE": "周辺",
+		"HISTORY_TITLE     ": "履歴",
+		"SEARCH_TEXT       ": "検索",
+	}
+}
