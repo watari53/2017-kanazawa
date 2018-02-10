@@ -1164,7 +1164,7 @@
         }
       ],
       "information": [
-        "./images/rain.svg"
+        "./images/light_rain.svg"
       ],
       "timeline_detail": {
         "time_required": "34分",
@@ -1188,13 +1188,14 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
+                "icon": "./images/light_rain.svg",
                 "text": "小雨"
               }
             ],
             "time_required": "1分",
             "lat": 36.578213,
-            "lng": 136.649215
+            "lng": 136.649215,
+            "passed_bus_stop": null
           },
           {
             "spot_name": "武蔵ヶ辻",
@@ -1207,7 +1208,34 @@
             "information": [],
             "time_required": "7分",
             "lat": 36.572852,
-            "lng": 136.655368
+            "lng": 136.655368,
+            "passed_bus_stop": [
+              {
+                "spot_name": "金沢駅東",
+                "lat": 36.577378,
+                "lng": 136.650288
+              },
+              {
+                "spot_name": "別院通り口",
+                "lat": 36.576566,
+                "lng": 136.652152
+              },
+              {
+                "spot_name": "別院通り",
+                "lat": 36.576482,
+                "lng": 136.653992
+              },
+              {
+                "spot_name": "東別院表参道口",
+                "lat": 36.575853,
+                "lng": 136.655792
+              },
+              {
+                "spot_name": "東別院",
+                "lat": 36.574356,
+                "lng": 136.655559
+              }
+            ]
           },
           {
             "spot_name": "袋町",
@@ -1219,13 +1247,14 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
+                "icon": "./images/light_rain.svg",
                 "text": "小雨"
               }
             ],
             "time_required": "3分",
             "lat": 36.572367,
-            "lng": 136.657428
+            "lng": 136.657428,
+            "passed_bus_stop": null
           },
           {
             "spot_name": "市役所・21世紀美術館",
@@ -1238,7 +1267,49 @@
             "information": [],
             "time_required": "19分",
             "lat": 36.561941,
-            "lng": 136.65819
+            "lng": 136.65819,
+            "passed_bus_stop": [
+              {
+                "spot_name": "武蔵ヶ辻・近江町市場",
+                "lat": 36.571924,
+                "lng": 136.655905
+              },
+              {
+                "spot_name": "武蔵ヶ辻・近江町市場",
+                "lat": 36.571924,
+                "lng": 136.655905
+              },
+              {
+                "spot_name": "十間町",
+                "lat": 36.57061,
+                "lng": 136.656752
+              },
+              {
+                "spot_name": "大手町",
+                "lat": 36.570054,
+                "lng": 136.66032
+              },
+              {
+                "spot_name": "大手門前",
+                "lat": 36.56936,
+                "lng": 136.661127
+              },
+              {
+                "spot_name": "大手堀",
+                "lat": 36.568901,
+                "lng": 136.659142
+              },
+              {
+                "spot_name": "商工会議所",
+                "lat": 36.566902,
+                "lng": 136.656554
+              },
+              {
+                "spot_name": "香林坊・仙石通り",
+                "lat": 36.563117,
+                "lng": 136.654596
+              }
+            ]
           },
           {
             "spot_name": "金沢21世紀美術館",
@@ -1250,13 +1321,14 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
+                "icon": "./images/light_rain.svg",
                 "text": "小雨"
               }
             ],
             "time_required": "4分",
             "lat": 36.560867,
-            "lng": 136.658258
+            "lng": 136.658258,
+            "passed_bus_stop": null
           }
         ]
       },
@@ -1288,7 +1360,7 @@
         }
       ],
       "information": [
-        "./images/rain.svg"
+        "./images/light_rain.svg"
       ],
       "timeline_detail": {
         "time_required": "29分",
@@ -1312,13 +1384,14 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
+                "icon": "./images/light_rain.svg",
                 "text": "小雨"
               }
             ],
             "time_required": "1分",
             "lat": 36.578213,
-            "lng": 136.649215
+            "lng": 136.649215,
+            "passed_bus_stop": null
           },
           {
             "spot_name": "町民文化館",
@@ -1331,7 +1404,44 @@
             "information": [],
             "time_required": "9分",
             "lat": 36.571575,
-            "lng": 136.659091
+            "lng": 136.659091,
+            "passed_bus_stop": [
+              {
+                "spot_name": "金沢駅東",
+                "lat": 36.577378,
+                "lng": 136.650288
+              },
+              {
+                "spot_name": "別院通り口",
+                "lat": 36.576566,
+                "lng": 136.652152
+              },
+              {
+                "spot_name": "別院通り",
+                "lat": 36.576482,
+                "lng": 136.653992
+              },
+              {
+                "spot_name": "東別院表参道口",
+                "lat": 36.575853,
+                "lng": 136.655792
+              },
+              {
+                "spot_name": "東別院",
+                "lat": 36.574356,
+                "lng": 136.655559
+              },
+              {
+                "spot_name": "武蔵ヶ辻",
+                "lat": 36.572852,
+                "lng": 136.655368
+              },
+              {
+                "spot_name": "近江町市場",
+                "lat": 36.572169,
+                "lng": 136.656725
+              }
+            ]
           },
           {
             "spot_name": "金沢21世紀美術館",
@@ -1343,13 +1453,14 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
+                "icon": "./images/light_rain.svg",
                 "text": "小雨"
               }
             ],
             "time_required": "19分",
             "lat": 36.560867,
-            "lng": 136.658258
+            "lng": 136.658258,
+            "passed_bus_stop": null
           }
         ]
       },
@@ -1373,7 +1484,7 @@
         }
       ],
       "information": [
-        "./images/rain.svg"
+        "./images/light_rain.svg"
       ],
       "timeline_detail": {
         "time_required": "32分",
@@ -1397,7 +1508,7 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
+                "icon": "./images/light_rain.svg",
                 "text": "小雨"
               }
             ],
@@ -1435,9 +1546,8 @@
         }
       ],
       "information": [
-        "./images/rain.svg",
-        "./images/bicycle.svg",
-        "./images/light_rain.svg"
+        "./images/light_rain.svg",
+        "./images/bicycle.svg"
       ],
       "timeline_detail": {
         "time_required": "16分",
@@ -1461,7 +1571,7 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
+                "icon": "./images/light_rain.svg",
                 "text": "小雨"
               }
             ],
@@ -1501,7 +1611,7 @@
             "fee": "0円",
             "information": [
               {
-                "icon": "./images/rain.svg",
+                "icon": "./images/light_rain.svg",
                 "text": "小雨"
               }
             ],
