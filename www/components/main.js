@@ -162,10 +162,11 @@ ons.bootstrap()
   .controller('AppController', function($scope, $http, DataService) {
     $scope.lang_set = LANG_SET;
     $scope.l = LANG;
-    $scope.application_name = TXT[$scope.l].APP_NAME;
-    $scope.src_text = TXT[$scope.l].SRC_TEXT;
-    $scope.dest_text = DEST_TEXT;
-    $scope.search_text = SEARCH_TEXT;
+    var txt = TXT[$scope.l];
+    $scope.application_name = txt.APP_NAME;
+    $scope.src_text = txt.SRC_TEXT;
+    $scope.dest_text = txt.DEST_TEXT;
+    $scope.search_text = txt.SEARCH_TEXT;
     $scope.search = {src: DEFAULT_SRC_MSG, dest: DEFAULT_DEST_MSG};
     $scope.type = "start"; // controll default search_type. start or arrive
     $scope.search_type = SEARCH_TYPE;
