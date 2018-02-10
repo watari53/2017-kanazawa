@@ -1022,18 +1022,6 @@
     }
   ],
   "spotdata": {
-    "金沢駅(鼓門・もてなしドーム)": {
-      "name": "金沢駅(鼓門・もてなしドーム)",
-      "desc": "金沢の玄関口。東広場では、金沢を訪れる人に差し出す雨傘をイメージし、おもてなしの心を表わしたガラスのドーム「もてなしドーム」や、伝統芸能に使われる鼓をイメージした「鼓門」を見ることができる。",
-      "address": "金沢市木ノ新保町1-1",
-      "location": [
-        "36.577912",
-        "136.648904"
-      ],
-      "open_hours": "",
-      "fee": "",
-      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/94"
-    },
     "ひがし茶屋街": {
       "name": "ひがし茶屋街",
       "desc": "金沢市内にある三茶屋街の一つであり、国の重要伝統的建造物群保存地区。キムスコ(木虫籠)と呼ばれる美しい出格子がある古い街並みが残る。",
@@ -1046,49 +1034,25 @@
       "fee": "",
       "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/24"
     },
-    "武蔵西": {
-      "name": "武蔵西",
-      "desc": "",
-      "address": "石川県金沢市武蔵町１５",
+    "金沢21世紀美術館": {
+      "name": "金沢21世紀美術館",
+      "desc": "金沢21世紀美術館は、兼六園に隣接し、中心部に位置しています。「新しい文化の創造」と「新たなまちの賑わいの創出」を目的に開設されました。ガラス張りの円形の建物で、誰もがいつでも立ち寄ることができる｢まちに開かれた公園のような美術館｣を目指しています。無料ゾーンにも作品があり、体感することができます。",
+      "address": "金沢市広坂1-2-1",
       "location": [
-        36.572449,
-        136.655411
+        "36.560867",
+        "136.658258"
       ],
-      "open_hours": "",
-      "fee": "",
-      "img": "dummy"
+      "open_hours": "展覧会ゾーン10:00～18:00（金・土は20:00　※チケットの販売は閉場の30分前まで）無料ゾーン9:00～22:00",
+      "fee": "美術館の建物への入館（交流ゾーン）　無料コレクション展　一般　360円、大学生・65歳以上　280円、高校生以下　無料※特別展は展覧会毎に異なります。",
+      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
     },
-    "白銀町": {
-      "name": "白銀町",
+    "広坂": {
+      "name": "広坂",
       "desc": "",
-      "address": "石川県金沢市玉川町１１",
+      "address": "石川県金沢市広坂１丁目２",
       "location": [
-        36.573518,
-        136.652316
-      ],
-      "open_hours": "",
-      "fee": "",
-      "img": "dummy"
-    },
-    "浅野川大橋": {
-      "name": "浅野川大橋",
-      "desc": "",
-      "address": "石川県金沢市橋場町４",
-      "location": [
-        36.571654,
-        136.664574
-      ],
-      "open_hours": "",
-      "fee": "",
-      "img": "dummy"
-    },
-    "袋町": {
-      "name": "袋町",
-      "desc": "",
-      "address": "石川県金沢市袋町２",
-      "location": [
-        36.572367,
-        136.657428
+        36.561412,
+        136.657436
       ],
       "open_hours": "",
       "fee": "",
@@ -1106,13 +1070,37 @@
       "fee": "",
       "img": "dummy"
     },
-    "金沢駅Ｂ": {
-      "name": "金沢駅Ｂ",
+    "21世紀美術館": {
+      "name": "21世紀美術館",
       "desc": "",
-      "address": "石川県金沢市木ノ新保町１－１",
+      "address": "石川県金沢市本多町３丁目１",
       "location": [
-        36.57707818565,
-        136.64759501065
+        36.561088,
+        136.659375
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "市役所・21世紀美術館": {
+      "name": "市役所・21世紀美術館",
+      "desc": "",
+      "address": "石川県金沢市広坂２丁目１",
+      "location": [
+        36.561941,
+        136.65819
+      ],
+      "open_hours": "",
+      "fee": "",
+      "img": "dummy"
+    },
+    "浅野川大橋": {
+      "name": "浅野川大橋",
+      "desc": "",
+      "address": "石川県金沢市橋場町４",
+      "location": [
+        36.571654,
+        136.664574
       ],
       "open_hours": "",
       "fee": "",
@@ -1121,271 +1109,9 @@
   },
   "timeline": [
     {
-      "start_time": "15:30",
-      "arrival_time": "15:54",
-      "time_required": "24分",
-      "fee": "0円",
-      "transportation": [
-        {
-          "type": "walk",
-          "text": "徒歩"
-        },
-        {
-          "type": "goal",
-          "text": "到着"
-        }
-      ],
-      "information": [],
-      "timeline_detail": {
-        "time_required": "24分",
-        "fee": "0円",
-        "src": "ひがし茶屋街",
-        "dest": "金沢駅(鼓門・もてなしドーム)",
-        "start": {
-          "spot_name": "ひがし茶屋街",
-          "time": "15:30",
-          "lat": 36.572587,
-          "lng": 136.666548
-        },
-        "waypoint": [
-          {
-            "spot_name": "金沢駅(鼓門・もてなしドーム)",
-            "arrival_time": "15:54",
-            "transportation": {
-              "type": "walk",
-              "text": "徒歩"
-            },
-            "fee": "0円",
-            "information": [],
-            "time_required": "24分",
-            "lat": 36.577912,
-            "lng": 136.648904
-          }
-        ]
-      },
-      "feature": {
-        "fast": false
-      }
-    },
-    {
-      "start_time": "15:42",
-      "arrival_time": "16:09",
-      "time_required": "27分",
-      "fee": "200円",
-      "transportation": [
-        {
-          "type": "walk",
-          "text": "徒歩"
-        },
-        {
-          "type": "bus",
-          "text": "長町ルート"
-        },
-        {
-          "type": "walk",
-          "text": "徒歩"
-        },
-        {
-          "type": "goal",
-          "text": "到着"
-        }
-      ],
-      "information": [],
-      "timeline_detail": {
-        "time_required": "27分",
-        "fee": "200円",
-        "src": "ひがし茶屋街",
-        "dest": "金沢駅(鼓門・もてなしドーム)",
-        "start": {
-          "spot_name": "ひがし茶屋街",
-          "time": "15:42",
-          "lat": 36.572587,
-          "lng": 136.666548
-        },
-        "waypoint": [
-          {
-            "spot_name": "武蔵西",
-            "arrival_time": "15:57",
-            "transportation": {
-              "type": "walk",
-              "text": "徒歩"
-            },
-            "fee": "0円",
-            "information": [],
-            "time_required": "15分",
-            "lat": 36.572449,
-            "lng": 136.655411
-          },
-          {
-            "spot_name": "白銀町",
-            "arrival_time": "15:59",
-            "transportation": {
-              "type": "bus",
-              "text": "長町ルート"
-            },
-            "fee": "200円",
-            "information": [],
-            "time_required": "2分",
-            "lat": 36.573518,
-            "lng": 136.652316,
-            "passed_bus_stop": []
-          },
-          {
-            "spot_name": "金沢駅(鼓門・もてなしドーム)",
-            "arrival_time": "16:09",
-            "transportation": {
-              "type": "walk",
-              "text": "徒歩"
-            },
-            "fee": "0円",
-            "information": [],
-            "time_required": "10分",
-            "lat": 36.577912,
-            "lng": 136.648904
-          }
-        ]
-      },
-      "feature": {
-        "fast": false
-      }
-    },
-    {
-      "start_time": "15:43",
-      "arrival_time": "16:09",
-      "time_required": "26分",
-      "fee": "400円",
-      "transportation": [
-        {
-          "type": "walk",
-          "text": "徒歩"
-        },
-        {
-          "type": "bus",
-          "text": "材木ルート"
-        },
-        {
-          "type": "walk",
-          "text": "徒歩"
-        },
-        {
-          "type": "bus",
-          "text": "長町ルート"
-        },
-        {
-          "type": "walk",
-          "text": "徒歩"
-        },
-        {
-          "type": "goal",
-          "text": "到着"
-        }
-      ],
-      "information": [],
-      "timeline_detail": {
-        "time_required": "26分",
-        "fee": "400円",
-        "src": "ひがし茶屋街",
-        "dest": "金沢駅(鼓門・もてなしドーム)",
-        "start": {
-          "spot_name": "ひがし茶屋街",
-          "time": "15:43",
-          "lat": 36.572587,
-          "lng": 136.666548
-        },
-        "waypoint": [
-          {
-            "spot_name": "浅野川大橋",
-            "arrival_time": "15:47",
-            "transportation": {
-              "type": "walk",
-              "text": "徒歩"
-            },
-            "fee": "0円",
-            "information": [],
-            "time_required": "4分",
-            "lat": 36.571654,
-            "lng": 136.664574
-          },
-          {
-            "spot_name": "袋町",
-            "arrival_time": "15:54",
-            "transportation": {
-              "type": "bus",
-              "text": "材木ルート"
-            },
-            "fee": "200円",
-            "information": [],
-            "time_required": "7分",
-            "lat": 36.572367,
-            "lng": 136.657428,
-            "passed_bus_stop": [
-              {
-                "spot_name": "泉鏡花記念館",
-                "lat": 36.570993,
-                "lng": 136.663013
-              },
-              {
-                "spot_name": "尾張町",
-                "lat": 36.571217,
-                "lng": 136.661218
-              },
-              {
-                "spot_name": "老舗交流館",
-                "lat": 36.571432,
-                "lng": 136.659338
-              }
-            ]
-          },
-          {
-            "spot_name": "武蔵西",
-            "arrival_time": "15:57",
-            "transportation": {
-              "type": "walk",
-              "text": "徒歩"
-            },
-            "fee": "0円",
-            "information": [],
-            "time_required": "3分",
-            "lat": 36.572449,
-            "lng": 136.655411
-          },
-          {
-            "spot_name": "白銀町",
-            "arrival_time": "15:59",
-            "transportation": {
-              "type": "bus",
-              "text": "長町ルート"
-            },
-            "fee": "200円",
-            "information": [],
-            "time_required": "2分",
-            "lat": 36.573518,
-            "lng": 136.652316,
-            "passed_bus_stop": []
-          },
-          {
-            "spot_name": "金沢駅(鼓門・もてなしドーム)",
-            "arrival_time": "16:09",
-            "transportation": {
-              "type": "walk",
-              "text": "徒歩"
-            },
-            "fee": "0円",
-            "information": [],
-            "time_required": "10分",
-            "lat": 36.577912,
-            "lng": 136.648904
-          }
-        ]
-      },
-      "feature": {
-        "fast": false
-      }
-    },
-    {
-      "start_time": "15:30",
-      "arrival_time": "15:46",
-      "time_required": "16分",
+      "start_time": "12:00",
+      "arrival_time": "12:11",
+      "time_required": "11分",
       "fee": "400円",
       "transportation": [
         {
@@ -1406,36 +1132,36 @@
         }
       ],
       "information": [
-        "./images/may_no_bicycle.svg"
+        "./images/bicycle.svg"
       ],
       "timeline_detail": {
-        "time_required": "16分",
+        "time_required": "11分",
         "fee": "400円",
-        "src": "ひがし茶屋街",
-        "dest": "金沢駅(鼓門・もてなしドーム)",
+        "src": "金沢21世紀美術館",
+        "dest": "ひがし茶屋街",
         "start": {
-          "spot_name": "ひがし茶屋街",
-          "time": "15:30",
-          "lat": 36.572587,
-          "lng": 136.666548
+          "spot_name": "金沢21世紀美術館",
+          "time": "12:00",
+          "lat": 36.560867,
+          "lng": 136.658258
         },
         "waypoint": [
           {
-            "spot_name": "東山",
-            "arrival_time": "15:33",
+            "spot_name": "広坂",
+            "arrival_time": "12:01",
             "transportation": {
               "type": "walk",
               "text": "徒歩"
             },
             "fee": "0円",
             "information": [],
-            "time_required": "3分",
-            "lat": 36.572311,
-            "lng": 136.664874
+            "time_required": "1分",
+            "lat": 36.561412,
+            "lng": 136.657436
           },
           {
-            "spot_name": "金沢駅Ｂ",
-            "arrival_time": "15:42",
+            "spot_name": "東山",
+            "arrival_time": "12:08",
             "transportation": {
               "type": "bicycle",
               "text": "自転車"
@@ -1443,17 +1169,363 @@
             "fee": "400円",
             "information": [
               {
-                "icon": "./images/may_no_bicycle.svg",
-                "text": "残り1台"
+                "icon": "./images/bicycle.svg",
+                "text": "残り10台"
               }
             ],
-            "time_required": "9分",
-            "lat": 36.57707818565,
-            "lng": 136.64759501065
+            "time_required": "7分",
+            "lat": 36.572311,
+            "lng": 136.664874
           },
           {
-            "spot_name": "金沢駅(鼓門・もてなしドーム)",
-            "arrival_time": "15:46",
+            "spot_name": "ひがし茶屋街",
+            "arrival_time": "12:11",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
+            "fee": "0円",
+            "information": [],
+            "time_required": "3分",
+            "lat": 36.572587,
+            "lng": 136.666548
+          }
+        ]
+      },
+      "feature": {
+        "fast": true
+      }
+    },
+    {
+      "start_time": "12:00",
+      "arrival_time": "12:22",
+      "time_required": "22分",
+      "fee": "0円",
+      "transportation": [
+        {
+          "type": "walk",
+          "text": "徒歩"
+        },
+        {
+          "type": "goal",
+          "text": "到着"
+        }
+      ],
+      "information": [],
+      "timeline_detail": {
+        "time_required": "22分",
+        "fee": "0円",
+        "src": "金沢21世紀美術館",
+        "dest": "ひがし茶屋街",
+        "start": {
+          "spot_name": "金沢21世紀美術館",
+          "time": "12:00",
+          "lat": 36.560867,
+          "lng": 136.658258
+        },
+        "waypoint": [
+          {
+            "spot_name": "ひがし茶屋街",
+            "arrival_time": "12:22",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
+            "fee": "0円",
+            "information": [],
+            "time_required": "22分",
+            "lat": 36.572587,
+            "lng": 136.666548
+          }
+        ]
+      },
+      "feature": {
+        "fast": false
+      }
+    },
+    {
+      "start_time": "12:07",
+      "arrival_time": "12:36",
+      "time_required": "29分",
+      "fee": "400円",
+      "transportation": [
+        {
+          "type": "walk",
+          "text": "徒歩"
+        },
+        {
+          "type": "bus",
+          "text": "菊川ルート"
+        },
+        {
+          "type": "walk",
+          "text": "徒歩"
+        },
+        {
+          "type": "bus",
+          "text": "材木ルート"
+        },
+        {
+          "type": "walk",
+          "text": "徒歩"
+        },
+        {
+          "type": "goal",
+          "text": "到着"
+        }
+      ],
+      "information": [],
+      "timeline_detail": {
+        "time_required": "29分",
+        "fee": "400円",
+        "src": "金沢21世紀美術館",
+        "dest": "ひがし茶屋街",
+        "start": {
+          "spot_name": "金沢21世紀美術館",
+          "time": "12:07",
+          "lat": 36.560867,
+          "lng": 136.658258
+        },
+        "waypoint": [
+          {
+            "spot_name": "21世紀美術館",
+            "arrival_time": "12:10",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
+            "fee": "0円",
+            "information": [],
+            "time_required": "3分",
+            "lat": 36.561088,
+            "lng": 136.659375
+          },
+          {
+            "spot_name": "21世紀美術館",
+            "arrival_time": "12:10",
+            "transportation": {
+              "type": "bus",
+              "text": "菊川ルート"
+            },
+            "fee": "200円",
+            "information": [],
+            "time_required": "0分",
+            "lat": 36.561088,
+            "lng": 136.659375,
+            "passed_bus_stop": [
+              {
+                "spot_name": "ふるさと偉人館",
+                "lat": 36.559364,
+                "lng": 136.657911
+              },
+              {
+                "spot_name": "市役所・柿木畠",
+                "lat": 36.560864,
+                "lng": 136.656994
+              },
+              {
+                "spot_name": "香林坊",
+                "lat": 36.561984,
+                "lng": 136.654805
+              },
+              {
+                "spot_name": "香林坊",
+                "lat": 36.561984,
+                "lng": 136.654805
+              },
+              {
+                "spot_name": "片町",
+                "lat": 36.560618,
+                "lng": 136.653174
+              },
+              {
+                "spot_name": "大工町",
+                "lat": 36.558696,
+                "lng": 136.653271
+              },
+              {
+                "spot_name": "タテマチ",
+                "lat": 36.557507,
+                "lng": 136.654982
+              },
+              {
+                "spot_name": "新竪町",
+                "lat": 36.555956,
+                "lng": 136.655894
+              },
+              {
+                "spot_name": "桜橋",
+                "lat": 36.553583,
+                "lng": 136.65691
+              },
+              {
+                "spot_name": "上川除",
+                "lat": 36.55247,
+                "lng": 136.658563
+              },
+              {
+                "spot_name": "菊川町公民館",
+                "lat": 36.551392,
+                "lng": 136.660159
+              },
+              {
+                "spot_name": "川上広見",
+                "lat": 36.551733,
+                "lng": 136.662219
+              },
+              {
+                "spot_name": "犀川大通り",
+                "lat": 36.552405,
+                "lng": 136.66327
+              },
+              {
+                "spot_name": "猿丸児童公園",
+                "lat": 36.553064,
+                "lng": 136.664515
+              },
+              {
+                "spot_name": "二十人坂",
+                "lat": 36.553749,
+                "lng": 136.667615
+              },
+              {
+                "spot_name": "一本松陸橋",
+                "lat": 36.554258,
+                "lng": 136.668597
+              },
+              {
+                "spot_name": "石引広見",
+                "lat": 36.555691,
+                "lng": 136.671327
+              },
+              {
+                "spot_name": "大学病院",
+                "lat": 36.556967,
+                "lng": 136.672819
+              },
+              {
+                "spot_name": "小立野下馬",
+                "lat": 36.55347,
+                "lng": 136.674613
+              },
+              {
+                "spot_name": "上石引",
+                "lat": 36.554237,
+                "lng": 136.671759
+              },
+              {
+                "spot_name": "中石引",
+                "lat": 36.55615,
+                "lng": 136.669434
+              },
+              {
+                "spot_name": "飛梅町",
+                "lat": 36.558423,
+                "lng": 136.666929
+              },
+              {
+                "spot_name": "本多の森ホール",
+                "lat": 36.557882,
+                "lng": 136.664777
+              },
+              {
+                "spot_name": "県立美術館",
+                "lat": 36.560325,
+                "lng": 136.662025
+              }
+            ]
+          },
+          {
+            "spot_name": "市役所・21世紀美術館",
+            "arrival_time": "12:13",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
+            "fee": "0円",
+            "information": [],
+            "time_required": "3分",
+            "lat": 36.561941,
+            "lng": 136.65819
+          },
+          {
+            "spot_name": "浅野川大橋",
+            "arrival_time": "12:32",
+            "transportation": {
+              "type": "bus",
+              "text": "材木ルート"
+            },
+            "fee": "200円",
+            "information": [],
+            "time_required": "19分",
+            "lat": 36.571654,
+            "lng": 136.664574,
+            "passed_bus_stop": [
+              {
+                "spot_name": "白鳥路",
+                "lat": 36.568124,
+                "lng": 136.663098
+              },
+              {
+                "spot_name": "兼六元町",
+                "lat": 36.570579,
+                "lng": 136.664026
+              },
+              {
+                "spot_name": "兼六園下",
+                "lat": 36.565461,
+                "lng": 136.664799
+              },
+              {
+                "spot_name": "小将町",
+                "lat": 36.564401,
+                "lng": 136.666891
+              },
+              {
+                "spot_name": "賢坂辻",
+                "lat": 36.564858,
+                "lng": 136.667948
+              },
+              {
+                "spot_name": "横山児童公園",
+                "lat": 36.565767,
+                "lng": 136.668624
+              },
+              {
+                "spot_name": "横山町",
+                "lat": 36.565806,
+                "lng": 136.671016
+              },
+              {
+                "spot_name": "常盤橋",
+                "lat": 36.566435,
+                "lng": 136.672229
+              },
+              {
+                "spot_name": "材木町",
+                "lat": 36.567275,
+                "lng": 136.671333
+              },
+              {
+                "spot_name": "天神橋",
+                "lat": 36.568552,
+                "lng": 136.669066
+              },
+              {
+                "spot_name": "並木町",
+                "lat": 36.569828,
+                "lng": 136.667532
+              },
+              {
+                "spot_name": "梅ノ橋",
+                "lat": 36.57059,
+                "lng": 136.666102
+              }
+            ]
+          },
+          {
+            "spot_name": "ひがし茶屋街",
+            "arrival_time": "12:36",
             "transportation": {
               "type": "walk",
               "text": "徒歩"
@@ -1461,13 +1533,156 @@
             "fee": "0円",
             "information": [],
             "time_required": "4分",
-            "lat": 36.577912,
-            "lng": 136.648904
+            "lat": 36.572587,
+            "lng": 136.666548
           }
         ]
       },
       "feature": {
-        "fast": true
+        "fast": false
+      }
+    },
+    {
+      "start_time": "12:09",
+      "arrival_time": "12:36",
+      "time_required": "27分",
+      "fee": "200円",
+      "transportation": [
+        {
+          "type": "walk",
+          "text": "徒歩"
+        },
+        {
+          "type": "bus",
+          "text": "材木ルート"
+        },
+        {
+          "type": "walk",
+          "text": "徒歩"
+        },
+        {
+          "type": "goal",
+          "text": "到着"
+        }
+      ],
+      "information": [],
+      "timeline_detail": {
+        "time_required": "27分",
+        "fee": "200円",
+        "src": "金沢21世紀美術館",
+        "dest": "ひがし茶屋街",
+        "start": {
+          "spot_name": "金沢21世紀美術館",
+          "time": "12:09",
+          "lat": 36.560867,
+          "lng": 136.658258
+        },
+        "waypoint": [
+          {
+            "spot_name": "市役所・21世紀美術館",
+            "arrival_time": "12:13",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
+            "fee": "0円",
+            "information": [],
+            "time_required": "4分",
+            "lat": 36.561941,
+            "lng": 136.65819
+          },
+          {
+            "spot_name": "浅野川大橋",
+            "arrival_time": "12:32",
+            "transportation": {
+              "type": "bus",
+              "text": "材木ルート"
+            },
+            "fee": "200円",
+            "information": [],
+            "time_required": "19分",
+            "lat": 36.571654,
+            "lng": 136.664574,
+            "passed_bus_stop": [
+              {
+                "spot_name": "白鳥路",
+                "lat": 36.568124,
+                "lng": 136.663098
+              },
+              {
+                "spot_name": "兼六元町",
+                "lat": 36.570579,
+                "lng": 136.664026
+              },
+              {
+                "spot_name": "兼六園下",
+                "lat": 36.565461,
+                "lng": 136.664799
+              },
+              {
+                "spot_name": "小将町",
+                "lat": 36.564401,
+                "lng": 136.666891
+              },
+              {
+                "spot_name": "賢坂辻",
+                "lat": 36.564858,
+                "lng": 136.667948
+              },
+              {
+                "spot_name": "横山児童公園",
+                "lat": 36.565767,
+                "lng": 136.668624
+              },
+              {
+                "spot_name": "横山町",
+                "lat": 36.565806,
+                "lng": 136.671016
+              },
+              {
+                "spot_name": "常盤橋",
+                "lat": 36.566435,
+                "lng": 136.672229
+              },
+              {
+                "spot_name": "材木町",
+                "lat": 36.567275,
+                "lng": 136.671333
+              },
+              {
+                "spot_name": "天神橋",
+                "lat": 36.568552,
+                "lng": 136.669066
+              },
+              {
+                "spot_name": "並木町",
+                "lat": 36.569828,
+                "lng": 136.667532
+              },
+              {
+                "spot_name": "梅ノ橋",
+                "lat": 36.57059,
+                "lng": 136.666102
+              }
+            ]
+          },
+          {
+            "spot_name": "ひがし茶屋街",
+            "arrival_time": "12:36",
+            "transportation": {
+              "type": "walk",
+              "text": "徒歩"
+            },
+            "fee": "0円",
+            "information": [],
+            "time_required": "4分",
+            "lat": 36.572587,
+            "lng": 136.666548
+          }
+        ]
+      },
+      "feature": {
+        "fast": false
       }
     }
   ]
