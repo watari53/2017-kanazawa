@@ -27,7 +27,9 @@
       <ons-toolbar>
         <div class="left"> </div>
         <div class="center">{{this.application_name}}</div>
-        <div class="right"> <ons-icon icon="gear" ng-click="setting.show()"></ons-icon></div>
+        <div class="right">
+          <ons-toolbar-button><ons-icon icon="ion-gear-a" ng-click="setting.show()" style="vertical-align: -4px; font-size: 28px; color: white"></ons-icon></ons-toolbar-button>
+        </div>
       </ons-toolbar>
 
       <section style="margin-top: 30px">
@@ -110,6 +112,20 @@
           {{search_text}}
         </ons-button>
       </div>
+
+      <ons-modal var="setting" direction="down">
+        <section style="margin: 0 20px">
+          <ons-list>
+            <ons-list-header>言語</ons-list-header>
+            <ons-select style="width: 98%" onchange="changeLang(event)">
+              <option ng-repeat="l in lang_set" value={{l.value}}>{{l.label}}</option>
+            </ons-select>
+          </ons-list>
+          <div style="text-align: center; background-color: white; padding: 20px">
+            <ons-button ng-click="setting.hide()">閉じる</ons-button>
+          </div>
+        </section>
+      </ons-modal>
 
     </ons-page>
   </ons-template>
@@ -402,16 +418,6 @@
       <p>
       <ons-icon icon="md-spinner" size="28px" spin></ons-icon> Loading...
       </p>
-    </div>
-  </ons-modal>
-
-  <ons-modal var="setting" direction="down">
-    <div style="text-align: center">
-      <ons-select id="choose-sel" onchange="editSelects(event)">
-        <option value="ja">日本語</option>
-        <option value="en">English</option>
-      </ons-select>      
-      <ons-button ng-click="">閉じる</ons-button>
     </div>
   </ons-modal>
 
