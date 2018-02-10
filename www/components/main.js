@@ -1,23 +1,14 @@
 // // use in index.html
-var LANG = {ja: true, en: true};
-var SRC_TEXT = "出発";
+var LANG = "ja"; // default lang
+
+var LANG_SET = [{label: "日本語", value: "ja"}, {label: "English", value: "en"}];
+var SRC_TEXT = {ja: "出発", en: "depart"};
 var DEST_TEXT = "到着";
 var SURROUNDINGS_TITLE = "周辺";
 var HISTORY_TITLE = "履歴";
 var SEARCH_TEXT = "検索";
 
-// // global value
-// // transportation
-// walk        = "fa-blind";
-// bicycle     = "fa-bicycle";
-// bus         = "fa-bus";
-// goal        = "fa-flag-o";
-// // information
-// rain          = "./images/rain.svg";
-// snow          = "./images/snow.svg";
-// traffic_jam   = "./images/traffic_jam.svg";
-// no_bicycle    = "./images/no_bicycle.svg";
-// may_no_bicycle = "./images/may_no_bicycle.svg";
+
 var APP_NAME = {ja: "金沢ルート検索", en: "kanazawa"};
 
 var SEARCH_TYPE = {start: "出発", arrive: "到着"};
@@ -28,7 +19,6 @@ var DEFAULT_SRC_MSG = "現在地";
 var DEFAULT_DEST_MSG = "到着地を選択";
 var DEFAULT_TIME = "現在時刻";
 var CONNECTION_FAILD_MSG = "電波の良いところでアプリを起動してください。";
-var LANG = {ja: "true", en: "false"};
 
 var DEMO_INIT_FILE = "sample-ja.json";
 var DEMO = [{dest: "金沢21世紀美術館", file:"sample1-ja.json"},{dest: "ひがし茶屋街", file:"sample2-ja.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3-ja.json"}];
@@ -153,12 +143,13 @@ ons.bootstrap()
     return service;
   })
   .controller('AppController', function($scope, $http, DataService) {
-    $scope.application_name = APP_NAME;
-    $scope.src_text = SRC_TEXT;
+    $scope.lang_set = LANG_SET;
+    $scope.l = LANG;
+    $scope.application_name = APP_NAME[$scope.l];
+    $scope.src_text = SRC_TEXT[$scope.l];
     $scope.dest_text = DEST_TEXT;
     $scope.search_text = SEARCH_TEXT;
     $scope.search = {src: DEFAULT_SRC_MSG, dest: DEFAULT_DEST_MSG};
-    // $scope.search_type = "出発";
     $scope.type = "start"; // controll default search_type. start or arrive
     $scope.search_type = SEARCH_TYPE;
     $scope.tp = TRANSPORTATION;
@@ -174,7 +165,7 @@ ons.bootstrap()
     this.setTime = function() {
       var time = new Date();
 
-      // Same handling for iPhone and Android
+      // Datepicker Same handling for iPhone and Android
       window.plugins.datePicker.show({
           date : time,
           mode : 'time', // date or time or blank for both
@@ -186,6 +177,14 @@ ons.bootstrap()
           $scope.$apply();
       });
     };
+    changeLang = function(e) {
+      $scope.l= e.target.value;
+      $scope.$apply(function(){
+        $scope.application_name = APP_NAME[$scope.l];
+        $scope.src_text = SRC_TEXT[$scope.l];
+      });
+    };
+
     this.changeSearchType = function() {
       if($scope.type === 'start') {
         $scope.type = 'arrive';
@@ -367,3 +366,18 @@ ons.ready(function() {
   console.log("Onsen UI is ready!");
   ons.platform.select('android');
 });
+
+
+// // icon value
+// // transportation
+// walk        = "fa-blind";
+// bicycle     = "fa-bicycle";
+// bus         = "fa-bus";
+// goal        = "fa-flag-o";
+// // information
+// rain          = "./images/rain.svg";
+// light_rain    = "./images/light_rain.svg";
+// snow          = "./images/snow.svg";
+// traffic_jam   = "./images/traffic_jam.svg";
+// no_bicycle    = "./images/no_bicycle.svg";
+// may_no_bicycle = "./images/may_no_bicycle.svg";
