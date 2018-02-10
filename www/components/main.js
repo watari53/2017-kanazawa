@@ -2,43 +2,79 @@
 var LANG = "ja"; // default lang
 
 var LANG_SET = [{label: "日本語", value: "ja"}, {label: "English", value: "en"}];
-var SRC_TEXT = {ja: "出発", en: "depart"};
-var DEST_TEXT = "到着";
-var SURROUNDINGS_TITLE = "周辺";
-var HISTORY_TITLE = "履歴";
-var SEARCH_TEXT = "検索";
+// var DEFAULT_SRC_MSG = "現在地";
+// var SRC_TEXT = {ja: "出発", en: "depart"};
+// var DEST_TEXT = "到着";
+// var SURROUNDINGS_TITLE = "周辺";
+// var HISTORY_TITLE = "履歴";
+// var SEARCH_TEXT = "検索";
+// var SEARCH_CTR_TITLE = {src: "出発地", dest: "到着地"};
 var TXT = {
   "ja": {
     "APP_NAME"          : "金沢ルート検索",
     "SRC_TEXT"          : "出発",
     "DEST_TEXT"         : "到着",
+    "SHORT_SRC_TEXT"    : "発",
+    "SHORT_DEST_TEXT"    : "着",
+    "LANG_SETTING_LABEL": "言語設定",
+    "CLOSE_LABEL"       : "閉じる",
+    "SEARCH_CTR_TITLE"  : {"src": "出発地", "dest": "到着地"},
+    "SEACH_INPUT_LABEL" : {"src": "出発地を入力", "dest": "到着地を入力"},
     "SURROUNDINGS_TITLE": "周辺",
-    "HISTORY_TITLE     ": "履歴",
-    "SEARCH_TEXT       ": "検索",
+    "HISTORY_TITLE"     : "履歴",
+    "NO_HISTORY_MSG"    : "検索履歴なし",
+    "SEARCH_TEXT"       : "検索",
+    "DEFAULT_TIME" : "現在時刻",
+    "PELPLE_LABEL": "人数",
+    "P_UNIT" : "人",
+    "FAST_TEXT"        : "早",
+    "DEFAULT_SRC_MSG" : "現在地",
+    "DEFAULT_DEST_MSG" : "到着地を選択",
+    "TRANSPORTATION_TEXT": {"walk": "徒歩", "bicycle": "自転車", "bus": "バス"},
+    "FILTER_TEXT": "優先",
+    "TIMELINE_TITLE": "経路一覧",
+    "TIMELINE_DETAIL_TITLE" : "経路詳細",
+    "SPOT_LABEL" : {"addr": "住所", "open": "営業時間", "fee": "料金", "desc": "概要"},
   },
   "en": {
-    "APP_NAME"          : "kanazawa",
-    "SRC_TEXT"          : "dep",
-    "DEST_TEXT"         : "arr",
+    "APP_NAME"          : "Kanazawa Route Search",
+    "SRC_TEXT"          : "Depart",
+    "DEST_TEXT"         : "Arrive",
+    "SHORT_SRC_TEXT"    : "D",
+    "SHORT_DEST_TEXT"    : "A",
+    "LANG_SETTING_LABEL": "Select Language",
+    "CLOSE_LABEL"       : "Close",
+    "SEARCH_CTR_TITLE"  : {"src": "Departure", "dest": "Destination"},
+    "SEACH_INPUT_LABEL" : {"src": "input Departure", "dest": "input Destination"},
     "SURROUNDINGS_TITLE": "Surroungings",
-    "HISTORY_TITLE     ": "History",
-    "SEARCH_TEXT       ": "Search",
+    "HISTORY_TITLE"     : "History",
+    "NO_HISTORY_MSG"    : "No History",
+    "SEARCH_TEXT"       : "Search",
+    "DEFAULT_TIME" : "Now",
+    "PELPLE_LABEL": "People",
+    "P_UNIT" : "",
+    "FAST_TEXT"        : "Fast",
+    "DEFAULT_SRC_MSG" : "Current Location",
+    "DEFAULT_DEST_MSG" : "Select Destination",
+    "TRANSPORTATION_TEXT": {"walk": "walking", "bicycle": "bicycle", "bus": "bus"},
+    "FILTER_TEXT": "Filter",
+    "TIMELINE_TITLE": "Routes",
+    "TIMELINE_DETAIL_TITLE" : "Detail",
+    "SPOT_LABEL" : {"addr": "address", "open": "open hour", "fee": "fee", "desc": "description"},
   }
-}
-
-
+};
 
 var SEARCH_TYPE = {start: "出発", arrive: "到着"};
-var SEARCH_CTR_TITLE = {src: "出発地", dest: "到着地"};
 var TRANSPORTATION = {"walk": true, "bicycle": true, "bus": true};
 var SHOW_ROUTE = ["徒歩", "自転車"];  //経路を表示するtransportation
-var DEFAULT_SRC_MSG = "現在地";
 var DEFAULT_DEST_MSG = "到着地を選択";
-var DEFAULT_TIME = "現在時刻";
 var CONNECTION_FAILD_MSG = "電波の良いところでアプリを起動してください。";
 
-var DEMO_INIT_FILE = "sample-ja.json";
-var DEMO = [{dest: "金沢21世紀美術館", file:"sample1-ja.json"},{dest: "ひがし茶屋街", file:"sample2-ja.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3-ja.json"}];
+var DEMO_INIT_FILE = {ja: "sample-ja.json", en: "sample-en.json"};
+var DEMO = {
+            "ja": [{dest: "金沢21世紀美術館", file:"sample1-ja.json"},{dest: "ひがし茶屋街", file:"sample2-ja.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3-ja.json"}],
+            "en": [{dest: "21st Century Museum of Contemporary Art, Kanazawa", file:"sample1-en.json"},{dest: "Higashi Chaya Street", file:"sample2-en.json"},{dest:"Kanazawa station \(Komon gate hospitality dome\)",file:"sample3-en.json"}],
+           };
 
 var TP_ICON  = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus", goal: "fa-flag-o"};
 var TP_COLOR = {
@@ -93,17 +129,18 @@ ons.bootstrap()
       sample = data;
     };
     // search_type = "src or dest"
-    service.getSurroundings = function(search_type) {
+    service.getSurroundings = function(search_type, lang) {
       if (search_type === "src") {
         var surroundings = sample.surroundings.concat();
-        surroundings.unshift({spot_name: DEFAULT_SRC_MSG, distance: ""});
+        surroundings.unshift({spot_name: TXT[lang].DEFAULT_SRC_MSG, distance: ""});
         return surroundings;
       } else {
         return sample.surroundings;
       }
     };
-    service.setHistory = function(spot_name) {
-      if(spot_name === DEFAULT_SRC_MSG) {
+    service.setHistory = function(spot_name, lang) {
+      console.log("@setHistory");
+      if(spot_name === TXT[lang].DEFAULT_SRC_MSG) {
         return;
       }
       var history = localStorage.getItem('history');
@@ -120,12 +157,13 @@ ons.bootstrap()
       }
     };
     service.getHistory = function() { //return array
+      console.log("@getHistory");
       var history = localStorage.getItem('history');
       if(history == null) {
         console.log('no history');
         return([]);
       } else {
-        console.log('exist history');
+        console.log('exist history' + history.split(','));
         return history.split(',');
       } 
     };
@@ -135,10 +173,15 @@ ons.bootstrap()
     service.getSpotData = function(spot_name) {
       return sample.spotdata[spot_name];
     };
+    // param = src, dest, lang
+    // src, dest = spot name
+    // lang = en or ja
     service.getData = function(param) {
+      console.log("@getData");
+      console.log(param);
       var DEMO_PATTERN = DEMO;
-      var sample_file = DEMO_INIT_FILE; // default file is sample1.json
-      angular.forEach(DEMO_PATTERN, function(p){
+      var sample_file = DEMO_INIT_FILE[param.lang]; // default file is sample1.json
+      angular.forEach(DEMO_PATTERN[param.lang], function(p){
         if(p.dest === param.dest) {
           console.log("hit sample data: " + p.file);
           sample_file = p.file;
@@ -161,21 +204,32 @@ ons.bootstrap()
   })
   .controller('AppController', function($scope, $http, DataService) {
     $scope.lang_set = LANG_SET;
-    $scope.l = LANG;
-    var txt = TXT[$scope.l];
-    $scope.application_name = txt.APP_NAME;
-    $scope.src_text = txt.SRC_TEXT;
-    $scope.dest_text = txt.DEST_TEXT;
-    $scope.search_text = txt.SEARCH_TEXT;
-    $scope.search = {src: DEFAULT_SRC_MSG, dest: DEFAULT_DEST_MSG};
     $scope.type = "start"; // controll default search_type. start or arrive
-    $scope.search_type = SEARCH_TYPE;
-    $scope.tp = TRANSPORTATION;
-    $scope.time = DEFAULT_TIME;
     $scope.people_n = 1;
 
+    langInit = function(lang) {
+      console.log("set lang: " + lang);
+      $scope.l = lang;
+      txt = TXT[$scope.l];
+      $scope.application_name = txt.APP_NAME;
+      $scope.src_text = txt.SRC_TEXT;
+      $scope.dest_text = txt.DEST_TEXT;
+      $scope.lang_setting_label = txt.LANG_SETTING_LABEL;
+      $scope.close_label = txt.CLOSE_LABEL;
+      $scope.search_text = txt.SEARCH_TEXT;
+      $scope.search = {src: txt.DEFAULT_SRC_MSG, dest: txt.DEFAULT_DEST_MSG};
+      $scope.search_type = SEARCH_TYPE;
+      $scope.tp = TRANSPORTATION;
+      $scope.p_unit = txt.P_UNIT;
+      $scope.time = txt.DEFAULT_TIME;
+      $scope.pelple_label = txt.PELPLE_LABEL;
+      $scope.filter_text = txt.FILTER_TEXT;
+      $scope.tp_text = txt.TRANSPORTATION_TEXT;
+    };
+
     //init
-    DataService.getData({});
+    langInit(LANG); // default LANG = "ja"
+    DataService.getData({lang: LANG});
     
     this.go_search = function(search_type) {
       navi.pushPage('search.html', {data: {search_type: search_type}});
@@ -196,10 +250,10 @@ ons.bootstrap()
       });
     };
     changeLang = function(e) {
-      $scope.l= e.target.value;
+      $scope.l = e.target.value; // "ja" or "en"
       $scope.$apply(function(){
-        $scope.application_name = APP_NAME[$scope.l];
-        $scope.src_text = SRC_TEXT[$scope.l];
+        langInit($scope.l);
+        DataService.getData({lang: $scope.l});
       });
     };
 
@@ -222,7 +276,7 @@ ons.bootstrap()
       //   return;
       // }
       modal.show();
-      promise = DataService.getData({src:$scope.search.src, dest:$scope.search.dest});
+      promise = DataService.getData({src:$scope.search.src, dest:$scope.search.dest, lang:$scope.l});
       promise.then(function(response){
         setTimeout(function() {
           modal.hide();
@@ -233,9 +287,11 @@ ons.bootstrap()
   })
   .controller('SearchController', function($scope, DataService) {
     var search_type = navi.topPage.data.search_type; // src or dest
-    this.title = SEARCH_CTR_TITLE[search_type];
-    this.surroundings_title = SURROUNDINGS_TITLE;
-    this.history_title = HISTORY_TITLE;
+    this.title = TXT[$scope.l].SEARCH_CTR_TITLE[search_type];
+    this.input_label = TXT[$scope.l].SEACH_INPUT_LABEL[search_type];
+    this.surroundings_title = TXT[$scope.l].SURROUNDINGS_TITLE;
+    this.history_title = TXT[$scope.l].HISTORY_TITLE;
+    this.no_history_msg = TXT[$scope.l].NO_HISTORY_MSG;
 
     this.ViewSurroundings = "surroundings"; // use in if
     this.ViewHistory = "history";  // use in if
@@ -244,10 +300,11 @@ ons.bootstrap()
     this.history_style = {display: 'none'};
 
 
-    // set data
-    this.surroundings = DataService.getSurroundings(search_type);
+    console.log("set data");
+    this.surroundings = DataService.getSurroundings(search_type, $scope.l);
     this.history = DataService.getHistory();
 
+    console.log("toggle view");
     this.changeView = function() {
         if (this.check === this.ViewSurroundings) {
           this.surroundings_style = {display: 'inline'};
@@ -260,18 +317,23 @@ ons.bootstrap()
         }
     };
 
+    console.log("@setSpot");
     this.setSpot = function(spot_name) {
       $scope.search[search_type] = spot_name;
-      DataService.setHistory(spot_name);
+      DataService.setHistory(spot_name, $scope.l);
       navi.popPage();
     };
   })
   .controller('TimeLineController', function($scope, DecolateService, DataService) {
+    this.title= TXT[$scope.l].TIMELINE_TITLE;
     this.search_type = $scope.search_type[$scope.type];
+    this.short_src_text = TXT[$scope.l].SHORT_SRC_TEXT;
+    this.short_dest_text = TXT[$scope.l].SHORT_DEST_TEXT;
     this.time        = $scope.time;
     this.src         = $scope.search.src;
     this.dest        = $scope.search.dest;
     this.people_n    = $scope.people_n;
+    this.fast_text   = TXT[$scope.l].FAST_TEXT;
     this.result      = DataService.getTimeLines();
 
     this.getTPColor = function(style, tp) {
@@ -289,7 +351,8 @@ ons.bootstrap()
       navi.pushPage('timeline_detail.html', {data: {timeline_detail: timeline_detail}});
     };
   })
-  .controller('TimeLineDetailController', function(DecolateService, DataService) {
+  .controller('TimeLineDetailController', function($scope, DecolateService, DataService) {
+    this.title = TXT[$scope.l].TIMELINE_DETAIL_TITLE;
     this.detail = navi.topPage.data.timeline_detail;
     var waypoint = this.detail.waypoint;
     
@@ -376,7 +439,8 @@ ons.bootstrap()
       });
     }
   })
-  .controller('SpotController', function(DataService) {
+  .controller('SpotController', function($scope, DataService) {
+    this.label = TXT[$scope.l].SPOT_LABEL;
     var spot_name = navi.topPage.data.spot_name;
     this.data = DataService.getSpotData(spot_name);
   });

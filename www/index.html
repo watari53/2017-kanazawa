@@ -81,7 +81,7 @@
               <ons-icon icon="fa-group"></ons-icon>
             </div>
             <div class="list-item__center">
-              <span style="margin-right: 10px">人数：</span>{{this.people_n}}人
+              <span style="margin-right: 10px">{{this.pelple_label}}：</span>{{this.people_n}}{{this.p_unit}}
             </div>
             <div class="list-item__right">
               <button ng-click="this.people_n=this.people_n-1" class="fab fab--material fab--mini" ng-disabled="this.people_n==1"><i class="zmdi zmdi-minus"></i></button>
@@ -97,10 +97,10 @@
             <div class="list-item__left" style="width: 25px">
               <ons-icon icon="fa-gear"></ons-icon>
             </div>
-            <span style="margin-right: 10px">優先：</span>
-            <ons-checkbox input-id="walk" ng-model="tp.walk"></ons-checkbox><span class="condition-unit">徒歩</span>
-            <ons-checkbox input-id="bicycle" ng-model="tp.bicycle"></ons-checkbox><span class="condition-unit">自転車</span>
-            <ons-checkbox input-id="bus" ng-model="tp.bus"></ons-checkbox><span class="condition-unit">バス</span>
+            <span style="margin-right: 10px">{{filter_text}}：</span>
+            <ons-checkbox input-id="walk" ng-model="tp.walk"></ons-checkbox><span class="condition-unit">{{tp_text.walk}}</span>
+            <ons-checkbox input-id="bicycle" ng-model="tp.bicycle"></ons-checkbox><span class="condition-unit">{{tp_text.bicycle}}</span>
+            <ons-checkbox input-id="bus" ng-model="tp.bus"></ons-checkbox><span class="condition-unit">{{tp_text.bus}}</span>
           </li>
         </ul>
         
@@ -116,13 +116,13 @@
       <ons-modal var="setting" direction="down">
         <section style="margin: 0 20px">
           <ons-list>
-            <ons-list-header>言語</ons-list-header>
+            <ons-list-header>{{lang_setting_label}}</ons-list-header>
             <ons-select style="width: 98%" onchange="changeLang(event)">
               <option ng-repeat="l in lang_set" value={{l.value}}>{{l.label}}</option>
             </ons-select>
           </ons-list>
           <div style="text-align: center; background-color: white; padding: 20px">
-            <ons-button ng-click="setting.hide()">閉じる</ons-button>
+            <ons-button ng-click="setting.hide()">{{close_label}}</ons-button>
           </div>
         </section>
       </ons-modal>
@@ -136,13 +136,13 @@
         <div class="left">
           <ons-back-button>Back</ons-back-button>
         </div>
-        <div class="center">{{sc.title}}を選択</div>
+        <div class="center">{{sc.title}}</div>
       </ons-toolbar>
 
       <section style="padding-top: 5px">
         <div class="navigation-bar">
           <div class="navigation-bar__center" style="text-align: center">
-            <input type="search" class="search-input search-input--material" ng-model="spot_name" style="width: 90%; margin: 6px auto 6px auto;" placeholder="{{sc.title}}を入力">
+            <input type="search" class="search-input search-input--material" ng-model="spot_name" style="width: 90%; margin: 6px auto 6px auto;" placeholder="{{sc.input_label}}">
           </div>
         </div>
 
@@ -187,8 +187,8 @@
             </div>
           </ons-list-item>
         </ons-list>
-        <div ng-style="{display: sc.history.length==0 ? 'contents':'none'}" style="height: 100%; background-color: white; text-align:center; padding-top: 20%">
-        検索履歴なし
+        <div ng-style="{display: sc.history.length==0 ? 'contents':'none'}" style="height: 50px; background-color: white; text-align:center; padding-top: 35px">
+          {{sc.no_history_msg}}
         </div>
       </section>
 
@@ -202,7 +202,7 @@
           <ons-back-button>Back</ons-back-button>
         </div>
         <div class="center">
-          検索結果
+          {{tl.title}}
         </div>
         <div class="right">
           <!--<ons-toolbar-button>
@@ -216,8 +216,8 @@
           <div class="card card--material">
             <div class="card__content">
               {{tl.time| date: "a hh:mm"}} <span style="margin-left: 6px">{{tl.search_type}}</span>
-              <div style="margin-top:5px"><span class="start_index">発</span><strong>{{tl.src}}</strong></div>
-              <div style="margin-top:10px"><span class="dest_index">着</span><strong>{{tl.dest}}</strong></div>
+              <div style="margin-top:5px"><span class="start_index">{{tl.short_src_text}}</span><strong>{{tl.src}}</strong></div>
+              <div style="margin-top:10px"><span class="dest_index">{{tl.short_dest_text}}</span><strong>{{tl.dest}}</strong></div>
             </div>
           </div>
         </div>
@@ -232,7 +232,7 @@
                   {{r.start_time}}
                   <ons-icon style="color: gray" icon="fa-long-arrow-right"></ons-icon>
                   {{r.arrival_time}}
-                  <span class="fast_index" ng-show="r.feature.fast">早</span>
+                  <span class="fast_index" ng-show="r.feature.fast">{{tl.fast_text}}</span>
                 </div>
 
                 <div class="plan-info">
@@ -275,7 +275,7 @@
 
         </div>
         <div class="center">
-          ルート詳細
+          {{td.title}}
         </div>
         <div class="right">
         </div>
@@ -386,25 +386,25 @@
       <ons-list class="list list--inset" style="margin-top: 20px;">
         <ons-list-item class="list-item-container">
           <div class="list-item-content">
-            <div class="spot-label">住所</div>
+            <div class="spot-label">{{sp.label.addr}}</div>
             <span class="desc">{{sp.data.address}}</span>
           </div>
         </ons-list-item>
         <ons-list-item class="list-item-container">
           <div class="list-item-content">
-            <div class="spot-label">営業時間</div>
+            <div class="spot-label">{{sp.label.open}}</div>
             <span class="desc">{{sp.data.open_hours}}</span>
           </div>
         </ons-list-item>
         <ons-list-item class="list-item-container">
           <div class="list-item-content">
-            <div class="spot-label">料金</div>
+            <div class="spot-label">{{sp.label.fee}}</div>
             <span class="desc">{{sp.data.fee}}</span>
           </div>
         </ons-list-item>
         <ons-list-item class="list-item-container">
           <div class="list-item-content">
-            <div class="spot-label">概要</div>
+            <div class="spot-label">{{sp.label.desc}}</div>
             <span class="desc">{{sp.data.desc}}</span>
           </div>
         </ons-list-item>
