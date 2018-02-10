@@ -1,435 +1,575 @@
 {
   "surroundings": [
     {
-      "spot_name": "金沢駅(鼓門・もてなしドーム)",
+      "spot_name": "ひがし茶屋街",
       "distance": "0m"
     },
     {
-      "spot_name": "旧玉井町（たまのいまち）",
-      "distance": "89m"
+      "spot_name": "旧木町（きまち）",
+      "distance": "50m"
     },
     {
-      "spot_name": "旧木ノ新保（きのしんぼ）",
-      "distance": "94m"
+      "spot_name": "ひがし茶屋休憩館",
+      "distance": "68m"
     },
     {
-      "spot_name": "金沢市アートホール",
-      "distance": "181m"
+      "spot_name": "旧観音町（かんのんまち）",
+      "distance": "69m"
     },
     {
-      "spot_name": "旧田丸町（たまるまち）",
-      "distance": "298m"
+      "spot_name": "卯辰山山麓寺院群",
+      "distance": "134m"
     },
     {
-      "spot_name": "島田町（しまだまち）",
-      "distance": "351m"
+      "spot_name": "旧八幡町（はちまんまち）",
+      "distance": "137m"
     },
     {
-      "spot_name": "旧荒町（あらまち）",
-      "distance": "371m"
+      "spot_name": "金沢市立安江金箔工芸館",
+      "distance": "139m"
     },
     {
-      "spot_name": "旧広岡町（ひろおかまち）",
-      "distance": "381m"
+      "spot_name": "旧御歩町（おかちまち）",
+      "distance": "158m"
     },
     {
-      "spot_name": "旧柳町（やなぎまち）",
-      "distance": "400m"
+      "spot_name": "子来坂（こぎざか）",
+      "distance": "174m"
     },
     {
-      "spot_name": "旧醒ヶ井町（さめがいちょう）",
-      "distance": "410m"
+      "spot_name": "徳田秋聲記念館",
+      "distance": "195m"
     },
     {
-      "spot_name": "旧日吉町（ひよしまち）",
-      "distance": "412m"
+      "spot_name": "橋場町（はしばちょう）",
+      "distance": "212m"
     },
     {
-      "spot_name": "旧鍛冶町（かじまち）",
-      "distance": "439m"
+      "spot_name": "旧森下町（もりもとまち）",
+      "distance": "212m"
     },
     {
-      "spot_name": "笠市町（かさいちまち）",
-      "distance": "450m"
+      "spot_name": "主計町（かずえまち）",
+      "distance": "227m"
     },
     {
-      "spot_name": "旧英町（はなふさちょう）",
-      "distance": "455m"
+      "spot_name": "主計町茶屋街",
+      "distance": "263m"
     },
     {
-      "spot_name": "折違町（すじかいまち）",
-      "distance": "471m"
+      "spot_name": "並木町（なみきまち）",
+      "distance": "265m"
     },
     {
-      "spot_name": "旧弓ノ町（ゆみのまち）",
-      "distance": "479m"
+      "spot_name": "観音坂（かんのんざか）",
+      "distance": "284m"
     },
     {
-      "spot_name": "六枚町（ろくまいまち）",
-      "distance": "483m"
+      "spot_name": "暗がり坂（くらがりざか）",
+      "distance": "285m"
     },
     {
-      "spot_name": "中橋町（なかばしまち）",
-      "distance": "488m"
+      "spot_name": "旧小川町（おがわちょう）",
+      "distance": "299m"
     },
     {
-      "spot_name": "堀川町（ほりかわまち）",
-      "distance": "505m"
+      "spot_name": "鶯町（うぐいすまち）",
+      "distance": "310m"
     },
     {
-      "spot_name": "旧古道（ふるみち）",
-      "distance": "514m"
+      "spot_name": "金沢文芸館",
+      "distance": "321m"
     },
     {
-      "spot_name": "旧象眼町（ぞうがねまち）",
-      "distance": "520m"
+      "spot_name": "中の橋",
+      "distance": "322m"
     },
     {
-      "spot_name": "旧白銀町（しろがねちょう）",
-      "distance": "521m"
+      "spot_name": "泉鏡花記念館",
+      "distance": "334m"
     },
     {
-      "spot_name": "芳斉町（ほうさいまち）",
-      "distance": "571m"
+      "spot_name": "金沢蓄音器館",
+      "distance": "373m"
     },
     {
-      "spot_name": "旧巴町（ともえまち）",
-      "distance": "579m"
+      "spot_name": "旧豊国町（とよくにまち）",
+      "distance": "373m"
     },
     {
-      "spot_name": "旧大隅町（おおすみちょう）",
-      "distance": "590m"
+      "spot_name": "旧金屋町（かなやちょう）",
+      "distance": "392m"
     },
     {
-      "spot_name": "旧淵上町（ふちのえまち）",
-      "distance": "609m"
+      "spot_name": "旧母衣町（ほろまち）",
+      "distance": "413m"
     },
     {
-      "spot_name": "旧三構（みつがまえ）",
-      "distance": "647m"
+      "spot_name": "旧玄蕃町（げんばまち）",
+      "distance": "416m"
     },
     {
-      "spot_name": "旧五宝町（ごぼうまち）",
-      "distance": "660m"
+      "spot_name": "寺島蔵人邸",
+      "distance": "457m"
     },
     {
-      "spot_name": "旧石屋小路（いしやしょうじ）",
-      "distance": "784m"
-    },
-    {
-      "spot_name": "瓢箪町（ひょうたんまち）",
-      "distance": "801m"
-    },
-    {
-      "spot_name": "三社町（さんじゃまち）",
-      "distance": "818m"
-    },
-    {
-      "spot_name": "旧塩屋町（しおやまち）",
-      "distance": "824m"
-    },
-    {
-      "spot_name": "旧宗叔町（そうしゅくちょう）",
-      "distance": "865m"
-    },
-    {
-      "spot_name": "旧栄町（さかえまち）",
-      "distance": "906m"
-    },
-    {
-      "spot_name": "袋町（ふくろまち）",
-      "distance": "913m"
-    },
-    {
-      "spot_name": "旧三社五十人町（さんじゃごじゅうにんまち）",
-      "distance": "920m"
-    },
-    {
-      "spot_name": "旧桶町（おけちょう）",
-      "distance": "948m"
-    },
-    {
-      "spot_name": "旧蔦町（つたまち）",
-      "distance": "984m"
-    },
-    {
-      "spot_name": "旧穴水町（あなみずまち）",
-      "distance": "1.0km"
-    },
-    {
-      "spot_name": "七ツ屋町（ななつやまち）",
-      "distance": "1.0km"
-    },
-    {
-      "spot_name": "旧藺田町（いだまち）",
-      "distance": "1.1km"
-    },
-    {
-      "spot_name": "旧七曲り（ななまがり）",
-      "distance": "1.1km"
-    },
-    {
-      "spot_name": "旧博労町（ばくろまち）",
-      "distance": "1.1km"
-    },
-    {
-      "spot_name": "旧岩根町（いわねまち）",
-      "distance": "1.1km"
-    },
-    {
-      "spot_name": "十間町（じっけんまち）",
-      "distance": "1.1km"
-    },
-    {
-      "spot_name": "長土塀（ながどへ）",
-      "distance": "1.2km"
-    },
-    {
-      "spot_name": "尾張町（おわりちょう）",
-      "distance": "1.2km"
-    },
-    {
-      "spot_name": "彦三町（ひこそまち）",
-      "distance": "1.2km"
-    },
-    {
-      "spot_name": "小橋町（こばしまち）",
-      "distance": "1.2km"
-    },
-    {
-      "spot_name": "尾張町老舗交流館",
-      "distance": "1.2km"
-    },
-    {
-      "spot_name": "旧水車町（みずぐるままち）",
-      "distance": "1.2km"
-    },
-    {
-      "spot_name": "甚右衛門坂（じんえもんざか）",
-      "distance": "1.2km"
+      "spot_name": "帰厚坂（きこうざか）",
+      "distance": "460m"
     },
     {
       "spot_name": "彦三緑地",
+      "distance": "469m"
+    },
+    {
+      "spot_name": "泉鏡花句碑",
+      "distance": "484m"
+    },
+    {
+      "spot_name": "旧大衆免（だいじゅめ）",
+      "distance": "487m"
+    },
+    {
+      "spot_name": "旧殿町（とのまち）",
+      "distance": "517m"
+    },
+    {
+      "spot_name": "旧中町（なかまち）",
+      "distance": "518m"
+    },
+    {
+      "spot_name": "新町（しんちょう）",
+      "distance": "520m"
+    },
+    {
+      "spot_name": "彦三町（ひこそまち）",
+      "distance": "522m"
+    },
+    {
+      "spot_name": "材木町（ざいもくちょう）",
+      "distance": "562m"
+    },
+    {
+      "spot_name": "小橋町（こばしまち）",
+      "distance": "579m"
+    },
+    {
+      "spot_name": "旧又五郎町（またごろうちょう）",
+      "distance": "582m"
+    },
+    {
+      "spot_name": "旧高道町（たかみちまち）",
+      "distance": "584m"
+    },
+    {
+      "spot_name": "旧九人橋下通（くにんばししたどおり）",
+      "distance": "590m"
+    },
+    {
+      "spot_name": "旧味噌蔵町（みそぐらちょう）",
+      "distance": "626m"
+    },
+    {
+      "spot_name": "尾張町老舗交流館",
+      "distance": "658m"
+    },
+    {
+      "spot_name": "旧岩根町（いわねまち）",
+      "distance": "661m"
+    },
+    {
+      "spot_name": "旧備中町（びっちゅうまち）",
+      "distance": "665m"
+    },
+    {
+      "spot_name": "旧御仲間町（おちゅうげんまち）",
+      "distance": "666m"
+    },
+    {
+      "spot_name": "旧梅本町（うめもとちょう）",
+      "distance": "666m"
+    },
+    {
+      "spot_name": "尾張町（おわりちょう）",
+      "distance": "676m"
+    },
+    {
+      "spot_name": "大手町（おおてまち）",
+      "distance": "682m"
+    },
+    {
+      "spot_name": "旧水車町（みずぐるままち）",
+      "distance": "690m"
+    },
+    {
+      "spot_name": "旧博労町（ばくろまち）",
+      "distance": "703m"
+    },
+    {
+      "spot_name": "金沢卯辰山工芸工房",
+      "distance": "758m"
+    },
+    {
+      "spot_name": "白鳥路",
+      "distance": "775m"
+    },
+    {
+      "spot_name": "横山町（よこやまちょう）",
+      "distance": "785m"
+    },
+    {
+      "spot_name": "旧桶町（おけちょう）",
+      "distance": "805m"
+    },
+    {
+      "spot_name": "旧胡桃町（くるみちょう）",
+      "distance": "807m"
+    },
+    {
+      "spot_name": "旧上田町（うえだまち）",
+      "distance": "841m"
+    },
+    {
+      "spot_name": "十間町（じっけんまち）",
+      "distance": "854m"
+    },
+    {
+      "spot_name": "山ノ上町（やまのうえまち）",
+      "distance": "884m"
+    },
+    {
+      "spot_name": "袋町（ふくろまち）",
+      "distance": "885m"
+    },
+    {
+      "spot_name": "瓢箪町（ひょうたんまち）",
+      "distance": "915m"
+    },
+    {
+      "spot_name": "紺屋坂（こんやざか）",
+      "distance": "928m"
+    },
+    {
+      "spot_name": "旧塩屋町（しおやまち）",
+      "distance": "948m"
+    },
+    {
+      "spot_name": "小将町（こしょうまち）",
+      "distance": "969m"
+    },
+    {
+      "spot_name": "甚右衛門坂（じんえもんざか）",
+      "distance": "973m"
+    },
+    {
+      "spot_name": "徳田秋聲文学碑",
+      "distance": "990m"
+    },
+    {
+      "spot_name": "旧御小人町（おこびとまち）",
+      "distance": "1.0km"
+    },
+    {
+      "spot_name": "旧馬場崎町（ばばさきちょう）",
+      "distance": "1.0km"
+    },
+    {
+      "spot_name": "望湖台(卯辰山公園)",
+      "distance": "1.0km"
+    },
+    {
+      "spot_name": "旧五宝町（ごぼうまち）",
+      "distance": "1.1km"
+    },
+    {
+      "spot_name": "旧同心町（どうしんまち）",
+      "distance": "1.1km"
+    },
+    {
+      "spot_name": "旧栄町（さかえまち）",
+      "distance": "1.1km"
+    },
+    {
+      "spot_name": "旧西町（にしちょう）",
+      "distance": "1.1km"
+    },
+    {
+      "spot_name": "旧巴町（ともえまち）",
+      "distance": "1.1km"
+    },
+    {
+      "spot_name": "旧石屋小路（いしやしょうじ）",
+      "distance": "1.1km"
+    },
+    {
+      "spot_name": "旧九枚町（くまいまち）",
+      "distance": "1.1km"
+    },
+    {
+      "spot_name": "小尻谷坂（こじりたにざか）",
+      "distance": "1.2km"
+    },
+    {
+      "spot_name": "旧象眼町（ぞうがねまち）",
+      "distance": "1.2km"
+    },
+    {
+      "spot_name": "旧火除町（ひよけまち）",
       "distance": "1.2km"
     },
     {
       "spot_name": "旧松原町（まつばらちょう）",
+      "distance": "1.2km"
+    },
+    {
+      "spot_name": "八坂五山",
+      "distance": "1.2km"
+    },
+    {
+      "spot_name": "旧成瀬町（なるせまち）",
+      "distance": "1.2km"
+    },
+    {
+      "spot_name": "八坂（はっさか）",
+      "distance": "1.2km"
+    },
+    {
+      "spot_name": "旧銀杏町（ぎんなんちょう）",
       "distance": "1.3km"
     },
     {
-      "spot_name": "新町（しんちょう）",
+      "spot_name": "旧鍛冶町（かじまち）",
       "distance": "1.3km"
     },
     {
-      "spot_name": "高岡町（たかおかまち）",
+      "spot_name": "旧弓ノ町（ゆみのまち）",
       "distance": "1.3km"
     },
     {
-      "spot_name": "金沢市文化ホール",
+      "spot_name": "旧淵上町（ふちのえまち）",
       "distance": "1.3km"
     },
     {
-      "spot_name": "旧竹田町（たけだまち）",
+      "spot_name": "旧柿木町（かきのきまち）",
       "distance": "1.3km"
     },
     {
-      "spot_name": "金沢市民芸術村",
+      "spot_name": "旧荒町（あらまち）",
       "distance": "1.3km"
-    },
-    {
-      "spot_name": "足軽資料館",
-      "distance": "1.3km"
-    },
-    {
-      "spot_name": "旧母衣町（ほろまち）",
-      "distance": "1.3km"
-    },
-    {
-      "spot_name": "旧中町（なかまち）",
-      "distance": "1.4km"
-    },
-    {
-      "spot_name": "中の橋",
-      "distance": "1.4km"
-    },
-    {
-      "spot_name": "旧高儀町（こうぎまち）",
-      "distance": "1.4km"
     },
     {
       "spot_name": "南町（みなみちょう）",
+      "distance": "1.3km"
+    },
+    {
+      "spot_name": "広坂（ひろさか）",
+      "distance": "1.3km"
+    },
+    {
+      "spot_name": "笠市町（かさいちまち）",
+      "distance": "1.3km"
+    },
+    {
+      "spot_name": "旧白銀町（しろがねちょう）",
       "distance": "1.4km"
     },
     {
-      "spot_name": "旧梅本町（うめもとちょう）",
+      "spot_name": "金沢市文化ホール",
       "distance": "1.4km"
     },
     {
-      "spot_name": "旧西町（にしちょう）",
+      "spot_name": "旧宗叔町（そうしゅくちょう）",
       "distance": "1.4km"
     },
     {
-      "spot_name": "旧元車町（もとぐるままち）",
+      "spot_name": "旧板前町（いたまえまち）",
       "distance": "1.4km"
     },
     {
-      "spot_name": "旧御仲間町（おちゅうげんまち）",
+      "spot_name": "旧吹屋町（ふきやまち）",
       "distance": "1.4km"
     },
     {
-      "spot_name": "旧加賀藩士高田家跡",
+      "spot_name": "堀川町（ほりかわまち）",
       "distance": "1.4km"
     },
     {
-      "spot_name": "旧富本町（とみもとちょう）",
+      "spot_name": "金沢能楽美術館",
       "distance": "1.4km"
     },
     {
-      "spot_name": "金沢蓄音器館",
+      "spot_name": "木曽坂（きそざか）",
       "distance": "1.4km"
     },
     {
-      "spot_name": "大野庄用水",
-      "distance": "1.4km"
-    },
-    {
-      "spot_name": "暗がり坂（くらがりざか）",
-      "distance": "1.4km"
-    },
-    {
-      "spot_name": "主計町茶屋街",
+      "spot_name": "木曽坂",
       "distance": "1.5km"
     },
     {
-      "spot_name": "泉鏡花記念館",
+      "spot_name": "春日町（かすがまち）",
       "distance": "1.5km"
     },
     {
-      "spot_name": "旧殿町（とのまち）",
+      "spot_name": "辰巳用水",
       "distance": "1.5km"
     },
     {
-      "spot_name": "大手町（おおてまち）",
+      "spot_name": "高岡町（たかおかまち）",
       "distance": "1.5km"
     },
     {
-      "spot_name": "長町武家屋敷休憩館",
+      "spot_name": "馬坂",
       "distance": "1.5km"
     },
     {
-      "spot_name": "旧宝船路町（ほうせんじまち）",
+      "spot_name": "飛梅町（とびうめちょう）",
       "distance": "1.5km"
     },
     {
-      "spot_name": "主計町（かずえまち）",
+      "spot_name": "旧仙石町（せんごくまち）",
       "distance": "1.5km"
     },
     {
-      "spot_name": "長町武家屋敷跡",
+      "spot_name": "金沢21世紀美術館",
       "distance": "1.5km"
     },
     {
-      "spot_name": "金沢文芸館",
+      "spot_name": "馬坂（うまざか）",
       "distance": "1.5km"
     },
     {
-      "spot_name": "橋場町（はしばちょう）",
+      "spot_name": "芳斉町（ほうさいまち）",
+      "distance": "1.5km"
+    },
+    {
+      "spot_name": "旧英町（はなふさちょう）",
+      "distance": "1.5km"
+    },
+    {
+      "spot_name": "旧田丸町（たまるまち）",
+      "distance": "1.5km"
+    },
+    {
+      "spot_name": "旧品川町（しながわちょう）",
+      "distance": "1.5km"
+    },
+    {
+      "spot_name": "石引町（いしびきまち）",
       "distance": "1.6km"
     },
     {
-      "spot_name": "旧森下町（もりもとまち）",
+      "spot_name": "出羽町（でわまち）",
       "distance": "1.6km"
     },
     {
-      "spot_name": "金沢市立安江金箔工芸館",
+      "spot_name": "天神町通り",
       "distance": "1.6km"
     },
     {
-      "spot_name": "寺島蔵人邸",
+      "spot_name": "金沢市アートホール",
       "distance": "1.6km"
     },
     {
-      "spot_name": "長町（ながまち）",
+      "spot_name": "旧木ノ新保（きのしんぼ）",
       "distance": "1.6km"
     },
     {
-      "spot_name": "ひがし茶屋休憩館",
+      "spot_name": "金沢くらしの博物館",
       "distance": "1.6km"
     },
     {
-      "spot_name": "旧木町（きまち）",
+      "spot_name": "旧石浦町（いしうらまち）",
       "distance": "1.6km"
     },
     {
-      "spot_name": "旧観音町（かんのんまち）",
+      "spot_name": "金沢市立中村記念美術館",
       "distance": "1.6km"
     },
     {
       "spot_name": "鞍月用水",
+      "distance": "1.6km"
+    },
+    {
+      "spot_name": "足軽資料館",
+      "distance": "1.6km"
+    },
+    {
+      "spot_name": "旧大音町（おとうまち）",
       "distance": "1.7km"
     },
     {
-      "spot_name": "旧大衆免（だいじゅめ）",
+      "spot_name": "柿木畠（かきのきばたけ）",
       "distance": "1.7km"
     },
     {
-      "spot_name": "旧塩川町（しおがわちょう）",
+      "spot_name": "金沢ふるさと偉人館",
       "distance": "1.7km"
     },
     {
-      "spot_name": "ひがし茶屋街",
+      "spot_name": "島田町（しまだまち）",
       "distance": "1.7km"
     },
     {
-      "spot_name": "旧金屋町（かなやちょう）",
+      "spot_name": "旧玉井町（たまのいまち）",
       "distance": "1.7km"
     },
     {
-      "spot_name": "金沢市老舗記念館",
+      "spot_name": "金沢歌劇座",
       "distance": "1.7km"
     },
     {
-      "spot_name": "旧仙石町（せんごくまち）",
+      "spot_name": "旧穴水町（あなみずまち）",
       "distance": "1.7km"
     },
     {
-      "spot_name": "白鳥路",
+      "spot_name": "旧三構（みつがまえ）",
       "distance": "1.7km"
     },
     {
-      "spot_name": "前田土佐守家資料館",
+      "spot_name": "金沢駅(鼓門・もてなしドーム)",
       "distance": "1.7km"
     },
     {
-      "spot_name": "旧石浦町（いしうらまち）",
+      "spot_name": "旧柳町（やなぎまち）",
       "distance": "1.7km"
     },
     {
-      "spot_name": "旧八幡町（はちまんまち）",
+      "spot_name": "鈴木大拙館",
+      "distance": "1.7km"
+    },
+    {
+      "spot_name": "本多町（ほんだまち）",
+      "distance": "1.7km"
+    },
+    {
+      "spot_name": "六枚町（ろくまいまち）",
+      "distance": "1.7km"
+    },
+    {
+      "spot_name": "大乗寺坂（だいじょうじざか）",
+      "distance": "1.7km"
+    },
+    {
+      "spot_name": "天神坂（てんじんざか）",
+      "distance": "1.7km"
+    },
+    {
+      "spot_name": "大野庄用水",
+      "distance": "1.7km"
+    },
+    {
+      "spot_name": "大樋町（おおひまち）",
+      "distance": "1.7km"
+    },
+    {
+      "spot_name": "長町武家屋敷跡",
+      "distance": "1.7km"
+    },
+    {
+      "spot_name": "旧加賀藩士高田家跡",
       "distance": "1.8km"
     },
     {
-      "spot_name": "卯辰山山麓寺院群",
-      "distance": "1.8km"
-    },
-    {
-      "spot_name": "旧高道町（たかみちまち）",
-      "distance": "1.8km"
-    },
-    {
-      "spot_name": "徳田秋聲記念館",
-      "distance": "1.8km"
-    },
-    {
-      "spot_name": "旧御歩町（おかちまち）",
-      "distance": "1.8km"
-    },
-    {
-      "spot_name": "旧味噌蔵町（みそぐらちょう）",
-      "distance": "1.8km"
-    },
-    {
-      "spot_name": "旧小川町（おがわちょう）",
+      "spot_name": "長町（ながまち）",
       "distance": "1.8km"
     },
     {
@@ -437,7 +577,15 @@
       "distance": "1.8km"
     },
     {
-      "spot_name": "並木町（なみきまち）",
+      "spot_name": "旧百々女木町（どどめきちょう）",
+      "distance": "1.8km"
+    },
+    {
+      "spot_name": "片町（かたまち）",
+      "distance": "1.8km"
+    },
+    {
+      "spot_name": "長町武家屋敷休憩館",
       "distance": "1.8km"
     },
     {
@@ -445,11 +593,67 @@
       "distance": "1.8km"
     },
     {
-      "spot_name": "子来坂（こぎざか）",
+      "spot_name": "旧安藤町（あんどうまち）",
       "distance": "1.8km"
     },
     {
-      "spot_name": "旧九人橋下通（くにんばししたどおり）",
+      "spot_name": "里見町（さとみちょう）",
+      "distance": "1.8km"
+    },
+    {
+      "spot_name": "前田土佐守家資料館",
+      "distance": "1.8km"
+    },
+    {
+      "spot_name": "金沢市老舗記念館",
+      "distance": "1.8km"
+    },
+    {
+      "spot_name": "堤町（つつみちょう）",
+      "distance": "1.8km"
+    },
+    {
+      "spot_name": "茨木町（いばらきちょう）",
+      "distance": "1.8km"
+    },
+    {
+      "spot_name": "旧古道（ふるみち）",
+      "distance": "1.8km"
+    },
+    {
+      "spot_name": "天神坂",
+      "distance": "1.8km"
+    },
+    {
+      "spot_name": "嫁坂（よめざか）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "鈴木大拙誕生地記念碑",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "旧鷹匠町（たかじょうまち）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "折違町（すじかいまち）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "嫁坂",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "旧塩川町（しおがわちょう）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "旧日吉町（ひよしまち）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "油車（あぶらぐるま）",
       "distance": "1.9km"
     },
     {
@@ -457,59 +661,67 @@
       "distance": "1.9km"
     },
     {
-      "spot_name": "紺屋坂（こんやざか）",
-      "distance": "1.9km"
-    },
-    {
-      "spot_name": "旧胡桃町（くるみちょう）",
-      "distance": "1.9km"
-    },
-    {
-      "spot_name": "旧上田町（うえだまち）",
-      "distance": "1.9km"
-    },
-    {
-      "spot_name": "片町（かたまち）",
-      "distance": "1.9km"
-    },
-    {
-      "spot_name": "辰巳用水",
-      "distance": "1.9km"
-    },
-    {
-      "spot_name": "山ノ上町（やまのうえまち）",
-      "distance": "1.9km"
-    },
-    {
-      "spot_name": "鶯町（うぐいすまち）",
-      "distance": "2.0km"
-    },
-    {
-      "spot_name": "観音坂（かんのんざか）",
-      "distance": "2.0km"
-    },
-    {
-      "spot_name": "柿木畠（かきのきばたけ）",
-      "distance": "2.0km"
-    },
-    {
       "spot_name": "旧古寺町（ふるでらまち）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "旧広岡町（ひろおかまち）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "竪町（たてまち）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "旧三社五十人町（さんじゃごじゅうにんまち）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "旧大工町（だいくまち）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "新坂（しんさか）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "旧宝船路町（ほうせんじまち）",
+      "distance": "1.9km"
+    },
+    {
+      "spot_name": "旧醒ヶ井町（さめがいちょう）",
       "distance": "2.0km"
     },
     {
-      "spot_name": "材木町（ざいもくちょう）",
+      "spot_name": "旧二十人町（にじゅうにんまち）",
       "distance": "2.0km"
     },
     {
-      "spot_name": "旧玄蕃町（げんばまち）",
+      "spot_name": "旧河内町（かわちまち）",
       "distance": "2.0km"
     },
     {
-      "spot_name": "金沢能楽美術館",
+      "spot_name": "旧欠原町（がけはらまち）",
       "distance": "2.0km"
     },
     {
-      "spot_name": "旧豊国町（とよくにまち）",
+      "spot_name": "三社町（さんじゃまち）",
+      "distance": "2.0km"
+    },
+    {
+      "spot_name": "長土塀（ながどへ）",
+      "distance": "2.0km"
+    },
+    {
+      "spot_name": "池田町（いけだまち）",
+      "distance": "2.0km"
+    },
+    {
+      "spot_name": "鱗町（うろこまち）",
+      "distance": "2.0km"
+    },
+    {
+      "spot_name": "中橋町（なかばしまち）",
       "distance": "2.0km"
     },
     {
@@ -517,219 +729,199 @@
       "distance": "2.0km"
     },
     {
-      "spot_name": "旧同心町（どうしんまち）",
+      "spot_name": "旧大隅町（おおすみちょう）",
       "distance": "2.0km"
     },
     {
-      "spot_name": "旧又五郎町（またごろうちょう）",
+      "spot_name": "旧河原町（かわらまち）",
       "distance": "2.1km"
     },
     {
-      "spot_name": "金沢21世紀美術館",
+      "spot_name": "旧手木町（てこまち）",
       "distance": "2.1km"
     },
     {
-      "spot_name": "白菊町（しらぎくちょう）",
+      "spot_name": "旧富本町（とみもとちょう）",
       "distance": "2.1km"
     },
     {
-      "spot_name": "広坂（ひろさか）",
+      "spot_name": "二十人坂",
       "distance": "2.1km"
     },
     {
-      "spot_name": "室生犀星記念館",
+      "spot_name": "旧百姓町（ひゃくしょうまち）",
       "distance": "2.1km"
     },
     {
-      "spot_name": "帰厚坂（きこうざか）",
+      "spot_name": "旧一本松（いっぽんまつ）",
       "distance": "2.1km"
     },
     {
-      "spot_name": "小将町（こしょうまち）",
+      "spot_name": "旧山田屋小路（やまだやしょうじ）",
       "distance": "2.1km"
     },
     {
-      "spot_name": "旧大工町（だいくまち）",
+      "spot_name": "旧蔦町（つたまち）",
       "distance": "2.1km"
     },
     {
-      "spot_name": "泉鏡花句碑",
+      "spot_name": "旧七曲り（ななまがり）",
       "distance": "2.1km"
+    },
+    {
+      "spot_name": "旧白山町（しらやまちょう）",
+      "distance": "2.1km"
+    },
+    {
+      "spot_name": "旧土取場（つちとりば）",
+      "distance": "2.1km"
+    },
+    {
+      "spot_name": "水溜町（みずためまち）",
+      "distance": "2.1km"
+    },
+    {
+      "spot_name": "三宅雪嶺生家跡",
+      "distance": "2.1km"
+    },
+    {
+      "spot_name": "杉浦町（すぎうらまち）",
+      "distance": "2.1km"
+    },
+    {
+      "spot_name": "旧高儀町（こうぎまち）",
+      "distance": "2.1km"
+    },
+    {
+      "spot_name": "旧元車町（もとぐるままち）",
+      "distance": "2.2km"
+    },
+    {
+      "spot_name": "七ツ屋町（ななつやまち）",
+      "distance": "2.2km"
     },
     {
       "spot_name": "千日町（せんにちまち）",
       "distance": "2.2km"
     },
     {
-      "spot_name": "旧河原町（かわらまち）",
-      "distance": "2.2km"
-    },
-    {
-      "spot_name": "旧五十人町（ごじゅうにんまち）",
-      "distance": "2.2km"
-    },
-    {
-      "spot_name": "里見町（さとみちょう）",
-      "distance": "2.2km"
-    },
-    {
-      "spot_name": "金沢ふるさと偉人館",
-      "distance": "2.2km"
-    },
-    {
-      "spot_name": "旧備中町（びっちゅうまち）",
-      "distance": "2.2km"
-    },
-    {
-      "spot_name": "横山町（よこやまちょう）",
-      "distance": "2.2km"
-    },
-    {
-      "spot_name": "小尻谷坂（こじりたにざか）",
-      "distance": "2.2km"
-    },
-    {
       "spot_name": "蛤坂（はまぐりざか）",
-      "distance": "2.3km"
+      "distance": "2.2km"
     },
     {
-      "spot_name": "池田町（いけだまち）",
-      "distance": "2.3km"
+      "spot_name": "室生犀星記念館",
+      "distance": "2.2km"
     },
     {
-      "spot_name": "旧助九郎町（すけくろまち）",
-      "distance": "2.3km"
-    },
-    {
-      "spot_name": "金沢歌劇座",
-      "distance": "2.3km"
-    },
-    {
-      "spot_name": "竪町（たてまち）",
-      "distance": "2.3km"
-    },
-    {
-      "spot_name": "にし茶屋街",
-      "distance": "2.3km"
-    },
-    {
-      "spot_name": "八坂五山",
-      "distance": "2.3km"
-    },
-    {
-      "spot_name": "八坂（はっさか）",
-      "distance": "2.4km"
-    },
-    {
-      "spot_name": "油車（あぶらぐるま）",
-      "distance": "2.4km"
-    },
-    {
-      "spot_name": "茨木町（いばらきちょう）",
-      "distance": "2.4km"
-    },
-    {
-      "spot_name": "西茶屋資料館",
-      "distance": "2.4km"
-    },
-    {
-      "spot_name": "春日町（かすがまち）",
-      "distance": "2.4km"
-    },
-    {
-      "spot_name": "金沢市立中村記念美術館",
-      "distance": "2.4km"
-    },
-    {
-      "spot_name": "本多町（ほんだまち）",
-      "distance": "2.4km"
-    },
-    {
-      "spot_name": "旧御小人町（おこびとまち）",
-      "distance": "2.4km"
-    },
-    {
-      "spot_name": "金沢卯辰山工芸工房",
-      "distance": "2.4km"
-    },
-    {
-      "spot_name": "水溜町（みずためまち）",
-      "distance": "2.5km"
-    },
-    {
-      "spot_name": "出羽町（でわまち）",
-      "distance": "2.5km"
-    },
-    {
-      "spot_name": "鈴木大拙館",
-      "distance": "2.5km"
-    },
-    {
-      "spot_name": "旧成瀬町（なるせまち）",
-      "distance": "2.5km"
-    },
-    {
-      "spot_name": "鱗町（うろこまち）",
-      "distance": "2.5km"
-    },
-    {
-      "spot_name": "杉浦町（すぎうらまち）",
-      "distance": "2.5km"
-    },
-    {
-      "spot_name": "旧馬場崎町（ばばさきちょう）",
-      "distance": "2.5km"
-    },
-    {
-      "spot_name": "旧九枚町（くまいまち）",
-      "distance": "2.6km"
-    },
-    {
-      "spot_name": "三宅雪嶺生家跡",
-      "distance": "2.6km"
-    },
-    {
-      "spot_name": "鈴木大拙誕生地記念碑",
-      "distance": "2.6km"
-    },
-    {
-      "spot_name": "飛梅町（とびうめちょう）",
-      "distance": "2.6km"
-    },
-    {
-      "spot_name": "大乗寺坂（だいじょうじざか）",
-      "distance": "2.6km"
+      "spot_name": "旧藺田町（いだまち）",
+      "distance": "2.2km"
     },
     {
       "spot_name": "室生犀星文学碑",
-      "distance": "2.6km"
+      "distance": "2.2km"
+    },
+    {
+      "spot_name": "旧竹田町（たけだまち）",
+      "distance": "2.3km"
+    },
+    {
+      "spot_name": "鶴間坂（つるまざか）",
+      "distance": "2.3km"
+    },
+    {
+      "spot_name": "旧主馬町（しゅめまち）",
+      "distance": "2.3km"
+    },
+    {
+      "spot_name": "白菊町（しらぎくちょう）",
+      "distance": "2.3km"
+    },
+    {
+      "spot_name": "下馬地蔵",
+      "distance": "2.3km"
     },
     {
       "spot_name": "犀川",
+      "distance": "2.3km"
+    },
+    {
+      "spot_name": "旧早道町（はやみちまち）",
+      "distance": "2.3km"
+    },
+    {
+      "spot_name": "旧五十人町（ごじゅうにんまち）",
+      "distance": "2.4km"
+    },
+    {
+      "spot_name": "旧助九郎町（すけくろまち）",
+      "distance": "2.4km"
+    },
+    {
+      "spot_name": "旧台所町（だいどころまち）",
+      "distance": "2.4km"
+    },
+    {
+      "spot_name": "旧長柄町（ながえまち）",
+      "distance": "2.4km"
+    },
+    {
+      "spot_name": "金沢市民芸術村",
+      "distance": "2.4km"
+    },
+    {
+      "spot_name": "桜坂（さくらざか）",
+      "distance": "2.4km"
+    },
+    {
+      "spot_name": "石伐坂（いしきりざか）",
+      "distance": "2.4km"
+    },
+    {
+      "spot_name": "亀坂（がめざか）",
+      "distance": "2.4km"
+    },
+    {
+      "spot_name": "旧上弓ノ町（かみゆみのまち）",
+      "distance": "2.4km"
+    },
+    {
+      "spot_name": "にし茶屋街",
+      "distance": "2.5km"
+    },
+    {
+      "spot_name": "西茶屋資料館",
+      "distance": "2.5km"
+    },
+    {
+      "spot_name": "菊川町（きくがわちょう）",
+      "distance": "2.5km"
+    },
+    {
+      "spot_name": "旧桜畠（さくらばたけ）",
       "distance": "2.6km"
     },
     {
-      "spot_name": "大樋町（おおひまち）",
+      "spot_name": "旧笹下町（ささかまち）",
       "distance": "2.6km"
     },
     {
-      "spot_name": "旧火除町（ひよけまち）",
+      "spot_name": "寺町（てらまち）",
+      "distance": "2.6km"
+    },
+    {
+      "spot_name": "旧仙人町（せんにんまち）",
+      "distance": "2.6km"
+    },
+    {
+      "spot_name": "旧六斗林（ろくとばやし）",
+      "distance": "2.6km"
+    },
+    {
+      "spot_name": "長良坂（ながらざか）",
       "distance": "2.7km"
     },
     {
-      "spot_name": "旧山田屋小路（やまだやしょうじ）",
-      "distance": "2.7km"
-    },
-    {
-      "spot_name": "徳田秋聲文学碑",
-      "distance": "2.7km"
-    },
-    {
-      "spot_name": "石引町（いしびきまち）",
-      "distance": "2.7km"
-    },
-    {
-      "spot_name": "木曽坂（きそざか）",
+      "spot_name": "旧茶畠（ちゃばたけ）",
       "distance": "2.7km"
     },
     {
@@ -737,67 +929,19 @@
       "distance": "2.7km"
     },
     {
-      "spot_name": "旧柿木町（かきのきまち）",
+      "spot_name": "旧沼田町（ぬまだまち）",
       "distance": "2.7km"
     },
     {
-      "spot_name": "木曽坂",
-      "distance": "2.7km"
-    },
-    {
-      "spot_name": "望湖台(卯辰山公園)",
-      "distance": "2.7km"
-    },
-    {
-      "spot_name": "旧六斗林（ろくとばやし）",
-      "distance": "2.7km"
-    },
-    {
-      "spot_name": "旧百姓町（ひゃくしょうまち）",
-      "distance": "2.7km"
-    },
-    {
-      "spot_name": "旧笹下町（ささかまち）",
-      "distance": "2.7km"
-    },
-    {
-      "spot_name": "旧銀杏町（ぎんなんちょう）",
+      "spot_name": "旧桜木小路（さくらぎしょうじ）",
       "distance": "2.8km"
     },
     {
-      "spot_name": "金沢くらしの博物館",
-      "distance": "2.8km"
-    },
-    {
-      "spot_name": "旧板前町（いたまえまち）",
-      "distance": "2.8km"
-    },
-    {
-      "spot_name": "桜坂（さくらざか）",
-      "distance": "2.8km"
-    },
-    {
-      "spot_name": "石伐坂（いしきりざか）",
-      "distance": "2.8km"
-    },
-    {
-      "spot_name": "馬坂",
-      "distance": "2.8km"
-    },
-    {
-      "spot_name": "馬坂（うまざか）",
-      "distance": "2.8km"
-    },
-    {
-      "spot_name": "嫁坂（よめざか）",
+      "spot_name": "旧上野町（うえのまち）",
       "distance": "2.9km"
     },
     {
-      "spot_name": "旧大音町（おとうまち）",
-      "distance": "2.9km"
-    },
-    {
-      "spot_name": "嫁坂",
+      "spot_name": "善光寺坂（ぜんこうじざか）",
       "distance": "2.9km"
     },
     {
@@ -805,220 +949,76 @@
       "distance": "2.9km"
     },
     {
-      "spot_name": "旧吹屋町（ふきやまち）",
+      "spot_name": "旧藤棚（ふじだな）",
       "distance": "2.9km"
-    },
-    {
-      "spot_name": "旧沼田町（ぬまだまち）",
-      "distance": "2.9km"
-    },
-    {
-      "spot_name": "旧手木町（てこまち）",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "旧品川町（しながわちょう）",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "旧早道町（はやみちまち）",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "旧鷹匠町（たかじょうまち）",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "寺町（てらまち）",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "天神町通り",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "旧安藤町（あんどうまち）",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "旧桜畠（さくらばたけ）",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "旧主馬町（しゅめまち）",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "新坂（しんさか）",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "泉町（いずみまち）",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "旧茶畠（ちゃばたけ）",
-      "distance": "3.0km"
-    },
-    {
-      "spot_name": "旧百々女木町（どどめきちょう）",
-      "distance": "3.1km"
-    },
-    {
-      "spot_name": "旧欠原町（がけはらまち）",
-      "distance": "3.1km"
-    },
-    {
-      "spot_name": "旧芦中町（あしなかまち）",
-      "distance": "3.1km"
-    },
-    {
-      "spot_name": "旧二十人町（にじゅうにんまち）",
-      "distance": "3.1km"
-    },
-    {
-      "spot_name": "旧桜木小路（さくらぎしょうじ）",
-      "distance": "3.1km"
-    },
-    {
-      "spot_name": "天神坂（てんじんざか）",
-      "distance": "3.2km"
-    },
-    {
-      "spot_name": "二十人坂",
-      "distance": "3.2km"
-    },
-    {
-      "spot_name": "堤町（つつみちょう）",
-      "distance": "3.2km"
-    },
-    {
-      "spot_name": "旧一本松（いっぽんまつ）",
-      "distance": "3.2km"
-    },
-    {
-      "spot_name": "旧河内町（かわちまち）",
-      "distance": "3.2km"
-    },
-    {
-      "spot_name": "旧長柄町（ながえまち）",
-      "distance": "3.2km"
-    },
-    {
-      "spot_name": "旧仙人町（せんにんまち）",
-      "distance": "3.2km"
-    },
-    {
-      "spot_name": "旧白山町（しらやまちょう）",
-      "distance": "3.3km"
-    },
-    {
-      "spot_name": "菊川町（きくがわちょう）",
-      "distance": "3.3km"
-    },
-    {
-      "spot_name": "天神坂",
-      "distance": "3.3km"
-    },
-    {
-      "spot_name": "旧台所町（だいどころまち）",
-      "distance": "3.3km"
-    },
-    {
-      "spot_name": "長良坂（ながらざか）",
-      "distance": "3.4km"
-    },
-    {
-      "spot_name": "旧土取場（つちとりば）",
-      "distance": "3.4km"
-    },
-    {
-      "spot_name": "下馬地蔵",
-      "distance": "3.5km"
-    },
-    {
-      "spot_name": "旧地黄煎町（じおうせんまち）",
-      "distance": "3.6km"
-    },
-    {
-      "spot_name": "亀坂（がめざか）",
-      "distance": "3.7km"
     },
     {
       "spot_name": "不老坂（ふろうさか）",
-      "distance": "3.7km"
+      "distance": "3.0km"
     },
     {
-      "spot_name": "鶴間坂（つるまざか）",
-      "distance": "3.7km"
+      "spot_name": "旧芦中町（あしなかまち）",
+      "distance": "3.2km"
     },
     {
-      "spot_name": "旧上弓ノ町（かみゆみのまち）",
+      "spot_name": "泉町（いずみまち）",
+      "distance": "3.2km"
+    },
+    {
+      "spot_name": "御参詣坂（ごさんけいざか）",
+      "distance": "3.3km"
+    },
+    {
+      "spot_name": "旧地黄煎町（じおうせんまち）",
+      "distance": "3.5km"
+    },
+    {
+      "spot_name": "大瀧坂（おおたきざか）",
       "distance": "3.8km"
     },
     {
       "spot_name": "有松町（ありまつまち）",
-      "distance": "3.8km"
-    },
-    {
-      "spot_name": "旧藤棚（ふじだな）",
-      "distance": "3.9km"
-    },
-    {
-      "spot_name": "旧上野町（うえのまち）",
-      "distance": "4.2km"
-    },
-    {
-      "spot_name": "善光寺坂（ぜんこうじざか）",
-      "distance": "4.2km"
-    },
-    {
-      "spot_name": "御参詣坂（ごさんけいざか）",
-      "distance": "4.3km"
-    },
-    {
-      "spot_name": "金沢市埋蔵文化財収蔵庫",
-      "distance": "4.6km"
+      "distance": "4.0km"
     },
     {
       "spot_name": "室生犀星の墓",
-      "distance": "5.0km"
-    },
-    {
-      "spot_name": "大瀧坂（おおたきざか）",
-      "distance": "5.1km"
+      "distance": "4.3km"
     },
     {
       "spot_name": "野田山(墓地)",
-      "distance": "5.3km"
+      "distance": "4.5km"
     },
     {
-      "spot_name": "みなと橋",
-      "distance": "5.5km"
+      "spot_name": "金沢市埋蔵文化財収蔵庫",
+      "distance": "5.8km"
     },
     {
       "spot_name": "金沢市埋蔵文化財センター",
-      "distance": "5.6km"
+      "distance": "6.9km"
+    },
+    {
+      "spot_name": "みなと橋",
+      "distance": "7.0km"
     },
     {
       "spot_name": "銭屋五兵衛銅像",
-      "distance": "5.7km"
+      "distance": "7.3km"
     },
     {
       "spot_name": "金沢湯涌創作の森",
-      "distance": "12.9km"
+      "distance": "11.4km"
     },
     {
       "spot_name": "金沢湯涌江戸村",
-      "distance": "13.6km"
+      "distance": "12.1km"
     },
     {
       "spot_name": "金沢湯涌夢二館",
-      "distance": "14.1km"
+      "distance": "12.6km"
     },
     {
       "spot_name": "白鷺の足湯",
-      "distance": "14.1km"
+      "distance": "12.6km"
     }
   ],
   "spotdata": {
@@ -1214,8 +1214,7 @@
             "information": [],
             "time_required": "15分",
             "lat": 36.572449,
-            "lng": 136.655411,
-            "passed_bus_stop": null
+            "lng": 136.655411
           },
           {
             "spot_name": "白銀町",
@@ -1242,8 +1241,7 @@
             "information": [],
             "time_required": "10分",
             "lat": 36.577912,
-            "lng": 136.648904,
-            "passed_bus_stop": null
+            "lng": 136.648904
           }
         ]
       },
@@ -1306,8 +1304,7 @@
             "information": [],
             "time_required": "4分",
             "lat": 36.571654,
-            "lng": 136.664574,
-            "passed_bus_stop": null
+            "lng": 136.664574
           },
           {
             "spot_name": "袋町",
@@ -1348,10 +1345,9 @@
             },
             "fee": "0円",
             "information": [],
-            "time_required": "2分",
+            "time_required": "3分",
             "lat": 36.572449,
-            "lng": 136.655411,
-            "passed_bus_stop": null
+            "lng": 136.655411
           },
           {
             "spot_name": "白銀町",
@@ -1378,8 +1374,7 @@
             "information": [],
             "time_required": "10分",
             "lat": 36.577912,
-            "lng": 136.648904,
-            "passed_bus_stop": null
+            "lng": 136.648904
           }
         ]
       },

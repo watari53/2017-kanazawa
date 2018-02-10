@@ -449,7 +449,7 @@
       "distance": "1.5km"
     },
     {
-      "spot_name": "Old Shinagawa cho",
+      "spot_name": "Old Shinagawa Town",
       "distance": "1.5km"
     },
     {
@@ -1022,6 +1022,18 @@
     }
   ],
   "spotdata": {
+    "Kanazawa station (Komon gate hospitality dome)\n": {
+      "name": "Kanazawa station (Komon gate hospitality dome)",
+      "desc": "The gateway to Kanazawa. In the East Plaza, you can see an umbrella presented to people visiting Kanazawa, you can see the glass dome \"hospitality dome\" representing the heart of hospitality and \"Hiramen\" which imaged the drum used in traditional arts.",
+      "address": "Kanazawa shi Kino Shinbo Town 1-1",
+      "open_hours": "",
+      "fee": "",
+      "location": [
+        "36.577912",
+        "136.648904"
+      ],
+      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/94"
+    },
     "Higashi Chaya Street\n": {
       "name": "Higashi Chaya Street",
       "desc": "It is one of the Sanya houses in Kanazawa city, a preserved area of ​​the important traditional buildings of the country. An old cityscape with a beautiful bellflower called Kimsuko (wooden basket) remains.",
@@ -1034,27 +1046,51 @@
       ],
       "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/24"
     },
-    "21st Century Museum of Contemporary Art, Kanazawa\n": {
-      "name": "21st Century Museum of Contemporary Art, Kanazawa",
-      "desc": "The 21st Century Museum of Contemporary Art of Kanazawa is located in the center, adjacent to Kenrokuen. It was established with the objective of \"creation of new culture\" and \"creation of bustle of new town\". It is a circular building with a glass, aiming at \"an art museum like a park open to the public\" that anyone can stop by anytime. There is also a work in the free zone, you can feel it.",
-      "address": "Kanazawa City Hirosaka 1-2-1",
-      "open_hours": "Exhibition zone 10: 00 ~ 18: 00 (Gilland is 20: 00 * Ticket sales are 30 minutes before closing) Free zone 9: 00 ~ 22: 00",
-      "fee": "Admission to the building of the museum (exchange zone) Free collection exhibition general 360 yen, college student 65 years old and over 280 yen, less than high school student free * special exhibition varies from exhibition to exhibition.",
-      "location": [
-        "36.560867",
-        "136.658258"
-      ],
-      "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
-    },
-    "Hirosaka\n": {
-      "name": "Hirosaka",
+    "Musashi Nishi\n": {
+      "name": "Musashi Nishi",
       "desc": "",
-      "address": "Ishikawa Prefecture Kanazawa City Hirosaka 1-chome 2",
+      "address": "Ishikawa Prefecture Kanazawa city Musashi cho 15",
       "open_hours": "",
       "fee": "",
       "location": [
-        36.561412,
-        136.657436
+        36.572449,
+        136.655411
+      ],
+      "img": "dummy"
+    },
+    "Shirogane cho\n": {
+      "name": "Shirogane cho",
+      "desc": "",
+      "address": "Tamagawa cho Kanazawa city, Ishikawa prefecture 11",
+      "open_hours": "",
+      "fee": "",
+      "location": [
+        36.573518,
+        136.652316
+      ],
+      "img": "dummy"
+    },
+    "Asano River Bridge\n": {
+      "name": "Asano River Bridge",
+      "desc": "",
+      "address": "Ishikawa Prefecture Kanazawa City Hashiba Town 4",
+      "open_hours": "",
+      "fee": "",
+      "location": [
+        36.571654,
+        136.664574
+      ],
+      "img": "dummy"
+    },
+    "Taguchi-cho\n": {
+      "name": "Taguchi-cho",
+      "desc": "",
+      "address": "Ishikawa Prefecture Kanazawa-shi, Kagoshima 2",
+      "open_hours": "",
+      "fee": "",
+      "location": [
+        36.572367,
+        136.657428
       ],
       "img": "dummy"
     },
@@ -1070,143 +1106,33 @@
       ],
       "img": "dummy"
     },
-    "21st Century Museum of Contemporary Art\n": {
-      "name": "21st Century Museum of Contemporary Art",
+    "Kanazawa Station B\n": {
+      "name": "Kanazawa Station B",
       "desc": "",
-      "address": "3-chome Honda-cho, Kanazawa-shi, Ishikawa Prefecture",
+      "address": "Ishikawa Prefecture Kanazawa City Kino Shinbotacho 1-1",
       "open_hours": "",
       "fee": "",
       "location": [
-        36.561088,
-        136.659375
-      ],
-      "img": "dummy"
-    },
-    "City Hall 21st Century Museum of Contemporary Art\n": {
-      "name": "City Hall 21st Century Museum of Contemporary Art",
-      "desc": "",
-      "address": "Ishikawa Prefecture Kanazawa City Hirosaka 2 - chome 1",
-      "open_hours": "",
-      "fee": "",
-      "location": [
-        36.561941,
-        136.65819
-      ],
-      "img": "dummy"
-    },
-    "Asano River Bridge\n": {
-      "name": "Asano River Bridge",
-      "desc": "",
-      "address": "Ishikawa Prefecture Kanazawa City Hashiba Town 4",
-      "open_hours": "",
-      "fee": "",
-      "location": [
-        36.571654,
-        136.664574
+        36.57707818565,
+        136.64759501065
       ],
       "img": "dummy"
     }
   },
   "timeline": [
     {
-      "start_time": "12:00",
-      "arrival_time": "12:11",
-      "time_required": "11 minutes",
-      "fee": "400 yen",
-      "transportation": [
-        {
-          "type": "walk",
-          "text": "Walking"
-        },
-        {
-          "type": "bicycle",
-          "text": "bicycle"
-        },
-        {
-          "type": "walk",
-          "text": "Walking"
-        },
-        {
-          "type": "goal",
-          "text": "arrival"
-        }
-      ],
-      "information": [
-        "./images/bicycle.svg"
-      ],
-      "feature": {
-        "fast": true
-      },
-      "timeline_detail": {
-        "time_required": "11 minutes",
-        "fee": "400 yen",
-        "src": "21st Century Museum of Contemporary Art, Kanazawa",
-        "dest": "Higashi Chaya Street",
-        "start": {
-          "spot_name": "21st Century Museum of Contemporary Art, Kanazawa",
-          "time": "12:00",
-          "lat": 36.560867,
-          "lng": 136.658258
-        },
-        "waypoint": [
-          {
-            "spot_name": "Hirosaka",
-            "arrival_time": "12:01",
-            "transportation": {
-              "type": "walk",
-              "text": "Walking"
-            },
-            "fee": "0 Yen",
-            "information": [],
-            "time_required": "1 minute",
-            "lat": 36.561412,
-            "lng": 136.657436
-          },
-          {
-            "spot_name": "Dongshan",
-            "arrival_time": "12:08",
-            "transportation": {
-              "type": "bicycle",
-              "text": "bicycle"
-            },
-            "fee": "400 yen",
-            "information": {
-              "icon": "./images/bicycle.svg",
-              "text": "The remaining 10"
-            },
-            "time_required": "7 minutes",
-            "lat": 36.572311,
-            "lng": 136.664874
-          },
-          {
-            "spot_name": "Higashi Chaya Street",
-            "arrival_time": "12:11",
-            "transportation": {
-              "type": "walk",
-              "text": "Walking"
-            },
-            "fee": "0 Yen",
-            "information": [],
-            "time_required": "3 minutes",
-            "lat": 36.572587,
-            "lng": 136.666548
-          }
-        ]
-      }
-    },
-    {
-      "start_time": "12:00",
-      "arrival_time": "12:22",
-      "time_required": "22 minutes",
+      "start_time": "15:30",
+      "arrival_time": "15:54",
+      "time_required": "24 minutes",
       "fee": "0 Yen",
       "transportation": [
         {
-          "type": "walk",
-          "text": "Walking"
+          "type": null,
+          "text": ""
         },
         {
-          "type": "goal",
-          "text": "arrival"
+          "type": null,
+          "text": ""
         }
       ],
       "information": [],
@@ -1214,169 +1140,54 @@
         "fast": false
       },
       "timeline_detail": {
-        "time_required": "22 minutes",
+        "time_required": "24 minutes",
         "fee": "0 Yen",
-        "src": "21st Century Museum of Contemporary Art, Kanazawa",
-        "dest": "Higashi Chaya Street",
+        "src": "Higashi Chaya Street",
+        "dest": "Kanazawa station (Komon gate hospitality dome)",
         "start": {
-          "spot_name": "21st Century Museum of Contemporary Art, Kanazawa",
-          "time": "12:00",
-          "lat": 36.560867,
-          "lng": 136.658258
+          "spot_name": "",
+          "time": null,
+          "lat": null,
+          "lng": null
         },
         "waypoint": [
           {
-            "spot_name": "Higashi Chaya Street",
-            "arrival_time": "12:22",
+            "spot_name": "Kanazawa station (Komon gate hospitality dome)",
+            "arrival_time": "15:54",
             "transportation": {
-              "type": "walk",
-              "text": "Walking"
+              "type": null,
+              "text": ""
             },
             "fee": "0 Yen",
             "information": [],
-            "time_required": "22 minutes",
-            "lat": 36.572587,
-            "lng": 136.666548
+            "time_required": "24 minutes",
+            "lat": 36.577912,
+            "lng": 136.648904
           }
         ]
       }
     },
     {
-      "start_time": "12:07",
-      "arrival_time": "12:36",
-      "time_required": "29 minutes",
-      "fee": "400 yen",
-      "transportation": [
-        {
-          "type": "walk",
-          "text": "Walking"
-        },
-        {
-          "type": "bus",
-          "text": "Kikukawa route"
-        },
-        {
-          "type": "walk",
-          "text": "Walking"
-        },
-        {
-          "type": "bus",
-          "text": "Zaimoku route"
-        },
-        {
-          "type": "walk",
-          "text": "Walking"
-        },
-        {
-          "type": "goal",
-          "text": "arrival"
-        }
-      ],
-      "information": [],
-      "feature": {
-        "fast": false
-      },
-      "timeline_detail": {
-        "time_required": "29 minutes",
-        "fee": "400 yen",
-        "src": "21st Century Museum of Contemporary Art, Kanazawa",
-        "dest": "Higashi Chaya Street",
-        "start": {
-          "spot_name": "21st Century Museum of Contemporary Art, Kanazawa",
-          "time": "12:07",
-          "lat": 36.560867,
-          "lng": 136.658258
-        },
-        "waypoint": [
-          {
-            "spot_name": "21st Century Museum of Contemporary Art",
-            "arrival_time": "12:10",
-            "transportation": {
-              "type": "walk",
-              "text": "Walking"
-            },
-            "fee": "0 Yen",
-            "information": [],
-            "time_required": "3 minutes",
-            "lat": 36.561088,
-            "lng": 136.659375
-          },
-          {
-            "spot_name": "21st Century Museum of Contemporary Art",
-            "arrival_time": "12:10",
-            "transportation": {
-              "type": "bus",
-              "text": "Kikukawa route"
-            },
-            "fee": "200 yen",
-            "information": [],
-            "time_required": "0 minutes",
-            "lat": 36.561088,
-            "lng": 136.659375
-          },
-          {
-            "spot_name": "City Hall 21st Century Museum of Contemporary Art",
-            "arrival_time": "12:13",
-            "transportation": {
-              "type": "walk",
-              "text": "Walking"
-            },
-            "fee": "0 Yen",
-            "information": [],
-            "time_required": "2 minutes",
-            "lat": 36.561941,
-            "lng": 136.65819
-          },
-          {
-            "spot_name": "Asano River Bridge",
-            "arrival_time": "12:32",
-            "transportation": {
-              "type": "bus",
-              "text": "Timber route"
-            },
-            "fee": "200 yen",
-            "information": [],
-            "time_required": "19 minutes",
-            "lat": 36.571654,
-            "lng": 136.664574
-          },
-          {
-            "spot_name": "Higashi Chaya Street",
-            "arrival_time": "12:36",
-            "transportation": {
-              "type": "walk",
-              "text": "Walking"
-            },
-            "fee": "0 Yen",
-            "information": [],
-            "time_required": "4 minutes",
-            "lat": 36.572587,
-            "lng": 136.666548
-          }
-        ]
-      }
-    },
-    {
-      "start_time": "12:09",
-      "arrival_time": "12:36",
+      "start_time": "15:42",
+      "arrival_time": "16:09",
       "time_required": "27 minutes",
       "fee": "200 yen",
       "transportation": [
         {
-          "type": "walk",
-          "text": "Walking"
+          "type": null,
+          "text": ""
         },
         {
-          "type": "bus",
-          "text": "Zaimoku route"
+          "type": null,
+          "text": ""
         },
         {
-          "type": "walk",
-          "text": "Walking"
+          "type": null,
+          "text": ""
         },
         {
-          "type": "goal",
-          "text": "arrival"
+          "type": null,
+          "text": ""
         }
       ],
       "information": [],
@@ -1386,53 +1197,273 @@
       "timeline_detail": {
         "time_required": "27 minutes",
         "fee": "200 yen",
-        "src": "21st Century Museum of Contemporary Art, Kanazawa",
-        "dest": "Higashi Chaya Street",
+        "src": "Higashi Chaya Street",
+        "dest": "Kanazawa station (Komon gate hospitality dome)",
         "start": {
-          "spot_name": "21st Century Museum of Contemporary Art, Kanazawa",
-          "time": "12:09",
-          "lat": 36.560867,
-          "lng": 136.658258
+          "spot_name": "",
+          "time": null,
+          "lat": null,
+          "lng": null
         },
         "waypoint": [
           {
-            "spot_name": "City Hall 21st Century Museum of Contemporary Art",
-            "arrival_time": "12:13",
+            "spot_name": "Musashi Nishi",
+            "arrival_time": "15:57",
             "transportation": {
-              "type": "walk",
-              "text": "Walking"
+              "type": null,
+              "text": ""
+            },
+            "fee": "0 Yen",
+            "information": [],
+            "time_required": "15 minutes",
+            "lat": 36.572449,
+            "lng": 136.655411
+          },
+          {
+            "spot_name": "Shirogane cho",
+            "arrival_time": "15:59",
+            "transportation": {
+              "type": null,
+              "text": ""
+            },
+            "fee": "200 yen",
+            "information": [],
+            "time_required": "2 minutes",
+            "lat": 36.573518,
+            "lng": 136.652316,
+            "passed_bus_stop": []
+          },
+          {
+            "spot_name": "Kanazawa station (Komon gate hospitality dome)",
+            "arrival_time": "16:09",
+            "transportation": {
+              "type": null,
+              "text": ""
+            },
+            "fee": "0 Yen",
+            "information": [],
+            "time_required": "10 minutes",
+            "lat": 36.577912,
+            "lng": 136.648904
+          }
+        ]
+      }
+    },
+    {
+      "start_time": "15:43",
+      "arrival_time": "16:09",
+      "time_required": "26 minutes",
+      "fee": "400 yen",
+      "transportation": [
+        {
+          "type": null,
+          "text": ""
+        },
+        {
+          "type": null,
+          "text": ""
+        },
+        {
+          "type": null,
+          "text": ""
+        },
+        {
+          "type": null,
+          "text": ""
+        },
+        {
+          "type": null,
+          "text": ""
+        },
+        {
+          "type": null,
+          "text": ""
+        }
+      ],
+      "information": [],
+      "feature": {
+        "fast": false
+      },
+      "timeline_detail": {
+        "time_required": "26 minutes",
+        "fee": "400 yen",
+        "src": "Higashi Chaya Street",
+        "dest": "Kanazawa station (Komon gate hospitality dome)",
+        "start": {
+          "spot_name": "",
+          "time": null,
+          "lat": null,
+          "lng": null
+        },
+        "waypoint": [
+          {
+            "spot_name": "Asano River Bridge",
+            "arrival_time": "15:47",
+            "transportation": {
+              "type": null,
+              "text": ""
             },
             "fee": "0 Yen",
             "information": [],
             "time_required": "4 minutes",
-            "lat": 36.561941,
-            "lng": 136.65819
-          },
-          {
-            "spot_name": "Asano River Bridge",
-            "arrival_time": "12:32",
-            "transportation": {
-              "type": "bus",
-              "text": "Timber route"
-            },
-            "fee": "200 yen",
-            "information": [],
-            "time_required": "19 minutes",
             "lat": 36.571654,
             "lng": 136.664574
           },
           {
-            "spot_name": "Higashi Chaya Street",
-            "arrival_time": "12:36",
+            "spot_name": "Taguchi-cho",
+            "arrival_time": "15:54",
             "transportation": {
-              "type": "walk",
-              "text": "Walking"
+              "type": null,
+              "text": ""
+            },
+            "fee": "200 yen",
+            "information": [],
+            "time_required": "7 minutes",
+            "lat": 36.572367,
+            "lng": 136.657428,
+            "passed_bus_stop": [
+              {
+                "spot_name": "",
+                "lat": 0,
+                "lng": 0
+              },
+              {
+                "spot_name": "",
+                "lat": 0,
+                "lng": 0
+              },
+              {
+                "spot_name": "",
+                "lat": 0,
+                "lng": 0
+              }
+            ]
+          },
+          {
+            "spot_name": "Musashi Nishi",
+            "arrival_time": "15:57",
+            "transportation": {
+              "type": null,
+              "text": ""
+            },
+            "fee": "0 Yen",
+            "information": [],
+            "time_required": "3 minutes",
+            "lat": 36.572449,
+            "lng": 136.655411
+          },
+          {
+            "spot_name": "Shirogane cho",
+            "arrival_time": "15:59",
+            "transportation": {
+              "type": null,
+              "text": ""
+            },
+            "fee": "200 yen",
+            "information": [],
+            "time_required": "2 minutes",
+            "lat": 36.573518,
+            "lng": 136.652316,
+            "passed_bus_stop": []
+          },
+          {
+            "spot_name": "Kanazawa station (Komon gate hospitality dome)",
+            "arrival_time": "16:09",
+            "transportation": {
+              "type": null,
+              "text": ""
+            },
+            "fee": "0 Yen",
+            "information": [],
+            "time_required": "10 minutes",
+            "lat": 36.577912,
+            "lng": 136.648904
+          }
+        ]
+      }
+    },
+    {
+      "start_time": "15:30",
+      "arrival_time": "15:46",
+      "time_required": "16 minutes",
+      "fee": "400 yen",
+      "transportation": [
+        {
+          "type": null,
+          "text": ""
+        },
+        {
+          "type": null,
+          "text": ""
+        },
+        {
+          "type": null,
+          "text": ""
+        },
+        {
+          "type": null,
+          "text": ""
+        }
+      ],
+      "information": [
+        "./images/may_no_bicycle.svg"
+      ],
+      "feature": {
+        "fast": true
+      },
+      "timeline_detail": {
+        "time_required": "16 minutes",
+        "fee": "400 yen",
+        "src": "Higashi Chaya Street",
+        "dest": "Kanazawa station (Komon gate hospitality dome)",
+        "start": {
+          "spot_name": "",
+          "time": null,
+          "lat": null,
+          "lng": null
+        },
+        "waypoint": [
+          {
+            "spot_name": "Dongshan",
+            "arrival_time": "15:33",
+            "transportation": {
+              "type": null,
+              "text": ""
+            },
+            "fee": "0 Yen",
+            "information": [],
+            "time_required": "3 minutes",
+            "lat": 36.572311,
+            "lng": 136.664874
+          },
+          {
+            "spot_name": "Kanazawa Station B",
+            "arrival_time": "15:42",
+            "transportation": {
+              "type": null,
+              "text": ""
+            },
+            "fee": "400 yen",
+            "information": {
+              "icon": null,
+              "text": ""
+            },
+            "time_required": "9 minutes",
+            "lat": 36.57707818565,
+            "lng": 136.64759501065
+          },
+          {
+            "spot_name": "Kanazawa station (Komon gate hospitality dome)",
+            "arrival_time": "15:46",
+            "transportation": {
+              "type": null,
+              "text": ""
             },
             "fee": "0 Yen",
             "information": [],
             "time_required": "4 minutes",
-            "lat": 36.572587,
-            "lng": 136.666548
+            "lat": 36.577912,
+            "lng": 136.648904
           }
         ]
       }
