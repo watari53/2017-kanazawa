@@ -71,7 +71,6 @@ var TXT = {
 };
 
 var TRANSPORTATION = {"walk": true, "bicycle": true, "bus": true};
-var SHOW_ROUTE = ["徒歩", "自転車"];  //経路を表示するtransportation
 var DEFAULT_DEST_MSG = "到着地を選択";
 var CONNECTION_FAILD_MSG = "電波の良いところでアプリを起動してください。";
 
@@ -86,8 +85,8 @@ var TP_COLOR = {
                   walk:    "#778899",
                   bicycle: "#a6cf22",
                   bus: {
-                    "此花ルート": "#4f5187",
-                    "Konohana route": "#4f5187",
+                    "此花ルート": "#1e1e6a",
+                    "Konohana route": "#1e1e6a",
                     "菊川ルート": "#821721",
                     "Kikukawa route": "#821721",
                     "材木ルート": "#0b6d34",
@@ -382,12 +381,6 @@ ons.bootstrap()
       return DecolateService.getTPIcon(tp.type);
     };
 
-    this.showRoute = function(tp) {
-        var tp_text = tp.text;
-        if(SHOW_ROUTE.indexOf(tp_text) !== -1) {
-          return true;
-        }
-    };
     // wapoint_index: 0,1,...n
     this.go_map = function(w_index){
       console.log("@go_map");
@@ -417,22 +410,27 @@ ons.bootstrap()
       navi.pushPage('spot.html', {data: {spot_name: spot_name}});
     };
   })
-  .controller('MapController', function() {
+  .controller('MapController', function($scope) {
     console.log("@MapController");
+    this.title = TXT[$scope.l].MAP_TEXT;
     var srcLatLng = navi.topPage.data.src;
     var destLatLng = navi.topPage.data.dest;
+    var waypoints = [];
     var w = navi.topPage.data.waypoints;
     this.map_url = "http://maps.google.com/maps?saddr=" + srcLatLng.lat + "," + srcLatLng.lng + "&daddr=" + destLatLng.lat + "," + destLatLng.lng;
     console.log("waypoint: " + w.length + ":" + JSON.stringify(w));
     console.log(srcLatLng.name +","+ srcLatLng.lat + ","+ srcLatLng.lng);
     console.log(destLatLng.name +","+ destLatLng.lat+ ","+ destLatLng.lng);
     
-    var waypoints = [];
-    if(w.length > 0) {
+    if(8 < w.length ) {
+      console.log("exceed max of waypoint");
+    } else if(0 < w.length) {
       console.log("create waypoints");
       angular.forEach(w, function(p){
         waypoints.push({location: new google.maps.LatLng(p.lat, p.lng)});
       });      
+      console.log("done create waypoints");
+      console.log(JSON.stringify(waypoints));
     }
     //Google mapの設定
     var directionsService = new google.maps.DirectionsService;

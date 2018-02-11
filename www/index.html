@@ -121,7 +121,7 @@
               <option ng-repeat="l in lang_set" value={{l.value}}>{{l.label}}</option>
             </ons-select>
           </ons-list>
-          <div style="text-align: center; background-color: white; padding: 20px">
+          <div style="background-color: white; padding: 20px">
             <ons-button ng-click="setting.hide()">{{close_label}}</ons-button>
           </div>
         </section>
@@ -319,7 +319,6 @@
             <ons-col style="padding: 15px 30px">
               <div style="min-height: 45px">
                 {{w.transportation.text}}
-<!--                <div style="float: right" ng-show="td.showRoute(w.transportation)"> -->
                 <div style="float: right">
                   <ons-button ng-click="td.go_map($index)">
                     <ons-icon icon="map"></ons-icon>
@@ -359,7 +358,7 @@
           <ons-back-button>Back</ons-back-button>
         </div>
         <div class="center">
-          ルート
+          {{mp.title}}
         </div>
         <div class="right">
           <ons-toolbar-button>
