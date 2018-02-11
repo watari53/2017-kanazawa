@@ -9,6 +9,7 @@ var LANG_SET = [{label: "日本語", value: "ja"}, {label: "English", value: "en
 // var HISTORY_TITLE = "履歴";
 // var SEARCH_TEXT = "検索";
 // var SEARCH_CTR_TITLE = {src: "出発地", dest: "到着地"};
+// var SEARCH_TYPE = {start: "出発", arrive: "到着"};
 var TXT = {
   "ja": {
     "APP_NAME"          : "金沢ルート検索",
@@ -27,6 +28,7 @@ var TXT = {
     "DEFAULT_TIME" : "現在時刻",
     "PELPLE_LABEL": "人数",
     "P_UNIT" : "人",
+    "SEARCH_TYPE" : {start: "出発", arrive: "到着"},
     "FAST_TEXT"        : "早",
     "DEFAULT_SRC_MSG" : "現在地",
     "DEFAULT_DEST_MSG" : "到着地を選択",
@@ -34,6 +36,7 @@ var TXT = {
     "FILTER_TEXT": "優先",
     "TIMELINE_TITLE": "経路一覧",
     "TIMELINE_DETAIL_TITLE" : "経路詳細",
+    "MAP_TEXT": "地図",
     "SPOT_LABEL" : {"addr": "住所", "open": "営業時間", "fee": "料金", "desc": "概要"},
   },
   "en": {
@@ -53,18 +56,20 @@ var TXT = {
     "DEFAULT_TIME" : "Now",
     "PELPLE_LABEL": "People",
     "P_UNIT" : "",
-    "FAST_TEXT"        : "Fast",
+    "SEARCH_TYPE" : {start: "Departure", arrive: "Arrive"},
+    "FAST_TEXT"        : "F",
     "DEFAULT_SRC_MSG" : "Current Location",
     "DEFAULT_DEST_MSG" : "Select Destination",
     "TRANSPORTATION_TEXT": {"walk": "walking", "bicycle": "bicycle", "bus": "bus"},
     "FILTER_TEXT": "Filter",
     "TIMELINE_TITLE": "Routes",
     "TIMELINE_DETAIL_TITLE" : "Detail",
-    "SPOT_LABEL" : {"addr": "address", "open": "open hour", "fee": "fee", "desc": "description"},
+    "MAP_TEXT": "Map",
+    "SPOT_LABEL" : {"addr": "Address", "open": "Open hour", "fee": "Fee", "desc": "Description"},
+
   }
 };
 
-var SEARCH_TYPE = {start: "出発", arrive: "到着"};
 var TRANSPORTATION = {"walk": true, "bicycle": true, "bus": true};
 var SHOW_ROUTE = ["徒歩", "自転車"];  //経路を表示するtransportation
 var DEFAULT_DEST_MSG = "到着地を選択";
@@ -82,9 +87,13 @@ var TP_COLOR = {
                   bicycle: "#a6cf22",
                   bus: {
                     "此花ルート": "#4f5187",
+                    "Konohana route": "#4f5187",
                     "菊川ルート": "#821721",
+                    "Kikukawa route": "#821721",
                     "材木ルート": "#0b6d34",
+                    "Zaimoku route": "#0b6d34",
                     "長町ルート": "#b17117",
+                    "Nagamachi route": "#b17117",
                   },
                   goal:    "black",
                };
@@ -218,7 +227,7 @@ ons.bootstrap()
       $scope.close_label = txt.CLOSE_LABEL;
       $scope.search_text = txt.SEARCH_TEXT;
       $scope.search = {src: txt.DEFAULT_SRC_MSG, dest: txt.DEFAULT_DEST_MSG};
-      $scope.search_type = SEARCH_TYPE;
+      $scope.search_type = txt.SEARCH_TYPE;
       $scope.tp = TRANSPORTATION;
       $scope.p_unit = txt.P_UNIT;
       $scope.time = txt.DEFAULT_TIME;
@@ -328,7 +337,8 @@ ons.bootstrap()
     this.title= TXT[$scope.l].TIMELINE_TITLE;
     this.search_type = $scope.search_type[$scope.type];
     this.short_src_text = TXT[$scope.l].SHORT_SRC_TEXT;
-    this.short_dest_text = TXT[$scope.l].SHORT_DEST_TEXT;
+    this.short_dest_text = TXT[$scope.l].SHORT_DEST_TEXT;
+
     this.time        = $scope.time;
     this.src         = $scope.search.src;
     this.dest        = $scope.search.dest;
@@ -354,10 +364,11 @@ ons.bootstrap()
   .controller('TimeLineDetailController', function($scope, DecolateService, DataService) {
     this.title = TXT[$scope.l].TIMELINE_DETAIL_TITLE;
     this.detail = navi.topPage.data.timeline_detail;
+    this.map_text = TXT[$scope.l].MAP_TEXT;
     var waypoint = this.detail.waypoint;
     
     function getSrcLocation() {
-      return {name: DEFAULT_SRC_MSG, lat: 36.578268, lng: 136.648035};
+      return {name: TXT[$scope.l].DEFAULT_SRC_MSG, lat: 36.578268, lng: 136.648035};
     }
 
     this.getTPColor = function(style, tp) {
@@ -379,37 +390,50 @@ ons.bootstrap()
     };
     // wapoint_index: 0,1,...n
     this.go_map = function(w_index){
+      console.log("@go_map");
       var srcLocation; // {name: spot_name, lat: latitude, lng: longitude}
+      var waypoints = [];
       if(w_index === 0) {
-        if(this.detail.start.spot_name === DEFAULT_SRC_MSG) {
+        if(this.detail.start.spot_name === TXT[$scope.l].DEFAULT_SRC_MSG) {
           srcLocation = getSrcLocation();
         } else {
           var start = this.detail.start;
-          srcLocation = {name: start.spot_name, lat: start.lat, lng: start.lng}
+          srcLocation = {name: start.spot_name, lat: start.lat, lng: start.lng};
         }
       } else {
         var i = w_index - 1;
+        console.log("SRC: waypoint["+ i + "]:" + JSON.stringify(waypoint[i]));
         srcLocation = {name: waypoint[i].spot_name, lat: waypoint[i].lat, lng: waypoint[i].lng};
       }
+      console.log("DEST: waypoint["+ w_index + "]:" + JSON.stringify(waypoint[w_index]));
       var destLocation = {name: waypoint[w_index].spot_name, lat: waypoint[w_index].lat, lng: waypoint[w_index].lng};
-      navi.pushPage('map.html', {data: {src: srcLocation, dest: destLocation}});
+      if(waypoint[w_index].transportation.type === "bus") {
+        waypoints = waypoint[w_index].passed_bus_stop;
+        console.log("type is bus, num of bus stop is : " + waypoints.length);
+      }
+      navi.pushPage('map.html', {data: {src: srcLocation, dest: destLocation, waypoints: waypoints}});
     };
     this.go_spot = function(spot_name) {
       navi.pushPage('spot.html', {data: {spot_name: spot_name}});
     };
   })
   .controller('MapController', function() {
+    console.log("@MapController");
     var srcLatLng = navi.topPage.data.src;
     var destLatLng = navi.topPage.data.dest;
+    var w = navi.topPage.data.waypoints;
     this.map_url = "http://maps.google.com/maps?saddr=" + srcLatLng.lat + "," + srcLatLng.lng + "&daddr=" + destLatLng.lat + "," + destLatLng.lng;
+    console.log("waypoint: " + w.length + ":" + JSON.stringify(w));
     console.log(srcLatLng.name +","+ srcLatLng.lat + ","+ srcLatLng.lng);
     console.log(destLatLng.name +","+ destLatLng.lat+ ","+ destLatLng.lng);
     
-    this.goExMap = function(url) {
-      window.open(url, '_system', 'location=yes');
-      return false;
-    };
-
+    var waypoints = [];
+    if(w.length > 0) {
+      console.log("create waypoints");
+      angular.forEach(w, function(p){
+        waypoints.push({location: new google.maps.LatLng(p.lat, p.lng)});
+      });      
+    }
     //Google mapの設定
     var directionsService = new google.maps.DirectionsService;
     var directionsDisplay = new google.maps.DirectionsRenderer;
@@ -426,6 +450,11 @@ ons.bootstrap()
       directionsService.route({
         origin: srcLatLng,
         destination: destLatLng,
+        waypoints: waypoints,
+        // waypoints: [ // 経由地点(指定なしでも可)
+        //     { location: new google.maps.LatLng(35.630152,139.74044) },
+        //     { location: new google.maps.LatLng(35.507456,139.617585) },
+        // ],
         // Note that Javascript allows us to access the constant
         // using square brackets and a string value as its
         // "property."
@@ -438,6 +467,11 @@ ons.bootstrap()
         }
       });
     }
+
+    this.goExMap = function(url) {
+      window.open(url, '_system', 'location=yes');
+      return false;
+    };
   })
   .controller('SpotController', function($scope, DataService) {
     this.label = TXT[$scope.l].SPOT_LABEL;

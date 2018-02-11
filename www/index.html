@@ -304,11 +304,11 @@
 
         <div ng-repeat="w in td.detail.waypoint">
           <ons-row>
-            <ons-col width="11%" class="plan-left">
+            <ons-col width="42px" class="plan-left">
               <div style="text-align: center; display: flex; align-items: center; width: 42px; height: 100%; font-size: 110%">
-                <div style="position: relative; z-index: 1; left: 22px; background-color: white; height: 33px; width: 42px; padding: 5px; border: 1px solid">
+                <div style="position: relative; z-index: 1; left: 24px; background-color: white; height: 33px; width: 42px; padding: 5px; border: 1px solid">
                   <ons-icon ng-style='td.getTPColor("color", w.transportation)' icon="{{td.getTPIcon(w.transportation)}}"></ons-icon>
-                  <div style="font-size: 80%">{{w.time_required}}</div>
+                  <div style="font-size: 65%">{{w.time_required}}</div>
                 </div>
               </div>
             </ons-col>
@@ -319,10 +319,11 @@
             <ons-col style="padding: 15px 30px">
               <div style="min-height: 45px">
                 {{w.transportation.text}}
-                <div style="float: right" ng-show="td.showRoute(w.transportation)">
+<!--                <div style="float: right" ng-show="td.showRoute(w.transportation)"> -->
+                <div style="float: right">
                   <ons-button ng-click="td.go_map($index)">
                     <ons-icon icon="map"></ons-icon>
-                    経路
+                    {{td.map_text}}
                   </ons-button>
                 </div>
                 <div ng-style="{display: w.information.length === 0 ? 'none': 'inline'}">
@@ -333,7 +334,7 @@
                   </span>
                 </div>
               </div>
-              <div style="margin-top: 6px; text-align: right">{{w.fee}}</div>
+              <div style="margin-top: 6px; text-align: right"> {{w.fee}} </div>
             </ons-col>
           </ons-row>
 

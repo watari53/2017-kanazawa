@@ -8,7 +8,8 @@
   color: white;
 }
 .button {
-  background-color: #20A738;
+  background-color: #20A738;
+
 }
 /* top page */
 .input-area {
@@ -134,7 +135,7 @@
   margin-right: 30px;
 }
 .spot-label {
-  font-weight: 500;
+  font-weight: 600;
   line-height: 16px;
   font-size: 15px;
   margin-bottom: 6px;
@@ -151,4 +152,5 @@
   vertical-align: middle;
   width: 23px;
   height: 23px;
+  margin-right: 3px;
 }
