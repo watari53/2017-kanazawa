@@ -77,7 +77,7 @@ var CONNECTION_FAILD_MSG = "電波の良いところでアプリを起動して�
 var DEMO_INIT_FILE = {ja: "sample-ja.json", en: "sample-en.json"};
 var DEMO = {
             "ja": [{dest: "金沢21世紀美術館", file:"sample1-ja.json"},{dest: "ひがし茶屋街", file:"sample2-ja.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3-ja.json"}],
-            "en": [{dest: "21st Century Museum of Contemporary Art, Kanazawa", file:"sample1-en.json"},{dest: "Higashi Chaya Street", file:"sample2-en.json"},{dest:"Kanazawa station \(Komon gate hospitality dome\)",file:"sample3-en.json"}],
+            "en": [{dest: "21st Century Museum of Contemporary Art  Kanazawa", file:"sample1-en.json"},{dest: "Higashi Chaya Street", file:"sample2-en.json"},{dest:"Kanazawa station \(Komon gate hospitality dome\)",file:"sample3-en.json"}],
            };
 
 var TP_ICON  = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus", goal: "fa-flag-o"};

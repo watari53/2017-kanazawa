@@ -10,7 +10,8 @@
   <script src="lib/onsenui/js/onsenui.min.js"></script>
   <script src="lib/onsenui/js/angular-onsenui.min.js"></script>
   <script src="components/main.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?language=en&key=" type="text/javascript"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?language=en&key=" type="text/javascript"></script>
+
 
 
   <link rel="stylesheet" href="components/loader.css">
@@ -117,7 +118,7 @@
         <section style="margin: 0 20px">
           <ons-list>
             <ons-list-header>{{lang_setting_label}}</ons-list-header>
-            <ons-select style="width: 98%" onchange="changeLang(event)">
+            <ons-select style="width: 86%; padding: 0 0 0 8%" onchange="changeLang(event)">
               <option ng-repeat="l in lang_set" value={{l.value}}>{{l.label}}</option>
             </ons-select>
           </ons-list>
