@@ -27,7 +27,7 @@
     <ons-page>
       <ons-toolbar>
         <div class="left"> </div>
-        <div class="center">{{this.application_name}}</div>
+        <div class="center">{{application_name}}</div>
         <div class="right">
           <ons-toolbar-button><ons-icon icon="ion-gear-a" ng-click="setting.show()" style="vertical-align: -4px; font-size: 28px; color: white"></ons-icon></ons-toolbar-button>
         </div>
@@ -39,13 +39,13 @@
             <div class="list-item__left">
               <span class="start_index">{{src_text}}</span>
             </div>
-            <div id="src" class="list-item__center">{{this.search.src}}</div>
+            <div id="src" class="list-item__center">{{search.src}}</div>
           </li>
           <li class="list-item list--inset__item list-item--tappable input-area" ng-click='app.go_search("dest")'>
             <div class="list-item__left">
               <span class="dest_index">{{dest_text}}</span>
             </div>
-            <div id="dest" class="list-item__center">{{this.search.dest}}</div>
+            <div id="dest" class="list-item__center">{{search.dest}}</div>
           </li>
         </ul>
       </section>
@@ -54,7 +54,7 @@
         <div class="list list--inset" style="text-align: center;">
           <div ng-click="app.setTime()" class="list--inset__item list-item--tappable input-area" style="display: flex;justify-content: center;align-items: center;">
               <ons-icon style="margin-right: 5px" icon="fa-clock-o"></ons-icon>
-              {{this.time | date: "M/d （EEE）a hh:mm"}}
+              {{time | date: "M/d （EEE）a hh:mm"}}
           </div>
         </div>
 
@@ -82,17 +82,16 @@
               <ons-icon icon="fa-group"></ons-icon>
             </div>
             <div class="list-item__center">
-              <span style="margin-right: 10px">{{this.pelple_label}}：</span>{{this.people_n}}{{this.p_unit}}
+              <span style="margin-right: 10px">{{pelple_label}}：</span>{{people_n}}{{p_unit}}
             </div>
             <div class="list-item__right">
-              <button ng-click="this.people_n=this.people_n-1" class="fab fab--material fab--mini" ng-disabled="this.people_n==1"><i class="zmdi zmdi-minus"></i></button>
+              <button ng-click="people_n=people_n-1" class="fab fab--material fab--mini" ng-disabled="people_n==1"><i class="zmdi zmdi-minus"></i></button>
               <i style="width: 5px"></i>
-              <button ng-click="this.people_n=this.people_n+1" class="fab fab--material fab--mini"><i class="zmdi zmdi-plus"></i></button>
+              <button ng-click="people_n=people_n+1" class="fab fab--material fab--mini"><i class="zmdi zmdi-plus"></i></button>
             </div>
           </li>
         </ul>
         
-
         <ul class="list list--inset" style="margin-top: 10px">
           <li class="list-item list--inset__item">
             <div class="list-item__left" style="width: 25px">
@@ -105,11 +104,10 @@
           </li>
         </ul>
         
-
       </section>
 
       <div style="text-align: center">
-        <ons-button class="button--material button--large--cta" style="width: 80%; margin: 40px auto;" ng-click="app.go_timeline()">
+        <ons-button class="button--material button--large--cta" style="width: 60%; margin: 40px auto; background-color: #fd814a" ng-click="app.go_timeline()">
           {{search_text}}
         </ons-button>
       </div>
@@ -169,12 +167,12 @@
 
       <section ng-style="sc.surroundings_style">
         <ons-list>
-          <ons-list-item ng-repeat="i in sc.surroundings|filter: {spot_name: spot_name} | limitTo: 10" ng-click="sc.setSpot(i.spot_name)" modifier="chevron tappable">
+          <ons-list-item ng-repeat="i in sc.surroundings|filter: {spot_name: spot_name} | orderBy: 'distance' | limitTo: 10" ng-click="sc.setSpot(i.spot_name)" modifier="chevron tappable">
             <div style="width: 70%" class="list__item__center">
               <div class="spot_name">{{i.spot_name}}</div>
             </div>
             <div class="sc-list__item__right">
-              <div class="distance">{{i.distance}}</div>
+              <div class="distance">{{i.distance}}km</div>
             </div>
           </ons-list-item>
         </ons-list>
@@ -216,7 +214,7 @@
         <div style="padding: 1px 0 0 0;">
           <div class="card card--material">
             <div class="card__content">
-              {{tl.time| date: "a hh:mm"}} <span style="margin-left: 6px">{{tl.search_type}}</span>
+              {{tl.time| date: "a hh:mm"}} <span style="margin-left: 6px">{{tl.search_type}}</span><span style="margin-left: 6px">{{tl.people_n}}{{p_unit}}</span>
               <div style="margin-top:5px"><span class="start_index">{{tl.short_src_text}}</span><strong>{{tl.src}}</strong></div>
               <div style="margin-top:10px"><span class="dest_index">{{tl.short_dest_text}}</span><strong>{{tl.dest}}</strong></div>
             </div>
@@ -321,7 +319,7 @@
               <div style="min-height: 45px">
                 {{w.transportation.text}}
                 <div style="float: right">
-                  <ons-button ng-click="td.go_map($index)">
+                  <ons-button ng-click="td.go_map($index)" style="background-color: #fd814a">
                     <ons-icon icon="map"></ons-icon>
                     {{td.map_text}}
                   </ons-button>

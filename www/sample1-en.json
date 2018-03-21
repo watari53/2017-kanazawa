@@ -1058,8 +1058,8 @@
       ],
       "img": "dummy"
     },
-    "Musashigasei": {
-      "name": "Musashigasei",
+    "Musashiga Tsuji": {
+      "name": "Musashiga Tsuji",
       "desc": "",
       "address": "Ishikawa Prefecture Kanazawa city Musashi cho 15",
       "open_hours": "",
@@ -1200,7 +1200,7 @@
             "lng": 136.649215
           },
           {
-            "spot_name": "Musashigasei",
+            "spot_name": "Musashiga Tsuji",
             "arrival_time": "9:36",
             "transportation": {
               "type": "bus",
@@ -1431,7 +1431,7 @@
                 "lng": 136.655559
               },
               {
-                "spot_name": "Musashigasei",
+                "spot_name": "Musashiga Tsuji",
                 "lat": 36.572852,
                 "lng": 136.655368
               },

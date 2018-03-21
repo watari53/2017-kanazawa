@@ -1,7 +1,8 @@
 // // use in index.html
 var LANG = "ja"; // default lang
-
+var LAMBDA_URL = "https://g336ju2rsd.execute-api.us-east-2.amazonaws.com/hello/hello-world";
 var LANG_SET = [{label: "日本語", value: "ja"}, {label: "English", value: "en"}];
+var SURROUND_SPOT_FILE = "spot.json";
 // var DEFAULT_SRC_MSG = "現在地";
 // var SRC_TEXT = {ja: "出発", en: "depart"};
 // var DEST_TEXT = "到着";
@@ -21,11 +22,13 @@ var TXT = {
     "CLOSE_LABEL"       : "閉じる",
     "SEARCH_CTR_TITLE"  : {"src": "出発地", "dest": "到着地"},
     "SEACH_INPUT_LABEL" : {"src": "出発地を入力", "dest": "到着地を入力"},
+    "NO_DEST_MSG"       : "目的地を選択してください。",
+    "SAME_SRC_DEST_MSG" : "目的地と到着地が同じです。",
+    "CONNECTION_FAILED_MSG": "電波の良いところでアプリを起動してください。",
     "SURROUNDINGS_TITLE": "周辺",
     "HISTORY_TITLE"     : "履歴",
     "NO_HISTORY_MSG"    : "検索履歴なし",
     "SEARCH_TEXT"       : "検索",
-    "DEFAULT_TIME" : "現在時刻",
     "PELPLE_LABEL": "人数",
     "P_UNIT" : "人",
     "SEARCH_TYPE" : {start: "出発", arrive: "到着"},
@@ -49,11 +52,13 @@ var TXT = {
     "CLOSE_LABEL"       : "Close",
     "SEARCH_CTR_TITLE"  : {"src": "Departure", "dest": "Destination"},
     "SEACH_INPUT_LABEL" : {"src": "input Departure", "dest": "input Destination"},
+    "NO_DEST_MSG"       : "Please Select Destination.",
+    "SAME_SRC_DEST_MSG" : "src and dest is same.",
+    "CONNECTION_FAILED_MSG": "connection failed",
     "SURROUNDINGS_TITLE": "Surroungings",
     "HISTORY_TITLE"     : "History",
     "NO_HISTORY_MSG"    : "No History",
     "SEARCH_TEXT"       : "Search",
-    "DEFAULT_TIME" : "Now",
     "PELPLE_LABEL": "People",
     "P_UNIT" : "",
     "SEARCH_TYPE" : {start: "Departure", arrive: "Arrive"},
@@ -66,19 +71,10 @@ var TXT = {
     "TIMELINE_DETAIL_TITLE" : "Detail",
     "MAP_TEXT": "Map",
     "SPOT_LABEL" : {"addr": "Address", "open": "Open hour", "fee": "Fee", "desc": "Description"},
-
   }
 };
 
 var TRANSPORTATION = {"walk": true, "bicycle": true, "bus": true};
-var DEFAULT_DEST_MSG = "到着地を選択";
-var CONNECTION_FAILD_MSG = "電波の良いところでアプリを起動してください。";
-
-var DEMO_INIT_FILE = {ja: "sample-ja.json", en: "sample-en.json"};
-var DEMO = {
-            "ja": [{dest: "金沢21世紀美術館", file:"sample1-ja.json"},{dest: "ひがし茶屋街", file:"sample2-ja.json"},{dest:"金沢駅(鼓門・もてなしドーム)",file:"sample3-ja.json"}],
-            "en": [{dest: "21st Century Museum of Contemporary Art  Kanazawa", file:"sample1-en.json"},{dest: "Higashi Chaya Street", file:"sample2-en.json"},{dest:"Kanazawa station \(Komon gate hospitality dome\)",file:"sample3-en.json"}],
-           };
 
 var TP_ICON  = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus", goal: "fa-flag-o"};
 var TP_COLOR = {
@@ -110,6 +106,18 @@ function arrayExist(array, value) {
   return false;
 }
 
+//距離の計算//
+function getDistance(lat1, lng1, lat2, lng2) {
+  function radians(deg){
+    return deg * Math.PI / 180;
+  }
+  return 6378.14 * Math.acos(Math.cos(radians(lat1))* 
+    Math.cos(radians(lat2))*
+    Math.cos(radians(lng2)-radians(lng1))+
+    Math.sin(radians(lat1))*
+    Math.sin(radians(lat2)));
+}
+
 ons.bootstrap()
   .service('DecolateService', function(){
     var service = {};
@@ -126,26 +134,28 @@ ons.bootstrap()
     service.getTPIcon = function(tp_type) {
       return TP_ICON[tp_type];
     };
-
     return service;
   })
   .service('DataService', function($http) {
     var sample;
+    var spot_for_surroundings = [];
     var service = {};
 
-    service.setSample = function(data){
-      sample = data;
-    };
     // search_type = "src or dest"
-    service.getSurroundings = function(search_type, lang) {
+    service.getSurroundings = function(search_type, location, lang) {
+      console.log("@getSurroundings");
+      var spots = spot_for_surroundings;
+      var surroundings = [];
       if (search_type === "src") {
-        var surroundings = sample.surroundings.concat();
-        surroundings.unshift({spot_name: TXT[lang].DEFAULT_SRC_MSG, distance: ""});
-        return surroundings;
-      } else {
-        return sample.surroundings;
-      }
+        surroundings.unshift({spot_name: TXT[lang].DEFAULT_SRC_MSG, distance: 0});
+      };
+      angular.forEach(spots, function(spot, i) {
+        var distance = getDistance(location.lat, location.lng, spot.lat, spot.lng).toPrecision(2);
+        surroundings.push({spot_name: spot.spot_name, distance: distance});
+      });
+      return surroundings;
     };
+
     service.setHistory = function(spot_name, lang) {
       console.log("@setHistory");
       if(spot_name === TXT[lang].DEFAULT_SRC_MSG) {
@@ -175,36 +185,51 @@ ons.bootstrap()
         return history.split(',');
       } 
     };
-    service.getTimeLines = function() {
-      return sample.timeline;
-    };
+
     service.getSpotData = function(spot_name) {
       return sample.spotdata[spot_name];
     };
     // param = src, dest, lang
     // src, dest = spot name
     // lang = en or ja
-    service.getData = function(param) {
-      console.log("@getData");
-      console.log(param);
-      var DEMO_PATTERN = DEMO;
-      var sample_file = DEMO_INIT_FILE[param.lang]; // default file is sample1.json
-      angular.forEach(DEMO_PATTERN[param.lang], function(p){
-        if(p.dest === param.dest) {
-          console.log("hit sample data: " + p.file);
-          sample_file = p.file;
-        }
-      });
-      return $http({method: 'GET', url: sample_file}).
+    service.setSpotForSearch = function(param) {
+      console.log("@setSpotForSearch");
+
+      return $http({method: 'GET', url: SURROUND_SPOT_FILE}).
         success(function(data, status, headers, config) {
           // レスポンスが有効の場合に、非同期で呼び出されるコールバックです。
           console.log('success init data');
-          service.setSample(data);
+          spot_for_surroundings = data;
         }).
         error(function(data, status, headers, config) {
           // エラーが発生、またはサーバからエラーステータスが返された場合に、
           // 非同期で呼び出されます。
-          alert(CONNECTION_FAILD_MSG);
+          alert(TXT[$scope.l].CONNECTION_FAILED_MSG);
+          console.log("Error Code: 0");
+        });
+    };
+
+    service.postData= function(param) {
+      console.log("@postData");
+      console.log(param);
+
+       return $http({method: 'POST', url: LAMBDA_URL, data: param}).
+        success(function(data, status, headers, config) {
+          // レスポンスが有効の場合に、非同期で呼び出されるコールバックです。
+          console.log('success post data');
+          console.log('data:' + data);
+          console.log('status:' + status);
+          console.log('headers:' + headers);
+          console.log('config:' + config);
+        }).
+        error(function(data, status, headers, config) {
+          // エラーが発生、またはサーバからエラーステータスが返された場合に、
+          // 非同期で呼び出されます。
+          alert(TXT[$scope.l].CONNECTION_FAILED_MSG);
+          console.log('data:' + data);
+          console.log('status:' + status);
+          console.log('headers:' + headers);
+          console.log('config:' + config);
           console.log("Error Code: 0");
         });
     };
@@ -213,7 +238,9 @@ ons.bootstrap()
   .controller('AppController', function($scope, $http, DataService) {
     $scope.lang_set = LANG_SET;
     $scope.type = "start"; // controll default search_type. start or arrive
-    $scope.people_n = 1;
+    $scope.people_n = 1; //default people_n
+    $scope.time = new Date();
+    $scope.location = {"lat": 36.559266, "lng": 136.652026};
 
     langInit = function(lang) {
       console.log("set lang: " + lang);
@@ -229,7 +256,6 @@ ons.bootstrap()
       $scope.search_type = txt.SEARCH_TYPE;
       $scope.tp = TRANSPORTATION;
       $scope.p_unit = txt.P_UNIT;
-      $scope.time = txt.DEFAULT_TIME;
       $scope.pelple_label = txt.PELPLE_LABEL;
       $scope.filter_text = txt.FILTER_TEXT;
       $scope.tp_text = txt.TRANSPORTATION_TEXT;
@@ -237,7 +263,7 @@ ons.bootstrap()
 
     //init
     langInit(LANG); // default LANG = "ja"
-    DataService.getData({lang: LANG});
+    DataService.setSpotForSearch({lang: LANG});
     
     this.go_search = function(search_type) {
       navi.pushPage('search.html', {data: {search_type: search_type}});
@@ -261,7 +287,7 @@ ons.bootstrap()
       $scope.l = e.target.value; // "ja" or "en"
       $scope.$apply(function(){
         langInit($scope.l);
-        DataService.getData({lang: $scope.l});
+        // DataService.setSpotForSearch({lang: $scope.l});
       });
     };
 
@@ -276,20 +302,38 @@ ons.bootstrap()
       }
     };
     this.go_timeline = function() {
-      // if($scope.search.dest === DEFAULT_DEST_MSG) {
-      //   alert("目的地を選択してください。")
-      //   return;
-      // }else if($scope.search.src === $scope.search.dest) {
-      //   alert("目的地と到着地が同じです");
-      //   return;
-      // }
+      if($scope.search.dest === TXT[$scope.l].DEFAULT_DEST_MSG) {
+        alert(TXT[$scope.l].NO_DEST_MSG);
+        return;
+      }else if($scope.search.src === $scope.search.dest) {
+        alert(TXT[$scope.l].SAME_SRC_DEST_MSG);
+        return;
+      }
       modal.show();
-      promise = DataService.getData({src:$scope.search.src, dest:$scope.search.dest, lang:$scope.l});
+      var send_data = {
+        "src": "金沢駅(鼓門・もてなしドーム)",
+        "dest" : "金沢21世紀美術館",
+        // "src":$scope.search.src,
+        // "dest":$scope.search.dest,
+        // "time":"20180325 09:00",
+        "time":moment($scope.time).format("YYYYMMDD HH:mm"),
+        "lat":"36.578268",
+        "lng":"136.648035",
+        "mode": $scope.type,
+        "people_n": $scope.people_n,
+        "lang":$scope.l
+      };
+      console.log("people n : " + send_data.people_n);
+      promise = DataService.postData(send_data);
+
       promise.then(function(response){
         setTimeout(function() {
           modal.hide();
-          navi.pushPage('timeline.html');
-        }, 0);          
+          navi.pushPage('timeline.html', {data: {response: response.data}});
+        }, 1500);          
+      }).catch(function(e) {
+        alert(TXT[$scope.l].CONNECTION_FAILED_MSG);
+        modal.hide();
       });
     };
   })
@@ -307,9 +351,8 @@ ons.bootstrap()
     this.surroundings_style = {display: 'inline'};
     this.history_style = {display: 'none'};
 
-
     console.log("set data");
-    this.surroundings = DataService.getSurroundings(search_type, $scope.l);
+    this.surroundings = DataService.getSurroundings(search_type, $scope.location, $scope.l);
     this.history = DataService.getHistory();
 
     console.log("toggle view");
@@ -333,6 +376,8 @@ ons.bootstrap()
     };
   })
   .controller('TimeLineController', function($scope, DecolateService, DataService) {
+    var data = navi.topPage.data.response;
+
     this.title= TXT[$scope.l].TIMELINE_TITLE;
     this.search_type = $scope.search_type[$scope.type];
     this.short_src_text = TXT[$scope.l].SHORT_SRC_TEXT;
@@ -343,7 +388,7 @@ ons.bootstrap()
     this.dest        = $scope.search.dest;
     this.people_n    = $scope.people_n;
     this.fast_text   = TXT[$scope.l].FAST_TEXT;
-    this.result      = DataService.getTimeLines();
+    this.result      = data.timeline;
 
     this.getTPColor = function(style, tp) {
       var hash = {};
@@ -461,7 +506,7 @@ ons.bootstrap()
         if (status == 'OK') {
           directionsDisplay.setDirections(response);
         } else {
-          window.alert(CONNECTION_FAILD_MSG + ': code: ' + status);
+          window.alert(TXT[$scope.l].CONNECTION_FAILED_MSG + ': code: ' + status);
         }
       });
     }
