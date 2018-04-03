@@ -1,16 +1,12 @@
 // // use in index.html
-var LANG = "ja"; // default lang
+var LANG = "ja"; // default lang, or en
 var LAMBDA_URL = "https://g336ju2rsd.execute-api.us-east-2.amazonaws.com/hello/hello-world";
 var LANG_SET = [{label: "日本語", value: "ja"}, {label: "English", value: "en"}];
-var SURROUND_SPOT_FILE = "spot.json";
-// var DEFAULT_SRC_MSG = "現在地";
-// var SRC_TEXT = {ja: "出発", en: "depart"};
-// var DEST_TEXT = "到着";
-// var SURROUNDINGS_TITLE = "周辺";
-// var HISTORY_TITLE = "履歴";
-// var SEARCH_TEXT = "検索";
-// var SEARCH_CTR_TITLE = {src: "出発地", dest: "到着地"};
-// var SEARCH_TYPE = {start: "出発", arrive: "到着"};
+var SURROUND_SPOT_FILE = {
+  "ja": "spot-ja.json",
+  "en": "spot-en.json"
+};
+
 var TXT = {
   "ja": {
     "APP_NAME"          : "金沢ルート検索",
@@ -189,13 +185,12 @@ ons.bootstrap()
     service.getSpotData = function(spot_name) {
       return sample.spotdata[spot_name];
     };
-    // param = src, dest, lang
-    // src, dest = spot name
-    // lang = en or ja
+    // param = {lang: "ja" or "en"}
     service.setSpotForSearch = function(param) {
       console.log("@setSpotForSearch");
+      var lang = param.lang;
 
-      return $http({method: 'GET', url: SURROUND_SPOT_FILE}).
+      return $http({method: 'GET', url: SURROUND_SPOT_FILE[lang]}).
         success(function(data, status, headers, config) {
           // レスポンスが有効の場合に、非同期で呼び出されるコールバックです。
           console.log('success init data');
