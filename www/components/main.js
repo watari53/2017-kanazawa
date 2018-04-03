@@ -309,18 +309,17 @@ ons.bootstrap()
         // "src": "金沢駅(鼓門・もてなしドーム)",
         // "dest" : "金沢21世紀美術館",
         // "time":"20180325 09:00",
-        "src":$scope.search.src,
-        "dest":$scope.search.dest,
-        "time":moment($scope.time).format("YYYYMMDD HH:mm"),
-        "lat":"36.578268",
-        "lng":"136.648035",
-        "mode": $scope.type,
+        "src"     : $scope.search.src,
+        "dest"    : $scope.search.dest,
+        "time"    : moment($scope.time).format("YYYYMMDD HH:mm"),
+        "lat"     : $scope.location.lat,
+        "lat"     : $scope.location.lng,
+        "mode"    : $scope.type,
         "people_n": $scope.people_n,
-        "lang":$scope.l
+        "lang"    : $scope.l
       };
-      console.log("people n : " + send_data.people_n);
+      
       promise = DataService.postData(send_data);
-
       promise.then(function(response){
         setTimeout(function() {
           modal.hide();
