@@ -237,7 +237,7 @@ ons.bootstrap()
     $scope.time = new Date();
     $scope.location = {"lat": 36.559266, "lng": 136.652026};
 
-    langInit = function(lang) {
+    initLang = function(lang) {
       console.log("set lang: " + lang);
       $scope.l = lang;
       txt = TXT[$scope.l];
@@ -257,8 +257,32 @@ ons.bootstrap()
     };
 
     //init
-    langInit(LANG); // default LANG = "ja"
+    initLang(LANG); // default LANG = "ja"
     DataService.setSpotForSearch({lang: LANG});
+
+    // onSuccess Callback
+    // This method accepts a Position object, which contains the
+    // current GPS coordinates
+    //
+    var onSuccess = function(position) {
+      console.log('Latitude: '          + position.coords.latitude          + '\n' +
+                  'Longitude: '         + position.coords.longitude         + '\n' +
+                  'Altitude: '          + position.coords.altitude          + '\n' +
+                  'Accuracy: '          + position.coords.accuracy          + '\n' +
+                  'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+                  'Heading: '           + position.coords.heading           + '\n' +
+                  'Speed: '             + position.coords.speed             + '\n' +
+                  'Timestamp: '         + position.timestamp                + '\n');
+      $scope.location.lat = position.coords.latitude;
+      $scope.location.lng = position.coords.longitude;
+    };
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+      console.log('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+    }
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
     
     this.go_search = function(search_type) {
       navi.pushPage('search.html', {data: {search_type: search_type}});
@@ -281,7 +305,7 @@ ons.bootstrap()
     changeLang = function(e) {
       $scope.l = e.target.value; // "ja" or "en"
       $scope.$apply(function(){
-        langInit($scope.l);
+        initLang($scope.l);
         DataService.setSpotForSearch({lang: $scope.l});
       });
     };
