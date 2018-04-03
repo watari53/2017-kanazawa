@@ -282,7 +282,7 @@ ons.bootstrap()
       $scope.l = e.target.value; // "ja" or "en"
       $scope.$apply(function(){
         langInit($scope.l);
-        // DataService.setSpotForSearch({lang: $scope.l});
+        DataService.setSpotForSearch({lang: $scope.l});
       });
     };
 
