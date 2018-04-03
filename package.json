@@ -7,7 +7,8 @@
             "cordova-plugin-splashscreen": {},
             "cordova-custom-config": {},
             "cordova-plugin-inappbrowser": {},
-            "monaca-plugin-datepicker": {}
+            "monaca-plugin-datepicker": {},
+            "cordova-plugin-geolocation": {}
         }
     },
     "dependencies": {
@@ -16,6 +17,7 @@
         "cordova-plugin-splashscreen": "5.0.1",
         "cordova-custom-config": "5.0.2",
         "cordova-plugin-inappbrowser": "2.0.1",
-        "monaca-plugin-datepicker": "1.0.1"
+        "monaca-plugin-datepicker": "1.0.1",
+        "cordova-plugin-geolocation": "4.0.1"
     }
 }
