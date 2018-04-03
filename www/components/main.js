@@ -199,7 +199,7 @@ ons.bootstrap()
         error(function(data, status, headers, config) {
           // エラーが発生、またはサーバからエラーステータスが返された場合に、
           // 非同期で呼び出されます。
-          alert(TXT[$scope.l].CONNECTION_FAILED_MSG);
+          alert(TXT[lang].CONNECTION_FAILED_MSG);
           console.log("Error Code: 0");
         });
     };
@@ -306,11 +306,11 @@ ons.bootstrap()
       }
       modal.show();
       var send_data = {
-        "src": "金沢駅(鼓門・もてなしドーム)",
-        "dest" : "金沢21世紀美術館",
-        // "src":$scope.search.src,
-        // "dest":$scope.search.dest,
+        // "src": "金沢駅(鼓門・もてなしドーム)",
+        // "dest" : "金沢21世紀美術館",
         // "time":"20180325 09:00",
+        "src":$scope.search.src,
+        "dest":$scope.search.dest,
         "time":moment($scope.time).format("YYYYMMDD HH:mm"),
         "lat":"36.578268",
         "lng":"136.648035",
