@@ -142,11 +142,15 @@ ons.bootstrap()
       console.log("@getSurroundings");
       var spots = spot_for_surroundings;
       var surroundings = [];
-      if (search_type === "src") {
+      if (search_type === "src" && location != null) {
         surroundings.unshift({spot_name: TXT[lang].DEFAULT_SRC_MSG, distance: 0});
       };
       angular.forEach(spots, function(spot, i) {
-        var distance = getDistance(location.lat, location.lng, spot.lat, spot.lng).toPrecision(2);
+        if (location != null) {
+          var distance = getDistance(location.lat, location.lng, spot.lat, spot.lng).toPrecision(2);
+        } else {
+          var distance = "-";
+        }
         surroundings.push({spot_name: spot.spot_name, distance: distance});
       });
       return surroundings;
@@ -305,6 +309,8 @@ ons.bootstrap()
     function onError(error) {
       console.log('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
+      $scope.location = null;
+
     }
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
     
