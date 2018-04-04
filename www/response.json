@@ -1,0 +1,210 @@
+{
+    "spotdata": {
+        "21st Century Museum of Contemporary Art, Kanazawa": {
+            "name": "21st Century Museum of Contemporary Art, Kanazawa",
+            "desc": "The 21st Century Museum of Contemporary Art of Kanazawa is located in the center, adjacent to Kenrokuen. It was established with the objective of creation of new culture and creation of bustle of new town. It is a circular building with a glass, aiming at an art museum like a park open to the public that anyone can stop by anytime. There is also a work in the free zone, you can feel it.",
+            "address": "kanazawashihirosaka12",
+            "location": [
+                "36.560867",
+                "136.658258"
+            ],
+            "open_hours": "Exhibition zone 10: 00 ~ 18: 00 (Gilland is 20: 00 * Ticket sales are 30 minutes before closing) Free zone 9: 00 ~ 22: 00",
+            "fee": "Exhibition zone 10: 00 ~ 18: 00 (Gilland is 20: 00 * Ticket sales are 30 minutes before closing) Free zone 9: 00 ~ 22: 00",
+            "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
+        },
+        "Kanazawa Station": {
+            "name": "Kanazawa Station",
+            "desc": "The gateway to Kanazawa. In the East Plaza, you can see an umbrella presented to the people visiting Kanazawa, you can see the glass dome hospitality dome representing the heart of hospitality and Hiramen which imaged the drum used for traditional arts.",
+            "address": "kanazawaichikinonibomachi1",
+            "location": [
+                "36.577912",
+                "136.648904"
+            ],
+            "open_hours": "",
+            "fee": "",
+            "img": "dummy"
+        },
+        "Kanazawa Station B": {
+            "name": "Kanazawa Station B",
+            "desc": "",
+            "address": "",
+            "location": [
+                36.57707818565,
+                136.64759501065
+            ],
+            "open_hours": "",
+            "fee": "",
+            "img": "dummy"
+        },
+        "Hirosaka": {
+            "name": "Hirosaka",
+            "desc": "",
+            "address": "",
+            "location": [
+                36.561412,
+                136.657436
+            ],
+            "open_hours": "",
+            "fee": "",
+            "img": "dummy"
+        }
+    },
+    "timeline": [
+        {
+            "start_time": "19:52",
+            "arrival_time": "20:24",
+            "time_required": "32min",
+            "fee": "0yen",
+            "transportation": [
+                {
+                    "type": "walk",
+                    "text": "Walking"
+                },
+                {
+                    "type": "goal",
+                    "text": "arrival"
+                }
+            ],
+            "information": [
+                "./images/light_rain.svg"
+            ],
+            "timeline_detail": {
+                "time_required": "32min",
+                "fee": "0yen",
+                "src": "Kanazawa Station",
+                "dest": "21st Century Museum of Contemporary Art, Kanazawa",
+                "start": {
+                    "spot_name": "Kanazawa Station",
+                    "time": "19:52",
+                    "lat": 36.577912,
+                    "lng": 136.648904
+                },
+                "waypoint": [
+                    {
+                        "spot_name": "21st Century Museum of Contemporary Art, Kanazawa",
+                        "arrival_time": "20:24",
+                        "transportation": {
+                            "type": "walk",
+                            "text": "Walking"
+                        },
+                        "fee": "0yen",
+                        "information": [
+                            {
+                                "icon": "./images/light_rain.svg",
+                                "text": "light rain"
+                            }
+                        ],
+                        "time_required": "32min",
+                        "lat": 36.560867,
+                        "lng": 136.658258
+                    }
+                ]
+            },
+            "feature": {
+                "fast": false
+            }
+        },
+        {
+            "start_time": "19:52",
+            "arrival_time": "20:08",
+            "time_required": "16min",
+            "fee": "200yen",
+            "transportation": [
+                {
+                    "type": "walk",
+                    "text": "Walking"
+                },
+                {
+                    "type": "bicycle",
+                    "text": "Bicycle"
+                },
+                {
+                    "type": "walk",
+                    "text": "Walking"
+                },
+                {
+                    "type": "goal",
+                    "text": "arrival"
+                }
+            ],
+            "information": [
+                "./images/light_rain.svg"
+            ],
+            "timeline_detail": {
+                "time_required": "16min",
+                "fee": "200yen",
+                "src": "Kanazawa Station",
+                "dest": "21st Century Museum of Contemporary Art, Kanazawa",
+                "start": {
+                    "spot_name": "Kanazawa Station",
+                    "time": "19:52",
+                    "lat": 36.577912,
+                    "lng": 136.648904
+                },
+                "waypoint": [
+                    {
+                        "spot_name": "Kanazawa Station B",
+                        "arrival_time": "19:56",
+                        "transportation": {
+                            "type": "walk",
+                            "text": "Walking"
+                        },
+                        "fee": "0yen",
+                        "information": [
+                            {
+                                "icon": "./images/light_rain.svg",
+                                "text": "light rain"
+                            }
+                        ],
+                        "time_required": "4min",
+                        "lat": 36.57707818565,
+                        "lng": 136.64759501065
+                    },
+                    {
+                        "spot_name": "Hirosaka",
+                        "arrival_time": "20:07",
+                        "transportation": {
+                            "type": "bicycle",
+                            "text": "Bicycle"
+                        },
+                        "fee": "200yen",
+                        "information": [
+                            {
+                                "icon": "./images/bicycle.svg",
+                                "text": "20 remaining"
+                            },
+                            {
+                                "icon": "./images/light_rain.svg",
+                                "text": "light rain"
+                            }
+                        ],
+                        "time_required": "11min",
+                        "lat": 36.561412,
+                        "lng": 136.657436
+                    },
+                    {
+                        "spot_name": "21st Century Museum of Contemporary Art, Kanazawa",
+                        "arrival_time": "20:08",
+                        "transportation": {
+                            "type": "walk",
+                            "text": "Walking"
+                        },
+                        "fee": "0yen",
+                        "information": [
+                            {
+                                "icon": "./images/light_rain.svg",
+                                "text": "light rain"
+                            }
+                        ],
+                        "time_required": "1min",
+                        "lat": 36.560867,
+                        "lng": 136.658258
+                    }
+                ]
+            },
+            "feature": {
+                "fast": true
+            }
+        }
+    ]
+}

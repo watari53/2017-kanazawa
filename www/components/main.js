@@ -133,7 +133,6 @@ ons.bootstrap()
     return service;
   })
   .service('DataService', function($http) {
-    var sample;
     var spot_for_surroundings = [];
     var service = {};
 
@@ -182,9 +181,9 @@ ons.bootstrap()
       } 
     };
 
-    service.getSpotData = function(spot_name) {
-      return sample.spotdata[spot_name];
-    };
+    // service.getSpotData = function(spot_name) {
+    //   return null;
+    // };
     // param = {lang: "ja" or "en"}
     service.setSpotForSearch = function(param) {
       console.log("@setSpotForSearch");
@@ -469,8 +468,9 @@ ons.bootstrap()
       }
       navi.pushPage('map.html', {data: {src: srcLocation, dest: destLocation, waypoints: waypoints}});
     };
-    this.go_spot = function(spot_name) {
-      navi.pushPage('spot.html', {data: {spot_name: spot_name}});
+
+    this.go_spot = function(waypoint) {
+      navi.pushPage('spot.html', {data: {waypoint: waypoint}});
     };
   })
   .controller('MapController', function($scope) {
@@ -536,8 +536,9 @@ ons.bootstrap()
   })
   .controller('SpotController', function($scope, DataService) {
     this.label = TXT[$scope.l].SPOT_LABEL;
-    var spot_name = navi.topPage.data.spot_name;
-    this.data = DataService.getSpotData(spot_name);
+    var spot = navi.topPage.data.waypoint;
+    this.data = spot;
+    // this.data = DataService.getSpotData(spot_name);
   });
 ons.ready(function() {
   console.log("Onsen UI is ready!");
