@@ -133,8 +133,9 @@ ons.bootstrap()
     return service;
   })
   .service('DataService', function($http) {
-    var spot_for_surroundings = [];
     var service = {};
+    var spot_for_surroundings = [];
+    var response = "";
 
     // search_type = "src or dest"
     service.getSurroundings = function(search_type, location, lang) {
@@ -238,6 +239,14 @@ ons.bootstrap()
           console.log('faild to read sample data');
         });
     };
+
+    service.setResponse = function(response) {
+      response = response;
+    };
+
+    service.getResponse = function() {
+      return response;
+    }
 
     return service;
   })
@@ -358,6 +367,7 @@ ons.bootstrap()
       promise = DataService.getSampleData();
       promise.then(function(response){
         setTimeout(function() {
+          DataService.setResponse(response.data);
           modal.hide();
           navi.pushPage('timeline.html', {data: {response: response.data}});
         }, 1500);          
@@ -406,7 +416,8 @@ ons.bootstrap()
     };
   })
   .controller('TimeLineController', function($scope, DecolateService, DataService) {
-    var data = navi.topPage.data.response;
+    // var data = navi.topPage.data.response;
+    var data = DataService.getResponse();
 
     this.title= TXT[$scope.l].TIMELINE_TITLE;
     this.search_type = $scope.search_type[$scope.type];
@@ -418,7 +429,7 @@ ons.bootstrap()
     this.dest        = $scope.search.dest;
     this.people_n    = $scope.people_n;
     this.fast_text   = TXT[$scope.l].FAST_TEXT;
-    this.result      = data.timeline;
+    this.timeline      = data.timeline;
 
     this.getTPColor = function(style, tp) {
       var hash = {};
