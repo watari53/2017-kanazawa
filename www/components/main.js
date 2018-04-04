@@ -18,6 +18,7 @@ var TXT = {
     "CLOSE_LABEL"       : "閉じる",
     "SEARCH_CTR_TITLE"  : {"src": "出発地", "dest": "到着地"},
     "SEACH_INPUT_LABEL" : {"src": "出発地を入力", "dest": "到着地を入力"},
+    "NO_SRC_MSG"        : "出発地を選択してください。",
     "NO_DEST_MSG"       : "目的地を選択してください。",
     "SAME_SRC_DEST_MSG" : "目的地と到着地が同じです。",
     "CONNECTION_FAILED_MSG": "電波の良いところでアプリを起動してください。",
@@ -29,8 +30,9 @@ var TXT = {
     "P_UNIT" : "人",
     "SEARCH_TYPE" : {start: "出発", arrive: "到着"},
     "FAST_TEXT"        : "早",
-    "DEFAULT_SRC_MSG" : "現在地",
+    "DEFAULT_SRC_MSG"  : "出発地を選択",
     "DEFAULT_DEST_MSG" : "到着地を選択",
+    "CURRENT_LOCATION_LABEL" : "現在地",
     "TRANSPORTATION_TEXT": {"walk": "徒歩", "bicycle": "自転車", "bus": "バス"},
     "FILTER_TEXT": "優先",
     "TIMELINE_TITLE": "経路一覧",
@@ -48,6 +50,8 @@ var TXT = {
     "CLOSE_LABEL"       : "Close",
     "SEARCH_CTR_TITLE"  : {"src": "Departure", "dest": "Destination"},
     "SEACH_INPUT_LABEL" : {"src": "input Departure", "dest": "input Destination"},
+    "NO_SRC_MSG"        : "Please Select Departure",
+
     "NO_DEST_MSG"       : "Please Select Destination.",
     "SAME_SRC_DEST_MSG" : "src and dest is same.",
     "CONNECTION_FAILED_MSG": "connection failed",
@@ -59,8 +63,9 @@ var TXT = {
     "P_UNIT" : "",
     "SEARCH_TYPE" : {start: "Departure", arrive: "Arrive"},
     "FAST_TEXT"        : "F",
-    "DEFAULT_SRC_MSG" : "Current Location",
+    "DEFAULT_SRC_MSG"  : "Select Departure",
     "DEFAULT_DEST_MSG" : "Select Destination",
+    "CURRENT_LOCATION_LABEL" : "You Are Here",
     "TRANSPORTATION_TEXT": {"walk": "walking", "bicycle": "bicycle", "bus": "bus"},
     "FILTER_TEXT": "Filter",
     "TIMELINE_TITLE": "Routes",
@@ -143,7 +148,7 @@ ons.bootstrap()
       var spots = spot_for_surroundings;
       var surroundings = [];
       if (search_type === "src" && location != null) {
-        surroundings.unshift({spot_name: TXT[lang].DEFAULT_SRC_MSG, distance: 0});
+        surroundings.unshift({spot_name: TXT[lang].CURRENT_LOCATION_LABEL, distance: 0});
       };
       angular.forEach(spots, function(spot, i) {
         if (location != null) {
@@ -158,7 +163,7 @@ ons.bootstrap()
 
     service.setHistory = function(spot_name, lang) {
       console.log("@setHistory");
-      if(spot_name === TXT[lang].DEFAULT_SRC_MSG) {
+      if(spot_name === TXT[lang].CURRENT_LOCATION_LABEL) {
         return;
       }
       var history = localStorage.getItem('history');
@@ -310,16 +315,15 @@ ons.bootstrap()
       console.log('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
       $scope.location = null;
-
     }
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
     
     this.go_search = function(search_type) {
       navi.pushPage('search.html', {data: {search_type: search_type}});
     };
+
     this.setTime = function() {
       var time = new Date();
-
       // Datepicker Same handling for iPhone and Android
       window.plugins.datePicker.show({
           date : time,
@@ -332,6 +336,7 @@ ons.bootstrap()
           $scope.$apply();
       });
     };
+
     changeLang = function(e) {
       $scope.l = e.target.value; // "ja" or "en"
       $scope.$apply(function(){
@@ -350,9 +355,13 @@ ons.bootstrap()
         console.log('invalid search type');
       }
     };
+
     this.go_timeline = function() {
-      if($scope.search.dest === TXT[$scope.l].DEFAULT_DEST_MSG) {
-        alert(TXT[$scope.l].NO_DEST_MSG);
+      if($scope.search.src === TXT[$scope.l].DEFAULT_SRC_MSG) {
+        alert(TXT[$scope.l].NO_SRC_MSG);
+        return;
+      }else if($scope.search.dest === TXT[$scope.l].DEFAULT_DEST_MSG) {
+        alert(TXT[$scope.l].NO_DEST_MSG);
         return;
       }else if($scope.search.src === $scope.search.dest) {
         alert(TXT[$scope.l].SAME_SRC_DEST_MSG);
@@ -363,16 +372,17 @@ ons.bootstrap()
         // "src": "金沢駅(鼓門・もてなしドーム)",
         // "dest" : "金沢21世紀美術館",
         // "time":"20180325 09:00",
-        "src"     : $scope.search.src,
+        "src"     : $scope.search.src, // 現在地 or You Are Here , other spot name
         "dest"    : $scope.search.dest,
         "time"    : moment($scope.time).format("YYYYMMDD HH:mm"),
-        "lat"     : $scope.location.lat,
-        "lat"     : $scope.location.lng,
         "mode"    : $scope.type,
         "people_n": $scope.people_n,
-        "lang"    : $scope.l
+        "lang"    : $scope.l        
       };
-      
+      if($scope.search.src == TXT[$scope.l].CURRENT_LOCATION_LABEL) {
+        send_data.lat = $scope.location.lat;
+        send_data.lng= $scope.location.lng;
+      }
       // promise = DataService.postData(send_data);
       promise = DataService.getSampleData();
       promise.then(function(response){
@@ -464,7 +474,7 @@ ons.bootstrap()
     
     function getSrcLocation() {
       // return {name: TXT[$scope.l].DEFAULT_SRC_MSG, lat: 36.578268, lng: 136.648035};
-      return {name: TXT[$scope.l].DEFAULT_SRC_MSG, lat: $scope.location.lat, lng: $scope.location.lng};
+      return {name: TXT[$scope.l].CURRENT_LOCATION_LABEL, lat: $scope.location.lat, lng: $scope.location.lng};
     }
 
     this.getTPColor = function(style, tp) {
@@ -484,7 +494,7 @@ ons.bootstrap()
       var srcLocation; // {name: spot_name, lat: latitude, lng: longitude}
       var waypoints = [];
       if(w_index === 0) {
-        if(this.detail.start.spot_name === TXT[$scope.l].DEFAULT_SRC_MSG) {
+        if(this.detail.start.spot_name === TXT[$scope.l].CURRENT_LOCATION_LABEL) {
           srcLocation = getSrcLocation();
         } else {
           var start = this.detail.start;
