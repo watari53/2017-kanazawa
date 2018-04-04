@@ -227,6 +227,18 @@ ons.bootstrap()
           console.log("Error Code: 0");
         });
     };
+
+    service.getSampleData = function() {
+      console.log("@getSampleData");
+      return $http.get('response.json').
+        success(function(data) {
+          console.log('success read sample data');
+        }).
+        error(function(err){
+          console.log('faild to read sample data');
+        });
+    };
+
     return service;
   })
   .controller('AppController', function($scope, $http, DataService) {
@@ -342,7 +354,8 @@ ons.bootstrap()
         "lang"    : $scope.l
       };
       
-      promise = DataService.postData(send_data);
+      // promise = DataService.postData(send_data);
+      promise = DataService.getSampleData();
       promise.then(function(response){
         setTimeout(function() {
           modal.hide();
