@@ -259,7 +259,7 @@ ons.bootstrap()
     $scope.type = "start"; // controll default search_type. start or arrive
     $scope.people_n = 1; //default people_n
     $scope.time = new Date();
-    $scope.location = {"lat": 36.559266, "lng": 136.652026};
+    $scope.location = {"lat": 35.681167, "lng": 139.767052};
 
     initLang = function(lang) {
       console.log("set lang: " + lang);
@@ -457,7 +457,8 @@ ons.bootstrap()
     var waypoint = this.detail.waypoint;
     
     function getSrcLocation() {
-      return {name: TXT[$scope.l].DEFAULT_SRC_MSG, lat: 36.578268, lng: 136.648035};
+      // return {name: TXT[$scope.l].DEFAULT_SRC_MSG, lat: 36.578268, lng: 136.648035};
+      return {name: TXT[$scope.l].DEFAULT_SRC_MSG, lat: $scope.location.lat, lng: $scope.location.lng};
     }
 
     this.getTPColor = function(style, tp) {
