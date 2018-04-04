@@ -135,7 +135,7 @@ ons.bootstrap()
   .service('DataService', function($http) {
     var service = {};
     var spot_for_surroundings = [];
-    var response = "";
+    var response = {};
 
     // search_type = "src or dest"
     service.getSurroundings = function(search_type, location, lang) {
@@ -182,9 +182,6 @@ ons.bootstrap()
       } 
     };
 
-    // service.getSpotData = function(spot_name) {
-    //   return null;
-    // };
     // param = {lang: "ja" or "en"}
     service.setSpotForSearch = function(param) {
       console.log("@setSpotForSearch");
@@ -240,13 +237,20 @@ ons.bootstrap()
         });
     };
 
-    service.setResponse = function(response) {
-      response = response;
+    service.setResponse = function(resp) {
+      console.log("@setResponse");
+      response = resp;
     };
 
     service.getResponse = function() {
+      console.log("@getResponse");
+      console.log(response);
       return response;
-    }
+    };
+
+    service.getSpotData = function(spot_name) {
+      return response.spotdata[spot_name];
+    };    
 
     return service;
   })
@@ -493,8 +497,8 @@ ons.bootstrap()
       navi.pushPage('map.html', {data: {src: srcLocation, dest: destLocation, waypoints: waypoints}});
     };
 
-    this.go_spot = function(waypoint) {
-      navi.pushPage('spot.html', {data: {waypoint: waypoint}});
+    this.go_spot = function(spot_name) {
+      navi.pushPage('spot.html', {data: {spot_name: spot_name}});
     };
   })
   .controller('MapController', function($scope) {
@@ -559,10 +563,12 @@ ons.bootstrap()
     };
   })
   .controller('SpotController', function($scope, DataService) {
+    console.log("@SpotController");
     this.label = TXT[$scope.l].SPOT_LABEL;
-    var spot = navi.topPage.data.waypoint;
-    this.data = spot;
-    // this.data = DataService.getSpotData(spot_name);
+    var spot_name = navi.topPage.data.spot_name;
+    console.log(spot_name);
+    this.data = DataService.getSpotData(spot_name);
+    console.log(this.data);
   });
 ons.ready(function() {
   console.log("Onsen UI is ready!");

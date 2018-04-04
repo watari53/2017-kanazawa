@@ -340,7 +340,7 @@
             <ons-list-item ng-show="!$last">
               <i style="margin-right: 20px">{{w.arrival_time}}</i> {{w.spot_name}}
             </ons-list-item>
-            <ons-list-item ng-show="$last" modifier="chevron tappable" ng-click="td.go_spot(w)">
+            <ons-list-item ng-show="$last" modifier="chevron tappable" ng-click="td.go_spot(w.spot_name)">
               <i style="margin-right: 20px">{{w.arrival_time}}</i> {{w.spot_name}}
             </ons-list-item>
           </ons-list>
