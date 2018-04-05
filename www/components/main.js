@@ -141,6 +141,7 @@ ons.bootstrap()
   })
   .service('DataService', function($http) {
     var service = {};
+    var history_separator = "::";
     var spot_for_surroundings = [];
     var response = {};
 
@@ -164,6 +165,7 @@ ons.bootstrap()
     };
 
     service.setHistory = function(spot_name, lang) {
+      var sep = history_separator;
       console.log("@setHistory");
       if(spot_name === TXT[lang].CURRENT_LOCATION_LABEL) {
         return;
@@ -172,24 +174,25 @@ ons.bootstrap()
       if(history == null) {
         localStorage.setItem('history', spot_name);
       } else {
-        history = history.split(',');
+        history = history.split(sep);
         var n = arrayExist(history, spot_name);    
         if(n !== false) {
           history.splice(n, 1);
         }
         history.unshift(spot_name);
-        localStorage.setItem('history', history);
+        localStorage.setItem('history', history.join(sep));
       }
     };
     service.getHistory = function() { //return array
       console.log("@getHistory");
+      var sep = history_separator;
       var history = localStorage.getItem('history');
       if(history == null) {
         console.log('no history');
         return([]);
       } else {
-        console.log('exist history' + history.split(','));
-        return history.split(',');
+        console.log('exist history' + history.split(sep));
+        return history.split(sep);
       } 
     };
 
