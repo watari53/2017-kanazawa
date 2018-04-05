@@ -7,6 +7,8 @@ var SURROUND_SPOT_FILE = {
   "en": "spot-en.json"
 };
 
+var SAMPLE_RESPONSE = "response-location.json";
+
 var TXT = {
   "ja": {
     "APP_NAME"          : "金沢ルート検索",
@@ -212,7 +214,7 @@ ons.bootstrap()
 
     service.postData= function(param) {
       console.log("@postData");
-      console.log(param);
+      var lang = param.lang;
 
        return $http({method: 'POST', url: LAMBDA_URL, data: param}).
         success(function(data, status, headers, config) {
@@ -226,7 +228,7 @@ ons.bootstrap()
         error(function(data, status, headers, config) {
           // エラーが発生、またはサーバからエラーステータスが返された場合に、
           // 非同期で呼び出されます。
-          alert(TXT[$scope.l].CONNECTION_FAILED_MSG);
+          alert(TXT[lang].CONNECTION_FAILED_MSG);
           console.log('data:' + data);
           console.log('status:' + status);
           console.log('headers:' + headers);
@@ -237,7 +239,7 @@ ons.bootstrap()
 
     service.getSampleData = function() {
       console.log("@getSampleData");
-      return $http.get('response.json').
+      return $http.get(SAMPLE_RESPONSE).
         success(function(data) {
           console.log('success read sample data');
         }).
@@ -306,8 +308,10 @@ ons.bootstrap()
                   'Heading: '           + position.coords.heading           + '\n' +
                   'Speed: '             + position.coords.speed             + '\n' +
                   'Timestamp: '         + position.timestamp                + '\n');
-      $scope.location.lat = position.coords.latitude;
-      $scope.location.lng = position.coords.longitude;
+      // $scope.location.lat = position.coords.latitude;
+      // $scope.location.lng = position.coords.longitude;
+      $scope.location.lat = 36.560134;
+      $scope.location.lng = 136.646738;
     };
     // onError Callback receives a PositionError object
     //
@@ -323,14 +327,19 @@ ons.bootstrap()
     };
 
     this.setTime = function() {
-      var time = new Date();
+      var time = $scope.time;
       // Datepicker Same handling for iPhone and Android
       window.plugins.datePicker.show({
           date : time,
           mode : 'time', // date or time or blank for both
           allowOldDates : true
       }, function(returnDate) {
-          var newTime = new Date(returnDate);
+          var newTime = "";
+          if(returnDate === "") {
+            return;
+          } else {
+            newTime = new Date(returnDate);
+          }
           // alert(newTime.toString());
           $scope.time = newTime;
           $scope.$apply();
@@ -358,10 +367,12 @@ ons.bootstrap()
 
     this.go_timeline = function() {
       if($scope.search.src === TXT[$scope.l].DEFAULT_SRC_MSG) {
-        alert(TXT[$scope.l].NO_SRC_MSG);
+        alert(TXT[$scope.l].NO_SRC_MSG);
+
         return;
       }else if($scope.search.dest === TXT[$scope.l].DEFAULT_DEST_MSG) {
-        alert(TXT[$scope.l].NO_DEST_MSG);
+        alert(TXT[$scope.l].NO_DEST_MSG);
+
         return;
       }else if($scope.search.src === $scope.search.dest) {
         alert(TXT[$scope.l].SAME_SRC_DEST_MSG);
@@ -371,7 +382,7 @@ ons.bootstrap()
       var send_data = {
         // "src": "金沢駅(鼓門・もてなしドーム)",
         // "dest" : "金沢21世紀美術館",
-        // "time":"20180325 09:00",
+        // "time":"20180625 09:00",
         "src"     : $scope.search.src, // 現在地 or You Are Here , other spot name
         "dest"    : $scope.search.dest,
         "time"    : moment($scope.time).format("YYYYMMDD HH:mm"),
@@ -472,11 +483,6 @@ ons.bootstrap()
     this.map_text = TXT[$scope.l].MAP_TEXT;
     var waypoint = this.detail.waypoint;
     
-    function getSrcLocation() {
-      // return {name: TXT[$scope.l].DEFAULT_SRC_MSG, lat: 36.578268, lng: 136.648035};
-      return {name: TXT[$scope.l].CURRENT_LOCATION_LABEL, lat: $scope.location.lat, lng: $scope.location.lng};
-    }
-
     this.getTPColor = function(style, tp) {
       var hash = {};
       var color = DecolateService.getTPColor(tp);
@@ -491,11 +497,12 @@ ons.bootstrap()
     // wapoint_index: 0,1,...n
     this.go_map = function(w_index){
       console.log("@go_map");
-      var srcLocation; // {name: spot_name, lat: latitude, lng: longitude}
+      var srcLocation = {}; // {name: spot_name, lat: latitude, lng: longitude}
       var waypoints = [];
       if(w_index === 0) {
         if(this.detail.start.spot_name === TXT[$scope.l].CURRENT_LOCATION_LABEL) {
-          srcLocation = getSrcLocation();
+          srcLocation = {name: TXT[$scope.l].CURRENT_LOCATION_LABEL, lat: $scope.location.lat, lng: $scope.location.lng};
+
         } else {
           var start = this.detail.start;
           srcLocation = {name: start.spot_name, lat: start.lat, lng: start.lng};
