@@ -7,7 +7,7 @@ var SURROUND_SPOT_FILE = {
   "en": "spot-en.json"
 };
 
-var SAMPLE_RESPONSE = "response-location.json";
+var SAMPLE_RESPONSE = "response.json";
 
 var TXT = {
   "ja": {
@@ -273,7 +273,7 @@ ons.bootstrap()
     $scope.type = "start"; // controll default search_type. start or arrive
     $scope.people_n = 1; //default people_n
     $scope.time = new Date();
-    $scope.location = {"lat": 35.681167, "lng": 139.767052};
+    $scope.location = {lat: null, lng: null};
 
     initLang = function(lang) {
       console.log("set lang: " + lang);
@@ -311,10 +311,10 @@ ons.bootstrap()
                   'Heading: '           + position.coords.heading           + '\n' +
                   'Speed: '             + position.coords.speed             + '\n' +
                   'Timestamp: '         + position.timestamp                + '\n');
-      // $scope.location.lat = position.coords.latitude;
-      // $scope.location.lng = position.coords.longitude;
-      $scope.location.lat = 36.560134;
-      $scope.location.lng = 136.646738;
+      $scope.location.lat = position.coords.latitude;
+      $scope.location.lng = position.coords.longitude;
+      // $scope.location.lat = 36.560134;
+      // $scope.location.lng = 136.646738;
     };
     // onError Callback receives a PositionError object
     //

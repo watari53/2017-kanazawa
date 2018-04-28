@@ -1,31 +1,79 @@
 {
     "spotdata": {
-        "21st Century Museum of Contemporary Art, Kanazawa": {
-            "name": "21st Century Museum of Contemporary Art, Kanazawa",
-            "desc": "The 21st Century Museum of Contemporary Art of Kanazawa is located in the center, adjacent to Kenrokuen. It was established with the objective of creation of new culture and creation of bustle of new town. It is a circular building with a glass, aiming at an art museum like a park open to the public that anyone can stop by anytime. There is also a work in the free zone, you can feel it.",
-            "address": "kanazawashihirosaka12",
+        "金沢21世紀美術館": {
+            "name": "金沢21世紀美術館",
+            "desc": "金沢21世紀美術館は、兼六園に隣接し、中心部に位置しています。「新しい文化の創造」と「新たなまちの賑わいの創出」を目的に開設されました。ガラス張りの円形の建物で、誰もがいつでも立ち寄ることができる｢まちに開かれた公園のような美術館｣を目指しています。無料ゾーンにも作品があり、体感することができます。",
+            "address": "金沢市広坂1-2-1",
             "location": [
                 "36.560867",
                 "136.658258"
             ],
-            "open_hours": "Exhibition zone 10: 00 ~ 18: 00 (Gilland is 20: 00 * Ticket sales are 30 minutes before closing) Free zone 9: 00 ~ 22: 00",
-            "fee": "Exhibition zone 10: 00 ~ 18: 00 (Gilland is 20: 00 * Ticket sales are 30 minutes before closing) Free zone 9: 00 ~ 22: 00",
+            "open_hours": "展覧会ゾーン10:00～18:00（金・土は20:00　※チケットの販売は閉場の30分前まで）無料ゾーン9:00～22:00",
+            "fee": "美術館の建物への入館（交流ゾーン）　無料コレクション展　一般　360円、大学生・65歳以上　280円、高校生以下　無料※特別展は展覧会毎に異なります。",
             "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/83"
         },
-        "Kanazawa Station": {
-            "name": "Kanazawa Station",
-            "desc": "The gateway to Kanazawa. In the East Plaza, you can see an umbrella presented to the people visiting Kanazawa, you can see the glass dome hospitality dome representing the heart of hospitality and Hiramen which imaged the drum used for traditional arts.",
-            "address": "kanazawaichikinonibomachi1",
+        "金沢駅(鼓門・もてなしドーム)": {
+            "name": "金沢駅(鼓門・もてなしドーム)",
+            "desc": "金沢の玄関口。東広場では、金沢を訪れる人に差し出す雨傘をイメージし、おもてなしの心を表わしたガラスのドーム「もてなしドーム」や、伝統芸能に使われる鼓をイメージした「鼓門」を見ることができる。",
+            "address": "金沢市木ノ新保町1-1",
             "location": [
                 "36.577912",
                 "136.648904"
             ],
             "open_hours": "",
             "fee": "",
+            "img": "http://open-imagedata.city.kanazawa.ishikawa.jp/image/thumbnail/94"
+        },
+        "金沢駅": {
+            "name": "金沢駅",
+            "desc": "",
+            "address": "",
+            "location": [
+                36.578213,
+                136.649215
+            ],
+            "open_hours": "",
+            "fee": "",
             "img": "dummy"
         },
-        "Kanazawa Station B": {
-            "name": "Kanazawa Station B",
+        "近江町市場": {
+            "name": "近江町市場",
+            "desc": "",
+            "address": "",
+            "location": [
+                36.572169,
+                136.656725
+            ],
+            "open_hours": "",
+            "fee": "",
+            "img": "dummy"
+        },
+        "十間町": {
+            "name": "十間町",
+            "desc": "",
+            "address": "",
+            "location": [
+                36.57061,
+                136.656752
+            ],
+            "open_hours": "",
+            "fee": "",
+            "img": "dummy"
+        },
+        "市役所・21世紀美術館": {
+            "name": "市役所・21世紀美術館",
+            "desc": "",
+            "address": "",
+            "location": [
+                36.561941,
+                136.65819
+            ],
+            "open_hours": "",
+            "fee": "",
+            "img": "dummy"
+        },
+        "金沢駅Ｂ": {
+            "name": "金沢駅Ｂ",
             "desc": "",
             "address": "",
             "location": [
@@ -36,8 +84,8 @@
             "fee": "",
             "img": "dummy"
         },
-        "Hirosaka": {
-            "name": "Hirosaka",
+        "広坂": {
+            "name": "広坂",
             "desc": "",
             "address": "",
             "location": [
@@ -51,50 +99,46 @@
     },
     "timeline": [
         {
-            "start_time": "19:52",
-            "arrival_time": "20:24",
-            "time_required": "32min",
-            "fee": "0yen",
+            "start_time": "08:58",
+            "arrival_time": "09:30",
+            "time_required": "32分",
+            "fee": "0円",
             "transportation": [
                 {
                     "type": "walk",
-                    "text": "Walking"
+                    "service": null,
+                    "text": "徒歩"
                 },
                 {
                     "type": "goal",
-                    "text": "arrival"
+                    "service": null,
+                    "text": "到着"
                 }
             ],
-            "information": [
-                "./images/light_rain.svg"
-            ],
+            "information": [],
             "timeline_detail": {
-                "time_required": "32min",
-                "fee": "0yen",
-                "src": "Kanazawa Station",
-                "dest": "21st Century Museum of Contemporary Art, Kanazawa",
+                "time_required": "32分",
+                "fee": "0円",
+                "src": "金沢駅(鼓門・もてなしドーム)",
+                "dest": "金沢21世紀美術館",
                 "start": {
-                    "spot_name": "Kanazawa Station",
-                    "time": "19:52",
+                    "spot_name": "金沢駅(鼓門・もてなしドーム)",
+                    "time": "08:58",
                     "lat": 36.577912,
                     "lng": 136.648904
                 },
                 "waypoint": [
                     {
-                        "spot_name": "21st Century Museum of Contemporary Art, Kanazawa",
-                        "arrival_time": "20:24",
+                        "spot_name": "金沢21世紀美術館",
+                        "arrival_time": "09:30",
                         "transportation": {
                             "type": "walk",
-                            "text": "Walking"
+                            "service": null,
+                            "text": "徒歩"
                         },
-                        "fee": "0yen",
-                        "information": [
-                            {
-                                "icon": "./images/light_rain.svg",
-                                "text": "light rain"
-                            }
-                        ],
-                        "time_required": "32min",
+                        "fee": "0円",
+                        "information": [],
+                        "time_required": "32分",
                         "lat": 36.560867,
                         "lng": 136.658258
                     }
@@ -105,98 +149,181 @@
             }
         },
         {
-            "start_time": "19:52",
-            "arrival_time": "20:08",
-            "time_required": "16min",
-            "fee": "200yen",
+            "start_time": "08:58",
+            "arrival_time": "09:22",
+            "time_required": "24分",
+            "fee": "200円",
             "transportation": [
                 {
                     "type": "walk",
-                    "text": "Walking"
+                    "service": null,
+                    "text": "徒歩"
                 },
                 {
-                    "type": "bicycle",
-                    "text": "Bicycle"
+                    "type": "bus",
+                    "service": "ふらっとバス",
+                    "text": "此花ルート"
                 },
                 {
                     "type": "walk",
-                    "text": "Walking"
+                    "service": null,
+                    "text": "徒歩"
+                },
+                {
+                    "type": "bus",
+                    "service": "ふらっとバス",
+                    "text": "材木ルート"
+                },
+                {
+                    "type": "walk",
+                    "service": null,
+                    "text": "徒歩"
                 },
                 {
                     "type": "goal",
-                    "text": "arrival"
+                    "service": null,
+                    "text": "到着"
                 }
             ],
-            "information": [
-                "./images/light_rain.svg"
-            ],
+            "information": [],
             "timeline_detail": {
-                "time_required": "16min",
-                "fee": "200yen",
-                "src": "Kanazawa Station",
-                "dest": "21st Century Museum of Contemporary Art, Kanazawa",
+                "time_required": "24分",
+                "fee": "200円",
+                "src": "金沢駅(鼓門・もてなしドーム)",
+                "dest": "金沢21世紀美術館",
                 "start": {
-                    "spot_name": "Kanazawa Station",
-                    "time": "19:52",
+                    "spot_name": "金沢駅(鼓門・もてなしドーム)",
+                    "time": "08:58",
                     "lat": 36.577912,
                     "lng": 136.648904
                 },
                 "waypoint": [
                     {
-                        "spot_name": "Kanazawa Station B",
-                        "arrival_time": "19:56",
+                        "spot_name": "金沢駅",
+                        "arrival_time": "08:58",
                         "transportation": {
                             "type": "walk",
-                            "text": "Walking"
+                            "service": null,
+                            "text": "徒歩"
                         },
-                        "fee": "0yen",
-                        "information": [
-                            {
-                                "icon": "./images/light_rain.svg",
-                                "text": "light rain"
-                            }
-                        ],
-                        "time_required": "4min",
-                        "lat": 36.57707818565,
-                        "lng": 136.64759501065
+                        "fee": "0円",
+                        "information": [],
+                        "time_required": "0分",
+                        "lat": 36.578213,
+                        "lng": 136.649215
                     },
                     {
-                        "spot_name": "Hirosaka",
-                        "arrival_time": "20:07",
+                        "spot_name": "近江町市場",
+                        "arrival_time": "9:07",
                         "transportation": {
-                            "type": "bicycle",
-                            "text": "Bicycle"
+                            "type": "bus",
+                            "service": "ふらっとバス",
+                            "text": "此花ルート"
                         },
-                        "fee": "200yen",
-                        "information": [
+                        "fee": "100円",
+                        "information": [],
+                        "time_required": "8分",
+                        "lat": 36.572169,
+                        "lng": 136.656725,
+                        "passed_bus_stop": [
                             {
-                                "icon": "./images/bicycle.svg",
-                                "text": "20 remaining"
+                                "spot_name": "金沢駅東",
+                                "lat": 36.577378,
+                                "lng": 136.650288
                             },
                             {
-                                "icon": "./images/light_rain.svg",
-                                "text": "light rain"
+                                "spot_name": "別院通り口",
+                                "lat": 36.576566,
+                                "lng": 136.652152
+                            },
+                            {
+                                "spot_name": "別院通り",
+                                "lat": 36.576482,
+                                "lng": 136.653992
+                            },
+                            {
+                                "spot_name": "東別院表参道口",
+                                "lat": 36.575853,
+                                "lng": 136.655792
+                            },
+                            {
+                                "spot_name": "東別院",
+                                "lat": 36.574356,
+                                "lng": 136.655559
+                            },
+                            {
+                                "spot_name": "武蔵ヶ辻",
+                                "lat": 36.572852,
+                                "lng": 136.655368
                             }
-                        ],
-                        "time_required": "11min",
-                        "lat": 36.561412,
-                        "lng": 136.657436
+                        ]
                     },
                     {
-                        "spot_name": "21st Century Museum of Contemporary Art, Kanazawa",
-                        "arrival_time": "20:08",
+                        "spot_name": "十間町",
+                        "arrival_time": "9:17",
                         "transportation": {
                             "type": "walk",
-                            "text": "Walking"
+                            "service": null,
+                            "text": "徒歩"
                         },
-                        "fee": "0yen",
-                        "information": [
+                        "fee": "0円",
+                        "information": [],
+                        "time_required": "10分",
+                        "lat": 36.57061,
+                        "lng": 136.656752
+                    },
+                    {
+                        "spot_name": "市役所・21世紀美術館",
+                        "arrival_time": "9:28",
+                        "transportation": {
+                            "type": "bus",
+                            "service": "ふらっとバス",
+                            "text": "材木ルート"
+                        },
+                        "fee": "100円",
+                        "information": [],
+                        "time_required": "11分",
+                        "lat": 36.561941,
+                        "lng": 136.65819,
+                        "passed_bus_stop": [
                             {
-                                "icon": "./images/light_rain.svg",
-                                "text": "light rain"
+                                "spot_name": "大手町",
+                                "lat": 36.570054,
+                                "lng": 136.66032
+                            },
+                            {
+                                "spot_name": "大手門前",
+                                "lat": 36.56936,
+                                "lng": 136.661127
+                            },
+                            {
+                                "spot_name": "大手堀",
+                                "lat": 36.568901,
+                                "lng": 136.659142
+                            },
+                            {
+                                "spot_name": "商工会議所",
+                                "lat": 36.566902,
+                                "lng": 136.656554
+                            },
+                            {
+                                "spot_name": "香林坊・仙石通り",
+                                "lat": 36.563117,
+                                "lng": 136.654596
                             }
-                        ],
-                        "time_required": "1min",
+                        ]
+                    },
+                    {
+                        "spot_name": "金沢21世紀美術館",
+                        "arrival_time": "09:22",
+                        "transportation": {
+                            "type": "walk",
+                            "service": null,
+                            "text": "徒歩"
+                        },
+                        "fee": "0円",
+                        "information": [],
+                        "time_required": "54分",
                         "lat": 36.560867,
                         "lng": 136.658258
                     }
@@ -204,6 +331,97 @@
             },
             "feature": {
                 "fast": true
+            }
+        },
+        {
+            "start_time": "09:16",
+            "arrival_time": "9:30",
+            "time_required": "14分",
+            "fee": "400円",
+            "transportation": [
+                {
+                    "type": "walk",
+                    "text": "徒歩"
+                },
+                {
+                    "type": "bicycle",
+                    "text": "自転車"
+                },
+                {
+                    "type": "walk",
+                    "text": "徒歩"
+                },
+                {
+                    "type": "goal",
+                    "text": "到着"
+                }
+            ],
+            "information": [
+                "./images/may_no_bicycle.svg"
+            ],
+            "timeline_detail": {
+                "time_required": "14分",
+                "fee": "400円",
+                "src": "金沢駅(鼓門・もてなしドーム)",
+                "dest": "金沢21世紀美術館",
+                "start": {
+                    "spot_name": "金沢駅(鼓門・もてなしドーム)",
+                    "time": "09:16",
+                    "lat": 36.577912,
+                    "lng": 136.648904
+                },
+                "waypoint": [
+                    {
+                        "spot_name": "金沢駅Ｂ",
+                        "arrival_time": "9:19",
+                        "transportation": {
+                            "type": "walk",
+                            "service": null,
+                            "text": "徒歩"
+                        },
+                        "fee": "0円",
+                        "information": [],
+                        "time_required": "3分",
+                        "lat": 36.57707818565,
+                        "lng": 136.64759501065
+                    },
+                    {
+                        "spot_name": "広坂",
+                        "arrival_time": "9:28",
+                        "transportation": {
+                            "type": "bicycle",
+                            "service": "まちのり",
+                            "text": "自転車"
+                        },
+                        "fee": "400円",
+                        "information": [
+                            {
+                                "icon": "./images/may_no_bicycle.svg",
+                                "text": "残り0台"
+                            }
+                        ],
+                        "time_required": "9分",
+                        "lat": 36.561412,
+                        "lng": 136.657436
+                    },
+                    {
+                        "spot_name": "金沢21世紀美術館",
+                        "arrival_time": "9:30",
+                        "transportation": {
+                            "type": "walk",
+                            "service": null,
+                            "text": "徒歩"
+                        },
+                        "fee": "0円",
+                        "information": [],
+                        "time_required": "2分",
+                        "lat": 36.560867,
+                        "lng": 136.658258
+                    }
+                ]
+            },
+            "feature": {
+                "fast": false
             }
         }
     ]

@@ -319,7 +319,10 @@
 
             <ons-col style="padding: 15px 30px">
               <div style="min-height: 45px">
-                {{w.transportation.text}}
+                <div style="float: left">
+                  <i ng-show="w.transportation.service">{{w.transportation.service}}<br></i>
+                  <i>{{w.transportation.text}}</i>
+                </div>
                 <div style="float: right">
                   <ons-button ng-click="td.go_map($index)" style="background-color: #fd814a">
                     <ons-icon icon="map"></ons-icon>
