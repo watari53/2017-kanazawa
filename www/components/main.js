@@ -11,7 +11,7 @@ var SAMPLE_RESPONSE = "response.json";
 
 var TXT = {
   "ja": {
-    "APP_NAME"          : "金沢ルート検索",
+    "APP_NAME"          : "金沢乗換ナビ",
     "SRC_TEXT"          : "出発",
     "DEST_TEXT"         : "到着",
     "SHORT_SRC_TEXT"    : "発",
@@ -43,7 +43,7 @@ var TXT = {
     "SPOT_LABEL" : {"addr": "住所", "open": "営業時間", "fee": "料金", "desc": "概要"},
   },
   "en": {
-    "APP_NAME"          : "Kanazawa Route Search",
+    "APP_NAME"          : "Kanazawa Transfer Navi",
     "SRC_TEXT"          : "Depart",
     "DEST_TEXT"         : "Arrive",
     "SHORT_SRC_TEXT"    : "D",
