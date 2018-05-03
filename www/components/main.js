@@ -77,6 +77,7 @@ var TXT = {
   }
 };
 
+var HISTORY_KEY = {"ja": "history_ja", "en": "history_en"};
 var TRANSPORTATION = {"walk": true, "bicycle": true, "bus": true};
 
 var TP_ICON  = {walk: "fa-blind", bicycle: "fa-bicycle", bus: "fa-bus", goal: "fa-flag-o"};
@@ -166,13 +167,14 @@ ons.bootstrap()
 
     service.setHistory = function(spot_name, lang) {
       var sep = history_separator;
-      console.log("@setHistory");
+      var key = HISTORY_KEY[lang];
+      console.log("@setHistory: key is " + key);
       if(spot_name === TXT[lang].CURRENT_LOCATION_LABEL) {
         return;
       }
-      var history = localStorage.getItem('history');
+      var history = localStorage.getItem(key);
       if(history == null) {
-        localStorage.setItem('history', spot_name);
+        localStorage.setItem(key, spot_name);
       } else {
         history = history.split(sep);
         var n = arrayExist(history, spot_name);    
@@ -180,13 +182,14 @@ ons.bootstrap()
           history.splice(n, 1);
         }
         history.unshift(spot_name);
-        localStorage.setItem('history', history.join(sep));
+        localStorage.setItem(key, history.join(sep));
       }
     };
-    service.getHistory = function() { //return array
-      console.log("@getHistory");
+    service.getHistory = function(lang) { //return array
       var sep = history_separator;
-      var history = localStorage.getItem('history');
+      var key = HISTORY_KEY[lang];
+      console.log("@getHistory: key is" + key);
+      var history = localStorage.getItem(key);
       if(history == null) {
         console.log('no history');
         return([]);
@@ -432,7 +435,7 @@ ons.bootstrap()
 
     console.log("set data");
     this.surroundings = DataService.getSurroundings(search_type, $scope.location, $scope.l);
-    this.history = DataService.getHistory();
+    this.history = DataService.getHistory($scope.l);
 
     console.log("toggle view");
     this.changeView = function() {
