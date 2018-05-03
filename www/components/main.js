@@ -303,14 +303,14 @@ ons.bootstrap()
     // current GPS coordinates
     //
     var onSuccess = function(position) {
-      console.log('Latitude: '          + position.coords.latitude          + '\n' +
-                  'Longitude: '         + position.coords.longitude         + '\n' +
-                  'Altitude: '          + position.coords.altitude          + '\n' +
-                  'Accuracy: '          + position.coords.accuracy          + '\n' +
-                  'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-                  'Heading: '           + position.coords.heading           + '\n' +
-                  'Speed: '             + position.coords.speed             + '\n' +
-                  'Timestamp: '         + position.timestamp                + '\n');
+      // console.log('Latitude: '          + position.coords.latitude          + '\n' +
+      //             'Longitude: '         + position.coords.longitude         + '\n' +
+      //             'Altitude: '          + position.coords.altitude          + '\n' +
+      //             'Accuracy: '          + position.coords.accuracy          + '\n' +
+      //             'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+      //             'Heading: '           + position.coords.heading           + '\n' +
+      //             'Speed: '             + position.coords.speed             + '\n' +
+      //             'Timestamp: '         + position.timestamp                + '\n');
       $scope.location.lat = position.coords.latitude;
       $scope.location.lng = position.coords.longitude;
       // $scope.location.lat = 36.560134;
@@ -347,6 +347,10 @@ ons.bootstrap()
           $scope.time = newTime;
           $scope.$apply();
       });
+    };
+    
+    this.addition_subtraction = function(n) {
+      $scope.people_n = $scope.people_n + n;
     };
 
     changeLang = function(e) {
@@ -393,6 +397,7 @@ ons.bootstrap()
         "people_n": $scope.people_n,
         "lang"    : $scope.l        
       };
+      console.log("send_data: "+ JSON.stringify(send_data));
       if($scope.search.src == TXT[$scope.l].CURRENT_LOCATION_LABEL) {
         send_data.lat = $scope.location.lat;
         send_data.lng= $scope.location.lng;
@@ -462,6 +467,7 @@ ons.bootstrap()
     this.src         = $scope.search.src;
     this.dest        = $scope.search.dest;
     this.people_n    = $scope.people_n;
+    console.log($scope.people_n);
     this.fast_text   = TXT[$scope.l].FAST_TEXT;
     this.timeline      = data.timeline;
 

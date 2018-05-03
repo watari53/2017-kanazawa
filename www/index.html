@@ -85,9 +85,9 @@
               <span style="margin-right: 10px">{{pelple_label}}：</span>{{people_n}}{{p_unit}}
             </div>
             <div class="list-item__right">
-              <button ng-click="people_n=people_n-1" class="fab fab--material fab--mini" ng-disabled="people_n==1"><i class="zmdi zmdi-minus"></i></button>
+              <button ng-click="app.addition_subtraction(-1)" class="fab fab--material fab--mini" ng-disabled="people_n==1"><i class="zmdi zmdi-minus"></i></button>
               <i style="width: 5px"></i>
-              <button ng-click="people_n=people_n+1" class="fab fab--material fab--mini"><i class="zmdi zmdi-plus"></i></button>
+              <button ng-click="app.addition_subtraction(1)" class="fab fab--material fab--mini"><i class="zmdi zmdi-plus"></i></button>
             </div>
           </li>
         </ul>
