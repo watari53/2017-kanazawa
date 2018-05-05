@@ -174,7 +174,7 @@
               <div class="spot_name">{{i.spot_name}}</div>
             </div>
             <div class="sc-list__item__right">
-              <div class="distance">{{i.distance}}km</div>
+              <div class="distance">{{sc.roundDistance(i.distance)}}</div>
             </div>
           </ons-list-item>
         </ons-list>
@@ -305,18 +305,18 @@
 
         <div ng-repeat="w in td.detail.waypoint">
           <ons-row>
-            <ons-col width="42px" class="plan-left">
-              <div style="text-align: center; display: flex; align-items: center; width: 42px; height: 100%; font-size: 110%">
-                <div style="position: relative; z-index: 1; left: 24px; background-color: white; height: 33px; width: 42px; padding: 5px; border: 1px solid">
+            <ons-col style="text-align: center; position: relative; font-size: 110%" width="42px" class="plan-left">
+              <div style="position: relative; z-index: 1; position: absolute; top: 50%; left: 45px; transform: translate(-50%, -50%); background-color: white; height: 42px; width: 42px; padding: 2px; border: 1px solid; border-radius: 24px; display: table;" ng-style='td.getTPColor("border-color", w.transportation)'>
+                <div style="display: table-cell; vertical-align: middle">
                   <ons-icon ng-style='td.getTPColor("color", w.transportation)' icon="{{td.getTPIcon(w.transportation)}}"></ons-icon>
-                  <div style="font-size: 65%">{{w.time_required}}</div>
+                  <div style="margin-top: 2px; font-size: 65%">{{w.time_required}}</div>
                 </div>
               </div>
             </ons-col>
 
             <ons-col width="6px" class="plan-center" ng-style='td.getTPColor("background-color", w.transportation)'>
             </ons-col>
-
+            
             <ons-col style="padding: 15px 30px">
               <div style="min-height: 45px">
                 <div style="float: left">

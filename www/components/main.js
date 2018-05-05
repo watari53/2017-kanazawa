@@ -43,7 +43,7 @@ var TXT = {
     "SPOT_LABEL" : {"addr": "住所", "open": "営業時間", "fee": "料金", "desc": "概要"},
   },
   "en": {
-    "APP_NAME"          : "Kanazawa Transfer Navi",
+    "APP_NAME"          : "Kanazawa NAVI",
     "SRC_TEXT"          : "Depart",
     "DEST_TEXT"         : "Arrive",
     "SHORT_SRC_TEXT"    : "D",
@@ -53,7 +53,6 @@ var TXT = {
     "SEARCH_CTR_TITLE"  : {"src": "Departure", "dest": "Destination"},
     "SEACH_INPUT_LABEL" : {"src": "input Departure", "dest": "input Destination"},
     "NO_SRC_MSG"        : "Please Select Departure",
-
     "NO_DEST_MSG"       : "Please Select Destination.",
     "SAME_SRC_DEST_MSG" : "src and dest is same.",
     "CONNECTION_FAILED_MSG": "connection failed",
@@ -85,6 +84,7 @@ var TP_COLOR = {
                   walk:    "#778899",
                   bicycle: "#a6cf22",
                   bus: {
+                    //ふらっとバス
                     "此花ルート": "#1e1e6a",
                     "Konohana route": "#1e1e6a",
                     "菊川ルート": "#821721",
@@ -93,6 +93,13 @@ var TP_COLOR = {
                     "Zaimoku route": "#0b6d34",
                     "長町ルート": "#b17117",
                     "Nagamachi route": "#b17117",
+                    "兼六園シャトル": "#7d042f",
+                    "KENROKUEN SHUTTLE": "#7d042f",
+                    //城下町周遊バス
+                    "右回りルート": "#d56c17",
+                    "Right Loop": "#d56c17",
+                    "左回りルート": "#388a34",
+                    "Left Loop": "#388a34",
                   },
                   goal:    "black",
                };
@@ -155,10 +162,9 @@ ons.bootstrap()
         surroundings.unshift({spot_name: TXT[lang].CURRENT_LOCATION_LABEL, distance: 0});
       };
       angular.forEach(spots, function(spot, i) {
-        if (location != null) {
-          var distance = getDistance(location.lat, location.lng, spot.lat, spot.lng).toPrecision(2);
-        } else {
-          var distance = "-";
+        var distance = "-";
+        if (location != null) { // if gps enabled
+          var distance = getDistance(location.lat, location.lng, spot.lat, spot.lng);
         }
         surroundings.push({spot_name: spot.spot_name, distance: distance});
       });
@@ -187,7 +193,8 @@ ons.bootstrap()
     };
     service.getHistory = function(lang) { //return array
       var sep = history_separator;
-      var key = HISTORY_KEY[lang];
+      var key = HISTORY_KEY[lang];
+
       console.log("@getHistory: key is" + key);
       var history = localStorage.getItem(key);
       if(history == null) {
@@ -316,8 +323,8 @@ ons.bootstrap()
       //             'Timestamp: '         + position.timestamp                + '\n');
       $scope.location.lat = position.coords.latitude;
       $scope.location.lng = position.coords.longitude;
-      // $scope.location.lat = 36.560134;
-      // $scope.location.lng = 136.646738;
+      // $scope.location.lat = 36.558945;
+      // $scope.location.lng = 136.652489;
     };
     // onError Callback receives a PositionError object
     //
@@ -405,8 +412,8 @@ ons.bootstrap()
         send_data.lat = $scope.location.lat;
         send_data.lng= $scope.location.lng;
       }
-      // promise = DataService.postData(send_data);
-      promise = DataService.getSampleData();
+      promise = DataService.postData(send_data);
+      // promise = DataService.getSampleData();
       promise.then(function(response){
         setTimeout(function() {
           DataService.setResponse(response.data);
@@ -455,6 +462,17 @@ ons.bootstrap()
       $scope.search[search_type] = spot_name;
       DataService.setHistory(spot_name, $scope.l);
       navi.popPage();
+    };
+    
+    this.roundDistance = function(dist) {
+      if (dist < 1) {
+        var d = (dist*100).toPrecision(2);
+        return d + "m";
+      } else if(dist < 10){
+        return dist.ToPrecision(2) + "km";
+      } else {
+        return "+10km";
+      }
     };
   })
   .controller('TimeLineController', function($scope, DecolateService, DataService) {
