@@ -1,4 +1,5 @@
 // // use in index.html
+var DEVICE_ID = "";
 var LANG = "ja"; // default lang, or en
 var LAMBDA_URL = "https://g336ju2rsd.execute-api.us-east-2.amazonaws.com/hello/hello-world";
 var LANG_SET = [{label: "日本語", value: "ja"}, {label: "English", value: "en"}];
@@ -201,7 +202,7 @@ ons.bootstrap()
         console.log('no history');
         return([]);
       } else {
-        console.log('exist history' + history.split(sep));
+        console.log('exist history');
         return history.split(sep);
       } 
     };
@@ -232,21 +233,21 @@ ons.bootstrap()
        return $http({method: 'POST', url: LAMBDA_URL, data: param}).
         success(function(data, status, headers, config) {
           // レスポンスが有効の場合に、非同期で呼び出されるコールバックです。
-          console.log('success post data');
-          console.log('data:' + data);
-          console.log('status:' + status);
-          console.log('headers:' + headers);
-          console.log('config:' + config);
+          // console.log('success post data');
+          // console.log('data:' + data);
+          // console.log('status:' + status);
+          // console.log('headers:' + headers);
+          // console.log('config:' + config);
         }).
         error(function(data, status, headers, config) {
           // エラーが発生、またはサーバからエラーステータスが返された場合に、
           // 非同期で呼び出されます。
           alert(TXT[lang].CONNECTION_FAILED_MSG);
-          console.log('data:' + data);
-          console.log('status:' + status);
-          console.log('headers:' + headers);
-          console.log('config:' + config);
-          console.log("Error Code: 0");
+          // console.log('data:' + data);
+          // console.log('status:' + status);
+          // console.log('headers:' + headers);
+          // console.log('config:' + config);
+          // console.log("Error Code: 0");
         });
     };
 
@@ -400,12 +401,13 @@ ons.bootstrap()
         // "src": "金沢駅(鼓門・もてなしドーム)",
         // "dest" : "金沢21世紀美術館",
         // "time":"20180625 09:00",
-        "src"     : $scope.search.src, // 現在地 or You Are Here , other spot name
-        "dest"    : $scope.search.dest,
-        "time"    : moment($scope.time).format("YYYYMMDD HH:mm"),
-        "mode"    : $scope.type,
-        "people_n": $scope.people_n,
-        "lang"    : $scope.l        
+        "user_id": DEVICE_ID,
+        "src"      : $scope.search.src, // 現在地 or You Are Here , other spot name
+        "dest"     : $scope.search.dest,
+        "time"     : moment($scope.time).format("YYYYMMDD HH:mm"),
+        "mode"     : $scope.type,
+        "people_n" : $scope.people_n,
+        "lang"     : $scope.l        
       };
       console.log("send_data: "+ JSON.stringify(send_data));
       if($scope.search.src == TXT[$scope.l].CURRENT_LOCATION_LABEL) {
@@ -488,7 +490,6 @@ ons.bootstrap()
     this.src         = $scope.search.src;
     this.dest        = $scope.search.dest;
     this.people_n    = $scope.people_n;
-    console.log($scope.people_n);
     this.fast_text   = TXT[$scope.l].FAST_TEXT;
     this.timeline      = data.timeline;
 
@@ -539,14 +540,14 @@ ons.bootstrap()
         }
       } else {
         var i = w_index - 1;
-        console.log("SRC: waypoint["+ i + "]:" + JSON.stringify(waypoint[i]));
+        // console.log("SRC: waypoint["+ i + "]:" + JSON.stringify(waypoint[i]));
         srcLocation = {name: waypoint[i].spot_name, lat: waypoint[i].lat, lng: waypoint[i].lng};
       }
-      console.log("DEST: waypoint["+ w_index + "]:" + JSON.stringify(waypoint[w_index]));
+      // console.log("DEST: waypoint["+ w_index + "]:" + JSON.stringify(waypoint[w_index]));
       var destLocation = {name: waypoint[w_index].spot_name, lat: waypoint[w_index].lat, lng: waypoint[w_index].lng};
       if(waypoint[w_index].transportation.type === "bus") {
         waypoints = waypoint[w_index].passed_bus_stop;
-        console.log("type is bus, num of bus stop is : " + waypoints.length);
+        // console.log("type is bus, num of bus stop is : " + waypoints.length);
       }
       navi.pushPage('map.html', {data: {src: srcLocation, dest: destLocation, waypoints: waypoints}});
     };
@@ -563,9 +564,9 @@ ons.bootstrap()
     var waypoints = [];
     var w = navi.topPage.data.waypoints;
     this.map_url = "http://maps.google.com/maps?saddr=" + srcLatLng.lat + "," + srcLatLng.lng + "&daddr=" + destLatLng.lat + "," + destLatLng.lng;
-    console.log("waypoint: " + w.length + ":" + JSON.stringify(w));
-    console.log(srcLatLng.name +","+ srcLatLng.lat + ","+ srcLatLng.lng);
-    console.log(destLatLng.name +","+ destLatLng.lat+ ","+ destLatLng.lng);
+    // console.log("waypoint: " + w.length + ":" + JSON.stringify(w));
+    // console.log(srcLatLng.name +","+ srcLatLng.lat + ","+ srcLatLng.lng);
+    // console.log(destLatLng.name +","+ destLatLng.lat+ ","+ destLatLng.lng);
     
     if(8 < w.length ) {
       console.log("exceed max of waypoint");
@@ -575,7 +576,7 @@ ons.bootstrap()
         waypoints.push({location: new google.maps.LatLng(p.lat, p.lng)});
       });      
       console.log("done create waypoints");
-      console.log(JSON.stringify(waypoints));
+      // console.log(JSON.stringify(waypoints));
     }
     //Google mapの設定
     var directionsService = new google.maps.DirectionsService;
@@ -606,7 +607,7 @@ ons.bootstrap()
         if (status == 'OK') {
           directionsDisplay.setDirections(response);
         } else {
-          window.alert(TXT[$scope.l].CONNECTION_FAILED_MSG + ': code: ' + status);
+          alert(TXT[$scope.l].CONNECTION_FAILED_MSG + ': code: ' + status);
         }
       });
     }
@@ -620,13 +621,15 @@ ons.bootstrap()
     console.log("@SpotController");
     this.label = TXT[$scope.l].SPOT_LABEL;
     var spot_name = navi.topPage.data.spot_name;
-    console.log(spot_name);
     this.data = DataService.getSpotData(spot_name);
-    console.log(this.data);
   });
 ons.ready(function() {
-  console.log("Onsen UI is ready!");
+  monaca.getDeviceId(function(id){
+     DEVICE_ID = id;
+     console.log('Device ID: ' + DEVICE_ID);
+  });
   ons.platform.select('android');
+  console.log("Onsen UI is ready!");
 });
 
 
