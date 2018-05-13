@@ -41,6 +41,8 @@ var TXT = {
     "TIMELINE_TITLE": "経路一覧",
     "TIMELINE_DETAIL_TITLE" : "経路詳細",
     "MAP_TEXT": "地図",
+    "NEXT_TRANSIT"     : "次の一本",
+    "PREVIOUS_TRANSIT" : "前の一本",
     "SPOT_LABEL" : {"addr": "住所", "open": "営業時間", "fee": "料金", "desc": "概要"},
   },
   "en": {
@@ -73,6 +75,8 @@ var TXT = {
     "TIMELINE_TITLE": "Routes",
     "TIMELINE_DETAIL_TITLE" : "Detail",
     "MAP_TEXT": "Map",
+    "NEXT_TRANSIT"     : "One Later",
+    "PREVIOUS_TRANSIT" : "One Earlier",
     "SPOT_LABEL" : {"addr": "Address", "open": "Open hour", "fee": "Fee", "desc": "Description"},
   }
 };
@@ -269,7 +273,7 @@ ons.bootstrap()
 
     service.getResponse = function() {
       console.log("@getResponse");
-      console.log(response);
+      console.log(JSON.stringify(response));
       return response;
     };
 
@@ -409,11 +413,11 @@ ons.bootstrap()
         "people_n" : $scope.people_n,
         "lang"     : $scope.l        
       };
-      console.log("send_data: "+ JSON.stringify(send_data));
       if($scope.search.src == TXT[$scope.l].CURRENT_LOCATION_LABEL) {
         send_data.lat = $scope.location.lat;
         send_data.lng= $scope.location.lng;
       }
+      console.log("send_data: "+ JSON.stringify(send_data));
       promise = DataService.postData(send_data);
       // promise = DataService.getSampleData();
       promise.then(function(response){
@@ -423,7 +427,7 @@ ons.bootstrap()
           navi.pushPage('timeline.html', {data: {response: response.data}});
         }, 1500);          
       }).catch(function(e) {
-        alert(TXT[$scope.l].CONNECTION_FAILED_MSG);
+        console.log("Get Error");
         modal.hide();
       });
     };
@@ -509,10 +513,13 @@ ons.bootstrap()
     };
   })
   .controller('TimeLineDetailController', function($scope, DecolateService, DataService) {
-    this.title = TXT[$scope.l].TIMELINE_DETAIL_TITLE;
-    this.detail = navi.topPage.data.timeline_detail;
-    this.map_text = TXT[$scope.l].MAP_TEXT;
-    var waypoint = this.detail.waypoint;
+    var timeline_detail = navi.topPage.data.timeline_detail;
+    this.detail         = timeline_detail;
+    this.title          = TXT[$scope.l].TIMELINE_DETAIL_TITLE;
+    this.map_text       = TXT[$scope.l].MAP_TEXT;
+    this.next_label     = TXT[$scope.l].NEXT_TRANSIT;
+    this.previous_label = TXT[$scope.l].PREVIOUS_TRANSIT;
+    // var waypoint = this.detail.waypoint;
     
     this.getTPColor = function(style, tp) {
       var hash = {};
@@ -551,7 +558,74 @@ ons.bootstrap()
       }
       navi.pushPage('map.html', {data: {src: srcLocation, dest: destLocation, waypoints: waypoints}});
     };
+    
+    this.is_contain_bus = function() {
+      var flag = false;
+      angular.forEach(this.detail.waypoint, function(w, i) {
+        if(w.transportation.type === "bus") {
+          flag = true;
+        }
+      });
+      return flag;
+    };
+    
+    function get_first_bus_time() {
+      var w = timeline_detail.waypoint;
+      var bus_arrival_time = "";
+      var ret = {
+        "bus_arrival_time": "",
+        "bus_line"        : ""
+      };
+      for(i = 0; i < w.length; i++) {
+        if(w[i].transportation.type === "bus") {
+          ret.bus_arrival_time = w[i-1].arrival_time;
+          ret.bus_line = w[i].transportation.text;
+          console.log(bus_arrival_time);
+          break;
+        }
+      }
+      return ret;
+    }
+    
+    this.search_before_and_after = function(type) {
+      var search_type = type;
+      var bus_param = get_first_bus_time();
+      modal.show();
+      var send_data = {
+        // "src": "金沢駅(鼓門・もてなしドーム)",
+        // "dest" : "金沢21世紀美術館",
+        // "time":"20180625 09:00",
+        "user_id": DEVICE_ID,
+        "src"      : $scope.search.src, // 現在地 or You Are Here , other spot name
+        "dest"     : $scope.search.dest,
+        "time"     : moment($scope.time).format("YYYYMMDD HH:mm"),
+        "mode"     : $scope.type,
+        "people_n" : $scope.people_n,
+        "lang"     : $scope.l,
+        // next or previous bus search
+        "search_type" : search_type,
+        "bus_line" : bus_param.bus_line, // waypoint.text,
+        "first_take_on_time": bus_param.bus_arrival_time, //バス出発時刻
+      };
+      if($scope.search.src == TXT[$scope.l].CURRENT_LOCATION_LABEL) {
+        send_data.lat = $scope.location.lat;
+        send_data.lng= $scope.location.lng;
+      }
+      console.log("send_data: "+ JSON.stringify(send_data));
 
+      promise = DataService.postData(send_data);
+      // promise = DataService.getSampleData();
+      promise.then(function(response){
+        setTimeout(function() {
+          DataService.setResponse(response.data);
+          modal.hide();
+          navi.pushPage('timeline.html', {data: {response: response.data}});
+        }, 1500);          
+      }).catch(function(e) {
+        modal.hide();
+      });
+    };
+    
     this.go_spot = function(spot_name) {
       navi.pushPage('spot.html', {data: {spot_name: spot_name}});
     };
@@ -625,7 +699,8 @@ ons.bootstrap()
   });
 ons.ready(function() {
   monaca.getDeviceId(function(id){
-     DEVICE_ID = id;
+     DEVICE_ID = id;
+
      console.log('Device ID: ' + DEVICE_ID);
   });
   ons.platform.select('android');

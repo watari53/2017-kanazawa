@@ -54,7 +54,7 @@
         <div class="list list--inset" style="text-align: center;">
           <div ng-click="app.setTime()" class="list--inset__item list-item--tappable input-area" style="display: flex;justify-content: center;align-items: center;">
               <ons-icon style="margin-right: 5px" icon="fa-clock-o"></ons-icon>
-              {{time | date: "M/d （EEE）a hh:mm"}}
+              {{time | date: "M/d （EEE）HH:mm"}}
           </div>
         </div>
 
@@ -350,6 +350,21 @@
             </ons-list-item>
           </ons-list>
         </div>
+      </section>
+      
+      <section ng-show="td.is_contain_bus()" style="margin-bottom: 20px">
+        <ons-row  style="text-align: center">
+          <ons-col style="padding: 10px">
+            <ons-button style="background-color: gray" modifier="large" ng-click='td.search_before_and_after("previous")'>
+              <ons-icon style="color: white; margin-right: 10px" icon="fa-long-arrow-left"></ons-icon>{{td.previous_label}}
+            </ons-button>
+          </ons-col>
+          <ons-col style="padding: 10px">
+            <ons-button style="background-color: gray" modifier="large" ng-click='td.search_before_and_after("next")' ng-click='td.search_before_and_after("next")'>
+              {{td.next_label}}<ons-icon style="color: white; margin-left: 10px" icon="fa-long-arrow-right"></ons-icon>
+            </ons-button>
+          </ons-col>
+        </ons-row>
       </section>
 
     </ons-page>
