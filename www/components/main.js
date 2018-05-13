@@ -41,8 +41,8 @@ var TXT = {
     "TIMELINE_TITLE": "経路一覧",
     "TIMELINE_DETAIL_TITLE" : "経路詳細",
     "MAP_TEXT": "地図",
-    "NEXT_TRANSIT"     : "次の一本",
-    "PREVIOUS_TRANSIT" : "前の一本",
+    "NEXT_TRANSIT"     : "この後のバス",
+    "PREVIOUS_TRANSIT" : "この前のバス",
     "SPOT_LABEL" : {"addr": "住所", "open": "営業時間", "fee": "料金", "desc": "概要"},
   },
   "en": {
@@ -75,8 +75,8 @@ var TXT = {
     "TIMELINE_TITLE": "Routes",
     "TIMELINE_DETAIL_TITLE" : "Detail",
     "MAP_TEXT": "Map",
-    "NEXT_TRANSIT"     : "One Later",
-    "PREVIOUS_TRANSIT" : "One Earlier",
+    "NEXT_TRANSIT"     : "Later",
+    "PREVIOUS_TRANSIT" : "Earlier",
     "SPOT_LABEL" : {"addr": "Address", "open": "Open hour", "fee": "Fee", "desc": "Description"},
   }
 };
@@ -417,7 +417,8 @@ ons.bootstrap()
         send_data.lat = $scope.location.lat;
         send_data.lng= $scope.location.lng;
       }
-      console.log("send_data: "+ JSON.stringify(send_data));
+      console.log("send_data: "+ JSON.stringify(send_data));
+
       promise = DataService.postData(send_data);
       // promise = DataService.getSampleData();
       promise.then(function(response){
@@ -519,6 +520,8 @@ ons.bootstrap()
     this.map_text       = TXT[$scope.l].MAP_TEXT;
     this.next_label     = TXT[$scope.l].NEXT_TRANSIT;
     this.previous_label = TXT[$scope.l].PREVIOUS_TRANSIT;
+    this.short_src_text = TXT[$scope.l].SHORT_SRC_TEXT;
+    this.short_dest_text = TXT[$scope.l].SHORT_DEST_TEXT;
     // var waypoint = this.detail.waypoint;
     
     this.getTPColor = function(style, tp) {

@@ -10,16 +10,7 @@
             "monaca-plugin-datepicker": {},
             "cordova-plugin-geolocation": {},
             "cordova-plugin-dialogs": {},
-            "cordova-plugin-statusbar": {},
-            "cordova-plugin-themeablebrowser": {},
-            "cordova-plugin-firebase": {},
-            "cordova-plugin-google-analytics": {},
-            "cordova-plugin-googlemaps": {},
-            "cordova-plugin-camera-preview": {},
-            "cordova-plugin-x-socialsharing": {},
-            "cordova-plugin-customurlscheme": {},
-            "cordova-plugin-local-notification": {},
-            "cordova-plugin-image-picker": {}
+            "cordova-plugin-statusbar": {}
         }
     },
     "dependencies": {
@@ -31,15 +22,6 @@
         "monaca-plugin-datepicker": "1.0.1",
         "cordova-plugin-geolocation": "4.0.1",
         "cordova-plugin-dialogs": "git+https:\/\/github.com\/apache\/cordova-plugin-dialogs",
-        "cordova-plugin-statusbar": "git+https:\/\/github.com\/apache\/cordova-plugin-statusbar",
-        "cordova-plugin-themeablebrowser": "git+https:\/\/github.com\/initialxy\/cordova-plugin-themeablebrowser",
-        "cordova-plugin-firebase": "git+https:\/\/github.com\/arnesson\/cordova-plugin-firebase",
-        "cordova-plugin-google-analytics": "git+https:\/\/github.com\/danwilson\/google-analytics-plugin",
-        "cordova-plugin-googlemaps": "git+https:\/\/github.com\/mapsplugin\/cordova-plugin-googlemaps",
-        "cordova-plugin-camera-preview": "git+https:\/\/github.com\/cordova-plugin-camera-preview\/cordova-plugin-camera-preview",
-        "cordova-plugin-x-socialsharing": "git+https:\/\/github.com\/EddyVerbruggen\/SocialSharing-PhoneGap-Plugin",
-        "cordova-plugin-customurlscheme": "git+https:\/\/github.com\/EddyVerbruggen\/Custom-URL-scheme",
-        "cordova-plugin-local-notification": "git+https:\/\/github.com\/katzer\/cordova-plugin-local-notifications",
-        "cordova-plugin-image-picker": "git+https:\/\/github.com\/wymsee\/cordova-imagePicker"
+        "cordova-plugin-statusbar": "git+https:\/\/github.com\/apache\/cordova-plugin-statusbar"
     }
 }
