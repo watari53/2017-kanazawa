@@ -522,7 +522,7 @@ ons.bootstrap()
     this.previous_label = TXT[$scope.l].PREVIOUS_TRANSIT;
     this.short_src_text = TXT[$scope.l].SHORT_SRC_TEXT;
     this.short_dest_text = TXT[$scope.l].SHORT_DEST_TEXT;
-    // var waypoint = this.detail.waypoint;
+    var waypoint = this.detail.waypoint;
     
     this.getTPColor = function(style, tp) {
       var hash = {};
