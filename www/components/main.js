@@ -344,6 +344,26 @@ ons.bootstrap()
       navi.pushPage('search.html', {data: {search_type: search_type}});
     };
 
+    this.replace_src_dest = function() {
+      console.log("replace: " + $scope.search.src + "<->" + $scope.search.dest);
+      var default_src_txt  = TXT[$scope.l].DEFAULT_SRC_MSG;
+      var default_dest_txt = TXT[$scope.l].DEFAULT_DEST_MSG;
+
+      if($scope.search.src !== default_src_txt && $scope.search.dest === default_dest_txt) {
+        $scope.search.dest = $scope.search.src;
+        $scope.search.src = default_src_txt;
+      }else if($scope.search.src === default_src_txt && $scope.search.dest !== default_dest_txt) {
+        $scope.search.src = $scope.search.dest;
+        $scope.search.dest = default_dest_txt;
+      }else if($scope.search.src !== default_src_txt && $scope.search.dest !== default_dest_txt) {
+        var tmp = $scope.search.src;
+        $scope.search.src = $scope.search.dest;
+        $scope.search.dest = tmp;
+      }else {
+        return;
+      }
+    };
+    
     this.setTime = function() {
       var time = $scope.time;
       // Datepicker Same handling for iPhone and Android
@@ -364,18 +384,6 @@ ons.bootstrap()
       });
     };
     
-    this.addition_subtraction = function(n) {
-      $scope.people_n = $scope.people_n + n;
-    };
-
-    changeLang = function(e) {
-      $scope.l = e.target.value; // "ja" or "en"
-      $scope.$apply(function(){
-        initLang($scope.l);
-        DataService.setSpotForSearch({lang: $scope.l});
-      });
-    };
-
     this.changeSearchType = function() {
       if($scope.type === 'start') {
         $scope.type = 'arrive';
@@ -387,14 +395,16 @@ ons.bootstrap()
       }
     };
 
+    this.addition_subtraction = function(n) {
+      $scope.people_n = $scope.people_n + n;
+    };
+
     this.go_timeline = function() {
       if($scope.search.src === TXT[$scope.l].DEFAULT_SRC_MSG) {
         alert(TXT[$scope.l].NO_SRC_MSG);
-
         return;
       }else if($scope.search.dest === TXT[$scope.l].DEFAULT_DEST_MSG) {
         alert(TXT[$scope.l].NO_DEST_MSG);
-
         return;
       }else if($scope.search.src === $scope.search.dest) {
         alert(TXT[$scope.l].SAME_SRC_DEST_MSG);
@@ -419,8 +429,8 @@ ons.bootstrap()
       }
       console.log("send_data: "+ JSON.stringify(send_data));
 
-      promise = DataService.postData(send_data);
-      // promise = DataService.getSampleData();
+      // promise = DataService.postData(send_data);
+      promise = DataService.getSampleData();
       promise.then(function(response){
         setTimeout(function() {
           DataService.setResponse(response.data);
@@ -430,6 +440,14 @@ ons.bootstrap()
       }).catch(function(e) {
         console.log("Get Error");
         modal.hide();
+      });
+    };
+
+    changeLang = function(e) {
+      $scope.l = e.target.value; // "ja" or "en"
+      $scope.$apply(function(){
+        initLang($scope.l);
+        DataService.setSpotForSearch({lang: $scope.l});
       });
     };
   })
@@ -638,21 +656,23 @@ ons.bootstrap()
     this.title = TXT[$scope.l].MAP_TEXT;
     var srcLatLng = navi.topPage.data.src;
     var destLatLng = navi.topPage.data.dest;
+    var transportation = "WALKING";
     var waypoints = [];
+    var max_waypoints_num = 23;
     var w = navi.topPage.data.waypoints;
     this.map_url = "http://maps.google.com/maps?saddr=" + srcLatLng.lat + "," + srcLatLng.lng + "&daddr=" + destLatLng.lat + "," + destLatLng.lng;
     // console.log("waypoint: " + w.length + ":" + JSON.stringify(w));
     // console.log(srcLatLng.name +","+ srcLatLng.lat + ","+ srcLatLng.lng);
     // console.log(destLatLng.name +","+ destLatLng.lat+ ","+ destLatLng.lng);
     
-    if(8 < w.length ) {
+    if(max_waypoints_num < w.length ) {
       console.log("exceed max of waypoint");
     } else if(0 < w.length) {
       console.log("create waypoints");
       angular.forEach(w, function(p){
         waypoints.push({location: new google.maps.LatLng(p.lat, p.lng)});
       });      
-      console.log("done create waypoints");
+      console.log("done create waypoints: " + waypoints.length);
       // console.log(JSON.stringify(waypoints));
     }
     //Google mapの設定
@@ -662,12 +682,30 @@ ons.bootstrap()
       zoom: 7,
       center: srcLatLng,
     });
+    directionsDisplay.setOptions({
+      suppressMarkers: true
+    });
     directionsDisplay.setMap(map);
-    calculateAndDisplayRoute(directionsService, directionsDisplay);
+    calculateAndDisplayRoute(directionsService, directionsDisplay, transportation);
     
-    function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+    // StartとGoalのMarker作成
+    addMarker(srcLatLng, "S", map);
+    addMarker(destLatLng, "G", map);
+  
+    function addMarker(location, label, map) {
+      // Add the marker at the clicked location, and add the next-available label
+      // from the array of alphabetical characters.
+      // position: {lat: latitude, lng: longitude}
+      var marker = new google.maps.Marker({
+        position: location,
+        label: {text: label, color: 'white'},
+        map: map
+      });
+    }
+
+    function calculateAndDisplayRoute(directionsService, directionsDisplay, transportation) {
       // var selectedMode = document.getElementById('mode').value;
-      var selectedMode = "WALKING";
+      var selectedMode = transportation;
       directionsService.route({
         origin: srcLatLng,
         destination: destLatLng,

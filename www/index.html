@@ -41,6 +41,13 @@
             </div>
             <div id="src" class="list-item__center">{{search.src}}</div>
           </li>
+          <div style="position: relative">
+          <ons-fab ng-click="app.replace_src_dest()" style="position: absolute; right: 5%; top: -20px;" modifier="mini">
+            <ons-icon style="transform: rotate(90deg)"
+              icon="md-swap">
+            </ons-icon>
+          </ons-fab>          
+          </div>
           <li class="list-item list--inset__item list-item--tappable input-area" ng-click='app.go_search("dest")'>
             <div class="list-item__left">
               <span class="dest_index">{{dest_text}}</span>
