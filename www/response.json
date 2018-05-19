@@ -106,8 +106,8 @@
             "transportation": [
                 {
                     "type": "walk",
-                    "service": null,
-                    "text": "徒歩"
+                    "service": "徒歩",
+                    "text": null
                 },
                 {
                     "type": "goal",
@@ -133,8 +133,8 @@
                         "arrival_time": "09:30",
                         "transportation": {
                             "type": "walk",
-                            "service": null,
-                            "text": "徒歩"
+                            "service": "徒歩",
+                            "text": null
                         },
                         "fee": "0円",
                         "information": [],
@@ -156,8 +156,8 @@
             "transportation": [
                 {
                     "type": "walk",
-                    "service": null,
-                    "text": "徒歩"
+                    "service": "徒歩",
+                    "text": null
                 },
                 {
                     "type": "bus",
@@ -166,8 +166,8 @@
                 },
                 {
                     "type": "walk",
-                    "service": null,
-                    "text": "徒歩"
+                    "service": "徒歩",
+                    "text": null
                 },
                 {
                     "type": "bus",
@@ -176,8 +176,8 @@
                 },
                 {
                     "type": "walk",
-                    "service": null,
-                    "text": "徒歩"
+                    "service": "徒歩",
+                    "text": null
                 },
                 {
                     "type": "goal",
@@ -203,8 +203,8 @@
                         "arrival_time": "08:58",
                         "transportation": {
                             "type": "walk",
-                            "service": null,
-                            "text": "徒歩"
+                            "service": "徒歩",
+                            "text": null
                         },
                         "fee": "0円",
                         "information": [],
@@ -263,8 +263,8 @@
                         "arrival_time": "9:17",
                         "transportation": {
                             "type": "walk",
-                            "service": null,
-                            "text": "徒歩"
+                            "service": "徒歩",
+                            "text": null
                         },
                         "fee": "0円",
                         "information": [],
@@ -318,8 +318,8 @@
                         "arrival_time": "09:22",
                         "transportation": {
                             "type": "walk",
-                            "service": null,
-                            "text": "徒歩"
+                            "service": "徒歩",
+                            "text": null
                         },
                         "fee": "0円",
                         "information": [],
@@ -376,8 +376,8 @@
                         "arrival_time": "9:19",
                         "transportation": {
                             "type": "walk",
-                            "service": null,
-                            "text": "徒歩"
+                            "service": "徒歩",
+                            "text": null
                         },
                         "fee": "0円",
                         "information": [],
@@ -409,8 +409,8 @@
                         "arrival_time": "9:30",
                         "transportation": {
                             "type": "walk",
-                            "service": null,
-                            "text": "徒歩"
+                            "service": "徒歩",
+                            "text": null
                         },
                         "fee": "0円",
                         "information": [],

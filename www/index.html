@@ -33,22 +33,22 @@
         </div>
       </ons-toolbar>
 
-      <section style="margin-top: 30px">
+      <section style="margin-top: 10%">
         <ul class="list list--inset">
-          <li class="list-item list--inset__item list-item--tappable input-area" ng-click='app.go_search("src")'>
+          <li class="list-item list--inset__item list-item--tappable main-input" ng-click='app.go_search("src")'>
             <div class="list-item__left">
               <span class="start_index">{{src_text}}</span>
             </div>
             <div id="src" class="list-item__center">{{search.src}}</div>
           </li>
-          <div style="position: relative">
-          <ons-fab ng-click="app.replace_src_dest()" style="position: absolute; right: 5%; top: -20px;" modifier="mini">
-            <ons-icon style="transform: rotate(90deg)"
-              icon="md-swap">
-            </ons-icon>
-          </ons-fab>          
+          <div style="position: relative; z-index: 10000">
+            <ons-button ng-click="app.replace_src_dest()" class="fab fab--material fab--mini opionbuton option-button" style="position: absolute; right: 5%; top: -20px;" modifier="mini">
+              <ons-icon style="transform: rotate(90deg)"
+                icon="md-swap">
+              </ons-icon>
+            </ons-fab>
           </div>
-          <li class="list-item list--inset__item list-item--tappable input-area" ng-click='app.go_search("dest")'>
+          <li class="list-item list--inset__item list-item--tappable main-input" ng-click='app.go_search("dest")'>
             <div class="list-item__left">
               <span class="dest_index">{{dest_text}}</span>
             </div>
@@ -58,34 +58,7 @@
       </section>
 
       <section style="margin-top: 20px">
-        <div class="list list--inset" style="text-align: center;">
-          <div ng-click="app.setTime()" class="list--inset__item list-item--tappable input-area" style="display: flex;justify-content: center;align-items: center;">
-              <ons-icon style="margin-right: 5px" icon="fa-clock-o"></ons-icon>
-              {{time | date: "M/d （EEE）HH:mm"}}
-          </div>
-        </div>
-<!--
-        <ul class="list list--inset" style="margin-bottom: 10px">
-          <div class="tabbar tabbar--top tabbar--top-border">
-            <label class="tabbar__item tabbar--top-border__item">
-              <button class="tabbar__button tabbar--top-border__button">
-                5分前
-              </button>
-            </label>
-            <label class="tabbar__item tabbar--top-border__item">
-              <button class="tabbar__button tabbar--top-border__button">
-                現在時刻
-              </button>
-            </label>
-            <label class="tabbar__item tabbar--top-border__item">
-              <button class="tabbar__button tabbar--top-border__button">
-                5分後
-              </button>
-            </label>
-          </div>
-        </ul>
--->
-        <ul class="list list--inset">
+        <ul class="list list--inset" style="margin-bottom: 5px">
           <div class="tabbar tabbar--top tabbar--top-border">
             <label class="tabbar__item tabbar--top-border__item">
               <input type="radio" name="top-tabbar-type" ng-model="type" value="start" ng-change="app.changeSearchType()" checked="checked">
@@ -102,26 +75,35 @@
             </label>
           </div>
         </ul>
+
+        <div class="list list--inset" style="text-align: center; margin-bottom: 7px">
+          <div ng-click="app.setTime()" class="list--inset__item list-item--tappable main-input" style="display: flex;justify-content: center;align-items: center">
+              <ons-icon style="margin-right: 5px" icon="fa-clock-o"></ons-icon>
+              {{time | date: "M/d （EEE）HH:mm"}}
+          </div>
+        </div>
+        <div class="list--inset" style="text-align: right; border: 0">
+          <ons-button ng-click="app.setCurrentTime()" class="option-text" modifier="quiet">{{set_current_time}}</ons-button>
+        </div>
       </section>
         
-      <section  style="margin-top: 10px">
+      <section  style="margin-top: 20px; display: none">
         <ul class="list list--inset">
-          <li class="list-item list--inset__item">
+          <li class="list-item list--inset__item main-input">
             <div class="list-item__left" style="width: 25px">
               <ons-icon icon="fa-group"></ons-icon>
             </div>
             <div class="list-item__center">
-              <span style="margin-right: 10px">{{pelple_label}}：</span>{{people_n}}{{p_unit}}
+              <span style="margin-right: 10px">{{people_label}}：</span>{{people_n}}{{p_unit}}
             </div>
             <div class="list-item__right">
-              <button ng-click="app.addition_subtraction(-1)" class="fab fab--material fab--mini" ng-disabled="people_n==1"><i class="zmdi zmdi-minus"></i></button>
+              <ons-button ng-click="app.addition_subtraction(-1)" class="fab fab--material fab--mini option-button" ng-disabled="people_n==1"><i class="zmdi zmdi-minus"></i></ons-button>
               <i style="width: 5px"></i>
-              <button ng-click="app.addition_subtraction(1)" class="fab fab--material fab--mini"><i class="zmdi zmdi-plus"></i></button>
+              <ons-button ng-click="app.addition_subtraction(1)" class="fab fab--material fab--mini option-button"><i class="zmdi zmdi-plus"></i></ons-button>
             </div>
           </li>
         </ul>
         
-        <!--
         <ul class="list list--inset" style="margin-top: 10px">
           <li class="list-item list--inset__item">
             <div class="list-item__left" style="width: 25px">
@@ -133,12 +115,10 @@
             <ons-checkbox input-id="bus" ng-model="tp.bus"></ons-checkbox><span class="condition-unit">{{tp_text.bus}}</span>
           </li>
         </ul>
-        -->
-        
       </section>
 
-      <div style="text-align: center">
-        <ons-button class="button--material button--large--cta" style="width: 60%; margin: 40px auto; background-color: #fd814a" ng-click="app.go_timeline()">
+      <div style="text-align: center; margin-top: 25px">
+        <ons-button class="button--material button--large--cta" style="width: 60%; margin: 0px auto; background-color: #fd814a" ng-click="app.go_timeline()">
           {{search_text}}
         </ons-button>
       </div>
@@ -328,7 +308,7 @@
       <section style="margin-bottom: 20px">
         <ons-list class="plan-list list--inset">
           <ons-list-item>
-            <i style="margin-right: 20px">{{td.detail.start.time}}</i> {{td.detail.start.spot_name}}
+            <span style="margin-right: 20px">{{td.detail.start.time}}</span> {{td.detail.start.spot_name}}
           </ons-list-item>
         </ons-list>
 
@@ -346,24 +326,24 @@
             <ons-col width="6px" class="plan-center" ng-style='td.getTPColor("background-color", w.transportation)'>
             </ons-col>
             
-            <ons-col style="padding: 15px 30px">
+            <ons-col style="padding: 15px 30px 15px 25px">
               <div style="min-height: 45px">
-                <div style="float: left">
-                  <i ng-show="w.transportation.service">{{w.transportation.service}}<br></i>
-                  <i>{{w.transportation.text}}</i>
+                <div style="float: left;">
+                  <i style="font-style: normal;" ng-show="w.transportation.service">{{w.transportation.service}}<br></i>
+                  <i class="sub-info">{{w.transportation.text}}</i>
+                  <div ng-style="{display: w.information.length === 0 ? 'none': 'inline'}">
+                    <br>
+                    <i class="sub-info" ng-repeat = "i in w.information">
+                      {{i.text}}
+                      <img class="icon-label" src="{{i.icon}}"><br>
+                    </i>
+                  </div>
                 </div>
                 <div style="float: right">
                   <ons-button ng-click="td.go_map($index)" style="background-color: #fd814a">
                     <ons-icon icon="map"></ons-icon>
                     {{td.map_text}}
                   </ons-button>
-                </div>
-                <div ng-style="{display: w.information.length === 0 ? 'none': 'inline'}">
-                  <br>
-                  <span ng-repeat = "i in w.information">
-                    <img class="icon-label" src="{{i.icon}}">
-                    {{i.text}}<br>
-                  </span>
                 </div>
               </div>
               <div style="margin-top: 6px; text-align: right"> {{w.fee}} </div>
@@ -372,10 +352,10 @@
 
           <ons-list class="plan-list list--inset">
             <ons-list-item ng-show="!$last">
-              <i style="margin-right: 20px">{{w.arrival_time}}</i> {{w.spot_name}}
+              <span style="margin-right: 20px">{{w.arrival_time}}</span> {{w.spot_name}}
             </ons-list-item>
             <ons-list-item ng-show="$last" modifier="chevron tappable" ng-click="td.go_spot(w.spot_name)">
-              <i style="margin-right: 20px">{{w.arrival_time}}</i> {{w.spot_name}}
+              <span style="margin-right: 20px">{{w.arrival_time}}</span> {{w.spot_name}}
             </ons-list-item>
           </ons-list>
         </div>

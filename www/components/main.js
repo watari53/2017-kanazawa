@@ -24,12 +24,13 @@ var TXT = {
     "NO_SRC_MSG"        : "出発地を選択してください。",
     "NO_DEST_MSG"       : "目的地を選択してください。",
     "SAME_SRC_DEST_MSG" : "目的地と到着地が同じです。",
+    "SET_CURRENT_TIME"  : "現在時刻に設定",
     "CONNECTION_FAILED_MSG": "電波の良いところでアプリを起動してください。",
     "SURROUNDINGS_TITLE": "周辺",
     "HISTORY_TITLE"     : "履歴",
     "NO_HISTORY_MSG"    : "検索履歴なし",
     "SEARCH_TEXT"       : "検索",
-    "PELPLE_LABEL": "人数",
+    "PEOPLE_LABEL": "人数",
     "P_UNIT" : "人",
     "SEARCH_TYPE" : {start: "出発", arrive: "到着"},
     "FAST_TEXT"        : "早",
@@ -58,12 +59,13 @@ var TXT = {
     "NO_SRC_MSG"        : "Please Select Departure",
     "NO_DEST_MSG"       : "Please Select Destination.",
     "SAME_SRC_DEST_MSG" : "src and dest is same.",
+    "SET_CURRENT_TIME"  : "SET CURRENT TIME",
     "CONNECTION_FAILED_MSG": "connection failed",
     "SURROUNDINGS_TITLE": "Surroungings",
     "HISTORY_TITLE"     : "History",
     "NO_HISTORY_MSG"    : "No History",
     "SEARCH_TEXT"       : "Search",
-    "PELPLE_LABEL": "People",
+    "PEOPLE_LABEL": "People",
     "P_UNIT" : "",
     "SEARCH_TYPE" : {start: "Departure", arrive: "Arrive"},
     "FAST_TEXT"        : "F",
@@ -302,9 +304,10 @@ ons.bootstrap()
       $scope.search_text = txt.SEARCH_TEXT;
       $scope.search = {src: txt.DEFAULT_SRC_MSG, dest: txt.DEFAULT_DEST_MSG};
       $scope.search_type = txt.SEARCH_TYPE;
+      $scope.set_current_time = txt.SET_CURRENT_TIME;
       $scope.tp = TRANSPORTATION;
       $scope.p_unit = txt.P_UNIT;
-      $scope.pelple_label = txt.PELPLE_LABEL;
+      $scope.people_label = txt.PEOPLE_LABEL;
       $scope.filter_text = txt.FILTER_TEXT;
       $scope.tp_text = txt.TRANSPORTATION_TEXT;
     };
@@ -384,6 +387,12 @@ ons.bootstrap()
       });
     };
     
+    this.setCurrentTime = function() {
+      console.log("set current time");
+      $scope.time = new Date();
+      // $scope.$apply();
+    };
+    
     this.changeSearchType = function() {
       if($scope.type === 'start') {
         $scope.type = 'arrive';
@@ -429,8 +438,8 @@ ons.bootstrap()
       }
       console.log("send_data: "+ JSON.stringify(send_data));
 
-      // promise = DataService.postData(send_data);
-      promise = DataService.getSampleData();
+      promise = DataService.postData(send_data);
+      // promise = DataService.getSampleData();
       promise.then(function(response){
         setTimeout(function() {
           DataService.setResponse(response.data);
@@ -690,7 +699,8 @@ ons.bootstrap()
     
     // StartとGoalのMarker作成
     addMarker(srcLatLng, "S", map);
-    addMarker(destLatLng, "G", map);
+    addMarker(destLatLng, "G", map);
+
   
     function addMarker(location, label, map) {
       // Add the marker at the clicked location, and add the next-available label

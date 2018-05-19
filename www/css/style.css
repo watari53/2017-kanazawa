@@ -7,15 +7,16 @@
 .toolbar__title {
   color: white;
 }
-.button {
-  background-color: #20A738;
-
+.option-button {
+  background-color: #3e7fc8;
+}
+.option-text {
+  color: #3e7fc8;
 }
 /* top page */
-.input-area {
-    height: 60px;
+.main-input {
+  height: 55px;
 }
-
 .start_index {
   padding: 3px 4px 2px 4px;
   margin-right: 2px;
@@ -149,7 +150,12 @@
 /* timeline detail */
 .icon-label {
   vertical-align: middle;
-  width: 23px;
-  height: 23px;
+  width: 22px;
+  height: 22px;
   margin-right: 3px;
+}
+.sub-info {
+  font-size: 90%;
+  font-style: normal;
+  color: gray;
 }
