@@ -851,8 +851,8 @@
   },
   {
     "spot_name": "Ohno Sho Water",
-    "lat": "36.564957",
-    "lng": "136.649607"
+    "lat": "36.5645382",
+    "lng": "136.649727"
   },
   {
     "spot_name": "Chief Town Chaya Street",
@@ -921,8 +921,8 @@
   },
   {
     "spot_name": "Muro star and star literary monument",
-    "lat": "36.554822",
-    "lng": "136.654723"
+    "lat": "36.5549105",
+    "lng": "136.6546597"
   },
   {
     "spot_name": "Tomb of Mu-sisai",
@@ -1011,8 +1011,8 @@
   },
   {
     "spot_name": "Tokuda Shinkin Memorial Hall",
-    "lat": "36.570902",
-    "lng": "136.667162"
+    "lat": "36.5709323",
+    "lng": "136.6671363"
   },
   {
     "spot_name": "Kanazawa Yuyu Yumeji-kan",
@@ -1031,8 +1031,8 @@
   },
   {
     "spot_name": "Kanazawa Gramophone Center",
-    "lat": "36.571283",
-    "lng": "136.662707"
+    "lat": "36.5713099",
+    "lng": "136.662659"
   },
   {
     "spot_name": "Kanazawa City Tanaka Village Memorial Museum",
@@ -1318,5 +1318,820 @@
     "spot_name": "Ohno Karakuri Memorial Hall",
     "lat": "36.619001",
     "lng": "136.604375"
+  },
+  {
+    "spot_name": "Omi-cho Market",
+    "lat": "36.5711298",
+    "lng": "136.6568484"
+  },
+  {
+    "spot_name": "Oyama Shrine",
+    "lat": "36.5663548",
+    "lng": "136.6556792"
+  },
+  {
+    "spot_name": "Kanazawa Castle Ishikawa gate",
+    "lat": "36.5654856",
+    "lng": "136.6611649"
+  },
+  {
+    "spot_name": "Tawaraya",
+    "lat": "36.5769843",
+    "lng": "136.6621893"
+  },
+  {
+    "spot_name": "Ishikawa prefectural concert hall",
+    "lat": "36.5767567",
+    "lng": "136.6477453"
+  },
+  {
+    "spot_name": "Kanazawa Minami Comprehensive Sports Park Rose Garden",
+    "lat": "36.5388382",
+    "lng": "136.6428425"
+  },
+  {
+    "spot_name": "Kanazawa Forus",
+    "lat": "36.5793479",
+    "lng": "136.6498105"
+  },
+  {
+    "spot_name": "Usually,",
+    "lat": "36.5727184",
+    "lng": "136.6549409"
+  },
+  {
+    "spot_name": "Ishikawa Four High Memorial Park",
+    "lat": "36.5632024",
+    "lng": "136.6554849"
+  },
+  {
+    "spot_name": "Shokatsukaku",
+    "lat": "36.5611084",
+    "lng": "136.6631732"
+  },
+  {
+    "spot_name": "Foil single store Foil skill hall",
+    "lat": "36.5612706",
+    "lng": "136.5979623"
+  },
+  {
+    "spot_name": "Gilt craftwork & gold leaf History Wataru Tadashima",
+    "lat": "36.5712936",
+    "lng": "136.6543188"
+  },
+  {
+    "spot_name": "Ishikawa Prefecture Government building Observation lobby",
+    "lat": "36.5945844",
+    "lng": "136.6256698"
+  },
+  {
+    "spot_name": "Teramachi Temple Group",
+    "lat": "36.5517064",
+    "lng": "136.6542327"
+  },
+  {
+    "spot_name": "Kanazawa Station Tourist Information Office",
+    "lat": "36.5784337",
+    "lng": "136.6478322"
+  },
+  {
+    "spot_name": "Kanayama",
+    "lat": "36.5208775",
+    "lng": "136.7991016"
+  },
+  {
+    "spot_name": "Asano River Bridge",
+    "lat": "36.5721521",
+    "lng": "136.6644399"
+  },
+  {
+    "spot_name": "Daimyoji",
+    "lat": "36.5334392",
+    "lng": "136.6585969"
+  },
+  {
+    "spot_name": "Korobobo Yamato",
+    "lat": "36.5627586",
+    "lng": "136.6540052"
+  },
+  {
+    "spot_name": "Terme Kanazawa",
+    "lat": "36.5694873",
+    "lng": "136.6014344"
+  },
+  {
+    "spot_name": "Saikawa Bridge",
+    "lat": "36.5585375",
+    "lng": "136.6505077"
+  },
+  {
+    "spot_name": "Crane Temple",
+    "lat": "36.5609807",
+    "lng": "136.666959"
+  },
+  {
+    "spot_name": "Yamato soy sauce miso \"糀 park\"",
+    "lat": "36.6135648",
+    "lng": "136.6075484"
+  },
+  {
+    "spot_name": "Fukaya Onsen",
+    "lat": "36.6130815",
+    "lng": "136.7210605"
+  },
+  {
+    "spot_name": "Kanazawa City Nishijaya Museum",
+    "lat": "36.5566501",
+    "lng": "136.6473442"
+  },
+  {
+    "spot_name": "Kanazawa Racecourse",
+    "lat": "36.6366231",
+    "lng": "136.6747928"
+  },
+  {
+    "spot_name": "Kimono Dressing & Rental Aya",
+    "lat": "36.5616753",
+    "lng": "136.6505054"
+  },
+  {
+    "spot_name": "Kanazawa Castle 30th Nagaya",
+    "lat": "36.56493",
+    "lng": "136.6581263"
+  },
+  {
+    "spot_name": "Eikukuji",
+    "lat": "36.5611196",
+    "lng": "136.6682838"
+  },
+  {
+    "spot_name": "Outside moor park Shiratoriji",
+    "lat": "36.5658522",
+    "lng": "136.662312"
+  },
+  {
+    "spot_name": "Small diameter of art",
+    "lat": "36.5594724",
+    "lng": "136.6609707"
+  },
+  {
+    "spot_name": "Ishikawa Prefecture Tourism and Commerce Museum",
+    "lat": "36.5649667",
+    "lng": "136.663224"
+  },
+  {
+    "spot_name": "Tatemachi",
+    "lat": "36.558764",
+    "lng": "136.6547046"
+  },
+  {
+    "spot_name": "Ishikawa 4th Memorial Cultural Exchange Center",
+    "lat": "36.5625413",
+    "lng": "136.6555877"
+  },
+  {
+    "spot_name": "Din",
+    "lat": "36.5783424",
+    "lng": "136.6479828"
+  },
+  {
+    "spot_name": "Kanazawa Castle 50 Nagaya",
+    "lat": "36.5670359",
+    "lng": "136.6583409"
+  },
+  {
+    "spot_name": "Kinjo Ryusawa",
+    "lat": "36.5604362",
+    "lng": "136.6623205"
+  },
+  {
+    "spot_name": "Soy sauce Naoya Genbei",
+    "lat": "36.6120123",
+    "lng": "136.6038543"
+  },
+  {
+    "spot_name": "Kenminhama Beach Park",
+    "lat": "36.5937998",
+    "lng": "136.5849511"
+  },
+  {
+    "spot_name": "Shaolin",
+    "lat": "36.5536033",
+    "lng": "136.6475749"
+  },
+  {
+    "spot_name": "Gallery Sable",
+    "lat": "36.5673442",
+    "lng": "136.6639544"
+  },
+  {
+    "spot_name": "Momoko",
+    "lat": "36.5723977",
+    "lng": "136.6671971"
+  },
+  {
+    "spot_name": "SAKESHOP Fukumitsuya Kanazawa Main Store",
+    "lat": "36.5535586",
+    "lng": "136.671993"
+  },
+  {
+    "spot_name": "Kanazawa City Ashigaraku Museum",
+    "lat": "36.565938",
+    "lng": "136.6499742"
+  },
+  {
+    "spot_name": "Kanazawa Kimono rental akari",
+    "lat": "36.5709798",
+    "lng": "136.6560326"
+  },
+  {
+    "spot_name": "Cafe noodles mushrooms",
+    "lat": "36.5596478",
+    "lng": "136.6540053"
+  },
+  {
+    "spot_name": "Kanazawa Samurai Hall",
+    "lat": "36.5659415",
+    "lng": "136.6635156"
+  },
+  {
+    "spot_name": "Noda-yama",
+    "lat": "36.5266596",
+    "lng": "136.666027"
+  },
+  {
+    "spot_name": "Kanazawa craft Hirosaka",
+    "lat": "36.5616818",
+    "lng": "136.657922"
+  },
+  {
+    "spot_name": "Kigo mountain contact village",
+    "lat": "36.5242036",
+    "lng": "136.7460645"
+  },
+  {
+    "spot_name": "Kaga Yuzen Kaikan",
+    "lat": "36.5638483",
+    "lng": "136.6643669"
+  },
+  {
+    "spot_name": "Kanazawa City Yusugi Boys Forest Campground",
+    "lat": "36.4744729",
+    "lng": "136.7329759"
+  },
+  {
+    "spot_name": "Amakusa",
+    "lat": "36.551607",
+    "lng": "136.6765946"
+  },
+  {
+    "spot_name": "Temple of Princess Temple",
+    "lat": "36.5515987",
+    "lng": "136.6766029"
+  },
+  {
+    "spot_name": "Kanazawa Higashibetsuin",
+    "lat": "36.5751129",
+    "lng": "136.654852"
+  },
+  {
+    "spot_name": "Kanazawa beautiful Asana",
+    "lat": "36.5730487",
+    "lng": "136.6665641"
+  },
+  {
+    "spot_name": "Izumi Kaga \"The white thread of a waterfall\" Statue",
+    "lat": "36.5704796",
+    "lng": "136.6665364"
+  },
+  {
+    "spot_name": "Yumeji Takehisa monogatari",
+    "lat": "36.4856584",
+    "lng": "136.7575955"
+  },
+  {
+    "spot_name": "Nomura Kodo-do",
+    "lat": "36.56485",
+    "lng": "136.6625435"
+  },
+  {
+    "spot_name": "Nakamura Pottery",
+    "lat": "36.6128703",
+    "lng": "136.603396"
+  },
+  {
+    "spot_name": "Saikawa-gosu Onsen",
+    "lat": "36.5119704",
+    "lng": "136.6928363"
+  },
+  {
+    "spot_name": "Kanazawa shonen nature house campground",
+    "lat": "36.5179515",
+    "lng": "136.7429094"
+  },
+  {
+    "spot_name": "Mu-Sai Star poet",
+    "lat": "36.5548755",
+    "lng": "136.6546603"
+  },
+  {
+    "spot_name": "Hawaiian candle Punana",
+    "lat": "36.5911762",
+    "lng": "136.6123905"
+  },
+  {
+    "spot_name": "Ceramics class Matsumoto Pottery",
+    "lat": "36.5552839",
+    "lng": "136.6358262"
+  },
+  {
+    "spot_name": "HIMITO light water soil",
+    "lat": "36.5551928",
+    "lng": "136.6546581"
+  },
+  {
+    "spot_name": "Nakajima noodle",
+    "lat": "36.5718736",
+    "lng": "136.6578316"
+  },
+  {
+    "spot_name": "Nippon car rental Kanazawa store",
+    "lat": "36.578106",
+    "lng": "136.6464268"
+  },
+  {
+    "spot_name": "A path of mind",
+    "lat": "36.5694742",
+    "lng": "136.6698751"
+  },
+  {
+    "spot_name": "Rifare",
+    "lat": "36.5755485",
+    "lng": "136.6518438"
+  },
+  {
+    "spot_name": "Kigo mountain boys nature house",
+    "lat": "36.5179459",
+    "lng": "136.7429289"
+  },
+  {
+    "spot_name": "Kutani Mitsuzen kiln",
+    "lat": "36.5550308",
+    "lng": "136.6449334"
+  },
+  {
+    "spot_name": "Lot of the Wing Pavilion",
+    "lat": "36.5869277",
+    "lng": "136.6668219"
+  },
+  {
+    "spot_name": "Gilt pasting experience Kanazawa Katani",
+    "lat": "36.5717658",
+    "lng": "136.6620461"
+  },
+  {
+    "spot_name": "Pond",
+    "lat": "36.5621307",
+    "lng": "136.6626507"
+  },
+  {
+    "spot_name": "Sunset Temple Kenmin Nature Park",
+    "lat": "36.5722828",
+    "lng": "136.7077885"
+  },
+  {
+    "spot_name": "Kaga Honda Museum",
+    "lat": "36.5584625",
+    "lng": "136.6624303"
+  },
+  {
+    "spot_name": "It will not be cool",
+    "lat": "36.5987419",
+    "lng": "136.5903773"
+  },
+  {
+    "spot_name": "Kanazawa Riding Club",
+    "lat": "36.6344342",
+    "lng": "136.6696885"
+  },
+  {
+    "spot_name": "A monument of the Nagasaki Christian martyr",
+    "lat": "36.5717631",
+    "lng": "136.6801046"
+  },
+  {
+    "spot_name": "Izumi Kaga Birthplace",
+    "lat": "36.5714805",
+    "lng": "136.6630517"
+  },
+  {
+    "spot_name": "Martyrs Toyokawa Girls Volunteers World Peace Prayer Statue",
+    "lat": "36.5691607",
+    "lng": "136.6835016"
+  },
+  {
+    "spot_name": "Tomb of Miyazaki Yuzusa",
+    "lat": "36.5756297",
+    "lng": "136.6717858"
+  },
+  {
+    "spot_name": "Rennyo citadel statue",
+    "lat": "36.5717267",
+    "lng": "136.6698222"
+  },
+  {
+    "spot_name": "Muro Susan Birthplace",
+    "lat": "36.5591665",
+    "lng": "136.6482163"
+  },
+  {
+    "spot_name": "Evil spirit",
+    "lat": "36.570935",
+    "lng": "136.6635589"
+  },
+  {
+    "spot_name": "Nichiren Kamishinba statue",
+    "lat": "36.5697965",
+    "lng": "136.6754301"
+  },
+  {
+    "spot_name": "Hometown of literature",
+    "lat": "36.5742596",
+    "lng": "136.6647559"
+  },
+  {
+    "spot_name": "Nishida Kitaro Zuzen wash basin animal",
+    "lat": "36.5692937",
+    "lng": "136.6706711"
+  },
+  {
+    "spot_name": "Yosano Akiko monogatari",
+    "lat": "36.5312472",
+    "lng": "136.7469086"
+  },
+  {
+    "spot_name": "The grave of Kaga Chiyoko",
+    "lat": "36.5742501",
+    "lng": "136.6502241"
+  },
+  {
+    "spot_name": "Izumi Kinpaku's birthplace",
+    "lat": "36.5714844",
+    "lng": "136.6630567"
+  },
+  {
+    "spot_name": "The garden of this Izumiji Kuyama Hakkai",
+    "lat": "36.5585979",
+    "lng": "136.7647118"
+  },
+  {
+    "spot_name": "Tsukisenceji",
+    "lat": "36.5768539",
+    "lng": "136.6702747"
+  },
+  {
+    "spot_name": "Katsuraji Temple",
+    "lat": "36.5473071",
+    "lng": "136.6589352"
+  },
+  {
+    "spot_name": "Pine trees in Namiki-machi",
+    "lat": "36.5695797",
+    "lng": "136.6682169"
+  },
+  {
+    "spot_name": "Higashihara's Mizuhashi Native Habitat",
+    "lat": "36.5857168",
+    "lng": "136.7823339"
+  },
+  {
+    "spot_name": "Yuquan Lake",
+    "lat": "36.483595",
+    "lng": "136.7576853"
+  },
+  {
+    "spot_name": "Nishida family park Yuzizen garden",
+    "lat": "36.5638081",
+    "lng": "136.6637091"
+  },
+  {
+    "spot_name": "Ishiura Shrine",
+    "lat": "36.5611971",
+    "lng": "136.6598401"
+  },
+  {
+    "spot_name": "Ozaki shrine",
+    "lat": "36.5692517",
+    "lng": "136.6574401"
+  },
+  {
+    "spot_name": "Mt. Toyomyama",
+    "lat": "36.5307001",
+    "lng": "136.7468114"
+  },
+  {
+    "spot_name": "Kanazawa Miki Cha-no-yu Salon Station Substation",
+    "lat": "36.5762403",
+    "lng": "136.6495693"
+  },
+  {
+    "spot_name": "Owl cafe Kanazawa OWL CONNECT GROUP",
+    "lat": "36.5732545",
+    "lng": "136.6552353"
+  },
+  {
+    "spot_name": "Higashi Konpaku Kimono Braid Institute",
+    "lat": "36.5346628",
+    "lng": "136.7158867"
+  },
+  {
+    "spot_name": "Bending water",
+    "lat": "36.5621304",
+    "lng": "136.6626504"
+  },
+  {
+    "spot_name": "fountain",
+    "lat": "36.5621304",
+    "lng": "136.6626514"
+  },
+  {
+    "spot_name": "Komon Bridge",
+    "lat": "36.5621304",
+    "lng": "136.6626521"
+  },
+  {
+    "spot_name": "Mt.",
+    "lat": "36.5621307",
+    "lng": "136.6626507"
+  },
+  {
+    "spot_name": "Pine pine grooming",
+    "lat": "36.5621277",
+    "lng": "136.6626517"
+  },
+  {
+    "spot_name": "Kohjima",
+    "lat": "36.5621309",
+    "lng": "136.6626517"
+  },
+  {
+    "spot_name": "Dragonite",
+    "lat": "36.5621307",
+    "lng": "136.6626511"
+  },
+  {
+    "spot_name": "Meiji Keizairo",
+    "lat": "36.5621277",
+    "lng": "136.6626517"
+  },
+  {
+    "spot_name": "Seven Lucky Shrines",
+    "lat": "36.5621304",
+    "lng": "136.6626507"
+  },
+  {
+    "spot_name": "Flying bridge",
+    "lat": "36.5621277",
+    "lng": "136.6626517"
+  },
+  {
+    "spot_name": "Scenic mountain",
+    "lat": "36.5621304",
+    "lng": "136.6626517"
+  },
+  {
+    "spot_name": "Karasaki Matsu",
+    "lat": "36.5621304",
+    "lng": "136.6626517"
+  },
+  {
+    "spot_name": "Tiger stone",
+    "lat": "36.5621304",
+    "lng": "136.6626524"
+  },
+  {
+    "spot_name": "Kasumigauri",
+    "lat": "36.5621307",
+    "lng": "136.6626524"
+  },
+  {
+    "spot_name": "Bamboo lantern",
+    "lat": "36.5621476",
+    "lng": "136.6626665"
+  },
+  {
+    "spot_name": "Ishikawa ken west green area park and field stadium",
+    "lat": "36.575834",
+    "lng": "136.6053635"
+  },
+  {
+    "spot_name": "Tsurumaru break place",
+    "lat": "36.5670359",
+    "lng": "136.6583409"
+  },
+  {
+    "spot_name": "Picture book soap store Ukichido",
+    "lat": "36.5370601",
+    "lng": "136.6501444"
+  },
+  {
+    "spot_name": "Foza rehabilitation practice",
+    "lat": "36.5775782",
+    "lng": "136.6650527"
+  },
+  {
+    "spot_name": "Kanazawa city's final water treatment plant",
+    "lat": "36.5131606",
+    "lng": "136.6982927"
+  },
+  {
+    "spot_name": "Yuzenkan pavilion",
+    "lat": "36.5650394",
+    "lng": "136.6474075"
+  },
+  {
+    "spot_name": "Kubo shi Bandai",
+    "lat": "36.5718879",
+    "lng": "136.6629614"
+  },
+  {
+    "spot_name": "Okonera",
+    "lat": "36.5532818",
+    "lng": "136.6523656"
+  },
+  {
+    "spot_name": "Ishikawa Prefecture Women Center",
+    "lat": "36.5705901",
+    "lng": "136.6453605"
+  },
+  {
+    "spot_name": "Oigaki Museum of Art",
+    "lat": "36.5699768",
+    "lng": "136.66447"
+  },
+  {
+    "spot_name": "Townspeople culture center",
+    "lat": "36.5714043",
+    "lng": "136.6591037"
+  },
+  {
+    "spot_name": "Kanazawa Harbor Ikiaki Fish City",
+    "lat": "36.6100441",
+    "lng": "136.6100688"
+  },
+  {
+    "spot_name": "Matsuo Basho Pagoda",
+    "lat": "36.5575584",
+    "lng": "136.6506272"
+  },
+  {
+    "spot_name": "Tokiwa Akira birthplace trace",
+    "lat": "36.5650389",
+    "lng": "136.6684267"
+  },
+  {
+    "spot_name": "Buddha tomb",
+    "lat": "36.5568307",
+    "lng": "136.6499218"
+  },
+  {
+    "spot_name": "Kaga lord's Maeda family cemetery",
+    "lat": "36.52839",
+    "lng": "136.666277"
+  },
+  {
+    "spot_name": "Tokuda Autumn Letter Monument",
+    "lat": "36.5705993",
+    "lng": "136.6772966"
+  },
+  {
+    "spot_name": "Ohno Odaiba Park",
+    "lat": "36.6171501",
+    "lng": "136.6058647"
+  },
+  {
+    "spot_name": "Hanagi-en",
+    "lat": "36.5727407",
+    "lng": "136.6789852"
+  },
+  {
+    "spot_name": "Belgian garden",
+    "lat": "36.5604759",
+    "lng": "136.6960953"
+  },
+  {
+    "spot_name": "Sanko-ji",
+    "lat": "36.5547532",
+    "lng": "136.6487664"
+  },
+  {
+    "spot_name": "Momoji Temple",
+    "lat": "36.5356059",
+    "lng": "136.667246"
+  },
+  {
+    "spot_name": "Fushimi-ji",
+    "lat": "36.5540533",
+    "lng": "136.6516273"
+  },
+  {
+    "spot_name": "Yukaji",
+    "lat": "36.5542122",
+    "lng": "136.6755112"
+  },
+  {
+    "spot_name": "Kyusei-ji",
+    "lat": "36.5718295",
+    "lng": "136.6683557"
+  },
+  {
+    "spot_name": "Kannonin",
+    "lat": "36.5710962",
+    "lng": "136.669475"
+  },
+  {
+    "spot_name": "Matsukiji",
+    "lat": "36.5543727",
+    "lng": "136.6511745"
+  },
+  {
+    "spot_name": "Honkanji",
+    "lat": "36.5586184",
+    "lng": "136.7646393"
+  },
+  {
+    "spot_name": "Nagakuji",
+    "lat": "36.5529813",
+    "lng": "136.6536577"
+  },
+  {
+    "spot_name": "Yongguo-ji",
+    "lat": "36.5756069",
+    "lng": "136.6718135"
+  },
+  {
+    "spot_name": "Myokoji",
+    "lat": "36.5572224",
+    "lng": "136.6499495"
+  },
+  {
+    "spot_name": "Treasure temple",
+    "lat": "36.5597198",
+    "lng": "136.6699032"
+  },
+  {
+    "spot_name": "Zenji Temple",
+    "lat": "36.5765317",
+    "lng": "136.6690387"
+  },
+  {
+    "spot_name": "Masenji",
+    "lat": "36.5755485",
+    "lng": "136.6709775"
+  },
+  {
+    "spot_name": "Junsaiji",
+    "lat": "36.5487648",
+    "lng": "136.6417811"
+  },
+  {
+    "spot_name": "Gen-ichi",
+    "lat": "36.5555197",
+    "lng": "136.6486608"
+  },
+  {
+    "spot_name": "Mamoruya",
+    "lat": "36.503953",
+    "lng": "136.6284368"
+  },
+  {
+    "spot_name": "Chiyonnozuka",
+    "lat": "36.5742732",
+    "lng": "136.6504627"
+  },
+  {
+    "spot_name": "Yamato Park",
+    "lat": "36.6135728",
+    "lng": "136.6075389"
+  },
+  {
+    "spot_name": "Ishikawa Prefecture Noh Theater",
+    "lat": "36.5596058",
+    "lng": "136.6632732"
+  },
+  {
+    "spot_name": "Sunset temple",
+    "lat": "36.5628553",
+    "lng": "136.6611289"
+  },
+  {
+    "spot_name": "Scenic shape of the Shinohiki",
+    "lat": "36.5632579",
+    "lng": "136.6555099"
+  },
+  {
+    "spot_name": "Oga Formation of Yamashina Fossil Production Area and Pit",
+    "lat": "36.5256456",
+    "lng": "136.6541559"
   }
 ]
